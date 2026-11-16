@@ -1,0 +1,1225 @@
+{
+ "caminho": [
+  [
+   1,
+   "Fundamentos e prontidão",
+   "18/11 · Módulo 1",
+   "#B04A1C",
+   "Diagnóstico 5D e o que termina",
+   "Escutar o sistema"
+  ],
+  [
+   2,
+   "Pessoas e coleta de insights",
+   "19/11 · Módulos 1 e 2",
+   "#2F6B6F",
+   "Mapa de pessoas e plano de coleta",
+   "Escutar o sistema"
+  ],
+  [
+   3,
+   "Insights e opções",
+   "25/11 · Módulo 2",
+   "#7A4E6D",
+   "Mapa de forças e opções",
+   "Escolher a próxima aposta"
+  ],
+  [
+   4,
+   "Experimentos de mudança",
+   "26/11 · Módulo 3",
+   "#B5781E",
+   "Portfólio de experimentos",
+   "Testar, medir e sustentar"
+  ],
+  [
+   5,
+   "Alinhamento e sustentabilidade",
+   "27/11 · Módulo 4",
+   "#5E7D52",
+   "Estratégia e rede de campeões",
+   "Testar, medir e sustentar"
+  ]
+ ],
+ "encontros": [
+  {
+   "n": 1,
+   "tom": "#B04A1C",
+   "data": "18 de novembro de 2026",
+   "miro": "https://miro.com/app/board/uXjVENt1lIM=/",
+   "titulo": "Fundamentos da mudança <em>para IA</em>",
+   "lede": "O paradoxo da adoção, a diferença entre mudança e transição, a curva de Satir e o diagnóstico de prontidão em cinco dimensões.",
+   "capaz": [
+    "Distinguir mudança e transição numa adoção real.",
+    "Diagnosticar a prontidão da sua organização em cinco dimensões e na curva de Satir."
+   ],
+   "blocos": [
+    {
+     "id": "e1-ab",
+     "num": "00",
+     "nome": "Abertura",
+     "tom": "#4A3F37",
+     "titulo": "A pergunta <em>do encontro</em>",
+     "constroi": "A pergunta que acompanha o encontro",
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Você não diz à água para onde ir. Você muda as margens.",
+       "html": "<p>A frase de Dave Snowden abre o curso. Numa organização, as margens são as restrições e as interações que orientam o comportamento: regras, rituais, metas, exemplos da liderança. No chat, em uma palavra: o que são as margens numa organização?</p>",
+       "fonte": "Dave Snowden · Cynefin Field Guide (Snowden e Rancati, 2021)."
+      },
+      {
+       "t": "atividade",
+       "id": "e1-a0",
+       "titulo": "A pergunta do encontro, em salas",
+       "tempo": "5 min",
+       "area": null,
+       "perg": "“Na sua organização, o que chegou primeiro: a ferramenta de IA ou a mudança no modo de trabalhar?”",
+       "passos": [
+        "Em cada sala, uma pessoa por vez responde à pergunta, em até um minuto.",
+        "Quem escuta registra, em uma palavra, o que se repetiu nas respostas.",
+        "Ao voltar, uma pessoa da sala conta em trinta segundos o que se repetiu."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas."
+        ],
+        [
+         "Entrega",
+         "O que se repetiu nas respostas da sala."
+        ],
+        [
+         "Tempo",
+         "5 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Nas três respostas da nossa sala, a ferramenta chegou com data marcada, e a mudança no trabalho ficou para depois.”</p>",
+       "campos": [
+        {
+         "k": "e1.a0.resp",
+         "rotulo": "A Minha Resposta",
+         "linhas": 3
+        },
+        {
+         "k": "e1.a0.rep",
+         "rotulo": "O Que Se Repetiu na Sala",
+         "tipo": "texto",
+         "ph": "Em uma palavra"
+        }
+       ]
+      },
+      {
+       "t": "conceito",
+       "titulo": "Combinados para os cinco encontros",
+       "html": "<div class=\"cards3\"><div><b>Pergunte sempre</b><p>Dúvida entra na hora, pelo microfone ou pelo chat. A dúvida de uma pessoa costuma ser a de várias.</p></div><div><b>Conecte com o seu trabalho</b><p>Cada conceito pede um exemplo real da sua organização. Traga o seu.</p></div><div><b>Pense no dia seguinte</b><p>A cada bloco, uma pergunta: o que eu coloco em prática amanhã?</p></div></div><p><b>Quatro papéis em cada sala.</b> Anfitrião da conversa: garante que todas as vozes apareçam e conduz a correção. Guardião do tempo: avisa a metade e o fim da atividade e anota o que ficou pendente. Escriba: compartilha a tela do Miro na sala e registra o que o grupo decidiu. Porta-voz: apresenta a sala à plenária e muda a cada atividade.</p>"
+      }
+     ]
+    },
+    {
+     "id": "e1-b1",
+     "num": "01",
+     "nome": "O paradoxo da IA",
+     "tom": "#B04A1C",
+     "titulo": "Panorama da adoção e o <em>paradoxo do valor</em>",
+     "pergunta": "Se quase todos usam, por que tão poucos capturam valor?",
+     "constroi": "O número que mais surpreendeu a sala",
+     "capaz": [
+      "Estimar, em grupo, os números da adoção de IA e do valor capturado.",
+      "Reconhecer o paradoxo entre uso amplo e valor raro.",
+      "Relacionar o paradoxo ao comportamento das pessoas, além da tecnologia."
+     ],
+     "itens": [
+      {
+       "t": "atividade",
+       "id": "e1-a1",
+       "titulo": "Complete os dados do panorama",
+       "tempo": "20 min",
+       "area": "Área 2",
+       "passos": [
+        "Distribuam os papéis e abram a Área 2 do Miro, no painel da sua sala (A, B ou C). <i>1 min</i>",
+        "Leiam a primeira frase e escolham, no banco, o número da lacuna. O escriba arrasta a nota.",
+        "Sigam frase a frase: cada número entra uma vez, e três sobram. <i>12 min</i>",
+        "Escolham o número que mais surpreendeu a sala e escrevam o porquê na nota laranja. <i>4 min</i>",
+        "Confiram com as respostas que entram no chat ao sinal. <i>3 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas: Sala 1, painel A; Sala 2, painel B; Sala 3, painel C."
+        ],
+        [
+         "Material",
+         "Miro, Área 2."
+        ],
+        [
+         "Entrega",
+         "Cinco lacunas preenchidas e o número que mais surpreendeu a sala."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>Diante de 23 e 61 para a mesma lacuna, a sala argumenta, decide e arrasta um só.</p>",
+       "campos": [
+        {
+         "k": "e1.a1.A",
+         "rotulo": "Painel A · O Paradoxo do Valor",
+         "tipo": "lacunas",
+         "banco": "6, 23, 37, 52, 61, 80, 89, 95",
+         "frases": [
+          [
+           "89",
+           "% usam IA regularmente em ao menos uma função."
+          ],
+          [
+           "37",
+           "% atribuem à IA algum impacto no EBIT."
+          ],
+          [
+           "6",
+           "% capturam valor relevante: 5% ou mais do EBIT."
+          ],
+          [
+           "95",
+           "% dos pilotos de IA generativa sem impacto mensurável."
+          ],
+          [
+           "80",
+           "% relatam ganho de produtividade individual."
+          ]
+         ]
+        },
+        {
+         "k": "e1.a1.B",
+         "rotulo": "Painel B · A IA Fora do Radar",
+         "tipo": "lacunas",
+         "banco": "1, 2, 4, 9, 33, 52, 75, 78",
+         "frases": [
+          [
+           "75",
+           "% dos trabalhadores do conhecimento usam IA generativa."
+          ],
+          [
+           "78",
+           "% de quem usa traz a própria ferramenta."
+          ],
+          [
+           "52",
+           "% relutam em admitir o uso nas tarefas importantes."
+          ],
+          [
+           "4",
+           "% é a estimativa dos líderes; os funcionários relatam 13%."
+          ],
+          [
+           "1",
+           "em cada 5 organizações sofreu violação ligada a IA fora do controle."
+          ]
+         ]
+        },
+        {
+         "k": "e1.a1.C",
+         "rotulo": "Painel C · O Fator Humano",
+         "tipo": "lacunas",
+         "banco": "3, 7, 8, 21, 31, 45, 65, 66",
+         "frases": [
+          [
+           "8",
+           "em cada 10 pessoas têm forte preocupação com a IA."
+          ],
+          [
+           "65",
+           "% temem ser substituídos por quem usa IA melhor."
+          ],
+          [
+           "31",
+           "% admitem sabotar a estratégia de IA."
+          ],
+          [
+           "7",
+           "vezes mais chance com gestão de mudanças excelente."
+          ],
+          [
+           "66",
+           "dias, em média, para um hábito se tornar automático."
+          ]
+         ]
+        },
+        {
+         "k": "e1.a1.surp",
+         "rotulo": "O Número Que Mais Surpreendeu a Sala, e Por Quê",
+         "linhas": 2
+        },
+        {
+         "k": "e1.a1.meu",
+         "rotulo": "Onde Esse Número Aparece no Meu Trabalho",
+         "linhas": 2
+        }
+       ]
+      },
+      {
+       "t": "conceito",
+       "titulo": "O paradoxo em três números",
+       "html": "<div class=\"cards3\"><div><b>89%</b><p>usam IA regularmente em ao menos uma função.</p></div><div><b>37%</b><p>atribuem à IA algum impacto no EBIT.</p></div><div><b>6%</b><p>capturam valor relevante: 5% ou mais do EBIT.</p></div></div><p><b>O que os 6% fazem diferente.</b> Redesenham o fluxo de trabalho: quase três quartos dos 6% redesenharam fluxos de forma fundamental, contra cerca de um quarto dos demais. A liderança demonstra compromisso: a chance de a liderança sênior demonstrar compromisso visível com a IA é o dobro. Fluxo de trabalho e liderança: os dois são comportamento.</p>",
+       "fonte": "McKinsey, The State of AI in 2026 (1.719 respondentes, 97 países)."
+      }
+     ]
+    },
+    {
+     "id": "e1-b2",
+     "num": "02",
+     "nome": "Mudança e transição",
+     "tom": "#2F6B6F",
+     "titulo": "Mudança <em>e transição</em>",
+     "pergunta": "O que termina para as pessoas quando a IA chega?",
+     "constroi": "A ficha da sua adoção: o que muda e o que termina",
+     "capaz": [
+      "Distinguir a mudança situacional da transição psicológica.",
+      "Reconhecer as três fases da transição: fim, fase neutra e novo começo.",
+      "Nomear o que termina para as pessoas numa adoção real."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Mudança e transição, duas coisas diferentes",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th></th><th>Mudança (situacional)</th><th>Transição (psicológica)</th></tr></thead><tbody><tr><td>Onde acontece</td><td>No sistema, no processo, na estrutura</td><td>Em cada pessoa</td></tr><tr><td>Tempo</td><td>Tem data</td><td>Tem duração própria</td></tr><tr><td>Quem conduz</td><td>A organização decide</td><td>Cada pessoa atravessa</td></tr></tbody></table></div><p><b>Mito ou fato?</b> “Toda transição começa por um fim.” Fato. Antes de aprender o novo, as pessoas deixam algo: uma rotina, uma competência reconhecida, a identidade de quem sabia. Quem anuncia o novo começo sem reconhecer o fim encontra resistência e costuma chamá-la de falta de engajamento.</p>",
+       "fonte": "Bridges, W. Managing Transitions, 4ª ed., 2017."
+      },
+      {
+       "t": "conceito",
+       "titulo": "As três fases da transição",
+       "html": "<div class=\"cards3\"><div><b>Fim (Ending)</b><p>O que as pessoas deixam: uma rotina, uma competência reconhecida, uma identidade. <i>Pergunta da liderança: o que esta mudança tira das pessoas?</i></p></div><div><b>Fase neutra (Neutral zone)</b><p>O antigo já não vale e o novo ainda não funciona. A produtividade oscila e a criatividade aparece. <i>Pergunta da liderança: do que as pessoas precisam para atravessar sem desistir?</i></p></div><div><b>Novo começo (New beginning)</b><p>Nova identidade, novo propósito, nova energia, no tempo de cada pessoa. <i>Pergunta da liderança: qual é o primeiro sinal de que o novo jeito já é o jeito?</i></p></div></div><p><b>O que pode estar terminando:</b> um processo (a cotação montada à mão), uma crença (bom profissional faz tudo sozinho), uma identidade (ser a pessoa que sabe todas as respostas), um ritual (a reunião que repete o que o painel já mostra), uma competência (a fórmula que só uma pessoa domina), um status (o acesso exclusivo à informação).</p>",
+       "fonte": "Bridges, W. Managing Transitions, 4ª ed., 2017."
+      },
+      {
+       "t": "atividade",
+       "id": "e1-a2",
+       "titulo": "O que muda e o que termina",
+       "tempo": "20 min",
+       "area": "Área 3",
+       "passos": [
+        "Na sua ficha da Área 3, escrevam uma adoção de IA real da sua área. <i>2 min</i>",
+        "Sem adoção em curso? Usem uma prevista. Dado reservado? Nome genérico.",
+        "Escrevam <b>O Que Muda</b> e <b>O Que Termina para as Pessoas</b>. <i>6 min</i>",
+        "Em dupla, um conta o caso; o outro pergunta: “O que isso pede da liderança na fase neutra?” <i>5 min</i>",
+        "Invertam os papéis. Cada pessoa anota a resposta na própria ficha. <i>5 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 3: a ficha com o seu nome."
+        ],
+        [
+         "Entrega",
+         "A ficha com os quatro campos preenchidos."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p><b>A Adoção Que Escolhi:</b> área de compras de uma indústria, assistente de IA que compara propostas de fornecedores.</p><p><b>O Que Muda:</b> o comprador recebe a comparação pronta e revisa. A planilha montada à mão deixa de ser o caminho oficial, e a aprovação passa a citar a análise do assistente.</p><p><b>O Que Termina para as Pessoas:</b> termina o papel do comprador sênior como a pessoa que sabia de cabeça o histórico de cada fornecedor. Termina também o orgulho da planilha bem feita.</p><p><b>O Que a Fase Neutra Pede da Liderança:</b> reconhecer em público o que os seniores sabem e dar a eles a revisão das respostas do assistente, para o saber deles continuar a contar.</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e1.a2.adocao",
+         "rotulo": "A Adoção Que Escolhi",
+         "linhas": 2,
+         "dica": "Esta adoção acompanha você nos cinco encontros."
+        },
+        {
+         "k": "e1.a2.muda",
+         "rotulo": "O Que Muda",
+         "linhas": 3
+        },
+        {
+         "k": "e1.a2.termina",
+         "rotulo": "O Que Termina para as Pessoas",
+         "linhas": 3
+        },
+        {
+         "k": "e1.a2.neutra",
+         "rotulo": "O Que a Fase Neutra Pede da Liderança",
+         "linhas": 3
+        }
+       ],
+       "pontos": [
+        "<b>O fim tem nome.</b> A ficha diz o que termina com um fato: um papel, uma rotina, um reconhecimento.",
+        "<b>O fim tem gente.</b> Fica claro para quem termina. Perdas diferentes pedem conversas diferentes.",
+        "<b>A travessia tem um pedido.</b> A liderança sabe o que oferecer: tempo, reconhecimento, segurança para errar."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e1-b3",
+     "num": "03",
+     "nome": "A curva de Satir e o ciclo",
+     "tom": "#7A4E6D",
+     "titulo": "A curva de Satir e o <em>ciclo Lean Change</em>",
+     "pergunta": "Onde o seu time está hoje na adoção?",
+     "constroi": "A posição do seu time na curva, com um fato",
+     "capaz": [
+      "Localizar a posição do seu time na curva de mudança de Satir.",
+      "Explicar por que o desempenho cai antes de subir numa adoção.",
+      "Descrever o ciclo Lean Change aplicado à adoção de IA."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "A curva de Satir na adoção de IA",
+       "html": "<p><b>Mito ou fato?</b> “Com a IA bem implantada, o desempenho do time sobe desde a primeira semana.” Mito. O elemento externo chega, o desempenho oscila, cai no caos e só sobe depois da ideia transformadora. Tentar evitar a queda prolonga o caos; preparar o time para atravessá-la encurta o caminho.</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Estágio</th><th>O que se observa</th></tr></thead><tbody><tr><td>Status quo</td><td>“Sempre fizemos assim.” O trabalho segue o jeito conhecido.</td></tr><tr><td>Resistência</td><td>“IA não vai funcionar aqui.” O elemento externo chegou.</td></tr><tr><td>Caos</td><td>“Nada funciona mais.” O desempenho cai e oscila.</td></tr><tr><td>Integração</td><td>“Agora entendo.” Depois da ideia transformadora, o desempenho sobe.</td></tr><tr><td>Novo status quo</td><td>“Como vivíamos sem isso?” O novo jeito é o jeito.</td></tr></tbody></table></div>",
+       "fonte": "Satir, V. et al. The Satir Model, 1991."
+      },
+      {
+       "t": "atividade",
+       "id": "e1-a3",
+       "titulo": "Onde está o seu time na curva",
+       "tempo": "6 min",
+       "area": "Área 4",
+       "passos": [
+        "Na Área 4, arrastem um ponto laranja até a posição do seu time na curva.",
+        "Ao lado do ponto, escrevam uma nota: área, estágio e um fato que sustenta a posição.",
+        "Olhem o desenho que a turma formou."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual, na sala principal."
+        ],
+        [
+         "Material",
+         "Miro, Área 4: a curva da turma."
+        ],
+        [
+         "Entrega",
+         "Um ponto e uma nota com um fato."
+        ],
+        [
+         "Tempo",
+         "6 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Compras · caos. Os compradores fazem a cotação duas vezes: no assistente e na planilha.”</p><p><i>Um ponto: a posição do time, e não a sua posição pessoal. Um fato: algo visto ou ouvido que sustenta a posição.</i></p>",
+       "campos": [
+        {
+         "k": "e1.a3.estagio",
+         "rotulo": "O Estágio do Meu Time",
+         "tipo": "escolha",
+         "opcoes": [
+          "Status quo",
+          "Resistência",
+          "Caos",
+          "Integração",
+          "Novo status quo"
+         ]
+        },
+        {
+         "k": "e1.a3.fato",
+         "rotulo": "O Fato Que Sustenta a Posição",
+         "linhas": 2
+        }
+       ]
+      },
+      {
+       "t": "conceito",
+       "titulo": "O motor Lean Change: insights, opções e experimentos",
+       "html": "<div class=\"cards3\"><div><b>1 · Insights</b><p>Como as pessoas preferem fazer hoje? O que já foi tentado? O que precisamos descobrir?</p></div><div><b>2 · Opções</b><p>Que comportamento queremos ver? O que o impede hoje? O que poderíamos fazer para habilitá-lo?</p></div><div><b>3 · Experimentos</b><p>O que queremos aprender? Qual é a hipótese? Como vamos medir?</p></div></div><p>Cada experimento percorre três passos: <b>preparar</b> (planejar com as pessoas afetadas), <b>introduzir</b> (colocar a mudança em prática) e <b>revisar</b> (prosseguir, pivotar ou pausar).</p>",
+       "fonte": "Little, J. Lean Change Management, 2014."
+      }
+     ]
+    },
+    {
+     "id": "e1-b4",
+     "num": "04",
+     "nome": "Diagnóstico de prontidão",
+     "tom": "#B5781E",
+     "titulo": "Diagnóstico de prontidão em <em>cinco dimensões</em>",
+     "pergunta": "Em que dimensão a sua organização está menos pronta?",
+     "constroi": "O seu diagnóstico 5D, com uma evidência para cada nota",
+     "capaz": [
+      "Diagnosticar a prontidão em cinco dimensões, no sistema de diagnóstico.",
+      "Sustentar cada nota com uma evidência observável.",
+      "Identificar a dimensão em que a lacuna mais pesa na adoção."
+     ],
+     "itens": [
+      {
+       "t": "regua",
+       "titulo": "Cinco dimensões de prontidão",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Dimensão</th><th>Nota 1</th><th>Nota 5</th></tr></thead><tbody><tr><td><b>Tecnologia</b><br>Infraestrutura, dados e ferramentas</td><td>A ferramenta não chega a quem trabalha</td><td>Ferramenta liberada e integrada aos dados</td></tr><tr><td><b>Pessoas</b><br>Habilidades e disposição</td><td>Poucos usam; muitos temem a substituição</td><td>O time usa e ensina o colega</td></tr><tr><td><b>Processos</b><br>Fluxos e governança de IA</td><td>A IA é uma etapa a mais no fluxo antigo</td><td>Fluxo redesenhado, com regras de uso</td></tr><tr><td><b>Cultura</b><br>Experimentação e erro</td><td>Errar com IA é arriscado; o uso se esconde</td><td>Experimentar é esperado; o erro ensina</td></tr><tr><td><b>Liderança</b><br>Patrocínio, visão e exemplo</td><td>A liderança cobra o uso e não usa</td><td>A liderança usa e remove barreiras</td></tr></tbody></table></div><p>Escala de 1 (ausente) a 5 (consolidado e em uso). Cada nota pede uma evidência: um fato visto. Fontes: TOEH Framework (Naheed, Pinto e Pirola, 2025) · Armenakis, Harris e Mossholder, 1993.</p>"
+      },
+      {
+       "t": "atividade",
+       "id": "e1-a4",
+       "titulo": "Diagnóstico 5D no sistema",
+       "tempo": "20 min",
+       "area": "Área 5",
+       "passos": [
+        "Leiam o QR code do slide ou abram o endereço <a href='https://diagtransia-qwhnsyez.manus.space/diagnostico-presencial' target='_blank' rel='noopener'>diagtransia-qwhnsyez.manus.space/diagnostico-presencial</a>. Digitem o token <b>CM4AI</b> e toquem em Acessar Diagnóstico. <i>2 min</i>",
+        "Respondam às 20 perguntas pensando na organização da adoção que vocês escolheram. <i>12 min</i>",
+        "Leiam o resultado e deixem a tela aberta.",
+        "Na Área 5 do Miro, preencham a sua linha: curva, notas, a menor nota e um fato. <i>6 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual, em silêncio, na sala principal."
+        ],
+        [
+         "Sem acesso",
+         "Avise no chat: há uma alternativa com a tabela das cinco dimensões."
+        ],
+        [
+         "Entrega",
+         "A sua linha preenchida, com um fato."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>Compras: curva no caos; Tecnologia 4, Pessoas 2, Processos 3, Cultura 2, Liderança 2. <b>A Menor Nota e o Fato:</b> Liderança, 2: a gerente cobra o uso na reunião semanal e nunca mostrou um uso próprio.</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e1.a4.curva",
+         "rotulo": "A Curva, Segundo o Sistema",
+         "tipo": "escolha",
+         "opcoes": [
+          "Status quo",
+          "Resistência",
+          "Caos",
+          "Integração",
+          "Novo status quo"
+         ]
+        },
+        {
+         "k": "e1.a4.n",
+         "rotulo": "As Cinco Notas",
+         "tipo": "notas",
+         "dims": [
+          [
+           "tec",
+           "Tecnologia"
+          ],
+          [
+           "pes",
+           "Pessoas"
+          ],
+          [
+           "pro",
+           "Processos"
+          ],
+          [
+           "cul",
+           "Cultura"
+          ],
+          [
+           "lid",
+           "Liderança"
+          ]
+         ],
+         "dica": "Arredonde as notas do sistema."
+        },
+        {
+         "k": "e1.a4.menor",
+         "rotulo": "A Menor Nota e o Fato",
+         "linhas": 2,
+         "ph": "Dimensão, nota: o fato visto"
+        },
+        {
+         "k": "e1.a4.fatos",
+         "rotulo": "Um Fato para Cada Uma das Outras Notas",
+         "linhas": 4,
+         "dica": "Tarefa até o Encontro 2."
+        }
+       ],
+       "pontos": [
+        "<b>Cada nota ancorada num fato.</b> O sistema mede a percepção; algo visto, medido ou dito confirma ou contesta a nota.",
+        "<b>A curva separada das notas.</b> É possível estar no caos com tecnologia nota 4: são leituras diferentes.",
+        "<b>A menor nota escolhida pelo peso.</b> Em caso de empate, vale a dimensão que mais segura a adoção.",
+        "Confira a sua linha: o fato é algo que outra pessoa da área também poderia ter visto? Se a resposta for sim, a evidência serve."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e1-fe",
+     "num": "05",
+     "nome": "Fechamento",
+     "tom": "#5E7D52",
+     "titulo": "A primeira conversa <em>da semana</em>",
+     "constroi": "A conversa marcada, com pessoa e dia",
+     "itens": [
+      {
+       "t": "atividade",
+       "id": "e1-a5",
+       "titulo": "A primeira conversa da semana",
+       "tempo": "6 min",
+       "area": "Área 6",
+       "perg": "“Com o que você viu hoje, qual é a primeira conversa que você vai ter nesta semana, e com quem?”",
+       "passos": [
+        "Em cada sala, uma pessoa por vez responde à pergunta, em até um minuto.",
+        "Os colegas ajudam com uma pergunta: “Com quem, e em que dia?”",
+        "Cada pessoa registra a sua conversa numa nota da Área 6."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 6."
+        ],
+        [
+         "Entrega",
+         "Uma nota com pessoa, dia e o que ouvir."
+        ],
+        [
+         "Tempo",
+         "6 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Dois compradores seniores, na quinta-feira: ouvir o que estão perdendo com o assistente.”</p>",
+       "campos": [
+        {
+         "k": "e1.a5.quem",
+         "rotulo": "Com Quem",
+         "tipo": "texto",
+         "ph": "Um papel ou um grupo pequeno"
+        },
+        {
+         "k": "e1.a5.dia",
+         "rotulo": "Em Que Dia",
+         "tipo": "texto"
+        },
+        {
+         "k": "e1.a5.ouvir",
+         "rotulo": "O Que Quero Ouvir",
+         "linhas": 2
+        }
+       ],
+       "pontos": [
+        "<b>Tem uma pessoa.</b> Um papel ou um grupo pequeno, e não “a área”.",
+        "<b>Tem um dia.</b> Uma data desta semana, ao alcance de quem escreveu.",
+        "<b>Começa por ouvir.</b> A primeira conversa pergunta antes de explicar."
+       ]
+      },
+      {
+       "t": "atividade",
+       "id": "e1-a6",
+       "titulo": "Até o próximo encontro",
+       "tempo": "até 19/11",
+       "area": "Área 5",
+       "passos": [
+        "<b>Faça a conversa.</b> A primeira conversa da semana, se o dia escolhido for amanhã.",
+        "<b>Traga um fato por dimensão.</b> Complete a sua linha da Área 5 com uma evidência para cada nota, e não só para a menor.",
+        "<b>Liste as pessoas.</b> Quem é afetado, quem decide e quem influencia a adoção que você escolheu. O Encontro 2 parte dessa lista."
+       ],
+       "meta": [
+        [
+         "Próximo encontro",
+         "Quinta-feira, 19 de novembro, às 19h."
+        ],
+        [
+         "Tema",
+         "Pessoas e coleta de insights."
+        ]
+       ],
+       "campos": [
+        {
+         "k": "e1.a6.conversa",
+         "rotulo": "Como Foi a Conversa",
+         "linhas": 3
+        },
+        {
+         "k": "e1.a6.afetado",
+         "rotulo": "Quem É Afetado",
+         "linhas": 2
+        },
+        {
+         "k": "e1.a6.decide",
+         "rotulo": "Quem Decide",
+         "linhas": 2
+        },
+        {
+         "k": "e1.a6.influencia",
+         "rotulo": "Quem Influencia",
+         "linhas": 2
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "tom": "#2F6B6F",
+   "data": "19 de novembro de 2026",
+   "miro": "https://miro.com/app/board/uXjVENsiEuo=/",
+   "titulo": "Pessoas e coleta <em>de insights</em>",
+   "lede": "Do diagnóstico à lacuna prioritária, o mapa de pessoas da adoção, seis práticas para ouvir o sistema e o plano de coleta dos próximos seis dias.",
+   "capaz": [
+    "Priorizar a lacuna de prontidão que mais libera a adoção e está ao alcance da área.",
+    "Mapear as pessoas afetadas pela adoção, por influência e por impacto no trabalho.",
+    "Escolher a prática de geração de insights adequada a cada pessoa ou grupo.",
+    "Elaborar um plano de coleta de insights para os próximos seis dias."
+   ],
+   "blocos": [
+    {
+     "id": "e2-ab",
+     "num": "00",
+     "nome": "Abertura",
+     "tom": "#4A3F37",
+     "titulo": "A retomada, <em>em salas</em>",
+     "constroi": "Quem ainda não foi ouvido",
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "As pessoas não resistem à mudança. Resistem a ser mudadas.",
+       "html": "<p>A frase, atribuída a Peter Senge, abre o encontro. No chat: uma mudança que você abraçou porque participou da decisão.</p>"
+      },
+      {
+       "t": "atividade",
+       "id": "e2-a0",
+       "titulo": "A retomada, em salas",
+       "tempo": "5 min",
+       "area": null,
+       "perg": "“Como foi, ou como você espera que seja, a primeira conversa da semana? E quem você ainda não ouviu?”",
+       "passos": [
+        "Em cada sala, uma pessoa por vez responde, em até um minuto.",
+        "Quem escuta registra quem ainda não foi ouvido em cada caso.",
+        "Ao voltar, uma pessoa da sala conta o que mais apareceu."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas."
+        ],
+        [
+         "Entrega",
+         "O que mais apareceu na sala."
+        ],
+        [
+         "Tempo",
+         "5 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Nos nossos casos, quem mais usa a ferramenta é quem menos foi ouvido.”</p>",
+       "campos": [
+        {
+         "k": "e2.a0.resp",
+         "rotulo": "A Minha Resposta",
+         "linhas": 3
+        },
+        {
+         "k": "e2.a0.falta",
+         "rotulo": "Quem Eu Ainda Não Ouvi",
+         "linhas": 2
+        }
+       ]
+      },
+      {
+       "t": "conceito",
+       "titulo": "Onde estamos no motor: insights",
+       "html": "<div class=\"cards3\"><div><b>Ontem</b><p>O paradoxo, o que termina, a curva e o diagnóstico: insights sobre a organização.</p></div><div><b>Hoje</b><p>As pessoas e o plano para ouvi-las: insights que só elas têm.</p></div><div><b>Até o Encontro 3</b><p>A coleta de verdade, com duas ou três conversas.</p></div></div>",
+       "fonte": "Little, J. Lean Change Management, 2014."
+      }
+     ]
+    },
+    {
+     "id": "e2-b1",
+     "num": "01",
+     "nome": "Leitura do diagnóstico em grupo",
+     "tom": "#B5781E",
+     "titulo": "Do diagnóstico à <em>lacuna prioritária</em>",
+     "pergunta": "Qual lacuna, resolvida, mais libera a adoção?",
+     "constroi": "A lacuna prioritária de cada pessoa e o que falta descobrir",
+     "capaz": [
+      "Comparar os diagnósticos e reconhecer o que se repete.",
+      "Interpretar a variação das notas como informação sobre o sistema.",
+      "Priorizar a lacuna que mais libera a adoção e está ao alcance da área."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Como ler um diagnóstico",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>O que o grupo vê</th><th>Como ler</th></tr></thead><tbody><tr><td>Nota baixa com evidência forte</td><td>É lacuna. Candidata à prioridade.</td></tr><tr><td>Nota baixa sem evidência</td><td>Ainda é pergunta. Vai para “o que preciso descobrir”.</td></tr><tr><td>Notas muito diferentes entre as pessoas</td><td>Percepções diferentes da mesma realidade: informação sobre o sistema.</td></tr><tr><td>Curva comparada às notas</td><td>Time no caos com liderança baixa: presença da liderança antes de mais ferramenta.</td></tr></tbody></table></div><p>No Lean Change Management, divergência e resistência são tratadas como informação.</p>",
+       "fonte": "Little, J. Lean Change Management, 2014."
+      },
+      {
+       "t": "regua",
+       "titulo": "A régua da prioridade",
+       "html": "<p class='regua__q'>“Qual destas lacunas, resolvida, mais libera a adoção e está ao alcance da área?”</p><div class=\"cards3\"><div><b>Impacto na adoção</b><p>Resolver esta lacuna move as outras.</p></div><div><b>Alcance da área</b><p>A área age sobre ela com as próprias decisões.</p></div><div><b>Atenção</b><p>A menor nota nem sempre é a lacuna prioritária.</p></div></div>"
+      },
+      {
+       "t": "atividade",
+       "id": "e2-a1",
+       "titulo": "A lacuna prioritária de cada pessoa",
+       "tempo": "20 min",
+       "area": "Área 1",
+       "passos": [
+        "Distribuam os papéis. Cada pessoa lê as cinco notas e o fato do Encontro 1. <i>4 min</i>",
+        "A sala pergunta a cada pessoa: “Que fato sustenta essa nota?”",
+        "Cada pessoa aplica a régua e registra <b>A Lacuna Prioritária</b> na sua linha. <i>8 min</i>",
+        "Com a ajuda da sala, cada pessoa escreve <b>O Que Preciso Descobrir</b>, em forma de pergunta. <i>5 min</i>",
+        "Registrem na nota laranja o que a sala tem em comum. <i>3 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas, de três a quatro pessoas."
+        ],
+        [
+         "Material",
+         "Miro, Área 1, e a tabela da Área 5 do Encontro 1."
+        ],
+        [
+         "Entrega",
+         "A sua linha preenchida e a nota laranja da sala."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p><b>A Menor Nota e o Fato:</b> Liderança, 2: a gerente cobra o uso e nunca mostrou um uso próprio.</p><p><b>A Lacuna Prioritária:</b> Liderança: a gerente usar o assistente diante do time. Alto impacto e ao alcance da área.</p><p><b>O Que Preciso Descobrir:</b> o que impede a gerente de usar? Falta de tempo, de confiança no resultado ou de exemplo acima dela?</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e2.a1.menor",
+         "rotulo": "A Menor Nota e o Fato (do Encontro 1)",
+         "tipo": "espelho",
+         "de": "e1.a4.menor"
+        },
+        {
+         "k": "e2.a1.lacuna",
+         "rotulo": "A Lacuna Prioritária, pela Régua",
+         "linhas": 3
+        },
+        {
+         "k": "e2.a1.descobrir",
+         "rotulo": "O Que Preciso Descobrir",
+         "linhas": 3,
+         "ph": "Em forma de pergunta"
+        },
+        {
+         "k": "e2.a1.comum",
+         "rotulo": "O Que a Sala Tem em Comum",
+         "linhas": 2
+        }
+       ],
+       "pontos": [
+        "<b>Lacuna escolhida pela régua.</b> Impacto e alcance, além da nota.",
+        "<b>Evidência em forma de fato.</b> Algo que outra pessoa também poderia ter visto.",
+        "<b>Descoberta em forma de pergunta.</b> Uma pergunta que uma pessoa real consegue responder.",
+        "Quem, na sua organização, sabe responder à pergunta que você escreveu? Essa pessoa entra no mapa do próximo bloco."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e2-b2",
+     "num": "02",
+     "nome": "O mapa de pessoas",
+     "tom": "#35608F",
+     "titulo": "O mapa de pessoas <em>da adoção</em>",
+     "pergunta": "Quem precisa mudar o que faz para a adoção acontecer?",
+     "constroi": "O mapa de pessoas da sua adoção",
+     "capaz": [
+      "Identificar quem é afetado, quem decide e quem influencia a adoção.",
+      "Posicionar cada pessoa por influência e por impacto no trabalho.",
+      "Reconhecer a disposição de cada pessoa como informação."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Resistência é informação",
+       "html": "<p><b>Mito ou fato?</b> “Quem resiste à IA é contra a mudança.” Mito. Quem resiste costuma estar protegendo algo que funciona: um prazo, um cliente, a qualidade de uma entrega. A resistência mostra onde a mudança encosta no trabalho real.</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>O que se ouve</th><th>A pergunta que a frase abre</th></tr></thead><tbody><tr><td>“Isso não funciona aqui.”</td><td>O que a pessoa já viu falhar?</td></tr><tr><td>“Não tenho tempo para isso.”</td><td>O que ela teria de parar de fazer?</td></tr><tr><td>“Prefiro fazer do meu jeito.”</td><td>O que o jeito dela garante que o novo ainda não garante?</td></tr></tbody></table></div>",
+       "fonte": "Little, J. Lean Change Management, 2014."
+      },
+      {
+       "t": "conceito",
+       "titulo": "Três perguntas para encontrar as pessoas",
+       "html": "<div class=\"cards3\"><div><b>Quem é afetado?</b><p>Quem passa a trabalhar de outro jeito, ganha ou perde uma tarefa, um papel ou um reconhecimento. <i>Exemplo: compradores seniores e juniores; fornecedores.</i></p></div><div><b>Quem decide?</b><p>Quem aprova orçamento, prioridade, regra de uso e meta. <i>Exemplo: gerente de compras; diretor financeiro; jurídico.</i></p></div><div><b>Quem influencia?</b><p>Quem os colegas observam antes de decidir se usam: a referência técnica, a pessoa mais antiga, quem aprendeu primeiro. <i>Exemplo: a compradora que descobriu a cláusula de reajuste.</i></p></div></div><p><b>O mapa: influência, impacto e disposição.</b> Cada nota ocupa uma posição por quanto a pessoa é afetada e por quanto influencia. A cor mostra a disposição hoje: verde apoia (já usa ou defende a adoção), amarela ainda não se posicionou (observa, espera para ver), laranja tem ressalvas (vê um risco concreto para o próprio trabalho). Onde começar: por quem é muito afetado e tem ressalvas. É onde está a informação que falta.</p><p><b>Como a adoção se espalha.</b> Os primeiros 16% experimentam por conta própria; a maioria, 68%, adota ao ver um colega parecido usar; os últimos 16% adotam quando o novo já é o normal.</p>",
+       "fonte": "Adaptado de Mendelow (1991), de Little (2014) e de Rogers, E. Diffusion of Innovations, 5ª ed., 2003."
+      },
+      {
+       "t": "atividade",
+       "id": "e2-a2",
+       "titulo": "O mapa de pessoas da sua adoção",
+       "tempo": "20 min",
+       "area": "Área 2",
+       "passos": [
+        "No seu mapa da Área 2, criem uma nota para cada pessoa ou grupo da adoção: de seis a dez notas. <i>4 min</i>",
+        "Usem o papel, e não o nome. Dado reservado? Papel genérico.",
+        "Posicionem cada nota e escolham a cor da disposição. <i>5 min</i>",
+        "Em dupla, um apresenta o mapa; o outro pergunta: “Quem está faltando? Quem você ainda não ouviu?” <i>4 min</i>",
+        "Invertam os papéis. Escrevam ⭐ nas notas das três pessoas a ouvir primeiro. <i>5 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 2: o mapa com o seu nome."
+        ],
+        [
+         "Entrega",
+         "O mapa com as notas e três estrelas."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Compradores seniores: muito afetados, muita influência, com ressalvas. Ouvir primeiro.”</p>",
+       "campos": [
+        {
+         "k": "e2.a2.mapa",
+         "rotulo": "As Pessoas da Minha Adoção",
+         "tipo": "tabela",
+         "n": 10,
+         "mapa": true,
+         "dica": "O mapa abaixo da tabela se desenha à medida que você preenche.",
+         "colunas": [
+          {
+           "t": "Pessoa ou Grupo (papel)",
+           "ph": "Ex.: compradores seniores"
+          },
+          {
+           "t": "Impacto no Trabalho",
+           "opcoes": [
+            "Pouco afetada",
+            "Muito afetada"
+           ]
+          },
+          {
+           "t": "Influência",
+           "opcoes": [
+            "Pouca influência",
+            "Muita influência"
+           ]
+          },
+          {
+           "t": "Disposição Hoje",
+           "opcoes": [
+            "Apoia",
+            "Ainda não se posicionou",
+            "Tem ressalvas"
+           ]
+          },
+          {
+           "t": "Ouvir Primeiro",
+           "opcoes": [
+            "⭐"
+           ]
+          }
+         ]
+        }
+       ],
+       "pontos": [
+        "<b>Onde as notas se concentram?</b> Mapas com tudo no quadrante de muita influência e muito impacto costumam ter esquecido quem usa todo dia.",
+        "<b>Quantas notas laranja estão entre as três estrelas?</b> Ouvir primeiro quem tem ressalvas traz a informação que falta.",
+        "<b>Quem influencia sem ter cargo?</b> A pessoa que os colegas observam antes de decidir se usam."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e2-b3",
+     "num": "03",
+     "nome": "Práticas de geração de insights",
+     "tom": "#7A4E6D",
+     "titulo": "Seis práticas para <em>ouvir o sistema</em>",
+     "pergunta": "Qual é a melhor forma de ouvir cada pessoa?",
+     "constroi": "O repertório de práticas para o plano de coleta",
+     "capaz": [
+      "Distinguir seis práticas de geração de insights.",
+      "Relacionar cada prática à situação em que ela funciona melhor.",
+      "Escolher a prática adequada a cada pessoa do mapa."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Seis práticas, seis usos",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Prática</th><th>Como funciona</th></tr></thead><tbody><tr><td>Conversa individual</td><td>Quinze minutos, uma pessoa, perguntas abertas sobre o trabalho dela.</td></tr><tr><td>Observação do trabalho</td><td>Acompanhar a pessoa enquanto ela executa a tarefa, sem interferir.</td></tr><tr><td>Retrospectiva</td><td>O time olha para um período: o que funcionou, o que atrapalhou, o que tentar.</td></tr><tr><td>Mural de perguntas</td><td>Um espaço visível onde qualquer pessoa registra dúvidas e receios.</td></tr><tr><td>Pesquisa de pulso</td><td>Três perguntas curtas, para muita gente, em dois minutos.</td></tr><tr><td>Dados de uso</td><td>Quem usa, em que tarefa e com que frequência, pelo registro da ferramenta.</td></tr></tbody></table></div><p>Três perguntas para escolher: <b>o que preciso descobrir</b> (uma razão, um comportamento ou um número), <b>de quantas pessoas</b> (uma, um time ou uma área inteira) e <b>em quanto tempo</b> (a prática cabe nos seis dias até o Encontro 3).</p>",
+       "fonte": "Seleção do curso, com base em Little, J. Lean Change Management, 2014."
+      },
+      {
+       "t": "atividade",
+       "id": "e2-a3",
+       "titulo": "Relacione situações e práticas",
+       "tempo": "12 min",
+       "area": "Área 3",
+       "passos": [
+        "Na Área 3, arrastem cada situação até a prática.",
+        "Cada prática recebe uma situação.",
+        "Registrem na nota laranja a escolha mais difícil."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 3: situações e práticas."
+        ],
+        [
+         "Entrega",
+         "Seis situações relacionadas e a escolha mais difícil."
+        ],
+        [
+         "Tempo",
+         "12 minutos"
+        ]
+       ],
+       "exemplo": "<p><b>Situação:</b> “O jurídico barrou o envio de contratos ao assistente e ninguém sabe exatamente o motivo.” <b>Prática:</b> conversa individual. Uma razão específica, de uma pessoa específica: pergunta-se a ela.</p>",
+       "campos": [
+        {
+         "k": "e2.a3.assoc",
+         "rotulo": "Seis Situações, Seis Práticas",
+         "tipo": "associar",
+         "opcoes": [
+          "Conversa individual",
+          "Observação do trabalho",
+          "Retrospectiva",
+          "Mural de perguntas",
+          "Pesquisa de pulso",
+          "Dados de uso"
+         ],
+         "pares": [
+          [
+           "“Os seniores refazem a cotação na planilha, e eu não sei por quê.”",
+           "Observação do trabalho"
+          ],
+          [
+           "“Quero entender o que impede a gerente de usar o assistente.”",
+           "Conversa individual"
+          ],
+          [
+           "“O time usou o assistente por um mês e ninguém avaliou o que funcionou.”",
+           "Retrospectiva"
+          ],
+          [
+           "“As pessoas têm receios que não dizem em reunião.”",
+           "Mural de perguntas"
+          ],
+          [
+           "“São 120 pessoas em três turnos; não consigo conversar com todas.”",
+           "Pesquisa de pulso"
+          ],
+          [
+           "“Quero saber quem usa de fato, e em que tarefa.”",
+           "Dados de uso"
+          ]
+         ]
+        },
+        {
+         "k": "e2.a3.dificil",
+         "rotulo": "A Escolha Mais Difícil, e Por Quê",
+         "linhas": 2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e2-b4",
+     "num": "04",
+     "nome": "Plano de coleta de insights",
+     "tom": "#5E7D52",
+     "titulo": "O plano de coleta <em>em seis dias</em>",
+     "pergunta": "O que você vai perguntar, a quem e quando?",
+     "constroi": "O plano de coleta de insights da sua adoção",
+     "capaz": [
+      "Formular perguntas abertas sobre fatos do trabalho.",
+      "Elaborar um plano de coleta com pessoa, prática, pergunta e data.",
+      "Avaliar o plano de um colega com três critérios."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Perguntas que trazem fatos",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Pergunta que traz opinião</th><th>Pergunta que traz fato</th></tr></thead><tbody><tr><td>“O que você acha do assistente?”</td><td>“Conte a última vez que você usou o assistente. O que aconteceu?”</td></tr><tr><td>“Você confia na comparação?”</td><td>“Em que momento você confere o resultado? O que você confere?”</td></tr><tr><td>“Por que você não usa?”</td><td>“Como você fez a última cotação, passo a passo?”</td></tr><tr><td>“O que precisa melhorar?”</td><td>“Se você pudesse mudar uma coisa na ferramenta amanhã, qual seria?”</td></tr></tbody></table></div><p>Três cuidados: pergunte pelo que aconteceu, ouça mais do que fale e registre com as palavras da pessoa.</p>"
+      },
+      {
+       "t": "atividade",
+       "id": "e2-a4",
+       "titulo": "O plano de coleta da sua adoção",
+       "tempo": "20 min",
+       "area": "Área 4",
+       "passos": [
+        "No seu plano da Área 4, preencham três linhas, uma para cada estrela do mapa. <i>8 min</i>",
+        "Em cada linha: <b>Quem</b>, <b>O Que Preciso Descobrir</b>, <b>Prática</b>, <b>Pergunta de Abertura</b> e <b>Quando</b>.",
+        "Em trios, cada pessoa lê as três perguntas de abertura. O trio reescreve a que trouxer opinião. <i>9 min</i>",
+        "Ajustem o plano e confirmem as datas. <i>2 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em trios, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 4: o plano com o seu nome."
+        ],
+        [
+         "Entrega",
+         "Três linhas completas, com data."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Quem</th><th>O Que Preciso Descobrir</th><th>Prática</th><th>Pergunta de Abertura</th><th>Quando</th></tr></thead><tbody><tr><td>Compradores seniores</td><td>Por que refazem a cotação na planilha.</td><td>Observação do trabalho</td><td>“Posso acompanhar a sua próxima cotação, do começo ao fim?”</td><td>Sexta, 20/11</td></tr><tr><td>Gerente de compras</td><td>O que a impede de usar o assistente diante do time.</td><td>Conversa individual</td><td>“Conte a última vez que você abriu o assistente. O que aconteceu?”</td><td>Segunda, 23/11</td></tr><tr><td>Compradores juniores</td><td>Em que tarefas usam e o que conferem depois.</td><td>Conversa individual</td><td>“Como você fez a última comparação de propostas, passo a passo?”</td><td>Terça, 24/11</td></tr></tbody></table></div><p><i>Três linhas, seis dias. As pessoas vêm das três estrelas do mapa; a primeira pergunta a descobrir vem da Área 1. Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e2.a4.plano",
+         "rotulo": "O Meu Plano de Coleta",
+         "tipo": "tabela",
+         "n": 3,
+         "colunas": [
+          {
+           "t": "Quem"
+          },
+          {
+           "t": "O Que Preciso Descobrir"
+          },
+          {
+           "t": "Prática",
+           "opcoes": [
+            "Conversa individual",
+            "Observação do trabalho",
+            "Retrospectiva",
+            "Mural de perguntas",
+            "Pesquisa de pulso",
+            "Dados de uso"
+           ]
+          },
+          {
+           "t": "Pergunta de Abertura"
+          },
+          {
+           "t": "Quando",
+           "ph": "Entre 20 e 24/11"
+          }
+         ]
+        }
+       ],
+       "pontos": [
+        "<b>Uma pessoa por linha.</b> Um papel específico, que você consegue encontrar nesta semana.",
+        "<b>Uma pergunta que traz fato.</b> Pede a última vez, o passo a passo, o que aconteceu.",
+        "<b>Uma data até terça.</b> Um dia marcado, entre 20 e 24 de novembro."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e2-fe",
+     "num": "05",
+     "nome": "Fechamento",
+     "tom": "#1F7A7A",
+     "titulo": "O compromisso <em>dos seis dias</em>",
+     "constroi": "A primeira conversa, com pessoa, dia e pergunta",
+     "itens": [
+      {
+       "t": "atividade",
+       "id": "e2-a5",
+       "titulo": "O compromisso dos seis dias",
+       "tempo": "5 min",
+       "area": "Área 5",
+       "perg": "“Até quarta-feira, com quem você conversa primeiro, e qual é a primeira pergunta?”",
+       "passos": [
+        "Na Área 5, cada pessoa escreve uma nota: com quem, quando e a primeira pergunta. <i>2 min</i>",
+        "Três pessoas voluntárias leem a própria nota para a turma.",
+        "A turma reage às notas que quer ver respondidas no Encontro 3."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; leitura em plenária."
+        ],
+        [
+         "Material",
+         "Miro, Área 5: o mural de compromissos."
+        ],
+        [
+         "Entrega",
+         "Uma nota com pessoa, dia e pergunta."
+        ],
+        [
+         "Tempo",
+         "5 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Amanhã, sexta: comprador sênior. ‘Posso acompanhar a sua próxima cotação?’”</p>",
+       "campos": [
+        {
+         "k": "e2.a5.comp",
+         "rotulo": "O Meu Compromisso",
+         "linhas": 2,
+         "ph": "Com quem, quando e a primeira pergunta"
+        }
+       ]
+      },
+      {
+       "t": "atividade",
+       "id": "e2-a6",
+       "titulo": "Até o próximo encontro",
+       "tempo": "até 25/11",
+       "area": "Área 4",
+       "passos": [
+        "<b>Faça duas ou três conversas.</b> As linhas do seu plano de coleta, nas datas marcadas.",
+        "<b>Registre depois de cada uma.</b> O que a pessoa faz hoje, o que já tentou e a frase que mais surpreendeu.",
+        "<b>Leve ao quadro.</b> As frases literais entram como notas na Área 4, abaixo do plano. O Encontro 3 parte delas."
+       ],
+       "meta": [
+        [
+         "Próximo encontro",
+         "Quarta-feira, 25 de novembro, às 19h."
+        ],
+        [
+         "Tema",
+         "Insights e opções: o que as conversas mostraram, o mapa de forças e as opções de mudança."
+        ]
+       ],
+       "campos": [
+        {
+         "k": "e2.a6.reg",
+         "rotulo": "O Registro das Conversas",
+         "tipo": "tabela",
+         "n": 3,
+         "colunas": [
+          {
+           "t": "Quem"
+          },
+          {
+           "t": "O Que a Pessoa Faz Hoje"
+          },
+          {
+           "t": "O Que Ela Já Tentou"
+          },
+          {
+           "t": "A Frase Que Mais Surpreendeu",
+           "ph": "Com as palavras da pessoa"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+name: Mentor de Lean Change Management
+on:
+  discussion:
+    types: [created]
+  discussion_comment:
+    types: [created]
+permissions:
+  contents: read
+  discussions: write
+concurrency:
+  group: mentor-${{ github.event.discussion.number }}
+  cancel-in-progress: false
+jobs:
+  responder:
+    if: ${{ github.event.sender.type != 'Bot' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Responder no fórum
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+          MENTOR_MODELO: gpt-6.1-sol
+          MENTOR_FIM: "2026-11-30"
+          MENTOR_MAX_RESPOSTAS: "12"
+        run: python3 .github/scripts/mentor.py
