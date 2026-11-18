@@ -1248,6 +1248,1631 @@
      ]
     }
    ]
+  },
+  {
+   "n": 3,
+   "tom": "#7A4E6D",
+   "data": "25 de novembro de 2026",
+   "miro": "https://miro.com/app/board/uXjVEN1xbkY=/",
+   "titulo": "Insights <em>e opções</em>",
+   "lede": "Dos registros das conversas aos insights, o mapa de forças da adoção, as opções de mudança para a força com estrela e a próxima aposta.",
+   "capaz": [
+    "Formular insights a partir dos registros das conversas, separando fato de interpretação.",
+    "Construir o mapa de forças da adoção, com as forças a favor e as contrárias.",
+    "Gerar opções de mudança para a força contrária que está ao alcance da área.",
+    "Selecionar a próxima aposta, pelo valor, pelo esforço e pelo alcance."
+   ],
+   "blocos": [
+    {
+     "id": "e3-ab",
+     "num": "00",
+     "nome": "Abertura",
+     "tom": "#4A3F37",
+     "titulo": "A retomada, <em>em salas</em>",
+     "constroi": "O que se repetiu nas conversas da semana",
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Para ter uma boa ideia, tenha muitas ideias.",
+       "html": "<p>A frase de Linus Pauling abre o encontro: as opções de hoje nascem em quantidade antes de nascer em qualidade.</p>"
+      },
+      {
+       "t": "atividade",
+       "id": "e3-a0",
+       "titulo": "A retomada, em salas",
+       "tempo": "4 min",
+       "area": null,
+       "passos": [
+        "Em cada sala, uma pessoa por vez responde, em até <b>um minuto</b>.",
+        "Quem escuta registra <b>o que se repetiu</b> entre as respostas.",
+        "Ao voltar, uma pessoa da sala conta o que se repetiu."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas. Sem conversa feita: responda pelo que espera ouvir."
+        ],
+        [
+         "Entrega",
+         "O que se repetiu entre as respostas."
+        ],
+        [
+         "Tempo",
+         "4 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Em três dos nossos quatro casos, a regra antiga continua valendo ao lado da ferramenta nova.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e3.a0.resp",
+         "rotulo": "A Minha Resposta",
+         "linhas": 3,
+         "ph": ""
+        },
+        {
+         "k": "e3.a0.rep",
+         "rotulo": "O Que Se Repetiu na Sala",
+         "linhas": 2,
+         "ph": ""
+        }
+       ],
+       "perg": "“Com quem você conversou, e o que você ouviu que ainda não sabia?”"
+      }
+     ]
+    },
+    {
+     "id": "e3-b1",
+     "num": "01",
+     "nome": "Dos registros aos insights",
+     "tom": "#2F6B6F",
+     "titulo": "Dos registros <em>aos insights</em>",
+     "pergunta": "O que as conversas explicam sobre a adoção?",
+     "constroi": "O insight de cada pessoa e o insight mais forte da sala",
+     "capaz": [
+      "Distinguir registro, padrão e insight.",
+      "Separar o fato da interpretação apressada.",
+      "Formular um insight que explica o comportamento das pessoas."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Três degraus: registro, padrão e insight",
+       "html": "<div class=\"cards3\"><div><b>Registro</b><p>A frase literal da pessoa, sem adjetivo de quem anotou.</p></div><div><b>Padrão</b><p>O que se repete em pelo menos dois registros.</p></div><div><b>Insight</b><p>A explicação: a razão das pessoas e o efeito sobre a adoção.</p></div></div><p><b>Como formular:</b> “Observamos que… (o padrão) porque… (a razão das pessoas) e isso… (o efeito sobre a adoção).”</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Interpretação apressada</th><th>Insight</th></tr></thead><tbody><tr><td>“Os seniores são resistentes à IA.”</td><td>Observamos que os seniores refazem a cotação na planilha, porque a reunião de aprovação exige a planilha, e isso dobra o trabalho de quem usa o assistente.</td></tr><tr><td>“Falta treinamento.”</td><td>Observamos que os juniores conferem todas as respostas, porque não sabem quem responde por um erro do assistente, e isso consome o tempo que a ferramenta economiza.</td></tr></tbody></table></div>",
+       "fonte": "Instrumento do curso. Exemplo do caso fictício da área de compras."
+      },
+      {
+       "t": "conceito",
+       "titulo": "Resistência é informação",
+       "html": "<p><b>Mito ou fato?</b> “Quem resiste à IA é contra a mudança.” Mito. Quem resiste costuma estar protegendo algo que funciona: um prazo, um cliente, a qualidade de uma entrega. A resistência mostra onde a mudança encosta no trabalho real.</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>O que se ouve</th><th>A pergunta que a frase abre</th></tr></thead><tbody><tr><td>“Isso não funciona aqui.”</td><td>O que a pessoa já viu falhar?</td></tr><tr><td>“Não tenho tempo para isso.”</td><td>O que ela teria de parar de fazer?</td></tr><tr><td>“Prefiro fazer do meu jeito.”</td><td>O que o jeito dela garante que o novo ainda não garante?</td></tr></tbody></table></div>",
+       "fonte": "Little, J. Lean Change Management, 2014."
+      },
+      {
+       "t": "atividade",
+       "id": "e3-a1",
+       "titulo": "O insight de cada pessoa",
+       "tempo": "20 min",
+       "area": "Área 1",
+       "passos": [
+        "Distribuam os papéis. Cada pessoa copia <b>três registros</b> das conversas para a sua linha. <i>4 min</i>",
+        "Sem conversa feita? Usem os registros do caso de compras, no alto da Área 1.",
+        "Cada pessoa lê os seus registros; os colegas dizem <b>o que se repete</b>. Registrem <b>O Padrão</b>. <i>8 min</i>",
+        "Cada pessoa escreve <b>O Insight</b>: “Observamos que… porque… e isso…”. <i>5 min</i>",
+        "Registrem na nota laranja <b>o insight mais forte</b> entre os da sala. <i>3 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas, de três a quatro pessoas."
+        ],
+        [
+         "Material",
+         "Miro, Área 1, e as suas frases da Área 4 do Encontro 2."
+        ],
+        [
+         "Entrega",
+         "A sua linha preenchida e a nota laranja da sala."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Observamos que os seniores refazem a cotação, porque a reunião exige a planilha, e isso dobra o trabalho.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e3.a1.reg",
+         "rotulo": "Os Três Registros",
+         "linhas": 4,
+         "ph": "Com as palavras de cada pessoa"
+        },
+        {
+         "k": "e3.a1.padrao",
+         "rotulo": "O Padrão",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e3.a1.insight",
+         "rotulo": "O Insight",
+         "linhas": 3,
+         "ph": "Observamos que… porque… e isso…"
+        },
+        {
+         "k": "e3.a1.forte",
+         "rotulo": "O Insight Mais Forte da Sala",
+         "linhas": 2,
+         "ph": ""
+        }
+       ],
+       "pontos": [
+        "<b>Registro literal.</b> A frase da pessoa, sem adjetivo de quem anotou.",
+        "<b>Padrão com dois apoios.</b> O que se repete em pelo menos dois registros.",
+        "<b>Insight que explica.</b> Diz a razão das pessoas e o efeito sobre a adoção, sem acusar.",
+        "A pessoa que você ouviu concordaria com o insight que você escreveu?"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e3-b2",
+     "num": "02",
+     "nome": "O mapa de forças",
+     "tom": "#B04A1C",
+     "titulo": "O mapa de forças <em>da adoção</em>",
+     "pergunta": "O que ajuda e o que impede a adoção hoje?",
+     "constroi": "O mapa de forças, com a força contrária ao alcance da área",
+     "capaz": [
+      "Descrever o comportamento desejado, com sujeito e verbo.",
+      "Identificar as forças a favor e as contrárias, com a intensidade.",
+      "Escolher a força contrária que está ao alcance da área."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Reduzir o que segura funciona melhor do que empurrar mais",
+       "html": "<p>No mapa de forças de Kurt Lewin, o comportamento de hoje é o equilíbrio entre forças a favor e forças contrárias. Quando só as forças a favor aumentam, a resposta contrária cresce junto. Quando uma força contrária diminui, o mesmo avanço acontece com menos tensão.</p><div class=\"cards3\"><div><b>Cada força tem um registro</b><p>Uma força sem frase ou fato que a sustente ainda é hipótese: marque com “?”.</p></div><div><b>A mais intensa nem sempre é a primeira</b><p>Primeiro, a contrária mais intensa que a área reduz com as próprias decisões.</p></div><div><b>Toda força tem gente</b><p>Atrás de cada força há pessoas do mapa do Encontro 2. Elas participam do desenho das opções.</p></div></div>",
+       "fonte": "Lewin, K. Frontiers in Group Dynamics, 1947; Field Theory in Social Science, 1951."
+      },
+      {
+       "t": "atividade",
+       "id": "e3-a2",
+       "titulo": "O mapa de forças da sua adoção",
+       "tempo": "20 min",
+       "area": "Área 2",
+       "passos": [
+        "No seu mapa da Área 2, escrevam <b>O Comportamento Desejado</b>, com sujeito e verbo. <i>2 min</i>",
+        "Preencham até quatro <b>Forças a Favor</b> e até quatro <b>Forças Contrárias</b>, com a intensidade de 1 a 5. <i>7 min</i>",
+        "Em dupla, um apresenta o mapa; o outro pergunta: <b>“Que registro sustenta essa força?”</b> <i>4 min</i>",
+        "Invertam os papéis. <i>4 min</i>",
+        "Marquem com ⭐ a força contrária mais intensa <b>que está ao alcance da área</b>. <i>3 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 2: o mapa com o seu nome."
+        ],
+        [
+         "Entrega",
+         "O mapa com as forças, as intensidades e uma estrela."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Contrária, 5: a reunião de aprovação exige a planilha. Registro: ‘é a planilha que a reunião pede’.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e3.a2.comp",
+         "rotulo": "O Comportamento Desejado",
+         "linhas": 2,
+         "ph": "Com sujeito e verbo"
+        },
+        {
+         "k": "e3.a2.forcas",
+         "rotulo": "As Forças da Minha Adoção",
+         "tipo": "tabela",
+         "n": 8,
+         "colunas": [
+          {
+           "t": "A Força"
+          },
+          {
+           "t": "Lado",
+           "opcoes": [
+            "A favor",
+            "Contrária"
+           ]
+          },
+          {
+           "t": "Intensidade",
+           "opcoes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+           ]
+          },
+          {
+           "t": "O Registro Que a Sustenta"
+          }
+         ]
+        },
+        {
+         "k": "e3.a2.estrela",
+         "rotulo": "A Força Com Estrela ⭐",
+         "linhas": 2,
+         "ph": "A contrária mais intensa ao alcance da área"
+        }
+       ],
+       "pontos": [
+        "<b>Quantas forças têm um registro?</b> Força com ponto de interrogação pede mais uma conversa.",
+        "<b>As contrárias falam de ferramenta ou de regra, exemplo e reconhecimento?</b> Na adoção de IA, as mais intensas costumam estar fora da ferramenta.",
+        "<b>A estrela está ao alcance da área?</b> Se depende de outra instância, a estrela desce para a próxima força."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e3-b3",
+     "num": "03",
+     "nome": "Opções de mudança",
+     "tom": "#B5781E",
+     "titulo": "Opções de mudança <em>para a força com estrela</em>",
+     "pergunta": "O que poderíamos fazer para habilitar o comportamento?",
+     "constroi": "O quadro de opções, com pelo menos cinco opções de três tipos",
+     "capaz": [
+      "Gerar opções em quantidade, antes de avaliar.",
+      "Distinguir cinco tipos de opção.",
+      "Registrar cada opção com quem faz o quê."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Do insight às opções",
+       "html": "<p>Três perguntas do método: <b>que comportamento queremos ver?</b> <b>O que o impede hoje?</b> <b>O que poderíamos fazer para habilitá-lo?</b></p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Tipo de opção</th><th>O que é</th></tr></thead><tbody><tr><td>Começar</td><td>Uma prática que ainda não existe.</td></tr><tr><td>Parar</td><td>Uma exigência que segura o jeito antigo.</td></tr><tr><td>Mudar</td><td>Um papel, um fluxo ou um ritual.</td></tr><tr><td>Manter</td><td>O que funciona e precisa continuar.</td></tr><tr><td>Esperar</td><td>Não fazer nada agora, por decisão.</td></tr></tbody></table></div><p><b>Quem participa do desenho sustenta a mudança:</b> no estudo de Coch e French (1948), os grupos que participaram do desenho recuperaram a produção; o que só recebeu a decisão resistiu.</p>",
+       "fonte": "Little, J. Lean Change Management, 2014 (as três perguntas). Os cinco tipos são instrumento do curso. Coch, L.; French, J. Human Relations, 1948."
+      },
+      {
+       "t": "atividade",
+       "id": "e3-a3",
+       "titulo": "O quadro de opções da sua adoção",
+       "tempo": "20 min",
+       "area": "Área 3",
+       "passos": [
+        "No seu quadro da Área 3, escrevam <b>A Força Com Estrela</b>. <i>1 min</i>",
+        "Em trios, uma pessoa por vez lê o insight e a força. O trio gera opções em voz alta; a pessoa registra. <i>5 min por pessoa</i>",
+        "Cada quadro termina com <b>pelo menos cinco opções</b>, de pelo menos <b>três tipos</b> diferentes.",
+        "Ainda não avaliem: as colunas <b>Valor</b> e <b>Esforço</b> ficam em branco.",
+        "Releiam o próprio quadro e completem o tipo de cada opção. <i>3 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Trios, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 3: o quadro com o seu nome."
+        ],
+        [
+         "Entrega",
+         "Pelo menos cinco opções, de três tipos."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Parar: a reunião de aprovação deixa de pedir a planilha nas compras de menor valor.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e3.a3.forca",
+         "rotulo": "A Força Com Estrela (do Bloco 2)",
+         "tipo": "espelho",
+         "de": "e3.a2.estrela",
+         "vazio": "Ainda sem registro no Encontro 3."
+        },
+        {
+         "k": "e3.a3.opcoes",
+         "rotulo": "O Meu Quadro de Opções",
+         "tipo": "tabela",
+         "n": 6,
+         "colunas": [
+          {
+           "t": "A Opção",
+           "ph": "Quem faz o quê"
+          },
+          {
+           "t": "Tipo",
+           "opcoes": [
+            "Começar",
+            "Parar",
+            "Mudar",
+            "Manter",
+            "Esperar"
+           ]
+          },
+          {
+           "t": "Valor",
+           "opcoes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+           ]
+          },
+          {
+           "t": "Esforço",
+           "opcoes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+           ]
+          }
+         ]
+        }
+       ],
+       "pontos": [
+        "<b>Pelo menos cinco opções.</b> A melhor costuma aparecer depois da terceira.",
+        "<b>Ao menos uma do tipo parar.</b> Suspender uma exigência antiga costuma custar menos do que criar uma prática nova.",
+        "<b>Opções com gente.</b> Cada opção diz quem faz o quê. “Sensibilizar a área” ainda não é opção."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e3-b4",
+     "num": "04",
+     "nome": "A próxima aposta",
+     "tom": "#35608F",
+     "titulo": "A próxima <em>aposta</em>",
+     "pergunta": "Qual opção vale testar primeiro?",
+     "constroi": "A sua linha no mural de apostas da turma",
+     "capaz": [
+      "Avaliar as opções por valor e por esforço.",
+      "Usar o alcance como critério de desempate.",
+      "Registrar a próxima aposta com o comportamento esperado e as pessoas do desenho."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Três critérios: valor, esforço e alcance",
+       "html": "<div class=\"cards3\"><div><b>Valor · de 1 a 5</b><p>Quanto esta opção reduz a força com estrela e aproxima o comportamento desejado.</p></div><div><b>Esforço · de 1 a 5</b><p>Tempo, dinheiro e desgaste para colocar a opção em prática.</p></div><div><b>Alcance · o desempate</b><p>Entre duas opções parecidas, a primeira aposta é a que afeta menos pessoas e pode ser desfeita.</p></div></div>",
+       "fonte": "Little, J. Lean Change Management, 2014: no método, as opções têm valor, custo e impacto."
+      },
+      {
+       "t": "atividade",
+       "id": "e3-a4",
+       "titulo": "A próxima aposta da sua adoção",
+       "tempo": "20 min",
+       "area": "Área 4",
+       "passos": [
+        "No seu quadro da Área 3, deem a cada opção <b>Valor</b> e <b>Esforço</b>, de 1 a 5. <i>5 min</i>",
+        "Escolham a aposta: <b>maior valor, menor esforço</b>. No empate, a que afeta menos pessoas e pode ser desfeita.",
+        "Em dupla, um apresenta a aposta; o outro pergunta: <b>“Quem precisa participar do desenho?”</b> <i>4 min</i>",
+        "Invertam os papéis. <i>4 min</i>",
+        "Na <b>Área 4</b>, preencham a sua linha do mural de apostas. <i>6 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 3 (o seu quadro) e Área 4 (o mural)."
+        ],
+        [
+         "Entrega",
+         "A sua linha do mural de apostas."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Opção 1: valor 4, esforço 2. A gerente e dois seniores participam do desenho.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e3.a4.aposta",
+         "rotulo": "A Próxima Aposta",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e3.a4.comp",
+         "rotulo": "O Comportamento Que Quero Ver",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e3.a4.desenho",
+         "rotulo": "Quem Participa do Desenho",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e3.a4.porque",
+         "rotulo": "Por Que Esta",
+         "linhas": 2,
+         "ph": "Valor, esforço e alcance"
+        }
+       ],
+       "pontos": [
+        "<b>Pequena.</b> Cabe em poucas semanas, com uma equipe, e pode ser desfeita.",
+        "<b>Visível.</b> Diz o comportamento que se passa a ver quando funciona.",
+        "<b>Com gente no desenho.</b> Quem vive a força com estrela ajuda a fechar a aposta."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e3-fe",
+     "num": "05",
+     "nome": "Fechamento",
+     "tom": "#5E7D52",
+     "titulo": "Até o <em>próximo encontro</em>",
+     "constroi": "A aposta mostrada a uma pessoa do desenho",
+     "itens": [
+      {
+       "t": "atividade",
+       "id": "e3-a5",
+       "titulo": "Até o próximo encontro",
+       "tempo": "até 26/11",
+       "area": null,
+       "passos": [
+        "<b>Mostre a aposta a uma pessoa.</b> Se houver oportunidade até amanhã: uma das pessoas do desenho. Pergunte o que ela mudaria.",
+        "<b>Releia a sua linha.</b> A aposta diz quem faz o quê? O comportamento é algo que se consegue ver?",
+        "<b>Registre no workbook.</b> O insight, o mapa de forças, as opções e a aposta, nesta página."
+       ],
+       "meta": [
+        [
+         "Próximo encontro",
+         "Quinta-feira, 26 de novembro, às 19h."
+        ],
+        [
+         "Tema",
+         "Experimentos de mudança: hipótese, medida, critério de revisão e o portfólio de experimentos."
+        ]
+       ],
+       "campos": [
+        {
+         "k": "e3.a5.reacao",
+         "rotulo": "O Que a Pessoa Mudaria na Aposta",
+         "linhas": 3,
+         "ph": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "tom": "#B5781E",
+   "data": "26 de novembro de 2026",
+   "miro": "https://miro.com/app/board/uXjVEN1S8z0=/",
+   "titulo": "Experimentos <em>de mudança</em>",
+   "lede": "Da aposta à hipótese, a medida com o critério de revisão, o plano do experimento em uma página e o portfólio de experimentos da turma.",
+   "capaz": [
+    "Formular a hipótese do experimento, com ação, comportamento esperado e medida.",
+    "Definir a medida de comportamento, com linha de base, meta e critério de revisão.",
+    "Planejar o experimento em uma página: preparar, introduzir e revisar.",
+    "Posicionar o experimento no portfólio da turma, com data de início e de revisão."
+   ],
+   "blocos": [
+    {
+     "id": "e4-ab",
+     "num": "00",
+     "nome": "Abertura",
+     "tom": "#4A3F37",
+     "titulo": "A retomada, <em>em grupos</em>",
+     "constroi": "O comportamento esperado em cada aposta",
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Se discorda do experimento, está errado.",
+       "html": "<p>A frase de Richard Feynman (Cornell, 1964) abre o encontro: quem decide se a aposta funciona é o que as pessoas passam a fazer depois dela, e isso só o experimento mostra.</p>"
+      },
+      {
+       "t": "atividade",
+       "id": "e4-a0",
+       "titulo": "A retomada, em grupos",
+       "tempo": "5 min",
+       "area": null,
+       "passos": [
+        "Em cada grupo, uma pessoa por vez responde, em até <b>um minuto</b>.",
+        "Quem escuta registra <b>o que as pessoas passam a fazer</b>, em cada aposta.",
+        "Ao voltar, uma pessoa do grupo conta a aposta em que isso ficou mais claro."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas. Sem aposta: use a do caso de compras."
+        ],
+        [
+         "Entrega",
+         "A aposta em que o comportamento ficou mais claro."
+        ],
+        [
+         "Tempo",
+         "5 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Na aposta de compras, ficou claro: os seniores apresentam a cotação pelo assistente.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e4.a0.resp",
+         "rotulo": "A Minha Resposta",
+         "linhas": 3,
+         "ph": ""
+        },
+        {
+         "k": "e4.a0.comp",
+         "rotulo": "O Que as Pessoas Passam a Fazer",
+         "linhas": 2,
+         "ph": ""
+        }
+       ],
+       "perg": "“Qual é a sua aposta, e o que você espera ver as pessoas fazendo quando ela funcionar?”"
+      }
+     ]
+    },
+    {
+     "id": "e4-b1",
+     "num": "01",
+     "nome": "Da aposta à hipótese",
+     "tom": "#7A4E6D",
+     "titulo": "Da aposta <em>à hipótese</em>",
+     "pergunta": "O que nós acreditamos que vai acontecer?",
+     "constroi": "A hipótese do seu experimento, em três partes",
+     "capaz": [
+      "Distinguir aposta e hipótese.",
+      "Descrever o comportamento esperado de forma que se consiga ver.",
+      "Formular a hipótese do experimento em três partes."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "A hipótese em três partes",
+       "html": "<div class=\"cards3\"><div><b>A Ação · “Acreditamos que, se…”</b><p>Quem faz, o quê e com que frequência.</p></div><div><b>O Comportamento Esperado · “então…”</b><p>O que as pessoas afetadas passam a fazer.</p></div><div><b>A Medida · “e mediremos por…”</b><p>A contagem que mostra o comportamento.</p></div></div><p><b>O teste:</b> “O que nós veríamos as pessoas fazendo?” Se a resposta não vier, a hipótese ainda está vaga.</p>",
+       "fonte": "Formato do curso, adaptado de Little, J. Lean Change Management, 2014."
+      },
+      {
+       "t": "atividade",
+       "id": "e4-a1",
+       "titulo": "A hipótese do seu experimento",
+       "tempo": "20 min",
+       "area": "Área 1",
+       "passos": [
+        "Na linha com o seu número, copiem <b>A Aposta</b> do mural do Encontro 3. <i>2 min</i>",
+        "Escrevam a hipótese nos três campos: <b>A Ação</b>, <b>O Comportamento Esperado</b> e <b>A Medida</b>. <i>6 min</i>",
+        "Em dupla, um lê a hipótese; o outro pergunta: <b>“O que nós veríamos as pessoas fazendo?”</b> <i>4 min</i>",
+        "Invertam os papéis. <i>4 min</i>",
+        "Reescrevam o campo que a pergunta mostrou que estava vago. <i>4 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 1, e a sua aposta da Área 4 do Encontro 3."
+        ],
+        [
+         "Sem aposta",
+         "Use a aposta do caso de compras, no alto da Área 1."
+        ],
+        [
+         "Entrega",
+         "A sua linha com os três campos da hipótese."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Então os compradores seniores apresentarão a cotação pela comparação do assistente.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e4.a1.aposta",
+         "rotulo": "A Aposta (do Encontro 3)",
+         "tipo": "espelho",
+         "de": "e3.a4.aposta",
+         "vazio": "Ainda sem registro no Encontro 3."
+        },
+        {
+         "k": "e4.a1.acao",
+         "rotulo": "A Ação",
+         "linhas": 2,
+         "ph": "Acreditamos que, se…"
+        },
+        {
+         "k": "e4.a1.comp",
+         "rotulo": "O Comportamento Esperado",
+         "linhas": 2,
+         "ph": "então…"
+        },
+        {
+         "k": "e4.a1.medida",
+         "rotulo": "A Medida",
+         "linhas": 2,
+         "ph": "e mediremos por…"
+        }
+       ],
+       "pontos": [
+        "<b>Ação com sujeito e frequência.</b> Quem faz, o quê e quantas vezes.",
+        "<b>Comportamento das pessoas afetadas.</b> Uma cena que se consegue ver.",
+        "<b>Medida que conta.</b> Uma contagem do comportamento, e não uma opinião sobre ele."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e4-b2",
+     "num": "02",
+     "nome": "A medida e o critério de revisão",
+     "tom": "#2F6B6F",
+     "titulo": "A medida e o <em>critério de revisão</em>",
+     "pergunta": "Como saberemos, em poucas semanas, se funcionou?",
+     "constroi": "A ficha da medida, com as três faixas do critério",
+     "capaz": [
+      "Distinguir medidas de acesso, de uso, de comportamento e de resultado.",
+      "Definir a linha de base, a meta e o sinal antecipado da medida.",
+      "Estabelecer, antes dos dados, o critério para ampliar, ajustar ou parar."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "A adoção se mede pelo comportamento",
+       "html": "<p><b>Mito ou fato?</b> “Se a ferramenta registra muitos acessos, a adoção aconteceu.” Mito. Acesso e uso mostram que a ferramenta foi aberta; a adoção aparece no comportamento.</p><div class=\"cards3\"><div><b>A Linha de Base</b><p>Quanto a medida marca hoje. Exemplo: 2 de 12 cotações sem a planilha refeita.</p></div><div><b>A Meta</b><p>O valor que confirma a hipótese, na data de revisão. Exemplo: 6 de 12, em quatro semanas.</p></div><div><b>O Sinal Antecipado</b><p>O que se observa já na primeira semana.</p></div></div><p><b>O critério de revisão, definido antes dos dados:</b> ampliar se…, ajustar se…, parar se…. E <b>a confiança antes</b>, de 0 a 100%.</p>",
+       "fonte": "Instrumento do curso, com base em Hubbard, D. How to Measure Anything, 2007."
+      },
+      {
+       "t": "atividade",
+       "id": "e4-a2",
+       "titulo": "A medida do seu experimento",
+       "tempo": "20 min",
+       "area": "Área 2",
+       "passos": [
+        "Na ficha com o seu número, registrem <b>A Linha de Base</b>: quanto a medida marca hoje. Sem o dado, estimem e marquem com “?”. <i>3 min</i>",
+        "Definam <b>A Meta</b>, <b>A Data de Revisão</b> (em até quatro semanas) e <b>A Confiança Antes</b>, de 0 a 100%. <i>4 min</i>",
+        "Escrevam <b>O Sinal Antecipado</b> e <b>O Critério de Revisão</b>: ampliar, ajustar e parar. <i>5 min</i>",
+        "Em dupla, um apresenta a ficha; o outro pergunta: <b>“Que número faria você parar?”</b> <i>4 min</i>",
+        "Invertam os papéis. <i>4 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "A ficha com o seu número, na Área 2."
+        ],
+        [
+         "Dado reservado",
+         "Use proporções no lugar de valores da empresa."
+        ],
+        [
+         "Entrega",
+         "A ficha completa, com as três faixas do critério."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Parar se 2 ou menos de 12: a medida ficou na linha de base.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e4.a2.medida",
+         "rotulo": "A Medida (do Bloco 1)",
+         "tipo": "espelho",
+         "de": "e4.a1.medida",
+         "vazio": "Ainda sem registro no Encontro 4."
+        },
+        {
+         "k": "e4.a2.base",
+         "rotulo": "A Linha de Base",
+         "linhas": 2,
+         "ph": "Sem o dado, estime e marque com “?”"
+        },
+        {
+         "k": "e4.a2.meta",
+         "rotulo": "A Meta e A Data de Revisão",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e4.a2.conf",
+         "rotulo": "A Confiança Antes",
+         "tipo": "texto",
+         "ph": "De 0 a 100%"
+        },
+        {
+         "k": "e4.a2.sinal",
+         "rotulo": "O Sinal Antecipado",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e4.a2.crit",
+         "rotulo": "O Critério de Revisão",
+         "linhas": 3,
+         "ph": "Ampliar se… Ajustar se… Parar se…"
+        }
+       ],
+       "pontos": [
+        "<b>Linha de base com origem.</b> O número de hoje diz de onde veio, ou recebe um ponto de interrogação.",
+        "<b>Meta de comportamento.</b> Conta o que as pessoas fazem, em até quatro semanas.",
+        "<b>Critério com três faixas.</b> Ampliar, ajustar e parar, escritas antes dos dados."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e4-b3",
+     "num": "03",
+     "nome": "O plano do experimento",
+     "tom": "#5E7D52",
+     "titulo": "O experimento, <em>em uma página</em>",
+     "pergunta": "O que acontece entre hoje e a data de revisão?",
+     "constroi": "O plano em uma página, com etapas datadas e o risco",
+     "capaz": [
+      "Descrever as três etapas do experimento: preparar, introduzir e revisar.",
+      "Identificar o risco do experimento e a forma de desfazê-lo.",
+      "Planejar o experimento em uma página."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Três etapas: preparar, introduzir e revisar",
+       "html": "<div class=\"cards3\"><div><b>Preparar</b><p>Combinar com quem participa, avisar quem é afetado e registrar a linha de base.</p></div><div><b>Introduzir</b><p>Executar a ação, pequena, acompanhar o sinal antecipado e anotar o que surpreende.</p></div><div><b>Revisar</b><p>Ler a medida com o time, decidir entre ampliar, ajustar ou parar, e registrar o aprendizado.</p></div></div><p><b>Seguro para falhar:</b> pequeno (uma equipe), curto (até quatro semanas), reversível (pode ser desfeito) e avisado (ninguém é surpreendido).</p>",
+       "fonte": "Little, J. Lean Change Management, 2014. Snowden, D.; Boone, M. HBR, 2007."
+      },
+      {
+       "t": "atividade",
+       "id": "e4-a3",
+       "titulo": "O plano do seu experimento",
+       "tempo": "20 min",
+       "area": "Área 3",
+       "passos": [
+        "No plano com o seu número, preencham <b>Preparar</b>, <b>Introduzir</b> e <b>Revisar</b>: o que acontece, quem faz e em que data. <i>6 min</i>",
+        "Registrem <b>Quem Participa</b> e <b>O Risco e Como Desfazer</b>. <i>2 min</i>",
+        "Em trios, uma pessoa por vez apresenta o plano em um minuto; os colegas perguntam: <b>“O que pode dar errado, e como se desfaz?”</b> <i>3 min por pessoa</i>",
+        "Ajustem o plano com o que ouviram. <i>3 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em trios, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "O plano com o seu número, na Área 3, e a sua ficha da Área 2."
+        ],
+        [
+         "Entrega",
+         "O plano com as três etapas datadas e o risco registrado."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Risco: aprovar uma cotação com erro. Como desfazer: a cotação seguinte volta à planilha.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e4.a3.prep",
+         "rotulo": "Preparar",
+         "linhas": 3,
+         "ph": "O que acontece, quem faz e em que data"
+        },
+        {
+         "k": "e4.a3.intro",
+         "rotulo": "Introduzir",
+         "linhas": 3,
+         "ph": ""
+        },
+        {
+         "k": "e4.a3.rev",
+         "rotulo": "Revisar",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e4.a3.quem",
+         "rotulo": "Quem Participa",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e4.a3.risco",
+         "rotulo": "O Risco e Como Desfazer",
+         "linhas": 3,
+         "ph": "Risco… Proteção… Como desfazer…"
+        }
+       ],
+       "pontos": [
+        "<b>Três etapas com data.</b>",
+        "<b>Gente avisada antes.</b> Quem participa foi consultado, e quem é afetado sabe que é um experimento.",
+        "<b>Risco com saída.</b> O que pode dar errado, a proteção e a forma de desfazer."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e4-b4",
+     "num": "04",
+     "nome": "O portfólio de experimentos",
+     "tom": "#35608F",
+     "titulo": "O portfólio <em>de experimentos</em>",
+     "pergunta": "Onde a área enxerga os experimentos em andamento?",
+     "constroi": "A sua linha conferida e a sua nota no portfólio da turma",
+     "capaz": [
+      "Organizar os experimentos em um quadro visível, por etapa.",
+      "Avaliar um experimento por quatro critérios: pequeno, visível, medido e reversível.",
+      "Posicionar o seu experimento no portfólio da turma."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Um quadro para os experimentos da área",
+       "html": "<div class=\"cards3\"><div><b>Visível para a área</b><p>Quem é afetado consegue ver o que está em teste.</p></div><div><b>Até três em Introduzir</b><p>Um experimento novo começa quando outro chega à revisão.</p></div><div><b>Revisão com data</b><p>Na data, a medida é lida e o cartão muda de coluna.</p></div></div><p>Quatro colunas: <b>A Seguir</b>, <b>Preparar</b>, <b>Introduzir</b> (limite de três) e <b>Revisar</b>.</p>",
+       "fonte": "Little, J. Lean Change Management, 2014. Anderson, D. Kanban, 2010."
+      },
+      {
+       "t": "atividade",
+       "id": "e4-a4",
+       "titulo": "O portfólio de experimentos da turma",
+       "tempo": "20 min",
+       "area": "Área 4",
+       "passos": [
+        "Na linha com o seu número, escrevam <b>O Experimento em Uma Frase</b>, <b>O Início</b> e <b>A Revisão</b>. <i>3 min</i>",
+        "Uma pessoa por vez apresenta o experimento em dois minutos. Os colegas conferem <b>Pequeno</b>, <b>Visível</b>, <b>Medido</b> e <b>Reversível</b> e registram ✔ ou “?”. <i>4 min por pessoa</i>",
+        "Cada pessoa cria uma nota com o experimento e a posiciona no portfólio: <b>Preparar</b>, se começa em até duas semanas; <b>A Seguir</b>, se depende de outra decisão. <i>1 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Grupos de quatro pessoas, em salas simultâneas."
+        ],
+        [
+         "Papéis",
+         "Anfitrião, guardião do tempo, escriba e porta-voz."
+        ],
+        [
+         "Material",
+         "Miro, Área 4, e os seus registros das Áreas 1 a 3."
+        ],
+        [
+         "Entrega",
+         "A sua linha conferida e a sua nota no portfólio."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Pequeno ✔, visível ✔, medido ✔, reversível ?: falta dizer como se desfaz.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e4.a4.frase",
+         "rotulo": "O Experimento em Uma Frase",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e4.a4.ini",
+         "rotulo": "O Início",
+         "tipo": "texto"
+        },
+        {
+         "k": "e4.a4.rev",
+         "rotulo": "A Revisão",
+         "tipo": "texto"
+        },
+        {
+         "k": "e4.a4.crit",
+         "rotulo": "Os Quatro Critérios, Conferidos pelo Grupo",
+         "tipo": "tabela",
+         "n": 1,
+         "colunas": [
+          {
+           "t": "Pequeno",
+           "opcoes": [
+            "✔",
+            "?"
+           ]
+          },
+          {
+           "t": "Visível",
+           "opcoes": [
+            "✔",
+            "?"
+           ]
+          },
+          {
+           "t": "Medido",
+           "opcoes": [
+            "✔",
+            "?"
+           ]
+          },
+          {
+           "t": "Reversível",
+           "opcoes": [
+            "✔",
+            "?"
+           ]
+          }
+         ]
+        },
+        {
+         "k": "e4.a4.col",
+         "rotulo": "A Coluna no Portfólio",
+         "tipo": "escolha",
+         "opcoes": [
+          "Preparar",
+          "A Seguir"
+         ]
+        }
+       ],
+       "pontos": [
+        "<b>Onde estão os cartões.</b> A maior parte em Preparar; os que dependem de decisão, em A Seguir.",
+        "<b>Os pontos de interrogação.</b> O critério que mais aparece com “?” indica o ajuste antes de começar.",
+        "<b>As datas de revisão.</b> Todas em até quatro semanas, já na agenda de quem participa."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e4-fe",
+     "num": "05",
+     "nome": "Fechamento",
+     "tom": "#B5781E",
+     "titulo": "Até o <em>próximo encontro</em>",
+     "constroi": "A data de revisão na agenda",
+     "itens": [
+      {
+       "t": "atividade",
+       "id": "e4-a5",
+       "titulo": "Até o próximo encontro",
+       "tempo": "até 27/11",
+       "area": null,
+       "passos": [
+        "<b>Marque a revisão.</b> Coloque a data de revisão na agenda, com as pessoas que participam do experimento.",
+        "<b>Mostre o plano a uma pessoa.</b> Se houver oportunidade até amanhã: alguém da etapa de preparar. Pergunte o que ela mudaria.",
+        "<b>Registre no workbook.</b> A hipótese, a medida, o plano e o cartão do portfólio, nesta página."
+       ],
+       "meta": [
+        [
+         "Próximo encontro",
+         "Sexta-feira, 27 de novembro, às 19h."
+        ],
+        [
+         "Tema",
+         "Alinhamento e sustentabilidade: estratégia da mudança, rede de campeões e métricas de adoção."
+        ]
+       ],
+       "campos": [
+        {
+         "k": "e4.a5.agenda",
+         "rotulo": "A Revisão na Agenda: Data e Quem Participa",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e4.a5.reacao",
+         "rotulo": "O Que a Pessoa Mudaria no Plano",
+         "linhas": 2,
+         "ph": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "tom": "#5E7D52",
+   "data": "27 de novembro de 2026",
+   "miro": "https://miro.com/app/board/uXjVEMMXhv4=/",
+   "titulo": "Alinhamento <em>e sustentabilidade</em>",
+   "lede": "O canvas estratégico da mudança, a rede de campeões, o painel de adoção e o roteiro de sustentabilidade em 90 dias, com a apresentação final e a certificação.",
+   "capaz": [
+    "Relacionar os produtos dos quatro encontros no canvas estratégico da mudança.",
+    "Desenhar a rede de campeões da sua adoção, a partir da curva de Rogers.",
+    "Montar o painel de adoção, com medidas por degrau e o sinal de regressão.",
+    "Planejar a sustentabilidade em 90 dias e apresentar a estratégia completa a colegas."
+   ],
+   "blocos": [
+    {
+     "id": "e5-ab",
+     "num": "00",
+     "nome": "Abertura",
+     "tom": "#4A3F37",
+     "titulo": "A retomada, <em>em grupos</em>",
+     "constroi": "Quem sustenta cada experimento",
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "A mudança se sustenta quando passa a ser o jeito como fazemos as coisas aqui.",
+       "html": "<p>A frase de John Kotter (Harvard Business Review, 1995) abre o último encontro. No chat: algo que hoje é o jeito de trabalhar e que já foi novidade.</p>"
+      },
+      {
+       "t": "atividade",
+       "id": "e5-a0",
+       "titulo": "A retomada, em grupos",
+       "tempo": "5 min",
+       "area": null,
+       "passos": [
+        "Em cada grupo, uma pessoa por vez responde, em até <b>um minuto</b>.",
+        "Quem escuta registra <b>quem sustenta</b> cada experimento: liderança, colegas ou ninguém ainda.",
+        "Ao voltar, uma pessoa do grupo conta o experimento com a sustentação mais clara."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Salas simultâneas. Sem experimento: use o do caso de compras."
+        ],
+        [
+         "Entrega",
+         "O experimento com a sustentação mais clara."
+        ],
+        [
+         "Tempo",
+         "5 minutos"
+        ]
+       ],
+       "exemplo": "<p>“No experimento de compras, quem sustenta é a compradora da cláusula, além da gerente.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e5.a0.resp",
+         "rotulo": "A Minha Resposta",
+         "linhas": 3,
+         "ph": ""
+        },
+        {
+         "k": "e5.a0.quem",
+         "rotulo": "Quem Sustenta o Meu Experimento Hoje",
+         "tipo": "escolha",
+         "opcoes": [
+          "A liderança",
+          "Colegas da equipe",
+          "Ninguém ainda"
+         ]
+        }
+       ],
+       "perg": "“Qual é o seu experimento, e quem precisa sustentá-lo depois que ele começar?”"
+      }
+     ]
+    },
+    {
+     "id": "e5-b1",
+     "num": "01",
+     "nome": "O canvas estratégico da mudança",
+     "tom": "#35608F",
+     "titulo": "O canvas estratégico <em>da mudança</em>",
+     "pergunta": "Como contar a mudança inteira em uma página?",
+     "constroi": "As duas primeiras faixas do canvas da sua adoção",
+     "capaz": [
+      "Relacionar os produtos dos quatro encontros num só instrumento.",
+      "Formular a visão da adoção como comportamento, em 90 dias.",
+      "Testar o canvas com a pergunta de quem decide."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "O canvas estratégico, em nove campos",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Faixa</th><th>Campos</th></tr></thead><tbody><tr><td><b>Por que e para onde</b></td><td>A Urgência (Encontro 1) · A Visão (Bloco 1) · O Que Termina (Encontro 1)</td></tr><tr><td><b>O que a turma já construiu</b></td><td>As Pessoas (Encontro 2) · As Forças (Encontro 3) · O Experimento (Encontro 4)</td></tr><tr><td><b>O que sustenta</b></td><td>A Rede (Bloco 2) · O Painel (Bloco 3) · As Margens (Bloco 4)</td></tr></tbody></table></div><p><b>O teste da visão:</b> “O que veríamos as pessoas fazendo, em 90 dias?” Exemplo: em 90 dias, os compradores apresentam a cotação pela comparação do assistente, e a planilha refeita passa a ser exceção.</p>",
+       "fonte": "Instrumento do curso, inspirado no canvas de mudança do Lean Change Management (Little, 2014)."
+      },
+      {
+       "t": "atividade",
+       "id": "e5-a1",
+       "titulo": "O canvas da sua adoção",
+       "tempo": "20 min",
+       "area": "Área 1",
+       "passos": [
+        "No canvas com o seu número, copiem dos registros dos Encontros 1 a 4 <b>A Urgência</b>, <b>O Que Termina</b>, <b>As Pessoas</b>, <b>As Forças</b> e <b>O Experimento</b>, em uma frase cada. <i>6 min</i>",
+        "Escrevam <b>A Visão</b>: o que as pessoas afetadas fazem, em 90 dias, quando a adoção acontece. <i>4 min</i>",
+        "Em dupla, um lê o canvas em dois minutos; o outro pergunta: <b>“Qual campo ainda não convenceria a sua diretoria?”</b> <i>4 min</i>",
+        "Invertam os papéis. <i>4 min</i>",
+        "Reescrevam o campo apontado. <i>2 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 1, e os registros dos Encontros 1 a 4, no workbook."
+        ],
+        [
+         "Sem registro",
+         "Use o campo do caso de compras e adapte."
+        ],
+        [
+         "Entrega",
+         "As duas primeiras faixas do seu canvas."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“A Visão: em 90 dias, os compradores apresentam a cotação pela comparação do assistente.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e5.a1.v1",
+         "rotulo": "O Que Termina, no Encontro 1",
+         "tipo": "espelho",
+         "de": "e1.a2.termina",
+         "vazio": "Ainda sem registro no Encontro 1."
+        },
+        {
+         "k": "e5.a1.v3",
+         "rotulo": "A Força Com Estrela, no Encontro 3",
+         "tipo": "espelho",
+         "de": "e3.a2.estrela",
+         "vazio": "Ainda sem registro no Encontro 3."
+        },
+        {
+         "k": "e5.a1.v4",
+         "rotulo": "O Experimento, no Encontro 4",
+         "tipo": "espelho",
+         "de": "e4.a4.frase",
+         "vazio": "Ainda sem registro no Encontro 4."
+        },
+        {
+         "k": "e5.a1.urg",
+         "rotulo": "A Urgência",
+         "linhas": 2,
+         "ph": "Um fato da rotina da área"
+        },
+        {
+         "k": "e5.a1.visao",
+         "rotulo": "A Visão",
+         "linhas": 2,
+         "ph": "Em 90 dias, as pessoas…"
+        },
+        {
+         "k": "e5.a1.termina",
+         "rotulo": "O Que Termina",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a1.pessoas",
+         "rotulo": "As Pessoas",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a1.forcas",
+         "rotulo": "As Forças",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a1.exp",
+         "rotulo": "O Experimento",
+         "linhas": 2,
+         "ph": ""
+        }
+       ],
+       "pontos": [
+        "<b>Urgência que se sente.</b> Um fato da rotina da área, e não uma tendência do mercado.",
+        "<b>Visão que se vê.</b> Gente fazendo algo diferente, em 90 dias, com um número.",
+        "<b>Fios entre os campos.</b> O experimento responde a uma força; a visão descreve o fim do que termina."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e5-b2",
+     "num": "02",
+     "nome": "A rede de campeões",
+     "tom": "#7A4E6D",
+     "titulo": "A rede <em>de campeões</em>",
+     "pergunta": "Quem sustenta a adoção quando a novidade passa?",
+     "constroi": "O mapa da rede, com o ritual e o primeiro pedido",
+     "capaz": [
+      "Identificar os campeões entre os adotantes iniciais.",
+      "Distinguir os papéis do patrocinador e dos campeões.",
+      "Desenhar a rede de campeões da sua adoção."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "O campeão é quem a maioria observa",
+       "html": "<p><b>Mito ou fato?</b> “O campeão ideal é a pessoa que mais entende de IA na equipe.” Mito. Os inovadores dominam a ferramenta e costumam ser vistos como diferentes do grupo; a maioria observa os adotantes iniciais: colegas respeitados, parecidos com ela, que adotam com critério.</p><div class=\"cards3\"><div><b>O Patrocinador</b><p>Tem alçada, dá o exemplo em público e remove obstáculos.</p></div><div><b>Os Campeões</b><p>Adotantes iniciais, um por equipe, com tempo reservado: mostram, escutam e devolvem.</p></div><div><b>A Maioria</b><p>Adota ao ver o colega parecido usar com resultado.</p></div></div><p><b>O ritual da rede:</b> quinze minutos por semana, com o patrocinador. O que vimos, o que impediu e o que apresentamos à diretoria.</p>",
+       "fonte": "Rogers, E. Diffusion of Innovations, 5ª ed., 2003. Papéis da rede: instrumento do curso."
+      },
+      {
+       "t": "atividade",
+       "id": "e5-a2",
+       "titulo": "A rede de campeões da sua adoção",
+       "tempo": "20 min",
+       "area": "Área 2",
+       "passos": [
+        "Abram o mapa de pessoas do Encontro 2 e marquem <b>os adotantes iniciais que a maioria observa</b>. <i>3 min</i>",
+        "Registrem <b>O Patrocinador</b>, <b>Os Campeões</b> e <b>A Maioria Que Cada Um Alcança</b>, por papel, sem nomes. <i>5 min</i>",
+        "Completem <b>O Que Cada Campeão Recebe</b>, <b>O Ritual da Rede</b> e <b>O Primeiro Pedido</b>. <i>4 min</i>",
+        "Em dupla, um apresenta a rede; o outro pergunta: <b>“Por que a maioria daria ouvidos a esse campeão?”</b> <i>4 min</i>",
+        "Invertam os papéis. <i>4 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas diferentes das do Bloco 1."
+        ],
+        [
+         "Material",
+         "Miro, Área 2, e o mapa de pessoas do Encontro 2."
+        ],
+        [
+         "Privacidade",
+         "Papéis, e não nomes de pessoas."
+        ],
+        [
+         "Entrega",
+         "O mapa da rede, com o primeiro pedido datado."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Os juniores já procuram a compradora da cláusula quando têm dúvida.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e5.a2.patro",
+         "rotulo": "O Patrocinador",
+         "linhas": 2,
+         "ph": "Por papel, sem nome"
+        },
+        {
+         "k": "e5.a2.camp",
+         "rotulo": "Os Campeões",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a2.maioria",
+         "rotulo": "A Maioria Que Cada Um Alcança",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a2.recebe",
+         "rotulo": "O Que Cada Campeão Recebe",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a2.ritual",
+         "rotulo": "O Ritual da Rede",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a2.pedido",
+         "rotulo": "O Primeiro Pedido",
+         "linhas": 2,
+         "ph": "O que você pede, e até quando"
+        },
+        {
+         "k": "e5.a2.canvas",
+         "rotulo": "A Rede, em Uma Frase, para o Canvas",
+         "linhas": 2,
+         "ph": ""
+        }
+       ],
+       "pontos": [
+        "<b>Campeões entre os pares.</b> Adotantes iniciais da própria equipe, e não a liderança nem o especialista.",
+        "<b>Patrocinador presente.</b> Aparece em público, com frequência, e remove o obstáculo.",
+        "<b>Ritual e pedido com data.</b> Quinze minutos por semana e um primeiro pedido pequeno, datado."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e5-b3",
+     "num": "03",
+     "nome": "O painel de adoção",
+     "tom": "#2F6B6F",
+     "titulo": "O painel <em>de adoção</em>",
+     "pergunta": "Como a área saberá, em 90 dias, que a adoção se sustenta?",
+     "constroi": "O painel com quatro degraus e o sinal de regressão",
+     "capaz": [
+      "Escolher uma medida para cada degrau da adoção.",
+      "Definir o valor de hoje e a meta em 90 dias.",
+      "Identificar o sinal de regressão e quem lê o painel."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "O painel de adoção, em quatro degraus",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Degrau</th><th>A medida (exemplo)</th><th>Hoje</th><th>Em 90 dias</th></tr></thead><tbody><tr><td>Acesso</td><td>Licenças ativas no time de compras.</td><td>12 de 12</td><td>12 de 12</td></tr><tr><td>Uso</td><td>Compradores que abrem o assistente na semana.</td><td>7 de 12</td><td>11 de 12</td></tr><tr><td>Comportamento</td><td>Cotações da semana sem a planilha refeita.</td><td>2 de 12</td><td>8 de 12</td></tr><tr><td>Resultado</td><td>Prazo médio da cotação.</td><td>5 dias</td><td>3 dias</td></tr></tbody></table></div><p><b>O sinal de regressão</b> é o jeito antigo voltando, definido antes: duas reuniões seguidas com mais de metade das cotações na planilha. <b>A leitura:</b> cada número tem quem o lê e uma data. Kotter (1995) aponta a declaração de vitória precoce entre os erros que mais comprometem uma transformação.</p>",
+       "fonte": "Escada de medidas do Encontro 4, com base em Hubbard, D., 2007. Kotter, J. HBR, 1995. Caso fictício da área de compras."
+      },
+      {
+       "t": "atividade",
+       "id": "e5-a3",
+       "titulo": "O painel da sua adoção",
+       "tempo": "15 min",
+       "area": "Área 3",
+       "passos": [
+        "Copiem da ficha do Encontro 4 a medida de comportamento para o degrau <b>Comportamento</b>. <i>1 min</i>",
+        "Escolham uma medida para <b>Acesso</b>, <b>Uso</b> e <b>Resultado</b>, com <b>Hoje</b> e <b>Em 90 Dias</b>. Sem o dado, estimem e marquem com “?”. <i>5 min</i>",
+        "Registrem <b>O Sinal de Regressão</b> e <b>Quem Lê e Quando</b>. <i>3 min</i>",
+        "Em dupla, cada um apresenta o painel em três minutos; o colega pergunta: <b>“Qual destes números pode enganar a área?”</b> <i>6 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois nas mesmas duplas do Bloco 2."
+        ],
+        [
+         "Material",
+         "Miro, Área 3, e a ficha da medida do Encontro 4."
+        ],
+        [
+         "Dado reservado",
+         "Use proporções no lugar de valores da empresa."
+        ],
+        [
+         "Entrega",
+         "O painel com os quatro degraus e o sinal de regressão."
+        ],
+        [
+         "Tempo",
+         "15 minutos"
+        ]
+       ],
+       "exemplo": "<p>“O uso pode enganar: onze de doze abrem o assistente e refazem a planilha depois.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e5.a3.v4",
+         "rotulo": "A Medida de Comportamento, no Encontro 4",
+         "tipo": "espelho",
+         "de": "e4.a1.medida",
+         "vazio": "Ainda sem registro no Encontro 4."
+        },
+        {
+         "k": "e5.a3.painel",
+         "rotulo": "O Meu Painel de Adoção",
+         "tipo": "tabela",
+         "n": 4,
+         "colunas": [
+          {
+           "t": "Degrau",
+           "opcoes": [
+            "Acesso",
+            "Uso",
+            "Comportamento",
+            "Resultado"
+           ]
+          },
+          {
+           "t": "A Medida"
+          },
+          {
+           "t": "Hoje",
+           "ph": "Sem o dado: “?”"
+          },
+          {
+           "t": "Em 90 Dias"
+          }
+         ]
+        },
+        {
+         "k": "e5.a3.regr",
+         "rotulo": "O Sinal de Regressão",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a3.leitura",
+         "rotulo": "Quem Lê e Quando",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a3.canvas",
+         "rotulo": "O Painel, em Uma Frase, para o Canvas",
+         "linhas": 2,
+         "ph": ""
+        }
+       ],
+       "pontos": [
+        "<b>Comportamento no centro.</b> O degrau da adoção é a medida do experimento, com meta em 90 dias.",
+        "<b>Regressão nomeada.</b> O sinal do jeito antigo voltando, escrito antes de aparecer.",
+        "<b>Leitura com data.</b> Quem lê cada número, quando, e o que pode decidir."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e5-b4",
+     "num": "04",
+     "nome": "O roteiro de sustentabilidade",
+     "tom": "#5E7D52",
+     "titulo": "O roteiro <em>de sustentabilidade</em>",
+     "pergunta": "O que mantém o novo jeito quando ninguém estiver olhando?",
+     "constroi": "O roteiro de 90 dias, a margem a mudar e a apresentação final",
+     "capaz": [
+      "Planejar a sustentação da adoção em 30, 60 e 90 dias.",
+      "Identificar a margem a mudar: a rotina, a regra, o padrão ou o reconhecimento.",
+      "Apresentar a estratégia da mudança a colegas e incorporar a devolutiva."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "O roteiro em 30, 60 e 90 dias, até as margens",
+       "html": "<div class=\"cards3\"><div><b>30 dias · revisar e decidir</b><p>A revisão do experimento, com o critério escrito antes. A rede se reúne toda semana.</p></div><div><b>60 dias · ampliar com a rede</b><p>O que funcionou chega a outras equipes, pelos campeões, com o painel lido.</p></div><div><b>90 dias · mudar as margens</b><p>A rotina, a regra ou o padrão mudam para o novo jeito ser o caminho natural.</p></div></div><p><b>As margens que sustentam o novo jeito:</b> a rotina (a reunião abre pela tela), a regra (o que pode ir ao assistente), o padrão (o modelo oficial de cotação) e o reconhecimento (o que a avaliação valoriza).</p>",
+       "fonte": "Roteiro de sustentabilidade: instrumento do curso. Kotter, J. HBR, 1995. Snowden, D.; Rancati, A. Cynefin Field Guide, 2021."
+      },
+      {
+       "t": "atividade",
+       "id": "e5-a4",
+       "titulo": "O roteiro e a apresentação final",
+       "tempo": "25 min",
+       "area": "Área 4",
+       "passos": [
+        "No roteiro com o seu número, preencham <b>30 Dias</b>, <b>60 Dias</b> e <b>90 Dias</b>: o que acontece e quem faz. <i>5 min</i>",
+        "Registrem <b>A Margem a Mudar</b> e <b>Quem Decide</b>, e completem <b>As Margens</b> no canvas. <i>2 min</i>",
+        "Em trios, cada pessoa apresenta a estratégia completa em três minutos: o canvas, a rede, o painel e o roteiro. <i>3 min por pessoa</i>",
+        "Depois de cada apresentação, os colegas respondem: <b>“O que sustenta isso quando ninguém estiver olhando?”</b> <i>2 min por pessoa</i>",
+        "Ajustem o roteiro com o que ouviram. <i>3 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em trios, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 4, e as Áreas 1 a 3."
+        ],
+        [
+         "Entrega",
+         "O roteiro com a margem e a estratégia apresentada."
+        ],
+        [
+         "Tempo",
+         "25 minutos"
+        ]
+       ],
+       "exemplo": "<p>“A planilha volta enquanto for o formato exigido: a margem é o modelo de cotação.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e5.a4.d30",
+         "rotulo": "30 Dias",
+         "linhas": 2,
+         "ph": "O que acontece e quem faz"
+        },
+        {
+         "k": "e5.a4.d60",
+         "rotulo": "60 Dias",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a4.d90",
+         "rotulo": "90 Dias",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a4.margem",
+         "rotulo": "A Margem a Mudar",
+         "linhas": 2,
+         "ph": "A rotina, a regra, o padrão ou o reconhecimento"
+        },
+        {
+         "k": "e5.a4.decide",
+         "rotulo": "Quem Decide",
+         "tipo": "texto"
+        },
+        {
+         "k": "e5.a4.devol",
+         "rotulo": "O Que Ouvi na Apresentação Final",
+         "linhas": 3,
+         "ph": "A resposta dos colegas: o que sustenta isso quando ninguém estiver olhando?"
+        },
+        {
+         "k": "e5.a4.canvas",
+         "rotulo": "As Margens, em Uma Frase, para o Canvas",
+         "linhas": 2,
+         "ph": ""
+        }
+       ],
+       "pontos": [
+        "<b>Margem com responsável.</b> A rotina, a regra, o padrão ou o reconhecimento, com quem decide.",
+        "<b>Roteiro que passa pela rede.</b> Os 60 dias ampliam pelos campeões, e não por comunicado.",
+        "<b>Painel na agenda.</b> A leitura de cada número já tem data e pessoa."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e5-fe",
+     "num": "05",
+     "nome": "Fechamento e certificação",
+     "tom": "#B04A1C",
+     "titulo": "As margens <em>e a certificação</em>",
+     "constroi": "A margem que você muda primeiro",
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Você não diz à água para onde ir. Você muda as margens.",
+       "html": "<p>A frase de Dave Snowden, que abriu o curso no Encontro 1, fecha o último encontro. Em cinco encontros, a turma escutou o sistema, escolheu uma aposta, testou, mediu e desenhou as margens.</p>"
+      },
+      {
+       "t": "conceito",
+       "titulo": "A certificação: presença e participação",
+       "html": "<div class=\"cards3\"><div><b>Presença</b><p>Em pelo menos quatro dos cinco encontros: 80% das 15 horas.</p></div><div><b>Participação</b><p>Os registros das atividades no Miro e neste workbook, com a apresentação final entre pares.</p></div><div><b>Certificado</b><p>Enviado por e-mail ao término da turma, depois da conferência dos dois critérios.</p></div></div>"
+      },
+      {
+       "t": "atividade",
+       "id": "e5-a5",
+       "titulo": "A margem que você muda primeiro",
+       "tempo": "2 min",
+       "area": null,
+       "perg": "“Qual é a margem que você vai mudar primeiro?”",
+       "passos": [
+        "No chat, escreva <b>a margem que você vai mudar primeiro</b>, em até dez palavras.",
+        "Registre aqui a mesma frase, com a data em que pretende mudá-la."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual, no chat da turma."
+        ],
+        [
+         "Entrega",
+         "A margem e a data."
+        ],
+        [
+         "Depois do curso",
+         "Dúvidas pelo botão Perguntar ao mentor, que chega ao Gino Terentim."
+        ]
+       ],
+       "campos": [
+        {
+         "k": "e5.a5.margem",
+         "rotulo": "A Margem Que Mudo Primeiro, e Quando",
+         "linhas": 2,
+         "ph": ""
+        },
+        {
+         "k": "e5.a5.curso",
+         "rotulo": "O Que Muda no Meu Trabalho Depois Destes Cinco Encontros",
+         "linhas": 3,
+         "ph": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }

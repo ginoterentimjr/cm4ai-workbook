@@ -40,7 +40,10 @@ def icone(nome, cor="#FFFFFF", tam=28, sw=1.8):
     return t.replace('stroke="currentColor"', f'stroke="{cor}"').replace('stroke-width="2"', f'stroke-width="{sw}"').replace("\n", "")
 
 IC_BLOCO = {"Abertura": "door-open", "O paradoxo da IA": "trending-up", "Mudança e transição": "route", "A curva de Satir": "activity", "A curva de Satir e o ciclo": "activity", "Diagnóstico de prontidão": "stethoscope", "Fechamento": "messages-square",
-            "Leitura do diagnóstico em grupo": "search", "O mapa de pessoas": "users", "Práticas de geração de insights": "link-2", "Plano de coleta de insights": "clipboard-list"}
+            "Leitura do diagnóstico em grupo": "search", "O mapa de pessoas": "users", "Práticas de geração de insights": "link-2", "Plano de coleta de insights": "clipboard-list",
+            "Dos registros aos insights": "lightbulb", "O mapa de forças": "scale", "Opções de mudança": "list-checks", "A próxima aposta": "flag",
+            "Da aposta à hipótese": "flask-conical", "A medida e o critério de revisão": "gauge", "O plano do experimento": "calendar-range", "O portfólio de experimentos": "layout-grid",
+            "O canvas estratégico da mudança": "layout-grid", "A rede de campeões": "network", "O painel de adoção": "gauge", "O roteiro de sustentabilidade": "waves", "Fechamento e certificação": "award"}
 IC_ENC = {1: "compass", 2: "users", 3: "lightbulb", 4: "flask-conical", 5: "flag"}
 FOTO_ENC = {1: "e1.jpg", 2: "e2.jpg", 3: "e3.jpg", 4: "e4.jpg", 5: "e5.jpg"}
 e = html.escape
@@ -59,7 +62,8 @@ def campo(c):
         ops = "".join(f"<option>{e(o)}</option>" for o in [""] + c["opcoes"])
         corpo = f'<select id="{k}" data-k="{k}">{ops}</select>'
     elif tipo == "espelho":
-        return f'<div class="campo espelho">{rot}{dica}<div class="espelho__v" data-espelho="{c["de"]}">Ainda sem registro no Encontro 1.</div></div>'
+        vz = c.get("vazio", "Ainda sem registro no Encontro 1.")
+        return f'<div class="campo espelho">{rot}{dica}<div class="espelho__v" data-espelho="{c["de"]}" data-vazio="{e(vz)}">{e(vz)}</div></div>'
     elif tipo == "notas":  # cinco dimensões, nota de 1 a 5
         cels = "".join(
             f'<div class="nota"><label for="{k}.{d}"><b>{e(n)}</b></label><select id="{k}.{d}" data-k="{k}.{d}">'
@@ -151,6 +155,7 @@ def bloco_html(b, enc):
 
 PUBLICADOS = {1, 2}
 ABRE = {3: "25/11", 4: "26/11", 5: "27/11"}
+ABRE_ISO = {3: "2026-11-25", 4: "2026-11-26", 5: "2026-11-27"}   # a parada vira link no dia do encontro (no navegador)
 FASES = (("Escutar o sistema", 2), ("Escolher a próxima aposta", 1), ("Testar, medir e sustentar", 2))
 
 
@@ -161,9 +166,11 @@ def caminho_html(atual, grande=False):
           '<path d="M100,62 C170,62 220,138 300,138 S430,62 500,62 S630,138 700,138 S830,62 900,62"/></svg>')
     for n, nome, data, tom, prod, grupo in CAMINHO:
         cls = "feito" if 0 < n < atual else ("aqui" if n == atual else "")
-        pub = n in PUBLICADOS
+        pub = n in PUBLICADOS or n in ABRE_ISO
         tag = "a" if pub and not PROF else "span"
         href = f' href="e{n}.html"' if tag == "a" else ""
+        if n in ABRE_ISO and not PROF:
+            href += f' data-abre="{ABRE_ISO[n]}" data-abre-txt="Abre em {ABRE[n]}"'
         foto = f'background-image:url({img_url(f"p{n}.jpg")})'
         rodape = (f'<small class="parada__c" data-cont>{"Você está aqui" if n == atual else ""}</small>' if pub
                   else f'<small class="parada__c">Abre em {ABRE.get(n, "")}</small>')
@@ -238,13 +245,13 @@ def fontes(inline):
 
 if PROF:
     MARCA = "data:image/png;base64," + base64.b64encode(open(os.path.join(RAIZ, "src", "logo-gt-mark.png"), "rb").read()).decode()
-    corpo = ('<section class="capa" style="--tom:#E5662C"><p class="capa__k">VERSÃO DO PROFESSOR · ENCONTROS 1 E 2</p>'
+    corpo = ('<section class="capa" style="--tom:#E5662C"><p class="capa__k">VERSÃO DO PROFESSOR · ENCONTROS 1 A 5</p>'
              '<h1>Change Management <em>for AI</em></h1><p class="capa__l">O mesmo workbook da turma, com a condução, as respostas e as perguntas de fechamento de cada atividade. '
              'Arquivo único, para uso fora da internet. Não publicar.</p></section>')
     for enc in ENCONTROS:
         corpo += encontro_html(enc)
     os.makedirs(os.path.join(RAIZ, "professor"), exist_ok=True)
-    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v3.html"), "w", encoding="utf-8").write(
+    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v4.html"), "w", encoding="utf-8").write(
         pagina("CM4AI · Workbook · Versão do professor", corpo, "prof", fontes(True)))
     print("professor ok")
 else:

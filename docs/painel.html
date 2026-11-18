@@ -307,7 +307,7 @@ function gravar(k,v){mem[k]=v;try{localStorage.setItem(P+k,v)}catch(e){}}
 function $(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
 var salvo=$("[data-salvo]");
 function aviso(){if(localStorage.getItem("cm4ai:sessao"))return;var h=new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});salvo.forEach(function(el){el.textContent="Respostas gravadas neste navegador às "+h+"."})}
-function espelhos(){$("[data-espelho]").forEach(function(el){var v=ler(el.getAttribute("data-espelho"));el.textContent=v||"Ainda sem registro no Encontro 1."})}
+function espelhos(){$("[data-espelho]").forEach(function(el){var v=ler(el.getAttribute("data-espelho"));el.textContent=v||el.getAttribute("data-vazio")||"Ainda sem registro."})}
 function altura(t){if(t.tagName!=="TEXTAREA")return;t.style.height="auto";t.style.height=(t.scrollHeight+4)+"px"}
 // restaura e grava
 $("[data-k]").forEach(function(el){
@@ -351,6 +351,7 @@ function curvas(){$("[data-curva]").forEach(function(m){
 })}
 var _mapas=mapas;mapas=function(){_mapas();curvas()};
 mapas();espelhos();
+(function(){var hoje=new Date();$("[data-abre]").forEach(function(el){var d=new Date(el.getAttribute("data-abre")+"T00:00:00-03:00");if(hoje<d){el.removeAttribute("href");el.classList.add("parada--breve");var c=el.querySelector(".parada__c");if(c){c.removeAttribute("data-cont");c.textContent=el.getAttribute("data-abre-txt")}}})})();
 window.CM4AI_atualizar=function(){$("[data-k]").forEach(altura);mapas();espelhos()};
 // exportar
 function texto(){
