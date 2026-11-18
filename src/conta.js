@@ -62,7 +62,8 @@ if(!ENC)return;
 var campos=$("[data-k]");
 function rotulo(el){
   var a=el.closest(".atividade"),t=a&&a.querySelector("h3"),c=el.closest(".campo"),l=c&&c.querySelector("label");
-  var r=(t?t.textContent.trim():"")+" · "+((l&&l.textContent.trim())||el.getAttribute("aria-label")||el.getAttribute("data-k"));
+  var tt=t?t.textContent.trim():(el.closest(".completar")?"Complete a frase":"Registro");
+  var r=tt+" · "+((l&&l.textContent.trim())||el.getAttribute("aria-label")||el.getAttribute("data-k"));
   return r.slice(0,190);
 }
 if(!s){
