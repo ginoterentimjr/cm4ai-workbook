@@ -20,7 +20,8 @@ PROF = len(sys.argv) > 1 and sys.argv[1] == "professor"
 REPO = "https://github.com/ginoterentimjr/cm4ai-workbook"
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 CSS = open(os.path.join(RAIZ, "src", "estilo.css"), encoding="utf-8").read()
-JS = open(os.path.join(RAIZ, "src", "app.js"), encoding="utf-8").read() + "\n" + open(os.path.join(RAIZ, "src", "conta.js"), encoding="utf-8").read()
+JS = "\n".join(open(os.path.join(RAIZ, "src", f), encoding="utf-8").read() for f in ("app.js", "conta.js", "duvidas.js"))
+PAINEL_JS = open(os.path.join(RAIZ, "src", "painel.js"), encoding="utf-8").read()
 API = open(os.path.join(RAIZ, "api.txt"), encoding="utf-8").read().strip() if os.path.exists(os.path.join(RAIZ, "api.txt")) else ""
 ICON_DIR = os.path.join(RAIZ, "src", "icons")
 
@@ -134,7 +135,7 @@ def bloco_html(b, enc):
             if it.get("pontos"):
                 o += '<details class="pontos"><summary>Os pontos que não podem faltar</summary><ul>' + "".join(f"<li>{p}</li>" for p in it["pontos"]) + "</ul></details>"
             if not PROF:
-                o += f'<p class="mentor"><a class="btn btn--mentor" href="{q}" target="_blank" rel="noopener">Perguntar ao mentor sobre esta atividade</a></p>'
+                o += caixa_duvida(titq)
             if PROF:
                 o += '<div class="prof"><span>VERSÃO DO PROFESSOR · CONDUÇÃO</span>'
                 o += "<ul>" + "".join(f"<li>{p}</li>" for p in it.get("conducao", [])) + "</ul>"
@@ -189,6 +190,13 @@ def pagina(titulo, corpo, pg, fontes_css, extra_js=""):
 <main>{corpo}</main>
 <footer class="rodape"><span>Change Management for AI · Turma on-line · Novembro de 2026</span><span>Rethinking Learning</span></footer>
 {cfg}<script>{JS}{extra_js}</script></body></html>"""
+
+
+def caixa_duvida(atividade):
+    return (f'<div class="duvidas" data-duvida="{e(atividade)}"><p class="mentor"><button type="button" class="btn btn--mentor" data-duvida-abrir>Perguntar ao mentor sobre esta atividade</button></p>'
+            '<div class="duvidas__form" hidden><label class="duvidas__l">A sua dúvida para o Gino Terentim<textarea rows="4" placeholder="Escreva a dúvida com o contexto da sua adoção. Use o papel das pessoas, e não o nome."></textarea></label>'
+            '<div class="duvidas__acoes"><button type="button" class="btn" data-duvida-enviar>Enviar a dúvida</button><button type="button" class="btn btn--sec" data-duvida-cancelar>Cancelar</button></div></div>'
+            '<p class="duvidas__msg" aria-live="polite"></p><div class="duvidas__lista"></div></div>')
 
 
 def barra():
@@ -272,21 +280,32 @@ else:
             '<div class="cards3 cards3--claro"><div><b>Como usar</b><p>Abra o encontro do dia e registre as suas respostas à medida que cada atividade acontece. Sem conexão, o registro fica neste navegador e segue para a sua página na alteração seguinte.</p></div>'
             '<div><b>O fio entre os encontros</b><p>A adoção de IA que você escolhe no Encontro 1 acompanha o curso inteiro. Cada encontro parte do que você registrou no anterior.</p></div>'
             '<div><b>Reserva dos seus dados</b><p>As respostas ficam na planilha privada da turma, aberta apenas ao Gino Terentim, e na sua página, protegida pelo seu código. Use o papel das pessoas, e não o nome.</p></div></div>'
-            f'<a class="cartao cartao--mentor" href="mentoria.html" style="--tom:#2A211C"><span class="disco" style="--tom:#E5662C">{icone("messages-square")}</span><span><span class="cartao__k">ENTRE OS ENCONTROS</span><b>Mentoria de Lean Change Management</b><i>Dúvidas sobre o método e as atividades, respondidas em cerca de um minuto</i></span></a></section>')
+            f'<a class="cartao cartao--mentor" href="mentoria.html" style="--tom:#2A211C"><span class="disco" style="--tom:#E5662C">{icone("messages-square")}</span><span><span class="cartao__k">ENTRE OS ENCONTROS</span><b>Dúvidas para o Gino Terentim</b><i>Pergunte sobre o método e as atividades; a resposta volta para a sua página e para o seu e-mail</i></span></a></section>')
     open(os.path.join(D, "index.html"), "w", encoding="utf-8").write(pagina("CM4AI · Workbook digital", idx, "index", F))
-    m = ('<section class="capa" style="--tom:#E5662C"><p class="capa__k">ENTRE OS ENCONTROS</p><h1>Mentoria de <em>Lean Change Management</em></h1>'
-         '<p class="capa__l">Um mentor de inteligência artificial responde às suas dúvidas sobre o método e sobre as atividades do curso, no fórum da turma.</p></section>'
+    m = ('<section class="capa" style="--tom:#E5662C"><p class="capa__k">ENTRE OS ENCONTROS</p><h1>Dúvidas para o <em>Gino Terentim</em></h1>'
+         '<p class="capa__l">Pergunte sobre o método e sobre as atividades do curso. A dúvida chega ao Gino Terentim, e a resposta volta para a sua página do workbook e para o seu e-mail.</p></section>'
          '<section class="bloco bloco--abre"><h2>Como <em>perguntar</em></h2><ol class="passos">'
-         '<li>Entre no GitHub com a sua conta. Quem ainda não tem cria uma, gratuita, em github.com.</li>'
-         f'<li>Abra o <a href="{REPO}/discussions/new?category=q-a" target="_blank" rel="noopener">fórum da turma</a> e escreva a sua dúvida, com o contexto da sua adoção.</li>'
-         '<li>A resposta do mentor chega na mesma página, em cerca de um minuto. Para continuar a conversa, responda ali mesmo.</li></ol>'
-         f'<p><a class="btn btn--mentor" href="{REPO}/discussions/new?category=q-a" target="_blank" rel="noopener">Abrir uma pergunta no fórum</a> '
-         f'<a class="btn btn--sec" href="{REPO}/discussions" target="_blank" rel="noopener">Ler as perguntas da turma</a></p>'
-         '<div class="cards3"><div><b>O fórum é visível</b><p>As perguntas e as respostas ficam visíveis à turma e a quem tiver o endereço. Use o papel das pessoas, e não o nome, e mantenha fora do texto os dados reservados da sua organização.</p></div>'
-         '<div><b>O que o mentor faz</b><p>Ajuda a aplicar o método à sua adoção: ler o diagnóstico, montar o mapa de pessoas, escolher a prática de coleta, redigir perguntas que trazem fatos.</p></div>'
-         '<div><b>O limite do mentor</b><p>O mentor é um modelo de IA (GPT-6.1 Sol) e pode errar. Nas questões de certificação e de condução do curso, a palavra final é do Gino Terentim, nos encontros.</p></div></div>'
-         '<article class="regua"><h3>Uma boa pergunta ao mentor</h3><p>“Na minha adoção, um assistente de IA para a área de compras, a menor nota do diagnóstico foi Liderança, 2. '
-         'A gerente cobra o uso e nunca mostrou um uso próprio. Que pergunta de abertura traz fatos numa conversa individual com ela?”</p></article>'
-         '<p class="nota-pe">A mentoria fica aberta até 30 de novembro de 2026.</p></section>')
+         '<li>Entre no workbook com o e-mail da inscrição e o seu código de quatro números.</li>'
+         '<li>Em cada atividade, use o botão <b>Perguntar ao mentor sobre esta atividade</b>. Para uma dúvida geral, use o campo abaixo.</li>'
+         '<li>A resposta aparece junto da atividade, na sua página, e chega no seu e-mail.</li></ol>'
+         + caixa_duvida("Dúvida geral") +
+         '<h2 style="margin-top:34px">As suas <em>dúvidas</em></h2><div class="duvidas__todas" data-duvidas-todas></div>'
+         '<div class="cards3"><div><b>Reserva</b><p>As dúvidas ficam na planilha privada da turma, aberta apenas ao Gino Terentim. Use o papel das pessoas, e não o nome, e mantenha fora do texto os dados reservados da sua organização.</p></div>'
+         '<div><b>Uma boa pergunta</b><p>Traz o contexto da sua adoção, o que você já tentou e o ponto exato da dúvida.</p></div>'
+         '<div><b>Prazo</b><p>As dúvidas ficam abertas até 30 de novembro de 2026.</p></div></div>'
+         '<article class="regua"><h3>Exemplo de pergunta, apenas ilustrativo</h3><p>“Na minha adoção, um assistente de IA para a área de compras, a menor nota do diagnóstico foi Liderança, 2. '
+         'A gerente cobra o uso e nunca mostrou um uso próprio. Que pergunta de abertura traz fatos numa conversa individual com ela?”</p></article></section>')
+    pn = ('<section class="capa" style="--tom:#2A211C"><p class="capa__k">ÁREA DO PROFESSOR</p><h1>Painel de <em>dúvidas</em></h1>'
+          '<p class="capa__l">As dúvidas da turma chegam aqui em tempo real. A resposta aparece no workbook do participante e vai para o e-mail dele.</p></section>'
+          '<section class="bloco bloco--abre painel">'
+          '<div class="painel__entrada" data-p-entrada><label class="duvidas__l">Chave do painel<input type="password" autocomplete="current-password" data-p-chave></label>'
+          '<div class="duvidas__acoes"><button type="button" class="btn" data-p-entrar>Abrir o painel</button><button type="button" class="btn btn--sec" data-p-enviar-chave>Receber a chave no e-mail</button></div></div>'
+          '<p class="duvidas__msg" data-p-msg aria-live="polite"></p>'
+          '<div data-p-quadro hidden><div class="painel__topo"><div class="painel__n"><b data-p-ag>0</b><span>aguardando</span></div><div class="painel__n painel__n--ok"><b data-p-rp>0</b><span>respondidas</span></div>'
+          '<div class="painel__f"><button type="button" class="chip-f" data-p-filtro="aguardando">Aguardando</button><button type="button" class="chip-f" data-p-filtro="respondidas">Respondidas</button><button type="button" class="chip-f" data-p-filtro="todas">Todas</button>'
+          '<select data-p-enc><option value="0">Todos os encontros</option>' + "".join(f'<option value="{k}">Encontro {k}</option>' for k in range(1, 6)) + '</select></div>'
+          '<div class="painel__h"><span data-p-hora></span><button type="button" class="btn btn--sec" data-p-sair>Sair</button></div></div>'
+          '<div data-p-lista></div></div></section>')
+    open(os.path.join(D, "painel.html"), "w", encoding="utf-8").write(pagina("Painel de dúvidas · CM4AI", pn, "painel", F, PAINEL_JS))
     open(os.path.join(D, "mentoria.html"), "w", encoding="utf-8").write(pagina("CM4AI · Mentoria", m, "mentoria", F))
     print("site ok")
