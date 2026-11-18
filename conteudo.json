@@ -78,7 +78,7 @@
        "passos": [
         "Em cada sala, uma pessoa por vez responde à pergunta, em até um minuto.",
         "Quem escuta registra, em uma palavra, o que se repetiu nas respostas.",
-        "Ao voltar, uma pessoa da sala conta em trinta segundos o que se repetiu."
+        "Ao voltar, uma pessoa da sala conta em uma frase o que se repetiu."
        ],
        "meta": [
         [
@@ -91,7 +91,7 @@
         ],
         [
          "Tempo",
-         "5 minutos"
+         "4 minutos"
         ]
        ],
        "exemplo": "<p>“Nas três respostas da nossa sala, a ferramenta chegou com data marcada, e a mudança no trabalho ficou para depois.”</p>",
@@ -108,6 +108,18 @@
          "ph": "Em uma palavra"
         }
        ]
+      },
+      {
+       "t": "conceito",
+       "titulo": "Duas lógicas de gestão da mudança",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th></th><th>Gestão da mudança tradicional (PDCA)</th><th>Lean Change Management (DCAP)</th></tr></thead><tbody><tr><td><b>O que é</b></td><td>Disciplina que conduz as pessoas por uma mudança definida, com plano de impacto, comunicação e treinamento</td><td>Método de Jason Little que conduz a mudança em ciclos curtos de insights, opções e experimentos</td></tr><tr><td><b>Ciclo</b></td><td>PDCA: o plano orienta a execução</td><td>DCAP: a execução orienta o plano</td></tr><tr><td><b>Ponto de partida</b></td><td>O plano completo da mudança</td><td>Insights: como as pessoas trabalham hoje e o que já foi tentado</td></tr><tr><td><b>Pessoas afetadas</b></td><td>Informadas e preparadas pelo plano</td><td>Coautoras: participam do desenho e avaliam cada ciclo</td></tr><tr><td><b>Incerteza</b></td><td>Prevista como risco, no início</td><td>Testada em pequena escala, ciclo a ciclo</td></tr><tr><td><b>Medida de sucesso</b></td><td>Plano executado no prazo</td><td>Comportamento adotado no trabalho</td></tr><tr><td><b>Indicação</b></td><td>Mudança conhecida: problema e solução definidos</td><td>Mudança conhecível, como a adoção de IA: a solução emerge</td></tr></tbody></table></div><p><b>Fome de Poder (The Founder, 2016).</b> Os irmãos McDonald desenham a cozinha em tamanho real, a giz, numa quadra de tênis, simulam o preparo dos pedidos e redesenham até o fluxo funcionar: fazem em pequena escala, checam, agem e só então planejam a obra definitiva. O custo de cada ciclo é um balde de giz e uma tarde. Na adoção de IA, o giz é o experimento pequeno com as pessoas afetadas.</p>",
+       "fonte": "Little, J. Lean Change Management, 2014 · ciclo PDCA de Shewhart e Deming."
+      },
+      {
+       "t": "conceito",
+       "titulo": "O motor Lean Change nos cinco encontros",
+       "html": "<div class=\"cards3\"><div><b>1 · Insights</b><p>Como as pessoas preferem fazer hoje? O que já foi tentado? O que precisamos descobrir?</p></div><div><b>2 · Opções</b><p>Que comportamento queremos ver? O que o impede hoje? O que poderíamos fazer para habilitá-lo?</p></div><div><b>3 · Experimentos</b><p>O que queremos aprender? Qual é a hipótese? Como vamos medir?</p></div></div><p>Cada experimento percorre três passos: <b>preparar</b> (planejar com as pessoas afetadas), <b>introduzir</b> (colocar a mudança em prática) e <b>revisar</b> (prosseguir, pivotar ou pausar).</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Fase do motor</th><th>Encontros</th></tr></thead><tbody><tr><td><b>Insights</b></td><td>Encontros 1 e 2. Hoje, o panorama, o que termina, a curva e o diagnóstico de prontidão; amanhã, as pessoas e a coleta de insights.</td></tr><tr><td><b>Opções</b></td><td>Encontro 3. O mapa de forças organiza os insights, e dele nascem as opções.</td></tr><tr><td><b>Experimentos</b></td><td>Encontro 4. Hipótese, medida e critério, em três passos: preparar, introduzir e revisar.</td></tr><tr><td><b>Sustentação do ciclo</b></td><td>Encontro 5. A estratégia numa página e a rede de campeões, para o ciclo continuar depois do curso.</td></tr></tbody></table></div><p>Hoje, todos os blocos estão na <b>fase de insights</b>.</p>",
+       "fonte": "Little, J. Lean Change Management, 2014."
       },
       {
        "t": "conceito",
@@ -141,7 +153,7 @@
         "Leiam a primeira frase e escolham, no banco, o número da lacuna. O escriba arrasta a nota.",
         "Sigam frase a frase: cada número entra uma vez, e três sobram. <i>12 min</i>",
         "Escolham o número que mais surpreendeu a sala e escrevam o porquê na nota laranja. <i>4 min</i>",
-        "Confiram com as respostas que entram no chat ao sinal. <i>3 min</i>"
+        "Ao sinal, as respostas aparecem no Miro, ao lado da Área 2: <b>confiram e corrijam</b>. <i>3 min</i>"
        ],
        "meta": [
         [
@@ -359,21 +371,21 @@
     {
      "id": "e1-b3",
      "num": "03",
-     "nome": "A curva de Satir e o ciclo",
+     "nome": "A curva de Satir",
      "tom": "#7A4E6D",
-     "titulo": "A curva de Satir e o <em>ciclo Lean Change</em>",
+     "titulo": "A curva de Satir e o <em>desempenho do time</em>",
      "pergunta": "Onde o seu time está hoje na adoção?",
      "constroi": "A posição do seu time na curva, com um fato",
      "capaz": [
       "Localizar a posição do seu time na curva de mudança de Satir.",
       "Explicar por que o desempenho cai antes de subir numa adoção.",
-      "Descrever o ciclo Lean Change aplicado à adoção de IA."
+      "Sustentar a posição marcada com um fato observável."
      ],
      "itens": [
       {
        "t": "conceito",
        "titulo": "A curva de Satir na adoção de IA",
-       "html": "<p><b>Mito ou fato?</b> “Com a IA bem implantada, o desempenho do time sobe desde a primeira semana.” Mito. O elemento externo chega, o desempenho oscila, cai no caos e só sobe depois da ideia transformadora. Tentar evitar a queda prolonga o caos; preparar o time para atravessá-la encurta o caminho.</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Estágio</th><th>O que se observa</th></tr></thead><tbody><tr><td>Status quo</td><td>“Sempre fizemos assim.” O trabalho segue o jeito conhecido.</td></tr><tr><td>Resistência</td><td>“IA não vai funcionar aqui.” O elemento externo chegou.</td></tr><tr><td>Caos</td><td>“Nada funciona mais.” O desempenho cai e oscila.</td></tr><tr><td>Integração</td><td>“Agora entendo.” Depois da ideia transformadora, o desempenho sobe.</td></tr><tr><td>Novo status quo</td><td>“Como vivíamos sem isso?” O novo jeito é o jeito.</td></tr></tbody></table></div>",
+       "html": "<p>Mesmo numa implantação bem feita, o desempenho cai antes de subir. O elemento externo chega, o desempenho oscila, cai no caos e só sobe depois da ideia transformadora. Tentar evitar a queda prolonga o caos; preparar o time para atravessá-la encurta o caminho.</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Estágio</th><th>O que se observa</th></tr></thead><tbody><tr><td>Status quo</td><td>“Sempre fizemos assim.” O trabalho segue o jeito conhecido.</td></tr><tr><td>Resistência</td><td>“IA não vai funcionar aqui.” O elemento externo chegou.</td></tr><tr><td>Caos</td><td>“Nada funciona mais.” O desempenho cai e oscila.</td></tr><tr><td>Integração</td><td>“Agora entendo.” Depois da ideia transformadora, o desempenho sobe.</td></tr><tr><td>Novo status quo</td><td>“Como vivíamos sem isso?” O novo jeito é o jeito.</td></tr></tbody></table></div>",
        "fonte": "Satir, V. et al. The Satir Model, 1991."
       },
       {
@@ -425,12 +437,6 @@
          "linhas": 2
         }
        ]
-      },
-      {
-       "t": "conceito",
-       "titulo": "O motor Lean Change: insights, opções e experimentos",
-       "html": "<div class=\"cards3\"><div><b>1 · Insights</b><p>Como as pessoas preferem fazer hoje? O que já foi tentado? O que precisamos descobrir?</p></div><div><b>2 · Opções</b><p>Que comportamento queremos ver? O que o impede hoje? O que poderíamos fazer para habilitá-lo?</p></div><div><b>3 · Experimentos</b><p>O que queremos aprender? Qual é a hipótese? Como vamos medir?</p></div></div><p>Cada experimento percorre três passos: <b>preparar</b> (planejar com as pessoas afetadas), <b>introduzir</b> (colocar a mudança em prática) e <b>revisar</b> (prosseguir, pivotar ou pausar).</p>",
-       "fonte": "Little, J. Lean Change Management, 2014."
       }
      ]
     },

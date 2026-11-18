@@ -38,7 +38,7 @@ def icone(nome, cor="#FFFFFF", tam=28, sw=1.8):
     t = t.replace('width="24"', f'width="{tam}"', 1).replace('height="24"', f'height="{tam}"', 1)
     return t.replace('stroke="currentColor"', f'stroke="{cor}"').replace('stroke-width="2"', f'stroke-width="{sw}"').replace("\n", "")
 
-IC_BLOCO = {"Abertura": "door-open", "O paradoxo da IA": "trending-up", "Mudança e transição": "route", "A curva de Satir e o ciclo": "activity", "Diagnóstico de prontidão": "stethoscope", "Fechamento": "messages-square",
+IC_BLOCO = {"Abertura": "door-open", "O paradoxo da IA": "trending-up", "Mudança e transição": "route", "A curva de Satir": "activity", "A curva de Satir e o ciclo": "activity", "Diagnóstico de prontidão": "stethoscope", "Fechamento": "messages-square",
             "Leitura do diagnóstico em grupo": "search", "O mapa de pessoas": "users", "Práticas de geração de insights": "link-2", "Plano de coleta de insights": "clipboard-list"}
 IC_ENC = {1: "compass", 2: "users", 3: "lightbulb", 4: "flask-conical", 5: "flag"}
 FOTO_ENC = {1: "e1.jpg", 2: "e2.jpg", 3: "e3.jpg", 4: "e4.jpg", 5: "e5.jpg"}
