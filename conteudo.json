@@ -755,6 +755,12 @@
      "itens": [
       {
        "t": "conceito",
+       "titulo": "A leitura da turma",
+       "html": "<p>Antes de cada pessoa ler o próprio diagnóstico, a turma lê junta a tabela da Área 5 do quadro do Encontro 1, com as linhas completadas com um fato por dimensão.</p><div class=\"cards3\"><div><b>A menor nota</b><p>Qual dimensão aparece mais vezes como a menor nota? No mercado, pessoas, cultura e liderança costumam ficar abaixo de tecnologia.</p></div><div><b>A variação</b><p>Onde as notas da turma mais variam? Variação alta numa dimensão indica realidades muito diferentes entre organizações.</p></div><div><b>As duas curvas</b><p>A curva do sistema confirma o ponto que você marcou na curva de ontem? Diferença entre as duas é informação: vale investigar com o time.</p></div></div>",
+       "fonte": "Little, J. Lean Change Management, 2014."
+      },
+      {
+       "t": "conceito",
        "titulo": "Como ler um diagnóstico",
        "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>O que o grupo vê</th><th>Como ler</th></tr></thead><tbody><tr><td>Nota baixa com evidência forte</td><td>É lacuna. Candidata à prioridade.</td></tr><tr><td>Nota baixa sem evidência</td><td>Ainda é pergunta. Vai para “o que preciso descobrir”.</td></tr><tr><td>Notas muito diferentes entre as pessoas</td><td>Percepções diferentes da mesma realidade: informação sobre o sistema.</td></tr><tr><td>Curva comparada às notas</td><td>Time no caos com liderança baixa: presença da liderança antes de mais ferramenta.</td></tr></tbody></table></div><p>No Lean Change Management, divergência e resistência são tratadas como informação.</p>",
        "fonte": "Little, J. Lean Change Management, 2014."
