@@ -673,7 +673,7 @@
    "lede": "Do diagnóstico à lacuna prioritária, o mapa de pessoas da adoção, seis práticas para ouvir o sistema e o plano de coleta dos próximos seis dias.",
    "capaz": [
     "Priorizar a lacuna de prontidão que mais libera a adoção e está ao alcance da área.",
-    "Mapear as pessoas afetadas pela adoção, por influência e por impacto no trabalho.",
+    "Mapear as pessoas da adoção na curva de difusão de Rogers e o que acelera ou freia a adoção.",
     "Escolher a prática de geração de insights adequada a cada pessoa ou grupo.",
     "Elaborar um plano de coleta de insights para os próximos seis dias."
    ],
@@ -840,26 +840,32 @@
      "num": "02",
      "nome": "O mapa de pessoas",
      "tom": "#35608F",
-     "titulo": "O mapa de pessoas <em>da adoção</em>",
+     "titulo": "O mapa de pessoas <em>na curva de adoção</em>",
      "pergunta": "Quem precisa mudar o que faz para a adoção acontecer?",
-     "constroi": "O mapa de pessoas da sua adoção",
+     "constroi": "As pessoas da sua adoção na curva",
      "capaz": [
       "Identificar quem é afetado, quem decide e quem influencia a adoção.",
-      "Posicionar cada pessoa por influência e por impacto no trabalho.",
-      "Reconhecer a disposição de cada pessoa como informação."
+      "Posicionar cada pessoa num segmento da curva de adoção, com um fato.",
+      "Reconhecer o atributo da adoção que mais pesa para a maioria."
      ],
      "itens": [
       {
        "t": "conceito",
-       "titulo": "Resistência é informação",
-       "html": "<p><b>Mito ou fato?</b> “Quem resiste à IA é contra a mudança.” Mito. Quem resiste costuma estar protegendo algo que funciona: um prazo, um cliente, a qualidade de uma entrega. A resistência mostra onde a mudança encosta no trabalho real.</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>O que se ouve</th><th>A pergunta que a frase abre</th></tr></thead><tbody><tr><td>“Isso não funciona aqui.”</td><td>O que a pessoa já viu falhar?</td></tr><tr><td>“Não tenho tempo para isso.”</td><td>O que ela teria de parar de fazer?</td></tr><tr><td>“Prefiro fazer do meu jeito.”</td><td>O que o jeito dela garante que o novo ainda não garante?</td></tr></tbody></table></div>",
-       "fonte": "Little, J. Lean Change Management, 2014."
+       "titulo": "Três perguntas para encontrar as pessoas",
+       "html": "<div class=\"cards3\"><div><b>Quem é afetado?</b><p>Quem passa a trabalhar de outro jeito, ganha ou perde uma tarefa, um papel ou um reconhecimento. <i>Exemplo: compradores seniores e juniores; fornecedores.</i></p></div><div><b>Quem decide?</b><p>Quem aprova orçamento, prioridade, regra de uso e meta. <i>Exemplo: gerente de compras; diretor financeiro; jurídico.</i></p></div><div><b>Quem influencia?</b><p>Quem os colegas observam antes de decidir se usam: a referência técnica, a pessoa mais antiga, quem aprendeu primeiro. <i>Exemplo: a compradora que descobriu a cláusula de reajuste.</i></p></div></div>",
+       "fonte": "Exemplos apenas ilustrativos, do caso fictício da área de compras."
       },
       {
        "t": "conceito",
-       "titulo": "Três perguntas para encontrar as pessoas",
-       "html": "<div class=\"cards3\"><div><b>Quem é afetado?</b><p>Quem passa a trabalhar de outro jeito, ganha ou perde uma tarefa, um papel ou um reconhecimento. <i>Exemplo: compradores seniores e juniores; fornecedores.</i></p></div><div><b>Quem decide?</b><p>Quem aprova orçamento, prioridade, regra de uso e meta. <i>Exemplo: gerente de compras; diretor financeiro; jurídico.</i></p></div><div><b>Quem influencia?</b><p>Quem os colegas observam antes de decidir se usam: a referência técnica, a pessoa mais antiga, quem aprendeu primeiro. <i>Exemplo: a compradora que descobriu a cláusula de reajuste.</i></p></div></div><p><b>O mapa: influência, impacto e disposição.</b> Cada nota ocupa uma posição por quanto a pessoa é afetada e por quanto influencia. A cor mostra a disposição hoje: verde apoia (já usa ou defende a adoção), amarela ainda não se posicionou (observa, espera para ver), laranja tem ressalvas (vê um risco concreto para o próprio trabalho). Onde começar: por quem é muito afetado e tem ressalvas. É onde está a informação que falta.</p><p><b>Como a adoção se espalha.</b> Os primeiros 16% experimentam por conta própria; a maioria, 68%, adota ao ver um colega parecido usar; os últimos 16% adotam quando o novo já é o normal.</p>",
-       "fonte": "Adaptado de Mendelow (1991), de Little (2014) e de Rogers, E. Diffusion of Innovations, 5ª ed., 2003."
+       "titulo": "A curva de adoção: cinco segmentos",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Segmento</th><th>Parcela</th><th>Como adota</th></tr></thead><tbody><tr><td><b>Inovadores</b></td><td>2,5%</td><td>Experimentam por conta própria e aceitam o erro.</td></tr><tr><td><b>Adotantes iniciais</b></td><td>13,5%</td><td>Adotam cedo, com critério; a maioria os observa antes de decidir.</td></tr><tr><td><b>Maioria inicial</b></td><td>34%</td><td>Adota ao ver um colega parecido usar com resultado.</td></tr><tr><td><b>Maioria tardia</b></td><td>34%</td><td>Adota quando o novo vira o normal do grupo.</td></tr><tr><td><b>Últimos adotantes</b></td><td>16%</td><td>Protegem algo que funciona; pedem escuta, e não pressão.</td></tr></tbody></table></div><p>O segmento descreve o momento da pessoa nesta adoção, e não a pessoa: a mesma pessoa pode ser inovadora numa ferramenta e última adotante em outra.</p>",
+       "fonte": "Rogers, E. Diffusion of Innovations, 5ª ed., 2003."
+      },
+      {
+       "t": "conceito",
+       "titulo": "Cinco atributos que aceleram ou freiam a adoção",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Atributo</th><th>A pergunta de quem adota</th></tr></thead><tbody><tr><td><b>Vantagem relativa</b></td><td>O novo é melhor que o jeito atual?</td></tr><tr><td><b>Compatibilidade</b></td><td>Conversa com os meus valores, as minhas rotinas e as minhas necessidades?</td></tr><tr><td><b>Complexidade</b></td><td>É difícil de entender e de usar? Quanto mais difícil parece, mais lenta a adoção.</td></tr><tr><td><b>Experimentabilidade</b></td><td>Consigo experimentar em pequena escala antes de me comprometer?</td></tr><tr><td><b>Observabilidade</b></td><td>Os resultados ficam visíveis para os colegas?</td></tr></tbody></table></div><p>Os atributos percebidos explicam de 49% a 87% da variação na velocidade de adoção. Na adoção de IA, a experimentabilidade é o experimento pequeno do Encontro 4, e a observabilidade é o colega parecido que mostra resultado.</p>",
+       "fonte": "Rogers, E. Diffusion of Innovations, 5ª ed., 2003."
       },
       {
        "t": "atividade",
@@ -868,10 +874,9 @@
        "tempo": "20 min",
        "area": "Área 2",
        "passos": [
-        "No seu mapa da Área 2, criem uma nota para cada pessoa ou grupo da adoção: de seis a dez notas. <i>4 min</i>",
-        "Usem o papel, e não o nome. Dado reservado? Papel genérico.",
-        "Posicionem cada nota e escolham a cor da disposição. <i>5 min</i>",
-        "Em dupla, um apresenta o mapa; o outro pergunta: “Quem está faltando? Quem você ainda não ouviu?” <i>4 min</i>",
+        "Na sua curva da Área 2, criem uma nota para cada pessoa ou grupo da adoção: de seis a dez notas, com o papel, e não o nome. <i>4 min</i>",
+        "Posicionem cada nota no segmento da curva em que a pessoa está hoje nesta adoção. <i>5 min</i>",
+        "Em dupla, um apresenta a curva; o outro pergunta: “Que fato sustenta essa posição?” e “Para a maioria, qual atributo mais freia a adoção?” <i>4 min</i>",
         "Invertam os papéis. Escrevam ⭐ nas notas das três pessoas a ouvir primeiro. <i>5 min</i>"
        ],
        "meta": [
@@ -881,52 +886,44 @@
         ],
         [
          "Material",
-         "Miro, Área 2: o mapa com o seu nome."
+         "Miro, Área 2: a curva com o seu nome."
         ],
         [
          "Entrega",
-         "O mapa com as notas e três estrelas."
+         "A curva com as notas, três estrelas e o atributo que freia."
         ],
         [
          "Tempo",
          "20 minutos"
         ]
        ],
-       "exemplo": "<p>“Compradores seniores: muito afetados, muita influência, com ressalvas. Ouvir primeiro.”</p>",
+       "exemplo": "<p>“Compradores seniores: maioria tardia; esperam ver um colega parecido usar com resultado. O atributo que freia: compatibilidade.”</p>",
        "campos": [
         {
          "k": "e2.a2.mapa",
          "rotulo": "As Pessoas da Minha Adoção",
          "tipo": "tabela",
          "n": 10,
-         "mapa": true,
-         "dica": "O mapa abaixo da tabela se desenha à medida que você preenche.",
+         "curva": true,
+         "dica": "A curva abaixo da tabela se desenha à medida que você preenche.",
          "colunas": [
           {
            "t": "Pessoa ou Grupo (papel)",
            "ph": "Ex.: compradores seniores"
           },
           {
-           "t": "Impacto no Trabalho",
+           "t": "Segmento da Curva",
            "opcoes": [
-            "Pouco afetada",
-            "Muito afetada"
+            "Inovadores",
+            "Adotantes iniciais",
+            "Maioria inicial",
+            "Maioria tardia",
+            "Últimos adotantes"
            ]
           },
           {
-           "t": "Influência",
-           "opcoes": [
-            "Pouca influência",
-            "Muita influência"
-           ]
-          },
-          {
-           "t": "Disposição Hoje",
-           "opcoes": [
-            "Apoia",
-            "Ainda não se posicionou",
-            "Tem ressalvas"
-           ]
+           "t": "O Fato que Sustenta a Posição",
+           "ph": "Ex.: refazem a cotação na planilha"
           },
           {
            "t": "Ouvir Primeiro",
@@ -935,12 +932,31 @@
            ]
           }
          ]
+        },
+        {
+         "k": "e2.a2.atributo",
+         "rotulo": "O Atributo que Mais Freia a Adoção para a Maioria",
+         "tipo": "escolha",
+         "opcoes": [
+          "Vantagem relativa",
+          "Compatibilidade",
+          "Complexidade",
+          "Experimentabilidade",
+          "Observabilidade"
+         ]
+        },
+        {
+         "k": "e2.a2.porque",
+         "rotulo": "Por Quê",
+         "tipo": "area",
+         "linhas": 2,
+         "ph": "O fato que mostra esse freio."
         }
        ],
        "pontos": [
-        "<b>Onde as notas se concentram?</b> Mapas com tudo no quadrante de muita influência e muito impacto costumam ter esquecido quem usa todo dia.",
-        "<b>Quantas notas laranja estão entre as três estrelas?</b> Ouvir primeiro quem tem ressalvas traz a informação que falta.",
-        "<b>Quem influencia sem ter cargo?</b> A pessoa que os colegas observam antes de decidir se usam."
+        "<b>Em que segmento as notas se concentram?</b> Muitas notas na maioria tardia pedem prova próxima, de um colega parecido.",
+        "<b>Quem é o adotante inicial que a maioria observa?</b> É a primeira estrela e o primeiro nome da rede de campeões do Encontro 5.",
+        "<b>Qual atributo mais apareceu nas duplas?</b> Complexidade e compatibilidade costumam liderar; a experimentabilidade é o que o Encontro 4 constrói."
        ]
       }
      ]

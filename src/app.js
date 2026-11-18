@@ -36,6 +36,19 @@ function mapas(){$("[data-mapa]").forEach(function(m){
     n.style.left=((dir?52:3)+(i%2)*22)+"%";n.style.top=((alto?9:57)+Math.floor(i/2)*11)+"%";m.appendChild(n);
   });
 })}
+// curva de adoção (Rogers) a partir da tabela
+var SEG=[["Inovadores","2,5%","#7A4E6D"],["Adotantes iniciais","13,5%","#35608F"],["Maioria inicial","34%","#2F6B6F"],["Maioria tardia","34%","#B5781E"],["Últimos adotantes","16%","#8D8377"]];
+function curvas(){$("[data-curva]").forEach(function(m){
+  var k=m.getAttribute("data-curva"),tb=document.querySelector('[data-tabela="'+k+'"]');if(!tb)return;
+  var por={};SEG.forEach(function(s){por[s[0]]=[]});
+  $("tbody tr",tb).forEach(function(tr){var c=$("[data-k]",tr).map(function(x){return x.value});if(c[0]&&por[c[1]])por[c[1]].push((c[3]?"⭐ ":"")+c[0])});
+  var pts=[],i,x,z;for(i=0;i<=100;i++){z=(i-50)/16.5;pts.push((i*6)+","+(120-100*Math.exp(-z*z/2)).toFixed(1))}
+  var lim=[0,17,33.5,50,66.5,100],svg='<svg viewBox="0 0 600 124" preserveAspectRatio="none" class="curva__svg">';
+  SEG.forEach(function(s,j){var a=lim[j],b=lim[j+1],pp=[(a*6)+",120"];for(i=Math.ceil(a);i<=Math.floor(b);i++)pp.push(pts[i]);pp.push((b*6)+",120");svg+='<polygon points="'+pp.join(" ")+'" fill="'+s[2]+'" opacity=".85"/>'});
+  svg+="</svg>";
+  m.innerHTML=svg+'<div class="curva__cols">'+SEG.map(function(s){return '<div class="curva__col" style="--c:'+s[2]+'"><b>'+s[0]+'</b><span>'+s[1]+'</span>'+por[s[0]].map(function(n){return '<i>'+n.replace(/</g,"&lt;")+'</i>'}).join("")+'</div>'}).join("")+'</div>';
+})}
+var _mapas=mapas;mapas=function(){_mapas();curvas()};
 mapas();espelhos();
 window.CM4AI_atualizar=function(){$("[data-k]").forEach(altura);mapas();espelhos()};
 // exportar

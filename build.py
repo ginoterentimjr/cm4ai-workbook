@@ -92,7 +92,7 @@ def campo(c):
                     inp = f'<textarea data-k="{kk}" rows="2" aria-label="{e(h["t"])}" placeholder="{e(h.get("ph", ""))}"></textarea>'
                 tds += f'<td data-th="{e(h["t"])}">{inp}</td>'
             lin += f"<tr>{tds}</tr>"
-        extra = '<div class="mapa" data-mapa="' + k + '"></div>' if c.get("mapa") else ""
+        extra = ('<div class="mapa" data-mapa="' + k + '"></div>' if c.get("mapa") else "") + ('<div class="curva" data-curva="' + k + '"></div>' if c.get("curva") else "")
         corpo = f'<div class="tabela-w"><table class="tabela" data-tabela="{k}"><thead><tr>{cab}</tr></thead><tbody>{lin}</tbody></table></div>{extra}'
     return f'<div class="campo">{rot}{dica}{corpo}</div>'
 
