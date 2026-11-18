@@ -24,6 +24,13 @@ JS = open(os.path.join(RAIZ, "src", "app.js"), encoding="utf-8").read() + "\n" +
 API = open(os.path.join(RAIZ, "api.txt"), encoding="utf-8").read().strip() if os.path.exists(os.path.join(RAIZ, "api.txt")) else ""
 ICON_DIR = os.path.join(RAIZ, "src", "icons")
 
+def img_url(nome):
+    """Endereço da imagem: arquivo no site, embutida na versão do professor."""
+    if PROF:
+        return "data:image/jpeg;base64," + base64.b64encode(open(os.path.join(RAIZ, "src", "img", nome), "rb").read()).decode()
+    return f"img/{nome}"
+
+
 def icone(nome, cor="#FFFFFF", tam=28, sw=1.8):
     import re as _re
     t = open(os.path.join(ICON_DIR, nome + ".svg"), encoding="utf-8").read()
@@ -156,7 +163,7 @@ def caminho_html(atual, grande=False):
         pub = n in PUBLICADOS
         tag = "a" if pub and not PROF else "span"
         href = f' href="e{n}.html"' if tag == "a" else ""
-        foto = "" if PROF else f'background-image:url(img/p{n}.jpg)'
+        foto = f'background-image:url({img_url(f"p{n}.jpg")})'
         rodape = (f'<small class="parada__c" data-cont>{"Você está aqui" if n == atual else ""}</small>' if pub
                   else f'<small class="parada__c">Abre em {ABRE.get(n, "")}</small>')
         o += (f'<{tag} class="parada {cls}{"" if pub else " parada--breve"}" data-parada="{n}" style="--tom:{tom}"{href}>'
@@ -193,7 +200,7 @@ def barra():
 
 def encontro_html(enc):
     foto = FOTO_ENC.get(enc["n"])
-    fst = f';--foto:url(img/{foto})' if foto and not PROF else ""
+    fst = f';--foto:url({img_url(foto)})' if foto else ""
     o = f'<section class="capa capa--foto" style="--tom:{enc["tom"]}{fst}"><p class="capa__k">ENCONTRO {enc["n"]} DE 5 · {e(enc["data"].upper())}</p><h1>{enc["titulo"]}</h1>'
     o += f'<p class="capa__l">{e(enc["lede"])}</p></section>'
     o += '<section class="bloco bloco--abre"><div class="capaz"><b>Ao término deste encontro, os participantes serão capazes de:</b><ol>' + "".join(f"<li>{e(x)}</li>" for x in enc["capaz"]) + "</ol></div>"
@@ -229,7 +236,7 @@ if PROF:
     for enc in ENCONTROS:
         corpo += encontro_html(enc)
     os.makedirs(os.path.join(RAIZ, "professor"), exist_ok=True)
-    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v1.html"), "w", encoding="utf-8").write(
+    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v2.html"), "w", encoding="utf-8").write(
         pagina("CM4AI · Workbook · Versão do professor", corpo, "prof", fontes(True)))
     print("professor ok")
 else:

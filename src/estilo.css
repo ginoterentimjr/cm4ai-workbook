@@ -150,7 +150,7 @@ textarea:focus,input:focus,select:focus{outline:3px solid rgba(229,102,44,.35);b
 .btn:hover{filter:brightness(1.06)}
 .disco{flex:none;display:inline-grid;place-items:center;width:54px;height:54px;border-radius:50%;background:var(--tom)}
 .disco svg{display:block}
-.capa--foto{background:var(--escuro) var(--foto) right center/cover no-repeat;min-height:380px;display:flex;flex-direction:column;justify-content:flex-end}
+.capa--foto{background-color:var(--escuro);background-image:var(--foto,none);background-position:right center;background-size:cover;background-repeat:no-repeat;min-height:380px;display:flex;flex-direction:column;justify-content:flex-end}
 .capa--foto .capa__l,.capa--foto h1,.capa--foto .capa__k{max-width:640px;position:relative;z-index:1}
 .capa--foto:after{opacity:.22}
 .conta{display:flex;align-items:center;gap:10px;font-size:14px;color:#FBEEE5}
