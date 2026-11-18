@@ -20,7 +20,21 @@ PROF = len(sys.argv) > 1 and sys.argv[1] == "professor"
 REPO = "https://github.com/ginoterentimjr/cm4ai-workbook"
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 CSS = open(os.path.join(RAIZ, "src", "estilo.css"), encoding="utf-8").read()
-JS = open(os.path.join(RAIZ, "src", "app.js"), encoding="utf-8").read()
+JS = open(os.path.join(RAIZ, "src", "app.js"), encoding="utf-8").read() + "\n" + open(os.path.join(RAIZ, "src", "conta.js"), encoding="utf-8").read()
+API = open(os.path.join(RAIZ, "api.txt"), encoding="utf-8").read().strip() if os.path.exists(os.path.join(RAIZ, "api.txt")) else ""
+ICON_DIR = os.path.join(RAIZ, "src", "icons")
+
+def icone(nome, cor="#FFFFFF", tam=28, sw=1.8):
+    import re as _re
+    t = open(os.path.join(ICON_DIR, nome + ".svg"), encoding="utf-8").read()
+    t = _re.sub(r"<!--.*?-->", "", t, flags=_re.S)
+    t = t.replace('width="24"', f'width="{tam}"', 1).replace('height="24"', f'height="{tam}"', 1)
+    return t.replace('stroke="currentColor"', f'stroke="{cor}"').replace('stroke-width="2"', f'stroke-width="{sw}"').replace("\n", "")
+
+IC_BLOCO = {"Abertura": "door-open", "O paradoxo da IA": "trending-up", "Mudança e transição": "route", "A curva de Satir e o ciclo": "activity", "Diagnóstico de prontidão": "stethoscope", "Fechamento": "messages-square",
+            "Leitura do diagnóstico em grupo": "search", "O mapa de pessoas": "users", "Práticas de geração de insights": "link-2", "Plano de coleta de insights": "clipboard-list"}
+IC_ENC = {1: "compass", 2: "users", 3: "lightbulb", 4: "flask-conical", 5: "flag"}
+FOTO_ENC = {1: "e1.jpg", 2: "e2.jpg", 3: "e3.jpg", 4: "e4.jpg", 5: "e5.jpg"}
 e = html.escape
 
 
@@ -79,7 +93,8 @@ def bloco_html(b, enc):
     tom = b["tom"]
     o = f'<section class="bloco" id="{b["id"]}" style="--tom:{tom}">'
     o += f'<div class="eyebrow"><span>{e(b["num"])} · {e(b["nome"].upper())}</span><i></i></div>'
-    o += f'<h2>{b["titulo"]}</h2>'
+    ic = IC_BLOCO.get(b["nome"])
+    o += (f'<div class="bloco__t"><span class="disco">{icone(ic)}</span><h2>{b["titulo"]}</h2></div>' if ic else f'<h2>{b["titulo"]}</h2>')
     if b.get("pergunta"):
         o += f'<p class="pergunta">{e(b["pergunta"])}</p>'
     if b.get("capaz"):
@@ -126,19 +141,37 @@ def bloco_html(b, enc):
     return o
 
 
-def caminho_html(atual):
-    o = '<div class="caminho">'
+PUBLICADOS = {1, 2}
+ABRE = {3: "25/11", 4: "26/11", 5: "27/11"}
+FASES = (("Escutar o sistema", 2), ("Escolher a próxima aposta", 1), ("Testar, medir e sustentar", 2))
+
+
+def caminho_html(atual, grande=False):
+    """Mapa do caminho: cinco paradas ligadas por uma rota, com foto, ícone e fase."""
+    o = f'<div class="rota{" rota--grande" if grande else ""}">'
+    o += ('<svg class="rota__linha" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true">'
+          '<path d="M100,62 C170,62 220,138 300,138 S430,62 500,62 S630,138 700,138 S830,62 900,62"/></svg>')
     for n, nome, data, tom, prod, grupo in CAMINHO:
-        cls = "feito" if n < atual else ("aqui" if n == atual else "")
-        o += (f'<a class="caminho__p {cls}" style="--tom:{tom}" href="{"e%d.html" % n if n <= 2 else "#"}">'
-              f'<span class="caminho__g">{e(grupo)}</span><span class="caminho__n">{n}</span>'
-              f'<b>{e(nome)}</b><small>{e(data)}</small><em>{e(prod)}</em></a>')
+        cls = "feito" if 0 < n < atual else ("aqui" if n == atual else "")
+        pub = n in PUBLICADOS
+        tag = "a" if pub and not PROF else "span"
+        href = f' href="e{n}.html"' if tag == "a" else ""
+        foto = "" if PROF else f'background-image:url(img/p{n}.jpg)'
+        rodape = (f'<small class="parada__c" data-cont>{"Você está aqui" if n == atual else ""}</small>' if pub
+                  else f'<small class="parada__c">Abre em {ABRE.get(n, "")}</small>')
+        o += (f'<{tag} class="parada {cls}{"" if pub else " parada--breve"}" data-parada="{n}" style="--tom:{tom}"{href}>'
+              f'<span class="parada__foto" style="{foto}"><span class="parada__n">{n}</span><span class="parada__ic">{icone(IC_ENC[n], tam=22)}</span></span>'
+              f'<span class="parada__k">ENCONTRO {n} · {e(data.split(" · ")[0])}</span>'
+              f'<b>{e(nome)}</b><em>{e(prod)}</em>{rodape}</{tag}>')
+    o += '<div class="rota__fases">' + "".join(f'<span style="grid-column:span {c}">{e(f)}</span>' for f, c in FASES) + "</div>"
     return o + "</div>"
 
 
 def pagina(titulo, corpo, pg, fontes_css, extra_js=""):
-    nav = "" if PROF else ('<nav class="nav"><a href="index.html">Início</a><a href="e1.html">Encontro 1</a>'
-                           '<a href="e2.html">Encontro 2</a><a href="mentoria.html">Mentoria</a></nav>')
+    nav = "" if PROF else ('<nav class="nav"><a href="index.html">Meu mapa</a><a href="e1.html">Encontro 1</a>'
+                           '<a href="e2.html">Encontro 2</a><a href="mentoria.html">Mentoria</a></nav><span class="conta" data-conta></span>')
+    n_enc = int(pg[1:]) if pg.startswith("e") and pg[1:].isdigit() else 0
+    cfg = "" if PROF else f'<script>window.CM4AI={{api:{json.dumps(API)},encontro:{n_enc}}};</script>'
     selo = '<span class="selo-prof">VERSÃO DO PROFESSOR</span>' if PROF else ""
     return f"""<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -148,17 +181,20 @@ def pagina(titulo, corpo, pg, fontes_css, extra_js=""):
 <header class="topo"><a class="marca" href="{'#' if PROF else 'index.html'}"><img src="{MARCA}" alt=""><span><b>GINO TERENTIM</b><i>RETHINKING LEARNING</i></span></a>{selo}{nav}</header>
 <main>{corpo}</main>
 <footer class="rodape"><span>Change Management for AI · Turma on-line · Novembro de 2026</span><span>Rethinking Learning</span></footer>
-<script>{JS}{extra_js}</script></body></html>"""
+{cfg}<script>{JS}{extra_js}</script></body></html>"""
 
 
 def barra():
-    return ('<div class="barra"><span class="barra__s" data-salvo>As respostas ficam gravadas neste navegador.</span>'
+    return ('<div class="aviso-conta" data-aviso-conta hidden><b>Entre com o seu e-mail para gravar as respostas na sua página do curso.</b> Sem entrar, elas ficam só neste navegador. <a class="btn" href="index.html">Entrar</a></div>'
+            '<div class="barra"><span class="barra__s" data-salvo>As respostas ficam gravadas na sua página do curso.</span>'
             '<button type="button" class="btn btn--sec" data-exportar>Exportar as minhas respostas</button>'
             '<button type="button" class="btn btn--sec" data-imprimir>Imprimir ou salvar em PDF</button></div>')
 
 
 def encontro_html(enc):
-    o = f'<section class="capa" style="--tom:{enc["tom"]}"><p class="capa__k">ENCONTRO {enc["n"]} DE 5 · {e(enc["data"].upper())}</p><h1>{enc["titulo"]}</h1>'
+    foto = FOTO_ENC.get(enc["n"])
+    fst = f';--foto:url(img/{foto})' if foto and not PROF else ""
+    o = f'<section class="capa capa--foto" style="--tom:{enc["tom"]}{fst}"><p class="capa__k">ENCONTRO {enc["n"]} DE 5 · {e(enc["data"].upper())}</p><h1>{enc["titulo"]}</h1>'
     o += f'<p class="capa__l">{e(enc["lede"])}</p></section>'
     o += '<section class="bloco bloco--abre"><div class="capaz"><b>Ao término deste encontro, os participantes serão capazes de:</b><ol>' + "".join(f"<li>{e(x)}</li>" for x in enc["capaz"]) + "</ol></div>"
     o += "<h3>Onde estamos no caminho</h3>" + caminho_html(enc["n"])
@@ -203,22 +239,33 @@ else:
     for f in os.listdir(os.path.join(RAIZ, "src", "fonts")):
         shutil.copy(os.path.join(RAIZ, "src", "fonts", f), os.path.join(D, "fonts", f))
     shutil.copy(os.path.join(RAIZ, "src", "logo-gt-mark.png"), D)
+    shutil.copytree(os.path.join(RAIZ, "src", "img"), os.path.join(D, "img"))
     open(os.path.join(D, ".nojekyll"), "w").close()
     F = fontes(False)
     for enc in ENCONTROS:
         open(os.path.join(D, f"e{enc['n']}.html"), "w", encoding="utf-8").write(
             pagina(f"CM4AI · Workbook · Encontro {enc['n']}", encontro_html(enc), f"e{enc['n']}", F))
-    idx = ('<section class="capa" style="--tom:#E5662C"><p class="capa__k">CERTIFICAÇÃO LEAN CHANGE MANAGEMENT · TURMA ON-LINE · NOVEMBRO DE 2026</p>'
-           '<h1>Change Management <em>for AI</em></h1><p class="capa__l">Workbook digital da turma. Cada atividade dos encontros tem aqui as instruções completas, '
-           'um exemplo e o espaço para o seu registro, com o mesmo texto dos slides e do quadro do Miro.</p></section>')
-    idx += '<section class="bloco bloco--abre"><h2>O caminho dos <em>cinco encontros</em></h2><p>Todos os encontros ao vivo, das 19h às 22h, horário de Brasília. Cada encontro termina com um produto aplicável ao seu contexto.</p>' + caminho_html(0)
-    idx += ('<div class="cards3"><div><b>Como usar</b><p>Abra o encontro do dia e registre as suas respostas à medida que a atividade acontece. O registro fica gravado neste navegador, neste aparelho.</p></div>'
-            '<div><b>O fio entre os encontros</b><p>A adoção de IA que você escolhe no Encontro 1 acompanha o curso inteiro. O Encontro 2 parte do que você registrou no Encontro 1.</p></div>'
-            '<div><b>Reserva dos seus dados</b><p>As respostas não saem do seu navegador. Use o papel das pessoas, e não o nome. Para guardar uma cópia, exporte ou salve em PDF.</p></div></div>')
-    idx += ('<div class="cards2"><a class="cartao" href="e1.html" style="--tom:#B04A1C"><span>ENCONTRO 1 · 18/11</span><b>Fundamentos e prontidão</b><i>Diagnóstico 5D e o que termina</i></a>'
-            '<a class="cartao" href="e2.html" style="--tom:#2F6B6F"><span>ENCONTRO 2 · 19/11</span><b>Pessoas e coleta de insights</b><i>Mapa de pessoas e plano de coleta</i></a>'
-            '<a class="cartao" href="mentoria.html" style="--tom:#2A211C"><span>ENTRE OS ENCONTROS</span><b>Mentoria de Lean Change Management</b><i>Dúvidas respondidas em cerca de um minuto</i></a></div>'
-            '<p class="nota-pe">Os Encontros 3, 4 e 5 entram neste workbook na data de cada um.</p></section>')
+    idx = ('<section class="capa capa--foto" style="--tom:#E5662C;--foto:url(img/capa.jpg)"><p class="capa__k">CHANGE MANAGEMENT FOR AI · TURMA ON-LINE · NOVEMBRO DE 2026</p>'
+           '<h1>O seu mapa de <em>navegação</em></h1><p class="capa__l">A página de cada participante no curso. Aqui ficam as instruções de cada atividade, '
+           'com o mesmo texto dos slides e do quadro do Miro, e o registro das suas respostas nos cinco encontros.</p></section>')
+    idx += ('<section class="entrada" data-entrada hidden><div class="entrada__f"><div class="eyebrow" style="--tom:#E5662C"><span>ACESSO · A SUA PÁGINA DO CURSO</span><i></i></div>'
+            '<h2>Entre com o seu <em>e-mail</em></h2>'
+            '<form novalidate><label for="f-email"><b>E-mail de inscrição</b></label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="nome@empresa.com.br">'
+            '<label for="f-codigo"><b>Código de quatro números</b></label><input id="f-codigo" name="codigo" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="current-password" required placeholder="••••">'
+            '<label for="f-nome"><b>Nome, no primeiro acesso</b></label><input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Nome e sobrenome">'
+            '<button class="btn btn--grande" type="submit">Abrir a minha página</button><p class="entrada__aviso" data-aviso aria-live="polite"></p></form></div>'
+            '<ol class="entrada__passos">'
+            f'<li><span class="disco" style="--tom:#B04A1C">{icone("mail")}</span><div><b>O e-mail da inscrição</b><p>O mesmo endereço informado na matrícula da turma.</p></div></li>'
+            f'<li><span class="disco" style="--tom:#2F6B6F">{icone("key-round")}</span><div><b>Um código seu</b><p>No primeiro acesso, você escolhe quatro números. Nos acessos seguintes, o mesmo código abre a sua página, em qualquer aparelho.</p></div></li>'
+            f'<li><span class="disco" style="--tom:#5E7D52">{icone("map-pin")}</span><div><b>O seu registro, encontro a encontro</b><p>Cada resposta é gravada na sua página assim que você escreve, e volta inteira no encontro seguinte.</p></div></li></ol></section>')
+    idx += ('<section class="mapa-curso" data-mapa-curso><div class="mapa-curso__cab"><div><div class="eyebrow" style="--tom:#E5662C"><span>O CAMINHO DOS CINCO ENCONTROS</span><i></i></div>'
+            '<h2><span data-ola-bloco hidden>Olá, <span data-ola></span>. </span>O seu <em>caminho</em></h2>'
+            '<p>Encontros ao vivo das 19h às 22h, horário de Brasília. Cada encontro termina com um produto aplicável ao seu contexto, e cada parada do mapa abre o workbook do encontro.</p></div>'
+            f'<span class="rosa" aria-hidden="true">{icone("compass", "#C9A24D", 120, 1.1)}</span></div>' + caminho_html(0, True) +
+            '<div class="cards3 cards3--claro"><div><b>Como usar</b><p>Abra o encontro do dia e registre as suas respostas à medida que cada atividade acontece. Sem conexão, o registro fica neste navegador e segue para a sua página na alteração seguinte.</p></div>'
+            '<div><b>O fio entre os encontros</b><p>A adoção de IA que você escolhe no Encontro 1 acompanha o curso inteiro. Cada encontro parte do que você registrou no anterior.</p></div>'
+            '<div><b>Reserva dos seus dados</b><p>As respostas ficam na planilha privada da turma, aberta apenas ao Gino Terentim, e na sua página, protegida pelo seu código. Use o papel das pessoas, e não o nome.</p></div></div>'
+            f'<a class="cartao cartao--mentor" href="mentoria.html" style="--tom:#2A211C"><span class="disco" style="--tom:#E5662C">{icone("messages-square")}</span><span><span class="cartao__k">ENTRE OS ENCONTROS</span><b>Mentoria de Lean Change Management</b><i>Dúvidas sobre o método e as atividades, respondidas em cerca de um minuto</i></span></a></section>')
     open(os.path.join(D, "index.html"), "w", encoding="utf-8").write(pagina("CM4AI · Workbook digital", idx, "index", F))
     m = ('<section class="capa" style="--tom:#E5662C"><p class="capa__k">ENTRE OS ENCONTROS</p><h1>Mentoria de <em>Lean Change Management</em></h1>'
          '<p class="capa__l">Um mentor de inteligência artificial responde às suas dúvidas sobre o método e sobre as atividades do curso, no fórum da turma.</p></section>'

@@ -5,7 +5,7 @@ function ler(k){try{var v=localStorage.getItem(P+k);return v===null?(mem[k]||"")
 function gravar(k,v){mem[k]=v;try{localStorage.setItem(P+k,v)}catch(e){}}
 function $(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
 var salvo=$("[data-salvo]");
-function aviso(){var h=new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});salvo.forEach(function(el){el.textContent="Respostas gravadas neste navegador às "+h+"."})}
+function aviso(){if(localStorage.getItem("cm4ai:sessao"))return;var h=new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});salvo.forEach(function(el){el.textContent="Respostas gravadas neste navegador às "+h+"."})}
 function espelhos(){$("[data-espelho]").forEach(function(el){var v=ler(el.getAttribute("data-espelho"));el.textContent=v||"Ainda sem registro no Encontro 1."})}
 function altura(t){if(t.tagName!=="TEXTAREA")return;t.style.height="auto";t.style.height=(t.scrollHeight+4)+"px"}
 // restaura e grava
@@ -37,6 +37,7 @@ function mapas(){$("[data-mapa]").forEach(function(m){
   });
 })}
 mapas();espelhos();
+window.CM4AI_atualizar=function(){$("[data-k]").forEach(altura);mapas();espelhos()};
 // exportar
 function texto(){
   var o=[document.title,"Exportado em "+new Date().toLocaleString("pt-BR"),""];
