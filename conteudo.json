@@ -670,12 +670,12 @@
    "data": "19 de novembro de 2026",
    "miro": "https://miro.com/app/board/uXjVENsiEuo=/",
    "titulo": "Pessoas e coleta <em>de insights</em>",
-   "lede": "A curva de Satir e o diagnóstico de prontidão, no quadro do Encontro 1; depois, a lacuna prioritária, o mapa de pessoas da adoção, seis práticas para ouvir o sistema e o plano de coleta dos próximos seis dias.",
+   "lede": "A curva de Satir e o diagnóstico de prontidão, no quadro do Encontro 1; depois, a lacuna prioritária, o mapa de pessoas da adoção e seis práticas para ouvir o sistema.",
    "capaz": [
     "Localizar o time na curva de Satir e diagnosticar a prontidão da área em cinco dimensões.",
     "Priorizar a lacuna de prontidão que mais libera a adoção e está ao alcance da área.",
     "Mapear as pessoas da adoção na curva de difusão de Rogers e o que acelera ou freia a adoção.",
-    "Elaborar um plano de coleta de insights para os próximos seis dias."
+    "Escolher a prática de geração de insights adequada a cada pessoa do mapa."
    ],
    "blocos": [
     {
@@ -1053,97 +1053,6 @@
      ]
     },
     {
-     "id": "e2-b4",
-     "num": "04",
-     "nome": "Plano de coleta de insights",
-     "tom": "#5E7D52",
-     "titulo": "O plano de coleta <em>em seis dias</em>",
-     "pergunta": "O que você vai perguntar, a quem e quando?",
-     "constroi": "O plano de coleta de insights da sua adoção",
-     "capaz": [
-      "Formular perguntas abertas sobre fatos do trabalho.",
-      "Elaborar um plano de coleta com pessoa, prática, pergunta e data.",
-      "Conferir o próprio plano com três critérios."
-     ],
-     "itens": [
-      {
-       "t": "conceito",
-       "titulo": "Perguntas que trazem fatos",
-       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Pergunta que traz opinião</th><th>Pergunta que traz fato</th></tr></thead><tbody><tr><td>“O que você acha do assistente?”</td><td>“Conte a última vez que você usou o assistente. O que aconteceu?”</td></tr><tr><td>“Você confia na comparação?”</td><td>“Em que momento você confere o resultado? O que você confere?”</td></tr><tr><td>“Por que você não usa?”</td><td>“Como você fez a última cotação, passo a passo?”</td></tr><tr><td>“O que precisa melhorar?”</td><td>“Se você pudesse mudar uma coisa na ferramenta amanhã, qual seria?”</td></tr></tbody></table></div><p>Três cuidados: pergunte pelo que aconteceu, ouça mais do que fale e registre com as palavras da pessoa.</p>"
-      },
-      {
-       "t": "atividade",
-       "id": "e2-a4",
-       "titulo": "A primeira linha do seu plano",
-       "tempo": "4 min",
-       "area": "Área 4",
-       "passos": [
-        "No seu plano da <b>Área 4</b>, preencha <b>a primeira linha</b>: a pessoa que você vai ouvir primeiro. <i>3 min</i>",
-        "Em cada coluna: <b>Quem</b>, <b>O Que Preciso Descobrir</b>, <b>Prática</b>, <b>Pergunta de Abertura</b> e <b>Quando</b>.",
-        "Releia a <b>Pergunta de Abertura</b>: ela pede <b>a última vez</b> ou <b>o passo a passo</b>? <i>1 min</i>"
-       ],
-       "meta": [
-        [
-         "Com quem",
-         "Individual."
-        ],
-        [
-         "Material",
-         "Miro, Área 4: o plano com o seu nome."
-        ],
-        [
-         "Entrega",
-         "A primeira linha do plano."
-        ],
-        [
-         "Tempo",
-         "4 minutos"
-        ]
-       ],
-       "exemplo": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Quem</th><th>O Que Preciso Descobrir</th><th>Prática</th><th>Pergunta de Abertura</th><th>Quando</th></tr></thead><tbody><tr><td>Compradores seniores</td><td>Por que refazem a cotação na planilha.</td><td>Observação do trabalho</td><td>“Posso acompanhar a sua próxima cotação, do começo ao fim?”</td><td>Sexta, 20/11</td></tr><tr><td>Gerente de compras</td><td>O que a impede de usar o assistente diante do time.</td><td>Conversa individual</td><td>“Conte a última vez que você abriu o assistente. O que aconteceu?”</td><td>Segunda, 23/11</td></tr><tr><td>Compradores juniores</td><td>Em que tarefas usam e o que conferem depois.</td><td>Conversa individual</td><td>“Como você fez a última comparação de propostas, passo a passo?”</td><td>Terça, 24/11</td></tr></tbody></table></div><p><i>Três linhas, seis dias. As pessoas vêm das três estrelas do mapa; a primeira pergunta a descobrir vem da Área 1. Caso fictício da área de compras.</i></p>",
-       "campos": [
-        {
-         "k": "e2.a4.plano",
-         "rotulo": "O Meu Plano de Coleta",
-         "tipo": "tabela",
-         "n": 3,
-         "colunas": [
-          {
-           "t": "Quem"
-          },
-          {
-           "t": "O Que Preciso Descobrir"
-          },
-          {
-           "t": "Prática",
-           "opcoes": [
-            "Conversa individual",
-            "Observação do trabalho",
-            "Retrospectiva",
-            "Mural de perguntas",
-            "Pesquisa de pulso",
-            "Dados de uso"
-           ]
-          },
-          {
-           "t": "Pergunta de Abertura"
-          },
-          {
-           "t": "Quando",
-           "ph": "Entre 20 e 24/11"
-          }
-         ]
-        }
-       ],
-       "pontos": [
-        "<b>Uma pessoa por linha.</b> Um papel específico, que você consegue encontrar nesta semana.",
-        "<b>Uma pergunta que traz fato.</b> Pede a última vez, o passo a passo, o que aconteceu.",
-        "<b>Uma data até terça.</b> Um dia marcado, entre 20 e 24 de novembro."
-       ]
-      }
-     ]
-    },
-    {
      "id": "e2-fe",
      "num": "05",
      "nome": "Fechamento",
@@ -1158,9 +1067,9 @@
        "tempo": "até 24/11",
        "area": null,
        "passos": [
-        "<b>Uma conversa de 15 minutos.</b> Com a pessoa da primeira linha do seu plano, até terça-feira, 24/11, com a sua pergunta de abertura.",
-        "<b>Se puder, mais uma.</b> Com outra pessoa do seu mapa. É opcional.",
-        "<b>Anote aqui.</b> Logo depois de cada conversa, na tabela abaixo: o que a pessoa faz hoje, o que já tentou e a frase que mais surpreendeu, com as palavras dela e sem o nome."
+        "<b>Uma conversa de 15 minutos.</b> Com uma das três estrelas do seu mapa de pessoas (Área 2), até terça-feira, 24/11.",
+        "<b>Comece pelo fato.</b> “Conte a última vez que você usou a ferramenta. Como foi, passo a passo?”",
+        "<b>Anote aqui.</b> Logo depois de cada conversa, na tabela abaixo: o que a pessoa faz hoje, o que já tentou e a frase que mais surpreendeu, com as palavras dela e sem o nome. Se puder, faça uma segunda conversa, com outra estrela."
        ],
        "meta": [
         [
