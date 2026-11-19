@@ -13,7 +13,7 @@
    "Pessoas e coleta de insights",
    "19/11 · Módulos 1 e 2",
    "#2F6B6F",
-   "Mapa de pessoas e plano de coleta",
+   "Lacuna prioritária e mapa de pessoas",
    "Escutar o sistema"
   ],
   [
@@ -552,115 +552,6 @@
        ]
       }
      ]
-    },
-    {
-     "id": "e1-fe",
-     "num": "05",
-     "nome": "Fechamento",
-     "tom": "#5E7D52",
-     "titulo": "A primeira conversa <em>da semana</em>",
-     "constroi": "A conversa marcada, com pessoa e dia",
-     "itens": [
-      {
-       "t": "atividade",
-       "id": "e1-a5",
-       "titulo": "A primeira conversa da semana",
-       "tempo": "6 min",
-       "area": "Área 6",
-       "perg": "“Com o que você viu hoje, qual é a primeira conversa que você vai ter nesta semana, e com quem?”",
-       "passos": [
-        "Em cada sala, uma pessoa por vez responde à pergunta, em até um minuto.",
-        "Os colegas ajudam com uma pergunta: “Com quem, e em que dia?”",
-        "Cada pessoa registra a sua conversa numa nota da Área 6."
-       ],
-       "meta": [
-        [
-         "Com quem",
-         "Salas simultâneas."
-        ],
-        [
-         "Material",
-         "Miro, Área 6."
-        ],
-        [
-         "Entrega",
-         "Uma nota com pessoa, dia e o que ouvir."
-        ],
-        [
-         "Tempo",
-         "6 minutos"
-        ]
-       ],
-       "exemplo": "<p>“Dois compradores seniores, na quinta-feira: ouvir o que estão perdendo com o assistente.”</p>",
-       "campos": [
-        {
-         "k": "e1.a5.quem",
-         "rotulo": "Com Quem",
-         "tipo": "texto",
-         "ph": "Um papel ou um grupo pequeno"
-        },
-        {
-         "k": "e1.a5.dia",
-         "rotulo": "Em Que Dia",
-         "tipo": "texto"
-        },
-        {
-         "k": "e1.a5.ouvir",
-         "rotulo": "O Que Quero Ouvir",
-         "linhas": 2
-        }
-       ],
-       "pontos": [
-        "<b>Tem uma pessoa.</b> Um papel ou um grupo pequeno, e não “a área”.",
-        "<b>Tem um dia.</b> Uma data desta semana, ao alcance de quem escreveu.",
-        "<b>Começa por ouvir.</b> A primeira conversa pergunta antes de explicar."
-       ]
-      },
-      {
-       "t": "atividade",
-       "id": "e1-a6",
-       "titulo": "Até o próximo encontro",
-       "tempo": "até 19/11",
-       "area": "Área 5",
-       "passos": [
-        "<b>Faça a conversa.</b> A primeira conversa da semana, se o dia escolhido for amanhã.",
-        "<b>Traga um fato por dimensão.</b> Complete a sua linha da Área 5 com uma evidência para cada nota, e não só para a menor.",
-        "<b>Liste as pessoas.</b> Quem é afetado, quem decide e quem influencia a adoção que você escolheu. O Encontro 2 parte dessa lista."
-       ],
-       "meta": [
-        [
-         "Próximo encontro",
-         "Quinta-feira, 19 de novembro, às 19h."
-        ],
-        [
-         "Tema",
-         "Pessoas e coleta de insights."
-        ]
-       ],
-       "campos": [
-        {
-         "k": "e1.a6.conversa",
-         "rotulo": "Como Foi a Conversa",
-         "linhas": 3
-        },
-        {
-         "k": "e1.a6.afetado",
-         "rotulo": "Quem É Afetado",
-         "linhas": 2
-        },
-        {
-         "k": "e1.a6.decide",
-         "rotulo": "Quem Decide",
-         "linhas": 2
-        },
-        {
-         "k": "e1.a6.influencia",
-         "rotulo": "Quem Influencia",
-         "linhas": 2
-        }
-       ]
-      }
-     ]
     }
    ]
   },
@@ -727,7 +618,7 @@
       {
        "t": "conceito",
        "titulo": "Continuação do Encontro 1: a curva de Satir e o diagnóstico",
-       "html": "<p>O encontro começa pelos Blocos 3 e 4 do Encontro 1, nas Áreas 4 e 5 do quadro do Encontro 1. O registro dessas duas atividades fica na página do Encontro 1 deste workbook. Em seguida, o quadro do Encontro 2.</p>"
+       "html": "<p>O encontro começa pelos Blocos 3 e 4 do Encontro 1, nas Áreas 4 e 5 do quadro do Encontro 1. O registro dessas duas atividades fica na página do Encontro 1 deste workbook. Ao fim da Área 5, o botão <b>Abrir o quadro do Encontro 2</b> leva ao quadro desta noite, que começa na Área 1: a lacuna prioritária.</p>"
       }
      ]
     },
@@ -960,7 +851,7 @@
      "tom": "#7A4E6D",
      "titulo": "Seis práticas para <em>ouvir o sistema</em>",
      "pergunta": "Qual é a melhor forma de ouvir cada pessoa?",
-     "constroi": "O repertório de práticas para o plano de coleta",
+     "constroi": "O repertório de práticas para a conversa da semana",
      "capaz": [
       "Distinguir seis práticas de geração de insights.",
       "Relacionar cada prática à situação em que ela funciona melhor.",
@@ -1058,7 +949,7 @@
      "nome": "Fechamento",
      "tom": "#1F7A7A",
      "titulo": "O post-work <em>dos seis dias</em>",
-     "constroi": "As conversas da semana, anotadas no seu workbook",
+     "constroi": "As conversas da semana e o que fica desta noite",
      "itens": [
       {
        "t": "atividade",
@@ -1107,6 +998,50 @@
            "ph": "Com as palavras da pessoa"
           }
          ]
+        }
+       ]
+      },
+      {
+       "t": "atividade",
+       "id": "e2-a7",
+       "titulo": "O que fica desta noite",
+       "tempo": "4 min",
+       "area": "Encerramento",
+       "passos": [
+        "Na sua linha, escreva <b>uma ideia desta noite</b> que você quer aplicar. <b>2 min</b>",
+        "Ao lado, escreva <b>a pessoa que você vai ouvir</b> até terça, 24/11: o papel, sem o nome. <b>1 min</b>",
+        "Leia as linhas dos colegas: <b>qual ideia você também quer aplicar?</b> <b>1 min</b>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual."
+        ],
+        [
+         "Material",
+         "Miro: Encerramento, depois da Área 3."
+        ],
+        [
+         "Entrega",
+         "A sua linha preenchida."
+        ],
+        [
+         "Tempo",
+         "4 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Perguntar pelo fato antes da opinião · a gerente de compras.”</p>",
+       "campos": [
+        {
+         "k": "e2.a7.ideia",
+         "rotulo": "Uma Ideia Desta Noite",
+         "linhas": 2
+        },
+        {
+         "k": "e2.a7.pessoa",
+         "rotulo": "A Pessoa Que Vou Ouvir",
+         "tipo": "texto",
+         "ph": "O papel, sem o nome"
         }
        ]
       }
