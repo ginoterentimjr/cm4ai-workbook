@@ -670,11 +670,11 @@
    "data": "19 de novembro de 2026",
    "miro": "https://miro.com/app/board/uXjVENsiEuo=/",
    "titulo": "Pessoas e coleta <em>de insights</em>",
-   "lede": "Do diagnóstico à lacuna prioritária, o mapa de pessoas da adoção, seis práticas para ouvir o sistema e o plano de coleta dos próximos seis dias.",
+   "lede": "A curva de Satir e o diagnóstico de prontidão, no quadro do Encontro 1; depois, a lacuna prioritária, o mapa de pessoas da adoção, seis práticas para ouvir o sistema e o plano de coleta dos próximos seis dias.",
    "capaz": [
+    "Localizar o time na curva de Satir e diagnosticar a prontidão da área em cinco dimensões.",
     "Priorizar a lacuna de prontidão que mais libera a adoção e está ao alcance da área.",
     "Mapear as pessoas da adoção na curva de difusão de Rogers e o que acelera ou freia a adoção.",
-    "Escolher a prática de geração de insights adequada a cada pessoa ou grupo.",
     "Elaborar um plano de coleta de insights para os próximos seis dias."
    ],
    "blocos": [
@@ -683,59 +683,51 @@
      "num": "00",
      "nome": "Abertura",
      "tom": "#4A3F37",
-     "titulo": "A retomada, <em>em salas</em>",
-     "constroi": "Quem ainda não foi ouvido",
+     "titulo": "A frase de abertura <em>e o combinado da turma</em>",
+     "constroi": "O combinado de post-work dos Encontros 2, 3 e 4",
      "itens": [
       {
        "t": "conceito",
-       "titulo": "As pessoas não resistem à mudança. Resistem a ser mudadas.",
-       "html": "<p>A frase, atribuída a Peter Senge, abre o encontro. No chat: uma mudança que você abraçou porque participou da decisão.</p>"
+       "titulo": "A crise consiste precisamente no fato de que o velho morre e o novo não pode nascer.",
+       "html": "<p>Antonio Gramsci, Cadernos do cárcere, 1930. A frase abre o encontro.</p>"
       },
       {
        "t": "atividade",
        "id": "e2-a0",
-       "titulo": "A retomada, em salas",
-       "tempo": "5 min",
+       "titulo": "O que está morrendo para que a IA possa nascer",
+       "tempo": "2 min",
        "area": null,
-       "perg": "“Como foi, ou como você espera que seja, a primeira conversa da semana? E quem você ainda não ouviu?”",
+       "perg": "“O que está morrendo para que a IA possa nascer na sua organização?”",
        "passos": [
-        "Em cada sala, uma pessoa por vez responde, em até um minuto.",
-        "Quem escuta registra quem ainda não foi ouvido em cada caso.",
-        "Ao voltar, uma pessoa da sala conta o que mais apareceu."
+        "No chat: <b>o que está morrendo para que a IA possa nascer</b> na sua organização?"
        ],
        "meta": [
         [
          "Com quem",
-         "Salas simultâneas."
-        ],
-        [
-         "Entrega",
-         "O que mais apareceu na sala."
+         "Individual, no chat."
         ],
         [
          "Tempo",
-         "5 minutos"
+         "2 minutos"
         ]
        ],
-       "exemplo": "<p>“Nos nossos casos, quem mais usa a ferramenta é quem menos foi ouvido.”</p>",
        "campos": [
         {
-         "k": "e2.a0.resp",
-         "rotulo": "A Minha Resposta",
-         "linhas": 3
-        },
-        {
-         "k": "e2.a0.falta",
-         "rotulo": "Quem Eu Ainda Não Ouvi",
+         "k": "e2.a0.morre",
+         "rotulo": "O Que Está Morrendo na Minha Organização",
          "linhas": 2
         }
        ]
       },
       {
        "t": "conceito",
-       "titulo": "Onde estamos no motor: insights",
-       "html": "<div class=\"cards3\"><div><b>Ontem</b><p>O paradoxo, o que termina, a curva e o diagnóstico: insights sobre a organização.</p></div><div><b>Hoje</b><p>As pessoas e o plano para ouvi-las: insights que só elas têm.</p></div><div><b>Até o Encontro 3</b><p>A coleta de verdade, com duas ou três conversas.</p></div></div>",
-       "fonte": "Little, J. Lean Change Management, 2014."
+       "titulo": "Combinado da turma: post-work entre os encontros",
+       "html": "<div class=\"cards3\"><div><b>Depois do Encontro 2 · cerca de 2 horas</b><p>Plano de coleta até sexta, 20/11, e duas ou três conversas até terça, 24/11, registradas no quadro.</p></div><div><b>Depois do Encontro 3 · 15 minutos</b><p>Mostrar a aposta a uma pessoa, se houver oportunidade, e registrar o encontro no workbook digital.</p></div><div><b>Depois do Encontro 4 · 15 minutos</b><p>Marcar na agenda a revisão do experimento e registrar o encontro no workbook digital.</p></div></div><p><b>Cada post-work abre o encontro seguinte.</b> O Encontro 3 começa pelas frases das conversas.</p>"
+      },
+      {
+       "t": "conceito",
+       "titulo": "Continuação do Encontro 1: a curva de Satir e o diagnóstico",
+       "html": "<p>O encontro começa pelos Blocos 3 e 4 do Encontro 1, nas Áreas 4 e 5 do quadro do Encontro 1. O registro dessas duas atividades fica na página do Encontro 1 deste workbook. Em seguida, o quadro do Encontro 2.</p>"
       }
      ]
     },
@@ -858,7 +850,7 @@
       {
        "t": "conceito",
        "titulo": "A curva de adoção: cinco segmentos",
-       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Segmento</th><th>Parcela</th><th>Como adota</th></tr></thead><tbody><tr><td><b>Inovadores</b></td><td>2,5%</td><td>Experimentam por conta própria e aceitam o erro.</td></tr><tr><td><b>Adotantes iniciais</b></td><td>13,5%</td><td>Adotam cedo, com critério; a maioria os observa antes de decidir.</td></tr><tr><td><b>Maioria inicial</b></td><td>34%</td><td>Adota ao ver um colega parecido usar com resultado.</td></tr><tr><td><b>Maioria tardia</b></td><td>34%</td><td>Adota quando o novo vira o normal do grupo.</td></tr><tr><td><b>Últimos adotantes</b></td><td>16%</td><td>Protegem algo que funciona; pedem escuta, e não pressão.</td></tr></tbody></table></div><p>O segmento descreve o momento da pessoa nesta adoção, e não a pessoa: a mesma pessoa pode ser inovadora numa ferramenta e última adotante em outra.</p>",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Segmento</th><th>Parcela</th><th>Como adota</th></tr></thead><tbody><tr><td><b>Inovadores</b></td><td>2,5%</td><td>Experimentam por conta própria e aceitam o erro.</td></tr><tr><td><b>Adotantes iniciais</b></td><td>13,5%</td><td>Adotam cedo, com critério; a maioria os observa antes de decidir.</td></tr><tr><td><b>Maioria inicial</b></td><td>34%</td><td>Adota ao ver um colega parecido usar com resultado.</td></tr><tr><td><b>Maioria tardia</b></td><td>34%</td><td>Adota quando o novo se torna o normal do grupo.</td></tr><tr><td><b>Últimos adotantes</b></td><td>16%</td><td>Protegem algo que funciona; pedem escuta, e não pressão.</td></tr></tbody></table></div><p>O segmento descreve o momento da pessoa nesta adoção, e não a pessoa: a mesma pessoa pode ser inovadora numa ferramenta e última adotante em outra.</p>",
        "fonte": "Rogers, E. Diffusion of Innovations, 5ª ed., 2003."
       },
       {
@@ -1071,7 +1063,7 @@
      "capaz": [
       "Formular perguntas abertas sobre fatos do trabalho.",
       "Elaborar um plano de coleta com pessoa, prática, pergunta e data.",
-      "Avaliar o plano de um colega com três critérios."
+      "Conferir o próprio plano com três critérios."
      ],
      "itens": [
       {
@@ -1082,19 +1074,19 @@
       {
        "t": "atividade",
        "id": "e2-a4",
-       "titulo": "O plano de coleta da sua adoção",
-       "tempo": "20 min",
+       "titulo": "A primeira linha do seu plano",
+       "tempo": "4 min",
        "area": "Área 4",
        "passos": [
-        "No seu plano da Área 4, preencham três linhas, uma para cada estrela do mapa. <i>8 min</i>",
-        "Em cada linha: <b>Quem</b>, <b>O Que Preciso Descobrir</b>, <b>Prática</b>, <b>Pergunta de Abertura</b> e <b>Quando</b>.",
-        "Em trios, cada pessoa lê as três perguntas de abertura. O trio reescreve a que trouxer opinião. <i>9 min</i>",
-        "Ajustem o plano e confirmem as datas. <i>2 min</i>"
+        "No seu plano da <b>Área 4</b>, preencha <b>a primeira linha</b>: a pessoa que você vai ouvir primeiro. <i>3 min</i>",
+        "Em cada coluna: <b>Quem</b>, <b>O Que Preciso Descobrir</b>, <b>Prática</b>, <b>Pergunta de Abertura</b> e <b>Quando</b>.",
+        "Releia a <b>Pergunta de Abertura</b>: ela pede <b>a última vez</b> ou <b>o passo a passo</b>? <i>1 min</i>",
+        "<b>Post-work:</b> as outras duas linhas até <b>sexta-feira, 20/11</b>, na mesma tabela."
        ],
        "meta": [
         [
          "Com quem",
-         "Individual; depois em trios, em salas simultâneas."
+         "Individual."
         ],
         [
          "Material",
@@ -1102,11 +1094,11 @@
         ],
         [
          "Entrega",
-         "Três linhas completas, com data."
+         "A primeira linha agora; as outras duas até sexta, 20/11."
         ],
         [
          "Tempo",
-         "20 minutos"
+         "4 minutos"
         ]
        ],
        "exemplo": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Quem</th><th>O Que Preciso Descobrir</th><th>Prática</th><th>Pergunta de Abertura</th><th>Quando</th></tr></thead><tbody><tr><td>Compradores seniores</td><td>Por que refazem a cotação na planilha.</td><td>Observação do trabalho</td><td>“Posso acompanhar a sua próxima cotação, do começo ao fim?”</td><td>Sexta, 20/11</td></tr><tr><td>Gerente de compras</td><td>O que a impede de usar o assistente diante do time.</td><td>Conversa individual</td><td>“Conte a última vez que você abriu o assistente. O que aconteceu?”</td><td>Segunda, 23/11</td></tr><tr><td>Compradores juniores</td><td>Em que tarefas usam e o que conferem depois.</td><td>Conversa individual</td><td>“Como você fez a última comparação de propostas, passo a passo?”</td><td>Terça, 24/11</td></tr></tbody></table></div><p><i>Três linhas, seis dias. As pessoas vêm das três estrelas do mapa; a primeira pergunta a descobrir vem da Área 1. Caso fictício da área de compras.</i></p>",
@@ -1157,59 +1149,19 @@
      "num": "05",
      "nome": "Fechamento",
      "tom": "#1F7A7A",
-     "titulo": "O compromisso <em>dos seis dias</em>",
-     "constroi": "A primeira conversa, com pessoa, dia e pergunta",
+     "titulo": "O post-work <em>dos seis dias</em>",
+     "constroi": "As conversas da semana, registradas no quadro",
      "itens": [
       {
        "t": "atividade",
-       "id": "e2-a5",
-       "titulo": "O compromisso dos seis dias",
-       "tempo": "5 min",
-       "area": "Área 5",
-       "perg": "“Até quarta-feira, com quem você conversa primeiro, e qual é a primeira pergunta?”",
-       "passos": [
-        "Na Área 5, cada pessoa escreve uma nota: com quem, quando e a primeira pergunta. <i>2 min</i>",
-        "Três pessoas voluntárias leem a própria nota para a turma.",
-        "A turma reage às notas que quer ver respondidas no Encontro 3."
-       ],
-       "meta": [
-        [
-         "Com quem",
-         "Individual; leitura em plenária."
-        ],
-        [
-         "Material",
-         "Miro, Área 5: o mural de compromissos."
-        ],
-        [
-         "Entrega",
-         "Uma nota com pessoa, dia e pergunta."
-        ],
-        [
-         "Tempo",
-         "5 minutos"
-        ]
-       ],
-       "exemplo": "<p>“Amanhã, sexta: comprador sênior. ‘Posso acompanhar a sua próxima cotação?’”</p>",
-       "campos": [
-        {
-         "k": "e2.a5.comp",
-         "rotulo": "O Meu Compromisso",
-         "linhas": 2,
-         "ph": "Com quem, quando e a primeira pergunta"
-        }
-       ]
-      },
-      {
-       "t": "atividade",
        "id": "e2-a6",
-       "titulo": "Até o próximo encontro",
-       "tempo": "até 25/11",
+       "titulo": "Até o próximo encontro: o post-work",
+       "tempo": "até 24/11",
        "area": "Área 4",
        "passos": [
-        "<b>Faça duas ou três conversas.</b> As linhas do seu plano de coleta, nas datas marcadas.",
-        "<b>Registre depois de cada uma.</b> O que a pessoa faz hoje, o que já tentou e a frase que mais surpreendeu.",
-        "<b>Leve ao quadro.</b> As frases literais entram como notas na Área 4, abaixo do plano. O Encontro 3 parte delas."
+        "<b>Complete o plano até sexta.</b> As duas outras linhas, na mesma tabela da Área 4, até sexta-feira, 20/11.",
+        "<b>Faça duas ou três conversas.</b> Nas datas do plano, até terça-feira, 24/11.",
+        "<b>Registre no quadro.</b> Depois de cada conversa: o que a pessoa faz hoje, o que já tentou e a frase que mais surpreendeu, como notas na Área 4."
        ],
        "meta": [
         [
