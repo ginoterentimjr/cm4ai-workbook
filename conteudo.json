@@ -719,7 +719,7 @@
     },
     {
      "id": "e2-b3",
-     "num": "03",
+     "num": "02",
      "nome": "Práticas de geração de insights",
      "tom": "#7A4E6D",
      "titulo": "Seis práticas para <em>ouvir o sistema</em>",
@@ -742,9 +742,9 @@
        "id": "e2-a3",
        "titulo": "Relacione situações e práticas",
        "tempo": "12 min",
-       "area": "Área 3",
+       "area": "Área 2",
        "passos": [
-        "Na Área 3, arrastem cada situação até a prática.",
+        "Na Área 2, arrastem cada situação até a prática.",
         "Cada prática recebe uma situação.",
         "Registrem na nota laranja a escolha mais difícil."
        ],
@@ -755,7 +755,7 @@
         ],
         [
          "Material",
-         "Miro, Área 3: situações e práticas."
+         "Miro, Área 2: situações e práticas."
         ],
         [
          "Entrega",
@@ -818,7 +818,7 @@
     },
     {
      "id": "e2-fe",
-     "num": "05",
+     "num": "03",
      "nome": "Fechamento",
      "tom": "#1F7A7A",
      "titulo": "O post-work <em>dos seis dias</em>",
@@ -891,7 +891,7 @@
         ],
         [
          "Material",
-         "Miro: Encerramento, depois da Área 3."
+         "Miro: Encerramento, depois da Área 2."
         ],
         [
          "Entrega",
