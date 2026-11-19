@@ -722,7 +722,7 @@
       {
        "t": "conceito",
        "titulo": "Combinado da turma: post-work entre os encontros",
-       "html": "<div class=\"cards3\"><div><b>Depois do Encontro 2 · cerca de 2 horas</b><p>Plano de coleta até sexta, 20/11, e duas ou três conversas até terça, 24/11, registradas no quadro.</p></div><div><b>Depois do Encontro 3 · 15 minutos</b><p>Mostrar a aposta a uma pessoa, se houver oportunidade, e registrar o encontro no workbook digital.</p></div><div><b>Depois do Encontro 4 · 15 minutos</b><p>Marcar na agenda a revisão do experimento e registrar o encontro no workbook digital.</p></div></div><p><b>Cada post-work abre o encontro seguinte.</b> O Encontro 3 começa pelas frases das conversas.</p>"
+       "html": "<p>Depois dos Encontros 2, 3 e 4, <b>uma atividade curta de aplicação</b>. Cada uma é apresentada no fim do encontro e registrada aqui, no seu workbook.</p>"
       },
       {
        "t": "conceito",
@@ -1080,8 +1080,7 @@
        "passos": [
         "No seu plano da <b>Área 4</b>, preencha <b>a primeira linha</b>: a pessoa que você vai ouvir primeiro. <i>3 min</i>",
         "Em cada coluna: <b>Quem</b>, <b>O Que Preciso Descobrir</b>, <b>Prática</b>, <b>Pergunta de Abertura</b> e <b>Quando</b>.",
-        "Releia a <b>Pergunta de Abertura</b>: ela pede <b>a última vez</b> ou <b>o passo a passo</b>? <i>1 min</i>",
-        "<b>Post-work:</b> as outras duas linhas até <b>sexta-feira, 20/11</b>, na mesma tabela."
+        "Releia a <b>Pergunta de Abertura</b>: ela pede <b>a última vez</b> ou <b>o passo a passo</b>? <i>1 min</i>"
        ],
        "meta": [
         [
@@ -1094,7 +1093,7 @@
         ],
         [
          "Entrega",
-         "A primeira linha agora; as outras duas até sexta, 20/11."
+         "A primeira linha do plano."
         ],
         [
          "Tempo",
@@ -1150,20 +1149,24 @@
      "nome": "Fechamento",
      "tom": "#1F7A7A",
      "titulo": "O post-work <em>dos seis dias</em>",
-     "constroi": "As conversas da semana, registradas no quadro",
+     "constroi": "As conversas da semana, anotadas no seu workbook",
      "itens": [
       {
        "t": "atividade",
        "id": "e2-a6",
        "titulo": "Até o próximo encontro: o post-work",
        "tempo": "até 24/11",
-       "area": "Área 4",
+       "area": null,
        "passos": [
-        "<b>Complete o plano até sexta.</b> As duas outras linhas, na mesma tabela da Área 4, até sexta-feira, 20/11.",
-        "<b>Faça duas ou três conversas.</b> Nas datas do plano, até terça-feira, 24/11.",
-        "<b>Registre no quadro.</b> Depois de cada conversa: o que a pessoa faz hoje, o que já tentou e a frase que mais surpreendeu, como notas na Área 4."
+        "<b>Uma conversa de 15 minutos.</b> Com a pessoa da primeira linha do seu plano, até terça-feira, 24/11, com a sua pergunta de abertura.",
+        "<b>Se puder, mais uma.</b> Com outra pessoa do seu mapa. É opcional.",
+        "<b>Anote aqui.</b> Logo depois de cada conversa, na tabela abaixo: o que a pessoa faz hoje, o que já tentou e a frase que mais surpreendeu, com as palavras dela e sem o nome."
        ],
        "meta": [
+        [
+         "Tempo",
+         "Cerca de 30 minutos na semana."
+        ],
         [
          "Próximo encontro",
          "Quarta-feira, 25 de novembro, às 19h."
@@ -1178,10 +1181,11 @@
          "k": "e2.a6.reg",
          "rotulo": "O Registro das Conversas",
          "tipo": "tabela",
-         "n": 3,
+         "n": 2,
          "colunas": [
           {
-           "t": "Quem"
+           "t": "Com Quem Conversei",
+           "ph": "O papel, sem o nome"
           },
           {
            "t": "O Que a Pessoa Faz Hoje"
@@ -1318,7 +1322,7 @@
         ],
         [
          "Material",
-         "Miro, Área 1, e as suas frases da Área 4 do Encontro 2."
+         "Miro, Área 1, e as anotações do seu workbook (Encontro 2)."
         ],
         [
          "Entrega",
