@@ -13,7 +13,7 @@
    "Pessoas e coleta de insights",
    "19/11 · Módulos 1 e 2",
    "#2F6B6F",
-   "Lacuna prioritária e mapa de pessoas",
+   "Diagnóstico 5D e lacuna prioritária",
    "Escutar o sistema"
   ],
   [
@@ -561,12 +561,11 @@
    "data": "19 de novembro de 2026",
    "miro": "https://miro.com/app/board/uXjVENsiEuo=/",
    "titulo": "Pessoas e coleta <em>de insights</em>",
-   "lede": "A curva de Satir e o diagnóstico de prontidão, no quadro do Encontro 1; depois, a lacuna prioritária, o mapa de pessoas da adoção e seis práticas para ouvir o sistema.",
+   "lede": "A curva de Satir e o diagnóstico de prontidão, no quadro do Encontro 1; depois, a lacuna prioritária e seis práticas para ouvir o sistema.",
    "capaz": [
     "Localizar o time na curva de Satir e diagnosticar a prontidão da área em cinco dimensões.",
     "Priorizar a lacuna de prontidão que mais libera a adoção e está ao alcance da área.",
-    "Mapear as pessoas da adoção na curva de difusão de Rogers e o que acelera ou freia a adoção.",
-    "Escolher a prática de geração de insights adequada a cada pessoa do mapa."
+    "Escolher a prática de geração de insights adequada a cada situação."
    ],
    "blocos": [
     {
@@ -719,143 +718,17 @@
      ]
     },
     {
-     "id": "e2-b2",
-     "num": "02",
-     "nome": "O mapa de pessoas",
-     "tom": "#35608F",
-     "titulo": "O mapa de pessoas <em>na curva de adoção</em>",
-     "pergunta": "Quem precisa mudar o que faz para a adoção acontecer?",
-     "constroi": "As pessoas da sua adoção na curva",
-     "capaz": [
-      "Identificar quem é afetado, quem decide e quem influencia a adoção.",
-      "Posicionar cada pessoa num segmento da curva de adoção, com um fato.",
-      "Reconhecer o atributo da adoção que mais pesa para a maioria."
-     ],
-     "itens": [
-      {
-       "t": "conceito",
-       "titulo": "Três perguntas para encontrar as pessoas",
-       "html": "<div class=\"cards3\"><div><b>Quem é afetado?</b><p>Quem passa a trabalhar de outro jeito, ganha ou perde uma tarefa, um papel ou um reconhecimento. <i>Exemplo: compradores seniores e juniores; fornecedores.</i></p></div><div><b>Quem decide?</b><p>Quem aprova orçamento, prioridade, regra de uso e meta. <i>Exemplo: gerente de compras; diretor financeiro; jurídico.</i></p></div><div><b>Quem influencia?</b><p>Quem os colegas observam antes de decidir se usam: a referência técnica, a pessoa mais antiga, quem aprendeu primeiro. <i>Exemplo: a compradora que descobriu a cláusula de reajuste.</i></p></div></div>",
-       "fonte": "Exemplos apenas ilustrativos, do caso fictício da área de compras."
-      },
-      {
-       "t": "conceito",
-       "titulo": "A curva de adoção: cinco segmentos",
-       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Segmento</th><th>Parcela</th><th>Como adota</th></tr></thead><tbody><tr><td><b>Inovadores</b></td><td>2,5%</td><td>Experimentam por conta própria e aceitam o erro.</td></tr><tr><td><b>Adotantes iniciais</b></td><td>13,5%</td><td>Adotam cedo, com critério; a maioria os observa antes de decidir.</td></tr><tr><td><b>Maioria inicial</b></td><td>34%</td><td>Adota ao ver um colega parecido usar com resultado.</td></tr><tr><td><b>Maioria tardia</b></td><td>34%</td><td>Adota quando o novo se torna o normal do grupo.</td></tr><tr><td><b>Últimos adotantes</b></td><td>16%</td><td>Protegem algo que funciona; pedem escuta, e não pressão.</td></tr></tbody></table></div><p>O segmento descreve o momento da pessoa nesta adoção, e não a pessoa: a mesma pessoa pode ser inovadora numa ferramenta e última adotante em outra.</p>",
-       "fonte": "Rogers, E. Diffusion of Innovations, 5ª ed., 2003."
-      },
-      {
-       "t": "conceito",
-       "titulo": "Cinco atributos que aceleram ou freiam a adoção",
-       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Atributo</th><th>A pergunta de quem adota</th></tr></thead><tbody><tr><td><b>Vantagem relativa</b></td><td>O novo é melhor que o jeito atual?</td></tr><tr><td><b>Compatibilidade</b></td><td>Conversa com os meus valores, as minhas rotinas e as minhas necessidades?</td></tr><tr><td><b>Complexidade</b></td><td>É difícil de entender e de usar? Quanto mais difícil parece, mais lenta a adoção.</td></tr><tr><td><b>Experimentabilidade</b></td><td>Consigo experimentar em pequena escala antes de me comprometer?</td></tr><tr><td><b>Observabilidade</b></td><td>Os resultados ficam visíveis para os colegas?</td></tr></tbody></table></div><p>Os atributos percebidos explicam de 49% a 87% da variação na velocidade de adoção. Na adoção de IA, a experimentabilidade é o experimento pequeno do Encontro 4, e a observabilidade é o colega parecido que mostra resultado.</p>",
-       "fonte": "Rogers, E. Diffusion of Innovations, 5ª ed., 2003."
-      },
-      {
-       "t": "atividade",
-       "id": "e2-a2",
-       "titulo": "O mapa de pessoas da sua adoção",
-       "tempo": "20 min",
-       "area": "Área 2",
-       "passos": [
-        "Na sua curva da Área 2, criem uma nota para cada pessoa ou grupo da adoção: de seis a dez notas, com o papel, e não o nome. <i>4 min</i>",
-        "Posicionem cada nota no segmento da curva em que a pessoa está hoje nesta adoção. <i>5 min</i>",
-        "Em dupla, um apresenta a curva; o outro pergunta: “Que fato sustenta essa posição?” e “Para a maioria, qual atributo mais freia a adoção?” <i>4 min</i>",
-        "Invertam os papéis. Escrevam ⭐ nas notas das três pessoas a ouvir primeiro. <i>5 min</i>"
-       ],
-       "meta": [
-        [
-         "Com quem",
-         "Individual; depois em duplas, em salas simultâneas."
-        ],
-        [
-         "Material",
-         "Miro, Área 2: a curva com o seu nome."
-        ],
-        [
-         "Entrega",
-         "A curva com as notas, três estrelas e o atributo que freia."
-        ],
-        [
-         "Tempo",
-         "20 minutos"
-        ]
-       ],
-       "exemplo": "<p>“Compradores seniores: maioria tardia; esperam ver um colega parecido usar com resultado. O atributo que freia: compatibilidade.”</p>",
-       "campos": [
-        {
-         "k": "e2.a2.mapa",
-         "rotulo": "As Pessoas da Minha Adoção",
-         "tipo": "tabela",
-         "n": 10,
-         "curva": true,
-         "dica": "A curva abaixo da tabela se desenha à medida que você preenche.",
-         "colunas": [
-          {
-           "t": "Pessoa ou Grupo (papel)",
-           "ph": "Ex.: compradores seniores"
-          },
-          {
-           "t": "Segmento da Curva",
-           "opcoes": [
-            "Inovadores",
-            "Adotantes iniciais",
-            "Maioria inicial",
-            "Maioria tardia",
-            "Últimos adotantes"
-           ]
-          },
-          {
-           "t": "O Fato que Sustenta a Posição",
-           "ph": "Ex.: refazem a cotação na planilha"
-          },
-          {
-           "t": "Ouvir Primeiro",
-           "opcoes": [
-            "⭐"
-           ]
-          }
-         ]
-        },
-        {
-         "k": "e2.a2.atributo",
-         "rotulo": "O Atributo que Mais Freia a Adoção para a Maioria",
-         "tipo": "escolha",
-         "opcoes": [
-          "Vantagem relativa",
-          "Compatibilidade",
-          "Complexidade",
-          "Experimentabilidade",
-          "Observabilidade"
-         ]
-        },
-        {
-         "k": "e2.a2.porque",
-         "rotulo": "Por Quê",
-         "tipo": "area",
-         "linhas": 2,
-         "ph": "O fato que mostra esse freio."
-        }
-       ],
-       "pontos": [
-        "<b>Em que segmento as notas se concentram?</b> Muitas notas na maioria tardia pedem prova próxima, de um colega parecido.",
-        "<b>Quem é o adotante inicial que a maioria observa?</b> É a primeira estrela e o primeiro nome da rede de campeões do Encontro 5.",
-        "<b>Qual atributo mais apareceu nas duplas?</b> Complexidade e compatibilidade costumam liderar; a experimentabilidade é o que o Encontro 4 constrói."
-       ]
-      }
-     ]
-    },
-    {
      "id": "e2-b3",
      "num": "03",
      "nome": "Práticas de geração de insights",
      "tom": "#7A4E6D",
      "titulo": "Seis práticas para <em>ouvir o sistema</em>",
      "pergunta": "Qual é a melhor forma de ouvir cada pessoa?",
-     "constroi": "O repertório de práticas para a conversa da semana",
+     "constroi": "O repertório de práticas para ouvir o sistema",
      "capaz": [
       "Distinguir seis práticas de geração de insights.",
       "Relacionar cada prática à situação em que ela funciona melhor.",
-      "Escolher a prática adequada a cada pessoa do mapa."
+      "Escolher a prática adequada a cada situação."
      ],
      "itens": [
       {
@@ -949,7 +822,7 @@
      "nome": "Fechamento",
      "tom": "#1F7A7A",
      "titulo": "O post-work <em>dos seis dias</em>",
-     "constroi": "As conversas da semana e o que fica desta noite",
+     "constroi": "A leitura do relatório do diagnóstico e o que fica desta noite",
      "itens": [
       {
        "t": "atividade",
@@ -958,9 +831,9 @@
        "tempo": "até 24/11",
        "area": null,
        "passos": [
-        "<b>Uma conversa de 15 minutos.</b> Com uma das três estrelas do seu mapa de pessoas (Área 2), até terça-feira, 24/11.",
-        "<b>Comece pelo fato.</b> “Conte a última vez que você usou a ferramenta. Como foi, passo a passo?”",
-        "<b>Anote aqui.</b> Logo depois de cada conversa, na tabela abaixo: o que a pessoa faz hoje, o que já tentou e a frase que mais surpreendeu, com as palavras dela e sem o nome. Se puder, faça uma segunda conversa, com outra estrela."
+        "<b>Leia o relatório do seu diagnóstico 5D.</b> O relatório que o sistema devolveu depois do diagnóstico desta noite.",
+        "<b>Marque os pontos que mais chamaram a sua atenção.</b>",
+        "<b>Registre aqui:</b> com o que você concorda, com o que você não concorda e o que surpreendeu você. Para cada ponto, anote o trecho do relatório que o motivou."
        ],
        "meta": [
         [
@@ -973,31 +846,30 @@
         ],
         [
          "Tema",
-         "Insights e opções: o que as conversas mostraram, o mapa de forças e as opções de mudança."
+         "O mapa de pessoas na curva de adoção, insights e opções."
         ]
        ],
+       "exemplo": "<p>“Concordo que a regra de aprovação segura a adoção. Não concordo com a nota de tecnologia: a ferramenta funciona bem no dia a dia. Surpreendeu: a dimensão de pessoas ficou abaixo da de liderança.”</p>",
        "campos": [
         {
-         "k": "e2.a6.reg",
-         "rotulo": "O Registro das Conversas",
-         "tipo": "tabela",
-         "n": 2,
-         "colunas": [
-          {
-           "t": "Com Quem Conversei",
-           "ph": "O papel, sem o nome"
-          },
-          {
-           "t": "O Que a Pessoa Faz Hoje"
-          },
-          {
-           "t": "O Que Ela Já Tentou"
-          },
-          {
-           "t": "A Frase Que Mais Surpreendeu",
-           "ph": "Com as palavras da pessoa"
-          }
-         ]
+         "k": "e2.a6.atencao",
+         "rotulo": "Os Pontos Que Mais Chamaram a Minha Atenção",
+         "linhas": 3
+        },
+        {
+         "k": "e2.a6.concordo",
+         "rotulo": "Com o Que Eu Concordo",
+         "linhas": 3
+        },
+        {
+         "k": "e2.a6.discordo",
+         "rotulo": "Com o Que Eu Não Concordo",
+         "linhas": 3
+        },
+        {
+         "k": "e2.a6.surpresa",
+         "rotulo": "O Que Me Surpreendeu",
+         "linhas": 3
         }
        ]
       },
