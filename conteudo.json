@@ -21,7 +21,7 @@
    "Insights e opções",
    "25/11 · Módulo 2",
    "#7A4E6D",
-   "Mapa de forças e opções",
+   "Mapa de pessoas, forças e opções",
    "Escolher a próxima aposta"
   ],
   [
@@ -926,9 +926,10 @@
    "data": "25 de novembro de 2026",
    "miro": "https://miro.com/app/board/uXjVEN1xbkY=/",
    "titulo": "Insights <em>e opções</em>",
-   "lede": "Dos registros das conversas aos insights, o mapa de forças da adoção, as opções de mudança para a força com estrela e a próxima aposta.",
+   "lede": "A curva de adoção e o mapa de pessoas, as leituras do relatório transformadas em insights, o mapa de forças, as opções de mudança e a próxima aposta.",
    "capaz": [
-    "Formular insights a partir dos registros das conversas, separando fato de interpretação.",
+    "Mapear as pessoas da adoção na curva de difusão de Rogers e o que acelera ou freia a adoção.",
+    "Formular insights a partir das leituras do relatório, separando fato de interpretação.",
     "Construir o mapa de forças da adoção, com as forças a favor e as contrárias.",
     "Gerar opções de mudança para a força contrária que está ao alcance da área.",
     "Selecionar a próxima aposta, pelo valor, pelo esforço e pelo alcance."
@@ -940,7 +941,7 @@
      "nome": "Abertura",
      "tom": "#4A3F37",
      "titulo": "A retomada, <em>em salas</em>",
-     "constroi": "O que se repetiu nas conversas da semana",
+     "constroi": "O ponto do relatório que mais surpreendeu",
      "itens": [
       {
        "t": "conceito",
@@ -950,54 +951,166 @@
       {
        "t": "atividade",
        "id": "e3-a0",
-       "titulo": "A retomada, em salas",
-       "tempo": "4 min",
+       "titulo": "O ponto do relatório que mais surpreendeu você",
+       "tempo": "1 min",
        "area": null,
+       "perg": "“Qual ponto do relatório do diagnóstico mais surpreendeu você?”",
        "passos": [
-        "Em cada sala, uma pessoa por vez responde, em até <b>um minuto</b>.",
-        "Quem escuta registra <b>o que se repetiu</b> entre as respostas.",
-        "Ao voltar, uma pessoa da sala conta o que se repetiu."
+        "No chat: <b>o ponto do relatório</b> que mais surpreendeu você."
        ],
        "meta": [
         [
          "Com quem",
-         "Salas simultâneas. Sem conversa feita: responda pelo que espera ouvir."
-        ],
-        [
-         "Entrega",
-         "O que se repetiu entre as respostas."
+         "Individual, no chat."
         ],
         [
          "Tempo",
-         "4 minutos"
+         "1 minuto"
         ]
        ],
-       "exemplo": "<p>“Em três dos nossos quatro casos, a regra antiga continua valendo ao lado da ferramenta nova.”</p><p><i>Caso fictício da área de compras.</i></p>",
        "campos": [
         {
-         "k": "e3.a0.resp",
-         "rotulo": "A Minha Resposta",
-         "linhas": 3,
-         "ph": ""
+         "k": "e3.a0.ponto",
+         "rotulo": "O Ponto Que Mais Me Surpreendeu",
+         "linhas": 2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e3-bp",
+     "num": "01",
+     "nome": "O mapa de pessoas",
+     "tom": "#7A4E6D",
+     "titulo": "O mapa de pessoas <em>na curva de adoção</em>",
+     "pergunta": "Quem precisa mudar o que faz para a adoção acontecer?",
+     "constroi": "As pessoas da sua adoção na curva",
+     "capaz": [
+      "Identificar quem é afetado, quem decide e quem influencia a adoção.",
+      "Posicionar cada pessoa num segmento da curva de adoção, com um fato.",
+      "Reconhecer o atributo da adoção que mais pesa para a maioria."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Três perguntas para encontrar as pessoas",
+       "html": "<div class=\"cards3\"><div><b>Quem é afetado?</b><p>Quem passa a trabalhar de outro jeito, ganha ou perde uma tarefa, um papel ou um reconhecimento. <i>Exemplo: compradores seniores e juniores; fornecedores.</i></p></div><div><b>Quem decide?</b><p>Quem aprova orçamento, prioridade, regra de uso e meta. <i>Exemplo: gerente de compras; diretor financeiro; jurídico.</i></p></div><div><b>Quem influencia?</b><p>Quem os colegas observam antes de decidir se usam: a referência técnica, a pessoa mais antiga, quem aprendeu primeiro. <i>Exemplo: a compradora que descobriu a cláusula de reajuste.</i></p></div></div>",
+       "fonte": "Exemplos apenas ilustrativos, do caso fictício da área de compras."
+      },
+      {
+       "t": "conceito",
+       "titulo": "A curva de adoção: cinco segmentos",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Segmento</th><th>Parcela</th><th>Como adota</th></tr></thead><tbody><tr><td><b>Inovadores</b></td><td>2,5%</td><td>Experimentam por conta própria e aceitam o erro.</td></tr><tr><td><b>Adotantes iniciais</b></td><td>13,5%</td><td>Adotam cedo, com critério; a maioria os observa antes de decidir.</td></tr><tr><td><b>Maioria inicial</b></td><td>34%</td><td>Adota ao ver um colega parecido usar com resultado.</td></tr><tr><td><b>Maioria tardia</b></td><td>34%</td><td>Adota quando o novo se torna o normal do grupo.</td></tr><tr><td><b>Últimos adotantes</b></td><td>16%</td><td>Protegem algo que funciona; pedem escuta, e não pressão.</td></tr></tbody></table></div><p>O segmento descreve o momento da pessoa nesta adoção, e não a pessoa: a mesma pessoa pode ser inovadora numa ferramenta e última adotante em outra.</p>",
+       "fonte": "Rogers, E. Diffusion of Innovations, 5ª ed., 2003."
+      },
+      {
+       "t": "conceito",
+       "titulo": "Cinco atributos que aceleram ou freiam a adoção",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Atributo</th><th>A pergunta de quem adota</th></tr></thead><tbody><tr><td><b>Vantagem relativa</b></td><td>O novo é melhor que o jeito atual?</td></tr><tr><td><b>Compatibilidade</b></td><td>Conversa com os meus valores, as minhas rotinas e as minhas necessidades?</td></tr><tr><td><b>Complexidade</b></td><td>É difícil de entender e de usar? Quanto mais difícil parece, mais lenta a adoção.</td></tr><tr><td><b>Experimentabilidade</b></td><td>Consigo experimentar em pequena escala antes de me comprometer?</td></tr><tr><td><b>Observabilidade</b></td><td>Os resultados ficam visíveis para os colegas?</td></tr></tbody></table></div><p>Os atributos percebidos explicam de 49% a 87% da variação na velocidade de adoção. Na adoção de IA, a experimentabilidade é o experimento pequeno do Encontro 4, e a observabilidade é o colega parecido que mostra resultado.</p>",
+       "fonte": "Rogers, E. Diffusion of Innovations, 5ª ed., 2003."
+      },
+      {
+       "t": "atividade",
+       "id": "e3-ap",
+       "titulo": "O mapa de pessoas da sua adoção",
+       "tempo": "17 min",
+       "area": "Área 1",
+       "passos": [
+        "Na sua curva da Área 1, criem uma nota para cada pessoa ou grupo da adoção: de seis a dez notas, com o papel, e não o nome. <i>3 min</i>",
+        "Posicionem cada nota no segmento da curva em que a pessoa está hoje nesta adoção. <i>4 min</i>",
+        "Em dupla, um apresenta a curva; o outro pergunta: “Que fato sustenta essa posição?” e “Para a maioria, qual atributo mais freia a adoção?” <i>4 min</i>",
+        "Invertam os papéis. Escrevam ⭐ nas notas das três pessoas a ouvir primeiro. <i>5 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Miro, Área 1: a curva com o seu nome."
+        ],
+        [
+         "Entrega",
+         "A curva com as notas, três estrelas e o atributo que freia."
+        ],
+        [
+         "Tempo",
+         "17 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Compradores seniores: maioria tardia; esperam ver um colega parecido usar com resultado. O atributo que freia: compatibilidade.”</p>",
+       "campos": [
+        {
+         "k": "e3.ap.mapa",
+         "rotulo": "As Pessoas da Minha Adoção",
+         "tipo": "tabela",
+         "n": 10,
+         "curva": true,
+         "dica": "A curva abaixo da tabela se desenha à medida que você preenche.",
+         "colunas": [
+          {
+           "t": "Pessoa ou Grupo (papel)",
+           "ph": "Ex.: compradores seniores"
+          },
+          {
+           "t": "Segmento da Curva",
+           "opcoes": [
+            "Inovadores",
+            "Adotantes iniciais",
+            "Maioria inicial",
+            "Maioria tardia",
+            "Últimos adotantes"
+           ]
+          },
+          {
+           "t": "O Fato que Sustenta a Posição",
+           "ph": "Ex.: refazem a cotação na planilha"
+          },
+          {
+           "t": "Ouvir Primeiro",
+           "opcoes": [
+            "⭐"
+           ]
+          }
+         ]
         },
         {
-         "k": "e3.a0.rep",
-         "rotulo": "O Que Se Repetiu na Sala",
+         "k": "e3.ap.atributo",
+         "rotulo": "O Atributo que Mais Freia a Adoção para a Maioria",
+         "tipo": "escolha",
+         "opcoes": [
+          "Vantagem relativa",
+          "Compatibilidade",
+          "Complexidade",
+          "Experimentabilidade",
+          "Observabilidade"
+         ]
+        },
+        {
+         "k": "e3.ap.porque",
+         "rotulo": "Por Quê",
+         "tipo": "area",
          "linhas": 2,
-         "ph": ""
+         "ph": "O fato que mostra esse freio."
         }
        ],
-       "perg": "“Com quem você conversou, e o que você ouviu que ainda não sabia?”"
+       "pontos": [
+        "<b>Em que segmento as notas se concentram?</b> Muitas notas na maioria tardia pedem prova próxima, de um colega parecido.",
+        "<b>Quem é o adotante inicial que a maioria observa?</b> É a primeira estrela e o primeiro nome da rede de campeões do Encontro 5.",
+        "<b>Qual atributo mais apareceu nas duplas?</b> Complexidade e compatibilidade costumam liderar; a experimentabilidade é o que o Encontro 4 constrói."
+       ]
       }
      ]
     },
     {
      "id": "e3-b1",
-     "num": "01",
+     "num": "02",
      "nome": "Dos registros aos insights",
      "tom": "#2F6B6F",
      "titulo": "Dos registros <em>aos insights</em>",
-     "pergunta": "O que as conversas explicam sobre a adoção?",
+     "pergunta": "O que as leituras do relatório explicam sobre a adoção?",
      "constroi": "O insight de cada pessoa e o insight mais forte da sala",
      "capaz": [
       "Distinguir registro, padrão e insight.",
@@ -1008,12 +1121,12 @@
       {
        "t": "conceito",
        "titulo": "Três degraus: registro, padrão e insight",
-       "html": "<div class=\"cards3\"><div><b>Registro</b><p>A frase literal da pessoa, sem adjetivo de quem anotou.</p></div><div><b>Padrão</b><p>O que se repete em pelo menos dois registros.</p></div><div><b>Insight</b><p>A explicação: a razão das pessoas e o efeito sobre a adoção.</p></div></div><p><b>Como formular:</b> “Observamos que… (o padrão) porque… (a razão das pessoas) e isso… (o efeito sobre a adoção).”</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Interpretação apressada</th><th>Insight</th></tr></thead><tbody><tr><td>“Os seniores são resistentes à IA.”</td><td>Observamos que os seniores refazem a cotação na planilha, porque a reunião de aprovação exige a planilha, e isso dobra o trabalho de quem usa o assistente.</td></tr><tr><td>“Falta treinamento.”</td><td>Observamos que os juniores conferem todas as respostas, porque não sabem quem responde por um erro do assistente, e isso consome o tempo que a ferramenta economiza.</td></tr></tbody></table></div>",
+       "html": "<div class=\"cards3\"><div><b>Registro</b><p>O ponto do relatório, a frase ou o comportamento visto, com o trecho e sem adjetivo.</p></div><div><b>Padrão</b><p>O que se repete em pelo menos dois registros.</p></div><div><b>Insight</b><p>A explicação: a razão, com um fato, e o efeito sobre a adoção.</p></div></div><p><b>Como formular:</b> “Observamos que… (o padrão) porque… (a razão das pessoas) e isso… (o efeito sobre a adoção).”</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Interpretação apressada</th><th>Insight</th></tr></thead><tbody><tr><td>“Os seniores são resistentes à IA.”</td><td>Observamos que os seniores refazem a cotação na planilha, porque a reunião de aprovação exige a planilha, e isso dobra o trabalho de quem usa o assistente.</td></tr><tr><td>“Falta treinamento.”</td><td>Observamos que os juniores conferem todas as respostas, porque não sabem quem responde por um erro do assistente, e isso consome o tempo que a ferramenta economiza.</td></tr></tbody></table></div>",
        "fonte": "Instrumento do curso. Exemplo do caso fictício da área de compras."
       },
       {
        "t": "conceito",
-       "titulo": "Resistência é informação",
+       "titulo": "Material complementar · Resistência é informação",
        "html": "<p><b>Mito ou fato?</b> “Quem resiste à IA é contra a mudança.” Mito. Quem resiste costuma estar protegendo algo que funciona: um prazo, um cliente, a qualidade de uma entrega. A resistência mostra onde a mudança encosta no trabalho real.</p><div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>O que se ouve</th><th>A pergunta que a frase abre</th></tr></thead><tbody><tr><td>“Isso não funciona aqui.”</td><td>O que a pessoa já viu falhar?</td></tr><tr><td>“Não tenho tempo para isso.”</td><td>O que ela teria de parar de fazer?</td></tr><tr><td>“Prefiro fazer do meu jeito.”</td><td>O que o jeito dela garante que o novo ainda não garante?</td></tr></tbody></table></div>",
        "fonte": "Little, J. Lean Change Management, 2014."
       },
@@ -1021,14 +1134,14 @@
        "t": "atividade",
        "id": "e3-a1",
        "titulo": "O insight de cada pessoa",
-       "tempo": "20 min",
-       "area": "Área 1",
+       "tempo": "17 min",
+       "area": "Área 2",
        "passos": [
-        "Distribuam os papéis. Cada pessoa copia <b>três registros</b> das conversas para a sua linha. <i>4 min</i>",
-        "Sem conversa feita? Usem os registros do caso de compras, no alto da Área 1.",
-        "Cada pessoa lê os seus registros; os colegas dizem <b>o que se repete</b>. Registrem <b>O Padrão</b>. <i>8 min</i>",
+        "Distribuam os papéis. Cada pessoa copia <b>três pontos do relatório</b> do seu workbook para a sua linha. <i>3 min</i>",
+        "Sem post-work feito? Usem os pontos do caso de compras, no alto da Área 2.",
+        "Cada pessoa lê os seus pontos; os colegas dizem <b>o que se repete</b>. Registrem <b>O Padrão</b>. <i>7 min</i>",
         "Cada pessoa escreve <b>O Insight</b>: “Observamos que… porque… e isso…”. <i>5 min</i>",
-        "Registrem na nota laranja <b>o insight mais forte</b> entre os da sala. <i>3 min</i>"
+        "Registrem na nota laranja <b>o insight mais forte</b> entre os da sala. <i>2 min</i>"
        ],
        "meta": [
         [
@@ -1037,7 +1150,7 @@
         ],
         [
          "Material",
-         "Miro, Área 1, e as anotações do seu workbook (Encontro 2)."
+         "Miro, Área 2, e as leituras do relatório no seu workbook (Encontro 2)."
         ],
         [
          "Entrega",
@@ -1045,16 +1158,16 @@
         ],
         [
          "Tempo",
-         "20 minutos"
+         "17 minutos"
         ]
        ],
        "exemplo": "<p>“Observamos que os seniores refazem a cotação, porque a reunião exige a planilha, e isso dobra o trabalho.”</p><p><i>Caso fictício da área de compras.</i></p>",
        "campos": [
         {
          "k": "e3.a1.reg",
-         "rotulo": "Os Três Registros",
+         "rotulo": "Os Três Pontos do Relatório",
          "linhas": 4,
-         "ph": "Com as palavras de cada pessoa"
+         "ph": "Concordo, não concordo ou surpreendeu, com o trecho"
         },
         {
          "k": "e3.a1.padrao",
@@ -1086,7 +1199,7 @@
     },
     {
      "id": "e3-b2",
-     "num": "02",
+     "num": "03",
      "nome": "O mapa de forças",
      "tom": "#B04A1C",
      "titulo": "O mapa de forças <em>da adoção</em>",
@@ -1108,14 +1221,14 @@
        "t": "atividade",
        "id": "e3-a2",
        "titulo": "O mapa de forças da sua adoção",
-       "tempo": "20 min",
-       "area": "Área 2",
+       "tempo": "18 min",
+       "area": "Área 3",
        "passos": [
-        "No seu mapa da Área 2, escrevam <b>O Comportamento Desejado</b>, com sujeito e verbo. <i>2 min</i>",
-        "Preencham até quatro <b>Forças a Favor</b> e até quatro <b>Forças Contrárias</b>, com a intensidade de 1 a 5. <i>7 min</i>",
+        "No seu mapa da Área 3, escrevam <b>O Comportamento Desejado</b>, com sujeito e verbo. <i>2 min</i>",
+        "Preencham até quatro <b>Forças a Favor</b> e até quatro <b>Forças Contrárias</b>, com a intensidade de 1 a 5. <i>6 min</i>",
         "Em dupla, um apresenta o mapa; o outro pergunta: <b>“Que registro sustenta essa força?”</b> <i>4 min</i>",
         "Invertam os papéis. <i>4 min</i>",
-        "Marquem com ⭐ a força contrária mais intensa <b>que está ao alcance da área</b>. <i>3 min</i>"
+        "Marquem com ⭐ a força contrária mais intensa <b>que está ao alcance da área</b>. <i>2 min</i>"
        ],
        "meta": [
         [
@@ -1124,7 +1237,7 @@
         ],
         [
          "Material",
-         "Miro, Área 2: o mapa com o seu nome."
+         "Miro, Área 3: o mapa com o seu nome."
         ],
         [
          "Entrega",
@@ -1132,7 +1245,7 @@
         ],
         [
          "Tempo",
-         "20 minutos"
+         "18 minutos"
         ]
        ],
        "exemplo": "<p>“Contrária, 5: a reunião de aprovação exige a planilha. Registro: ‘é a planilha que a reunião pede’.”</p><p><i>Caso fictício da área de compras.</i></p>",
@@ -1191,7 +1304,7 @@
     },
     {
      "id": "e3-b3",
-     "num": "03",
+     "num": "04",
      "nome": "Opções de mudança",
      "tom": "#B5781E",
      "titulo": "Opções de mudança <em>para a força com estrela</em>",
@@ -1213,14 +1326,14 @@
        "t": "atividade",
        "id": "e3-a3",
        "titulo": "O quadro de opções da sua adoção",
-       "tempo": "20 min",
-       "area": "Área 3",
+       "tempo": "18 min",
+       "area": "Área 4",
        "passos": [
-        "No seu quadro da Área 3, escrevam <b>A Força Com Estrela</b>. <i>1 min</i>",
+        "No seu quadro da Área 4, escrevam <b>A Força Com Estrela</b>. <i>1 min</i>",
         "Em trios, uma pessoa por vez lê o insight e a força. O trio gera opções em voz alta; a pessoa registra. <i>5 min por pessoa</i>",
         "Cada quadro termina com <b>pelo menos cinco opções</b>, de pelo menos <b>três tipos</b> diferentes.",
         "Ainda não avaliem: as colunas <b>Valor</b> e <b>Esforço</b> ficam em branco.",
-        "Releiam o próprio quadro e completem o tipo de cada opção. <i>3 min</i>"
+        "Releiam o próprio quadro e completem o tipo de cada opção. <i>2 min</i>"
        ],
        "meta": [
         [
@@ -1229,7 +1342,7 @@
         ],
         [
          "Material",
-         "Miro, Área 3: o quadro com o seu nome."
+         "Miro, Área 4: o quadro com o seu nome."
         ],
         [
          "Entrega",
@@ -1237,7 +1350,7 @@
         ],
         [
          "Tempo",
-         "20 minutos"
+         "18 minutos"
         ]
        ],
        "exemplo": "<p>“Parar: a reunião de aprovação deixa de pedir a planilha nas compras de menor valor.”</p><p><i>Caso fictício da área de compras.</i></p>",
@@ -1302,7 +1415,7 @@
     },
     {
      "id": "e3-b4",
-     "num": "04",
+     "num": "05",
      "nome": "A próxima aposta",
      "tom": "#35608F",
      "titulo": "A próxima <em>aposta</em>",
@@ -1324,14 +1437,14 @@
        "t": "atividade",
        "id": "e3-a4",
        "titulo": "A próxima aposta da sua adoção",
-       "tempo": "20 min",
-       "area": "Área 4",
+       "tempo": "17 min",
+       "area": "Área 5",
        "passos": [
-        "No seu quadro da Área 3, deem a cada opção <b>Valor</b> e <b>Esforço</b>, de 1 a 5. <i>5 min</i>",
+        "No seu quadro da Área 4, deem a cada opção <b>Valor</b> e <b>Esforço</b>, de 1 a 5. <i>4 min</i>",
         "Escolham a aposta: <b>maior valor, menor esforço</b>. No empate, a que afeta menos pessoas e pode ser desfeita.",
         "Em dupla, um apresenta a aposta; o outro pergunta: <b>“Quem precisa participar do desenho?”</b> <i>4 min</i>",
         "Invertam os papéis. <i>4 min</i>",
-        "Na <b>Área 4</b>, preencham a sua linha do mural de apostas. <i>6 min</i>"
+        "Na <b>Área 5</b>, preencham a sua linha do mural de apostas. <i>4 min</i>"
        ],
        "meta": [
         [
@@ -1340,7 +1453,7 @@
         ],
         [
          "Material",
-         "Miro, Área 3 (o seu quadro) e Área 4 (o mural)."
+         "Miro, Área 4 (o seu quadro) e Área 5 (o mural)."
         ],
         [
          "Entrega",
@@ -1348,7 +1461,7 @@
         ],
         [
          "Tempo",
-         "20 minutos"
+         "17 minutos"
         ]
        ],
        "exemplo": "<p>“Opção 1: valor 4, esforço 2. A gerente e dois seniores participam do desenho.”</p><p><i>Caso fictício da área de compras.</i></p>",
@@ -1388,7 +1501,7 @@
     },
     {
      "id": "e3-fe",
-     "num": "05",
+     "num": "06",
      "nome": "Fechamento",
      "tom": "#5E7D52",
      "titulo": "Até o <em>próximo encontro</em>",
@@ -1403,7 +1516,7 @@
        "passos": [
         "<b>Mostre a aposta a uma pessoa.</b> Se houver oportunidade até amanhã: uma das pessoas do desenho. Pergunte o que ela mudaria.",
         "<b>Releia a sua linha.</b> A aposta diz quem faz o quê? O comportamento é algo que se consegue ver?",
-        "<b>Registre no workbook.</b> O insight, o mapa de forças, as opções e a aposta, nesta página."
+        "<b>Registre no workbook.</b> O mapa de pessoas, o insight, o mapa de forças, as opções e a aposta, nesta página."
        ],
        "meta": [
         [
