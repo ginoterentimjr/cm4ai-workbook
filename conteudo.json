@@ -881,7 +881,7 @@
        "area": "Encerramento",
        "passos": [
         "Na sua linha, escreva <b>uma ideia desta noite</b> que você quer aplicar. <b>2 min</b>",
-        "Ao lado, escreva <b>a pessoa que você vai ouvir</b> até terça, 24/11: o papel, sem o nome. <b>1 min</b>",
+        "Ao lado, escreva <b>o ponto do relatório</b> que você quer discutir no Encontro 3. <b>1 min</b>",
         "Leia as linhas dos colegas: <b>qual ideia você também quer aplicar?</b> <b>1 min</b>"
        ],
        "meta": [
@@ -902,7 +902,7 @@
          "4 minutos"
         ]
        ],
-       "exemplo": "<p>“Perguntar pelo fato antes da opinião · a gerente de compras.”</p>",
+       "exemplo": "<p>“Perguntar pelo fato antes da opinião · a nota de liderança.”</p>",
        "campos": [
         {
          "k": "e2.a7.ideia",
@@ -910,10 +910,9 @@
          "linhas": 2
         },
         {
-         "k": "e2.a7.pessoa",
-         "rotulo": "A Pessoa Que Vou Ouvir",
-         "tipo": "texto",
-         "ph": "O papel, sem o nome"
+         "k": "e2.a7.ponto",
+         "rotulo": "O Ponto do Relatório Para o Encontro 3",
+         "linhas": 2
         }
        ]
       }
