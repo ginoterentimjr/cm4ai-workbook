@@ -32,6 +32,7 @@ function doPost(e) {
     if (req.acao === 'duvida') return saida(registrarDuvida(ss, p, req));
     if (req.acao === 'duvidas') return saida(minhasDuvidas(ss, p));
     if (req.acao === 'pendentes') return saida(pendentes(ss, p));
+    if (req.acao === 'lidas') return saida(marcarLidas(ss, p, req));
     return saida({ok: false, erro: 'acao'});
   } catch (err) {
     return saida({ok: false, erro: 'servico', detalhe: String(err).slice(0, 200)});
@@ -174,7 +175,7 @@ function preparar() {
 
 // ---------- Dúvidas: o participante pergunta, o mentor responde no painel ----------
 var ABA_DUV = 'Dúvidas';
-var CAB_DUV = ['ID', 'Recebida em', 'E-mail', 'Nome', 'Encontro', 'Atividade', 'Pergunta', 'Situação', 'Resposta', 'Respondida em'];
+var CAB_DUV = ['ID', 'Recebida em', 'E-mail', 'Nome', 'Encontro', 'Atividade', 'Pergunta', 'Situação', 'Resposta', 'Respondida em', 'Lida em'];
 var AVISO = 'EMAIL_DO_INSTRUTOR';   // recebe o aviso de cada dúvida e a chave do painel
 var SITE = 'https://USUARIO.github.io/REPOSITORIO/';
 
@@ -184,16 +185,19 @@ function abaDuv(ss) {
     a = ss.insertSheet(ABA_DUV);
     a.getRange(1, 1, 1, CAB_DUV.length).setValues([CAB_DUV]).setFontWeight('bold').setBackground('#2A211C').setFontColor('#FBEEE5');
     a.setFrozenRows(1); a.setColumnWidth(6, 260); a.setColumnWidth(7, 420); a.setColumnWidth(9, 420);
+  } else if (String(a.getRange(1, CAB_DUV.length).getValue()) !== CAB_DUV[CAB_DUV.length - 1]) {
+    a.getRange(1, CAB_DUV.length).setValue(CAB_DUV[CAB_DUV.length - 1]).setFontWeight('bold').setBackground('#2A211C').setFontColor('#FBEEE5');
   }
   return a;
 }
+function dataTxt(x) { return x instanceof Date ? Utilities.formatDate(x, 'America/Sao_Paulo', 'dd/MM/yyyy HH:mm') : String(x == null ? '' : x); }
 function linhasDuv(a) {
   var n = a.getLastRow();
   if (n < 2) return [];
   return a.getRange(2, 1, n - 1, CAB_DUV.length).getValues().map(function (v, i) {
     return {linha: i + 2, id: String(v[0]), recebida: String(v[1]), email: String(v[2]), nome: String(v[3]).replace(/^'/, ''), encontro: Number(v[4]),
             atividade: String(v[5]).replace(/^'/, ''), pergunta: String(v[6]).replace(/^'/, ''), situacao: String(v[7]),
-            resposta: String(v[8]).replace(/^'/, ''), respondida: String(v[9])};
+            resposta: String(v[8]).replace(/^'/, ''), respondida: String(v[9]), lida: dataTxt(v[10])};
   });
 }
 function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>'); }
@@ -216,9 +220,10 @@ function registrarDuvida(ss, p, req) {
 
 function minhasDuvidas(ss, p) {
   var l = linhasDuv(abaDuv(ss)).filter(function (d) { return normEmail(d.email) === p.email; }).map(function (d) {
-    return {id: d.id, recebida: d.recebida, encontro: d.encontro, atividade: d.atividade, pergunta: d.pergunta, situacao: d.situacao, resposta: d.resposta, respondida: d.respondida};
+    return {id: d.id, recebida: d.recebida, encontro: d.encontro, atividade: d.atividade, pergunta: d.pergunta, situacao: d.situacao, resposta: d.resposta, respondida: d.respondida,
+            lida: d.lida, nova: d.situacao === 'Respondida' && !d.lida};
   });
-  return {ok: true, duvidas: l};
+  return {ok: true, duvidas: l, naoLidas: l.filter(function (d) { return d.nova; }).length};
 }
 
 function chavePainel() {
@@ -248,12 +253,24 @@ function enviarChave() {
   return {ok: true, enviada: true};
 }
 
-// Menu do instrutor: só a contagem de dúvidas aguardando, e só para a sessão do instrutor.
-// Ler e responder continua exigindo a chave do painel.
+// Avisos do menu. Participante: respostas ainda não lidas. Instrutor: também a contagem de dúvidas aguardando.
+// Ler e responder as dúvidas da turma continua exigindo a chave do painel.
 function pendentes(ss, p) {
-  if (p.email !== normEmail(AVISO)) return {ok: true, instrutor: false};
-  var n = linhasDuv(abaDuv(ss)).filter(function (d) { return d.situacao !== 'Respondida'; }).length;
-  return {ok: true, instrutor: true, n: n};
+  var l = linhasDuv(abaDuv(ss));
+  var nl = l.filter(function (d) { return normEmail(d.email) === p.email && d.situacao === 'Respondida' && !d.lida; }).length;
+  if (p.email !== normEmail(AVISO)) return {ok: true, instrutor: false, naoLidas: nl};
+  return {ok: true, instrutor: true, n: l.filter(function (d) { return d.situacao !== 'Respondida'; }).length, naoLidas: nl};
+}
+
+// Leitura: o participante registra como lidas as respostas que apareceram na aba Dúvidas enviadas.
+function marcarLidas(ss, p, req) {
+  var ids = (req.ids || []).slice(0, 200).map(String), a = abaDuv(ss), quando = agora(), n = 0;
+  linhasDuv(a).forEach(function (d) {
+    if (ids.indexOf(d.id) >= 0 && normEmail(d.email) === p.email && d.situacao === 'Respondida' && !d.lida) {
+      a.getRange(d.linha, CAB_DUV.length).setValue(quando); n++;
+    }
+  });
+  return {ok: true, marcadas: n, lida: quando};
 }
 
 function painel(ss) {
@@ -267,7 +284,7 @@ function responder(ss, req) {
   var a = abaDuv(ss), d = linhasDuv(a).filter(function (x) { return x.id === id; })[0];
   if (!d) return {ok: false, erro: 'id'};
   var quando = agora();
-  a.getRange(d.linha, 8, 1, 3).setValues([['Respondida', seguro(resp), quando]]);
+  a.getRange(d.linha, 8, 1, 4).setValues([['Respondida', seguro(resp), quando, '']]);
   var enviado = false;
   try {
     var nome1 = (d.nome || '').split(' ')[0] || 'Olá';

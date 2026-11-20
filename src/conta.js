@@ -25,9 +25,18 @@ $("[data-conta]").forEach(function(el){
   else{el.innerHTML='<a href="index.html">Entrar</a>'}
 });
 
-// ---------- menu do instrutor: dúvidas aguardando resposta ----------
+// ---------- avisos do menu: respostas não lidas e, para o instrutor, dúvidas aguardando ----------
 // O serviço reconhece o instrutor pela sessão; o site não guarda e-mail algum.
-var relogio=null;
+var relogio=null,ritmo=0;
+function seloMentoria(n){
+  $('.nav a[href="mentoria.html"]').forEach(function(a){
+    var b=a.querySelector("[data-naolidas]");
+    if(!b){b=document.createElement("span");b.className="selo-n";b.setAttribute("data-naolidas","");b.hidden=true;a.appendChild(b);a.classList.add("nav-selo")}
+    b.textContent=n>99?"99+":String(n);b.hidden=!(n>0);
+    a.setAttribute("aria-label","Mentoria"+(n>0?", "+n+(n>1?" respostas novas":" resposta nova"):""));
+  });
+}
+document.addEventListener("cm4ai:naolidas",function(ev){seloMentoria(+ev.detail||0)});
 function itemInstrutor(n){
   $(".nav").forEach(function(nav){
     var a=nav.querySelector("[data-instrutor]");
@@ -39,17 +48,21 @@ function itemInstrutor(n){
       a.setAttribute("aria-label","Responder dúvidas"+(n>0?", "+n+" aguardando resposta":""))}
   });
 }
-function semInstrutor(){$("[data-instrutor]").forEach(function(a){a.parentNode.removeChild(a)});if(relogio){clearInterval(relogio);relogio=null}}
+function semInstrutor(){$("[data-instrutor]").forEach(function(a){a.parentNode.removeChild(a)})}
+// Nas páginas com dúvidas, a própria consulta das dúvidas atualiza o aviso do participante (CM4AI_DUV).
 function pendentes(){
+  if(document.hidden&&relogio)return;
+  if(s.instr===false&&window.CM4AI_DUV)return;
   chamar({acao:"pendentes",email:s.email,token:s.token}).then(function(r){
     if(!r||!r.ok)return;
     if(s.instr!==!!r.instrutor){s.instr=!!r.instrutor;guardar(s)}
-    if(!r.instrutor){semInstrutor();return}
-    itemInstrutor(r.n);
-    if(!relogio)relogio=setInterval(pendentes,60000);
+    if(r.instrutor)itemInstrutor(r.n);else semInstrutor();
+    if(typeof r.naoLidas==="number"&&!window.CM4AI_DUV)seloMentoria(r.naoLidas);
+    var q=r.instrutor?60000:(window.CM4AI_DUV?0:120000);
+    if(q!==ritmo){if(relogio)clearInterval(relogio);relogio=q?setInterval(pendentes,q):null;ritmo=q}
   }).catch(function(){});
 }
-if(s&&s.instr!==false){if(s.instr)itemInstrutor();pendentes()}
+if(s){if(s.instr)itemInstrutor();setTimeout(pendentes,0)}
 
 // ---------- página inicial: entrada e mapa ----------
 var ent=document.querySelector("[data-entrada]"),mapa=document.querySelector("[data-mapa-curso]");

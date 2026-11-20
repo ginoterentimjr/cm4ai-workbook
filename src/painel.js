@@ -56,7 +56,8 @@ function desenhar(){
     var resp=d.situacao==="Respondida",ed=editando[d.id];
     var cab='<div class="pd__cab"><b>'+esc(d.nome||d.email)+'</b><span>'+esc(d.email)+'</span><span>'+(d.encontro?"Encontro "+d.encontro+" · ":"")+esc(d.atividade||"Dúvida geral")+'</span><span>'+esc(d.recebida)+'</span></div>';
     var corpo='<div class="pd__p">'+esc(d.pergunta)+'</div>';
-    if(resp&&!ed){corpo+='<div class="pd__r"><span>A SUA RESPOSTA · '+esc(d.respondida)+'</span>'+esc(d.resposta)+'</div><button type="button" class="btn btn--sec" data-p-editar="'+esc(d.id)+'">Editar a resposta</button>'}
+    if(resp&&!ed){corpo+='<div class="pd__r"><span>A SUA RESPOSTA · '+esc(d.respondida)+'</span>'+esc(d.resposta)+'</div>'+
+      (d.lida?'<p class="pd__leitura pd__leitura--ok">Lida pelo participante em '+esc(d.lida)+'</p>':'<p class="pd__leitura">Ainda não lida pelo participante</p>')+'<button type="button" class="btn btn--sec" data-p-editar="'+esc(d.id)+'">Editar a resposta</button>'}
     else{var v=rasc[d.id]!=null?rasc[d.id]:(resp?d.resposta:"");
       corpo+='<textarea rows="4" data-p-resp="'+esc(d.id)+'" placeholder="Escreva a resposta. Ela aparece no workbook do participante e vai para o e-mail dele.">'+esc(v).replace(/<br>/g,"\n")+'</textarea>'+
         '<div class="pd__acoes"><button type="button" class="btn" data-p-responder="'+esc(d.id)+'">Enviar a resposta</button>'+(ed?'<button type="button" class="btn btn--sec" data-p-cancelar="'+esc(d.id)+'">Cancelar</button>':'')+'<span class="pd__ok" data-p-ok="'+esc(d.id)+'"></span></div>'}

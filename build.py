@@ -199,8 +199,8 @@ def pagina(titulo, corpo, pg, fontes_css, extra_js=""):
 {cfg}<script>{JS}{extra_js}</script></body></html>"""
 
 
-def caixa_duvida(atividade):
-    return (f'<div class="duvidas" data-duvida="{e(atividade)}"><p class="mentor"><button type="button" class="btn btn--mentor" data-duvida-abrir>Perguntar ao mentor sobre esta atividade</button></p>'
+def caixa_duvida(atividade, rotulo="Perguntar ao mentor sobre esta atividade"):
+    return (f'<div class="duvidas" data-duvida="{e(atividade)}"><p class="mentor"><button type="button" class="btn btn--mentor" data-duvida-abrir>{rotulo}</button></p>'
             '<div class="duvidas__form" hidden><label class="duvidas__l">A sua dúvida para o Gino Terentim<textarea rows="4" placeholder="Escreva a dúvida com o contexto da sua adoção. Use o papel das pessoas, e não o nome."></textarea></label>'
             '<div class="duvidas__acoes"><button type="button" class="btn" data-duvida-enviar>Enviar a dúvida</button><button type="button" class="btn btn--sec" data-duvida-cancelar>Cancelar</button></div></div>'
             '<p class="duvidas__msg" aria-live="polite"></p><div class="duvidas__lista"></div></div>')
@@ -291,17 +291,23 @@ else:
     open(os.path.join(D, "index.html"), "w", encoding="utf-8").write(pagina("CM4AI · Workbook digital", idx, "index", F))
     m = ('<section class="capa" style="--tom:#E5662C"><p class="capa__k">ENTRE OS ENCONTROS</p><h1>Dúvidas para o <em>Gino Terentim</em></h1>'
          '<p class="capa__l">Pergunte sobre o método e sobre as atividades do curso. A dúvida chega ao Gino Terentim, e a resposta volta para a sua página do workbook e para o seu e-mail.</p></section>'
-         '<section class="bloco bloco--abre"><h2>Como <em>perguntar</em></h2><ol class="passos">'
+         '<section class="bloco bloco--abre"><div class="abas" role="tablist" aria-label="Dúvidas para o Gino Terentim">'
+         f'<button type="button" class="aba" role="tab" id="aba-nova" aria-controls="painel-nova" aria-selected="true" data-aba="nova">{icone("message-square-plus", "currentColor", 22, 2)}Nova dúvida</button>'
+         f'<button type="button" class="aba" role="tab" id="aba-enviadas" aria-controls="painel-enviadas" aria-selected="false" tabindex="-1" data-aba="enviadas">{icone("inbox", "currentColor", 22, 2)}Dúvidas enviadas<span class="selo-n" data-naolidas-aba hidden></span></button></div>'
+         '<div class="aba__painel" role="tabpanel" id="painel-nova" aria-labelledby="aba-nova" data-painel-aba="nova">'
+         '<h2>Como <em>perguntar</em></h2><ol class="passos">'
          '<li>Entre no workbook com o e-mail da inscrição e o seu código de quatro números.</li>'
-         '<li>Em cada atividade, use o botão <b>Perguntar ao mentor sobre esta atividade</b>. Para uma dúvida geral, use o campo abaixo.</li>'
-         '<li>A resposta aparece junto da atividade, na sua página, e chega no seu e-mail.</li></ol>'
-         + caixa_duvida("Dúvida geral") +
-         '<h2 style="margin-top:34px">As suas <em>dúvidas</em></h2><div class="duvidas__todas" data-duvidas-todas></div>'
+         '<li>Em cada atividade, use o botão <b>Perguntar ao mentor sobre esta atividade</b>. Para uma dúvida geral, use o botão abaixo.</li>'
+         '<li>A resposta aparece na aba <b>Dúvidas enviadas</b> e junto da atividade, e chega no seu e-mail. No menu, o item Mentoria mostra quantas respostas você ainda não leu.</li></ol>'
+         + caixa_duvida("Dúvida geral", "Escrever uma dúvida geral") +
          '<div class="cards3"><div><b>Reserva</b><p>As dúvidas ficam na planilha privada da turma, aberta apenas ao Gino Terentim. Use o papel das pessoas, e não o nome, e mantenha fora do texto os dados reservados da sua organização.</p></div>'
          '<div><b>Uma boa pergunta</b><p>Traz o contexto da sua adoção, o que você já tentou e o ponto exato da dúvida.</p></div>'
          '<div><b>Prazo</b><p>As dúvidas ficam abertas até 30 de novembro de 2026.</p></div></div>'
          '<article class="regua"><h3>Exemplo de pergunta, apenas ilustrativo</h3><p>“Na minha adoção, um assistente de IA para a área de compras, a menor nota do diagnóstico foi Liderança, 2. '
-         'A gerente cobra o uso e nunca mostrou um uso próprio. Que pergunta de abertura traz fatos numa conversa individual com ela?”</p></article></section>')
+         'A gerente cobra o uso e nunca mostrou um uso próprio. Que pergunta de abertura traz fatos numa conversa individual com ela?”</p></article></div>'
+         '<div class="aba__painel" role="tabpanel" id="painel-enviadas" aria-labelledby="aba-enviadas" data-painel-aba="enviadas" hidden>'
+         '<h2>As suas <em>dúvidas</em></h2><p class="aba__nota">Cada resposta nova chega com o selo <b>Nova</b> e passa a constar como lida quando você abre esta aba.</p>'
+         '<div class="duvidas__todas" data-duvidas-todas></div></div></section>')
     pn = ('<section class="capa" style="--tom:#2A211C"><p class="capa__k">ÁREA DO PROFESSOR</p><h1>Painel de <em>dúvidas</em></h1>'
           '<p class="capa__l">As dúvidas da turma chegam aqui em tempo real. A resposta aparece no workbook do participante e vai para o e-mail dele.</p></section>'
           '<section class="bloco bloco--abre painel">'
