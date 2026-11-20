@@ -190,14 +190,20 @@ function abaDuv(ss) {
   }
   return a;
 }
-function dataTxt(x) { return x instanceof Date ? Utilities.formatDate(x, 'America/Sao_Paulo', 'dd/MM/yyyy HH:mm') : String(x == null ? '' : x); }
+// A planilha converte o texto 'dd/MM/yyyy HH:mm:ss' em data no fuso dela; a leitura devolve o mesmo horário, sem os segundos.
+var FUSO_PLAN = null;
+function dataTxt(x) {
+  if (x instanceof Date) return Utilities.formatDate(x, FUSO_PLAN || 'America/Sao_Paulo', 'dd/MM/yyyy HH:mm');
+  return String(x == null ? '' : x).replace(/^(\d{2}\/\d{2}\/\d{4} \d{2}:\d{2}):\d{2}$/, '$1');
+}
 function linhasDuv(a) {
   var n = a.getLastRow();
   if (n < 2) return [];
+  if (!FUSO_PLAN) FUSO_PLAN = a.getParent().getSpreadsheetTimeZone();
   return a.getRange(2, 1, n - 1, CAB_DUV.length).getValues().map(function (v, i) {
-    return {linha: i + 2, id: String(v[0]), recebida: String(v[1]), email: String(v[2]), nome: String(v[3]).replace(/^'/, ''), encontro: Number(v[4]),
+    return {linha: i + 2, id: String(v[0]), recebida: dataTxt(v[1]), email: String(v[2]), nome: String(v[3]).replace(/^'/, ''), encontro: Number(v[4]),
             atividade: String(v[5]).replace(/^'/, ''), pergunta: String(v[6]).replace(/^'/, ''), situacao: String(v[7]),
-            resposta: String(v[8]).replace(/^'/, ''), respondida: String(v[9]), lida: dataTxt(v[10])};
+            resposta: String(v[8]).replace(/^'/, ''), respondida: dataTxt(v[9]), lida: dataTxt(v[10])};
   });
 }
 function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>'); }
