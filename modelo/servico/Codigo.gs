@@ -2,6 +2,7 @@
  * CM4AI On-line · Workbook da turma
  * Serviço que grava e devolve as respostas de cada participante na planilha da turma.
  * Implantação: Implantar > Nova implantação > App da Web; executar como: eu; acesso: qualquer pessoa.
+ * Atualização: Implantar > Gerenciar implantações > editar > Nova versão (o endereço não muda).
  */
 var PLANILHA_ID = 'ID_DA_PLANILHA_PRIVADA_DA_TURMA';
 var ABA_PART = 'Participantes';
@@ -30,6 +31,7 @@ function doPost(e) {
     if (req.acao === 'mapa') return saida(mapa(ss, p));
     if (req.acao === 'duvida') return saida(registrarDuvida(ss, p, req));
     if (req.acao === 'duvidas') return saida(minhasDuvidas(ss, p));
+    if (req.acao === 'pendentes') return saida(pendentes(ss, p));
     return saida({ok: false, erro: 'acao'});
   } catch (err) {
     return saida({ok: false, erro: 'servico', detalhe: String(err).slice(0, 200)});
@@ -75,7 +77,7 @@ function entrar(ss, req) {
   if (!r) {
     var tk = Utilities.getUuid();
     a.appendRow([email, seguro(nome), h, tk, agora(), agora(), 0]);
-    return {ok: true, token: tk, nome: nome, novo: true};
+    return {ok: true, token: tk, nome: nome, novo: true, instrutor: email === normEmail(AVISO)};
   }
   var v = a.getRange(r, 1, 1, CAB_PART.length).getValues()[0];
   var falhas = Number(v[6] || 0);
@@ -85,7 +87,7 @@ function entrar(ss, req) {
   var token = v[3] || Utilities.getUuid();
   if (nome && !v[1]) a.getRange(r, 2).setValue(seguro(nome));
   a.getRange(r, 4, 1, 4).setValues([[token, v[4] || agora(), agora(), 0]]);
-  return {ok: true, token: token, nome: v[1] || nome, novo: false};
+  return {ok: true, token: token, nome: v[1] || nome, novo: false, instrutor: email === normEmail(AVISO)};
 }
 
 function autenticar(ss, req) {
@@ -244,6 +246,14 @@ function enviarChave() {
     htmlBody: '<p>A chave do painel de dúvidas do workbook é <b style="font-size:18px;letter-spacing:2px">' + k + '</b>.</p><p><a href="' + SITE + 'painel.html">Abrir o painel</a></p>'});
   cache.put('chave_enviada', '1', 600);
   return {ok: true, enviada: true};
+}
+
+// Menu do instrutor: só a contagem de dúvidas aguardando, e só para a sessão do instrutor.
+// Ler e responder continua exigindo a chave do painel.
+function pendentes(ss, p) {
+  if (p.email !== normEmail(AVISO)) return {ok: true, instrutor: false};
+  var n = linhasDuv(abaDuv(ss)).filter(function (d) { return d.situacao !== 'Respondida'; }).length;
+  return {ok: true, instrutor: true, n: n};
 }
 
 function painel(ss) {

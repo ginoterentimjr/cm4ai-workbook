@@ -25,6 +25,32 @@ $("[data-conta]").forEach(function(el){
   else{el.innerHTML='<a href="index.html">Entrar</a>'}
 });
 
+// ---------- menu do instrutor: dúvidas aguardando resposta ----------
+// O serviço reconhece o instrutor pela sessão; o site não guarda e-mail algum.
+var relogio=null;
+function itemInstrutor(n){
+  $(".nav").forEach(function(nav){
+    var a=nav.querySelector("[data-instrutor]");
+    if(!a){a=document.createElement("a");a.href="painel.html";a.setAttribute("data-instrutor","");
+      a.innerHTML='Responder dúvidas<span class="selo-n" data-pend hidden></span>';
+      var m=nav.querySelector('a[href="mentoria.html"]');if(m&&m.nextSibling)nav.insertBefore(a,m.nextSibling);else nav.appendChild(a);
+      if(document.body.getAttribute("data-pg")==="painel")a.classList.add("ativo")}
+    if(n!==undefined){var b=a.querySelector("[data-pend]");b.textContent=n>99?"99+":String(n);b.hidden=!(n>0);
+      a.setAttribute("aria-label","Responder dúvidas"+(n>0?", "+n+" aguardando resposta":""))}
+  });
+}
+function semInstrutor(){$("[data-instrutor]").forEach(function(a){a.parentNode.removeChild(a)});if(relogio){clearInterval(relogio);relogio=null}}
+function pendentes(){
+  chamar({acao:"pendentes",email:s.email,token:s.token}).then(function(r){
+    if(!r||!r.ok)return;
+    if(s.instr!==!!r.instrutor){s.instr=!!r.instrutor;guardar(s)}
+    if(!r.instrutor){semInstrutor();return}
+    itemInstrutor(r.n);
+    if(!relogio)relogio=setInterval(pendentes,60000);
+  }).catch(function(){});
+}
+if(s&&s.instr!==false){if(s.instr)itemInstrutor();pendentes()}
+
 // ---------- página inicial: entrada e mapa ----------
 var ent=document.querySelector("[data-entrada]"),mapa=document.querySelector("[data-mapa-curso]");
 function mostrarMapa(){
@@ -51,7 +77,7 @@ if(ent){
       if(!r.ok){av.textContent=MSG[r.erro]||MSG.servico;av.className="entrada__aviso entrada__aviso--erro";return}
       var em=d.email.trim().toLowerCase(),ult="";try{ult=localStorage.getItem("cm4ai:ultimo")||""}catch(e){}
       if(ult&&ult!==em)limpar();
-      s={email:em,token:r.token,nome:r.nome||d.nome};guardar(s);try{localStorage.setItem("cm4ai:ultimo",em)}catch(e){}
+      s={email:em,token:r.token,nome:r.nome||d.nome,instr:!!r.instrutor};guardar(s);try{localStorage.setItem("cm4ai:ultimo",em)}catch(e){}
       location.reload();
     }).catch(function(){av.textContent=MSG.rede;av.className="entrada__aviso entrada__aviso--erro"});
   });
