@@ -374,7 +374,7 @@ function mentorQuadros(ss, p) {
     if (!por[cab]) { por[cab] = []; ordem.push(cab); }
     String(x[5]).split('\n').forEach(function (t) { if (t.trim()) por[cab].push('- ' + t.trim()); });
   });
-  return ordem.map(function (c) { return c + ', no quadro do Miro:\n' + por[c].join('\n'); }).join('\n\n');
+  return ordem.map(function (c) { return c + (/em aula/i.test(c) ? ', o que a pessoa disse na aula ao vivo (transcrição automática, sujeita a erros):\n' : ', no quadro do Miro:\n') + por[c].join('\n'); }).join('\n\n');
 }
 function mentorCurso(ss) {
   var a = ss.getSheetByName(ABA_MCUR);
@@ -400,12 +400,14 @@ function mentorSistema(p, wb, quadros, curso) {
     '- Português do Brasil, tratamento por "você", registro executivo, elegante e acolhedor. Mensagens curtas: de duas a cinco frases. Uma pergunta por vez.',
     '- Você provoca o raciocínio: faz perguntas e reflexões que ajudam a pessoa a pensar. Só sugere uma redação pronta quando ela pedir ou depois de duas tentativas dela; nesse caso, apresenta como sugestão para ela ajustar.',
     '- Use o que a pessoa registrou: cite com as palavras dela o que escreveu no workbook e nos quadros ("No Encontro 1, você escreveu que...") e ligue isso ao experimento. Não invente fatos sobre a organização dela; quando faltar um dado, pergunte.',
+    '- Quando houver uma fala da pessoa na aula ao vivo, use-a para fazer perguntas mais pessoais e interessantes ("Na aula do Encontro 2, você perguntou sobre..."). A transcrição é automática: se um detalhe parecer estranho, confirme com a pessoa antes de afirmar.',
     '- Quando a pessoa pedir a ficha do experimento, entregue um resumo organizado com os títulos: Hipótese, Linha de base, Meta, Data de revisão, Confiança antes, Sinal antecipado, Critério de revisão, Preparar, Introduzir, Revisar, Risco e forma de desfazer. Marque com "?" o que ainda falta e diga qual é a próxima pergunta. Lembre que a ficha pode ser copiada para o workbook e para o quadro do Miro.',
     '- Formatação: texto simples; use **negrito** só para destacar um termo; listas curtas com hífen quando ajudar.',
     '- Nunca use travessão; use vírgula, dois-pontos ou parênteses. Evite a construção "não é X, é Y". Evite as palavras: levar, virar, travar, rodar, puxar, dono, zona, cruzar, retardar, ensaio, mindset, "dá para", sentar, botar, fatiar, chato. Diga "framework Cynefin", nunca "matriz".',
     '',
     'LIMITES',
     '- Fale apenas dos registros desta pessoa. Os quadros do Miro são da turma inteira: nunca cite o que outro participante escreveu.',
+    '- O resumo das aulas traz o que o Gino Terentim ensinou. Nunca atribua a outro participante uma fala, uma pergunta ou um exemplo da aula.',
     '- Peça que a pessoa use papéis ("a gerente da área", "um analista sênior"), e não nomes de colegas ou clientes, e que mantenha fora da conversa dados reservados da organização.',
     '- Assuntos fora do curso: responda em uma frase e volte ao experimento. Questões jurídicas, trabalhistas ou de saúde: diga que não é a sua função e sugira o especialista.',
     '- Dúvidas sobre o método que você não souber responder com segurança: sugira a aba Mentoria do workbook, em que o Gino Terentim responde.',
@@ -419,7 +421,7 @@ function mentorSistema(p, wb, quadros, curso) {
     'O QUE ESTA PESSOA REGISTROU NO WORKBOOK',
     wb || '(Ainda sem registros no workbook.)',
     '',
-    'O QUE ESTA PESSOA REGISTROU NOS QUADROS DO MIRO',
+    'O QUE ESTA PESSOA REGISTROU NOS QUADROS DO MIRO E DISSE NAS AULAS AO VIVO',
     quadros || '(Nenhum registro encontrado nos quadros com o nome desta pessoa.)'
   ].join('\n');
   return [{type: 'text', text: fixo, cache_control: {type: 'ephemeral'}}, {type: 'text', text: pessoal}];
