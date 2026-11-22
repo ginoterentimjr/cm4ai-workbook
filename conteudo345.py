@@ -271,7 +271,7 @@ E5 = dict(n=5, tom="#5E7D52", data="27 de novembro de 2026", miro="https://miro.
                     dict(t="atividade", id="e5-a5", titulo="A margem que você muda primeiro", tempo="2 min", area=None,
                          perg="“Qual é a margem que você vai mudar primeiro?”",
                          passos=["No chat, escreva <b>a margem que você vai mudar primeiro</b>, em até dez palavras.", "Registre aqui a mesma frase, com a data em que pretende mudá-la."],
-                         meta=[("Com quem", "Individual, no chat da turma."), ("Entrega", "A margem e a data."), ("Depois do curso", "Dúvidas pelo botão Perguntar ao mentor, que chega ao Gino Terentim.")],
+                         meta=[("Com quem", "Individual, no chat da turma."), ("Entrega", "A margem e a data."), ("Depois do curso", "Dúvidas pelo botão Perguntar ao Gino Terentim, com a resposta na sua página e no seu e-mail.")],
                          campos=[F("e5.a5.margem", "A Margem Que Mudo Primeiro, e Quando", 2), F("e5.a5.curso", "O Que Muda no Meu Trabalho Depois Destes Cinco Encontros", 3)],
                          conducao=["Discussão do encontro e do curso, 20 minutos (21h40 a 22h00): que margem da sua organização mais protege o jeito antigo? Quem seria o primeiro campeão da sua área, e o que essa pessoa precisaria receber? O que você faz na segunda-feira, com a estratégia que construiu?"])]),
     ])

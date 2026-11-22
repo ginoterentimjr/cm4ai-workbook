@@ -199,7 +199,7 @@ def pagina(titulo, corpo, pg, fontes_css, extra_js=""):
 {cfg}<script>{JS}{extra_js}</script></body></html>"""
 
 
-def caixa_duvida(atividade, rotulo="Perguntar ao mentor sobre esta atividade"):
+def caixa_duvida(atividade, rotulo="Perguntar ao Gino Terentim sobre esta atividade"):
     return (f'<div class="duvidas" data-duvida="{e(atividade)}"><p class="mentor"><button type="button" class="btn btn--mentor" data-duvida-abrir>{rotulo}</button></p>'
             '<div class="duvidas__form" hidden><label class="duvidas__l">A sua dúvida para o Gino Terentim<textarea rows="4" placeholder="Escreva a dúvida com o contexto da sua adoção. Use o papel das pessoas, e não o nome."></textarea></label>'
             '<div class="duvidas__acoes"><button type="button" class="btn" data-duvida-enviar>Enviar a dúvida</button><button type="button" class="btn btn--sec" data-duvida-cancelar>Cancelar</button></div></div>'
@@ -251,7 +251,7 @@ if PROF:
     for enc in ENCONTROS:
         corpo += encontro_html(enc)
     os.makedirs(os.path.join(RAIZ, "professor"), exist_ok=True)
-    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v11.html"), "w", encoding="utf-8").write(
+    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v12.html"), "w", encoding="utf-8").write(
         pagina("CM4AI · Workbook · Versão do professor", corpo, "prof", fontes(True)))
     print("professor ok")
 else:
@@ -298,7 +298,7 @@ else:
          '<div class="aba__painel" role="tabpanel" id="painel-nova" aria-labelledby="aba-nova" data-painel-aba="nova">'
          '<h2>Como <em>perguntar</em></h2><ol class="passos">'
          '<li>Entre no workbook com o e-mail da inscrição e o seu código de quatro números.</li>'
-         '<li>Em cada atividade, use o botão <b>Perguntar ao mentor sobre esta atividade</b>. Para uma dúvida geral, use o botão abaixo.</li>'
+         '<li>Em cada atividade, use o botão <b>Perguntar ao Gino Terentim sobre esta atividade</b>. Para uma dúvida geral, use o botão abaixo.</li>'
          '<li>A resposta aparece na aba <b>Dúvidas enviadas</b> e junto da atividade, e chega no seu e-mail. No menu, o item Mentoria mostra quantas respostas você ainda não leu.</li></ol>'
          + caixa_duvida("Dúvida geral", "Escrever uma dúvida geral") +
          '<div class="cards3"><div><b>Reserva</b><p>As dúvidas ficam na planilha privada da turma, aberta apenas ao Gino Terentim. Use o papel das pessoas, e não o nome, e mantenha fora do texto os dados reservados da sua organização.</p></div>'
