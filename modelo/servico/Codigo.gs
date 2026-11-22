@@ -374,7 +374,7 @@ function mentorQuadros(ss, p) {
     if (!por[cab]) { por[cab] = []; ordem.push(cab); }
     String(x[5]).split('\n').forEach(function (t) { if (t.trim()) por[cab].push('- ' + t.trim()); });
   });
-  return ordem.map(function (c) { return c + (/em aula/i.test(c) ? ', o que a pessoa disse na aula ao vivo (transcrição automática, sujeita a erros):\n' : ', no quadro do Miro:\n') + por[c].join('\n'); }).join('\n\n');
+  return ordem.map(function (c) { return c + (/em aula/i.test(c) ? ', temas que a pessoa trouxe na aula ao vivo (transcrição automática; uso discreto, apenas para orientar as perguntas, nunca para citar):\n' : ', no quadro do Miro:\n') + por[c].join('\n'); }).join('\n\n');
 }
 function mentorCurso(ss) {
   var a = ss.getSheetByName(ABA_MCUR);
@@ -400,10 +400,11 @@ function mentorSistema(p, wb, quadros, curso) {
     '- Português do Brasil, tratamento por "você", registro executivo, elegante e acolhedor. Mensagens curtas: de duas a cinco frases. Uma pergunta por vez.',
     '- Você provoca o raciocínio: faz perguntas e reflexões que ajudam a pessoa a pensar. Só sugere uma redação pronta quando ela pedir ou depois de duas tentativas dela; nesse caso, apresenta como sugestão para ela ajustar.',
     '- Use o que a pessoa registrou: cite com as palavras dela o que escreveu no workbook e nos quadros ("No Encontro 1, você escreveu que...") e ligue isso ao experimento. Não invente fatos sobre a organização dela; quando faltar um dado, pergunte.',
-    '- Quando houver uma fala da pessoa na aula ao vivo, use-a para fazer perguntas mais pessoais e interessantes ("Na aula do Encontro 2, você perguntou sobre..."). A transcrição é automática: se um detalhe parecer estranho, confirme com a pessoa antes de afirmar.',
+    '- Os temas que a pessoa trouxe na aula ao vivo servem apenas para orientar as suas perguntas, de forma sutil e indireta. Nunca diga que ela disse, perguntou ou comentou algo em aula, e nunca mencione a aula, a transcrição ou a fala dela. Transforme o tema numa pergunta aberta sobre o experimento: se ela se preocupou com a narrativa durante o caos, por exemplo, pergunte "o que as pessoas da sua área precisariam ouvir nas semanas mais difíceis?". Procure, ao longo da conversa, o momento em que esse tema enriquece o experimento (o risco e a proteção, a medida, quem preparar, o que dizer às pessoas) e traga-o nesse momento, sempre como pergunta. Se o tema não parecer se aplicar, siga o que ela disser.',
     '- Quando a pessoa pedir a ficha do experimento, entregue um resumo organizado com os títulos: Hipótese, Linha de base, Meta, Data de revisão, Confiança antes, Sinal antecipado, Critério de revisão, Preparar, Introduzir, Revisar, Risco e forma de desfazer. Marque com "?" o que ainda falta e diga qual é a próxima pergunta. Lembre que a ficha pode ser copiada para o workbook e para o quadro do Miro.',
     '- Formatação: texto simples; use **negrito** só para destacar um termo; listas curtas com hífen quando ajudar.',
     '- Nunca use travessão; use vírgula, dois-pontos ou parênteses. Evite a construção "não é X, é Y". Evite as palavras: levar, virar, travar, rodar, puxar, dono, zona, cruzar, retardar, ensaio, mindset, "dá para", sentar, botar, fatiar, chato. Diga "framework Cynefin", nunca "matriz".',
+    '- Antes de enviar, releia a mensagem e troque qualquer palavra da lista acima por um sinônimo de registro executivo (por exemplo: "tornar-se" no lugar de "virar", "conduzir" no lugar de "levar", "é possível" no lugar de "dá para").',
     '',
     'LIMITES',
     '- Fale apenas dos registros desta pessoa. Os quadros do Miro são da turma inteira: nunca cite o que outro participante escreveu.',
@@ -463,7 +464,7 @@ function mentorConversa(req) {
   if (!chave) return {ok: false, erro: 'mentor_config'};
   var modelo = pr.getProperty('MENTOR_MODELO') || MENTOR_MODELO_PADRAO;
   var msgs = mentorMensagens(req), abertura = !msgs.length;
-  if (abertura) msgs = [{role: 'user', content: '(A pessoa acabou de abrir a conversa. Cumprimente pelo primeiro nome, mostre em uma ou duas frases que você conhece o que ela já registrou no curso, e faça a primeira pergunta para começar o experimento. Se não houver registros, pergunte qual é a adoção de IA em que ela trabalha.)'}];
+  if (abertura) msgs = [{role: 'user', content: '(A pessoa acabou de abrir a conversa. Cumprimente pelo primeiro nome, mostre em uma ou duas frases que você conhece o que ela já registrou no workbook e nos quadros (sem mencionar as falas em aula), e faça a primeira pergunta para começar o experimento. Se não houver registros, pergunte qual é a adoção de IA em que ela trabalha.)'}];
   var r = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
     method: 'post', contentType: 'application/json', muteHttpExceptions: true,
     headers: {'x-api-key': chave, 'anthropic-version': '2023-06-01'},
