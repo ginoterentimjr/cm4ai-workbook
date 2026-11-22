@@ -347,4 +347,4 @@ input[type=email],input[type=password]{width:100%;font:inherit;font-size:18px;co
 .mentorx__passos .disco{flex:none;width:38px;height:38px}
 .mentorx__passos b{display:block;color:var(--tinta)}
 @media (max-width:860px){.mentorx{grid-template-columns:1fr}.zap{height:76vh}.zap__chips{flex-wrap:nowrap;overflow-x:auto}}
-@media (max-width:700px){.topo{position:static}}
+@media (max-width:700px){.topo{position:static}.capa>*{position:relative;z-index:1}.capa:after{width:150px;height:150px;right:-62px;top:-62px;opacity:.22}}

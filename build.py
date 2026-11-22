@@ -184,7 +184,7 @@ def caminho_html(atual, grande=False):
 
 def pagina(titulo, corpo, pg, fontes_css, extra_js=""):
     nav = "" if PROF else ('<nav class="nav"><a href="index.html">Meu mapa</a><a href="e1.html">Encontro 1</a>'
-                           '<a href="e2.html">Encontro 2</a><a href="mentoria.html">Mentoria</a></nav><span class="conta" data-conta></span>')
+                           '<a href="e2.html">Encontro 2</a><a href="mentor.html">Mentor de experimentos</a><a href="mentoria.html">Mentoria</a></nav><span class="conta" data-conta></span>')
     n_enc = int(pg[1:]) if pg.startswith("e") and pg[1:].isdigit() else 0
     cfg = "" if PROF else f'<script>window.CM4AI={{api:{json.dumps(API)},encontro:{n_enc}}};</script>'
     selo = '<span class="selo-prof">VERSÃO DO PROFESSOR</span>' if PROF else ""
@@ -287,6 +287,7 @@ else:
             '<div class="cards3 cards3--claro"><div><b>Como usar</b><p>Abra o encontro do dia e registre as suas respostas à medida que cada atividade acontece. Sem conexão, o registro fica neste navegador e segue para a sua página na alteração seguinte.</p></div>'
             '<div><b>O fio entre os encontros</b><p>A adoção de IA que você escolhe no Encontro 1 acompanha o curso inteiro. Cada encontro parte do que você registrou no anterior.</p></div>'
             '<div><b>Reserva dos seus dados</b><p>As respostas ficam na planilha privada da turma, aberta apenas ao Gino Terentim, e na sua página, protegida pelo seu código. Use o papel das pessoas, e não o nome.</p></div></div>'
+            f'<a class="cartao cartao--mentor" href="mentor.html" style="--tom:#2F6B6F"><span class="disco" style="--tom:#1F4E51">{icone("flask-conical")}</span><span><span class="cartao__k">ENTRE OS ENCONTROS</span><b>Mentor de experimentos</b><i>Converse sobre a sua aposta e desenhe o experimento a partir do que você registrou no workbook e nos quadros do Miro</i></span></a>'
             f'<a class="cartao cartao--mentor" href="mentoria.html" style="--tom:#2A211C"><span class="disco" style="--tom:#E5662C">{icone("messages-square")}</span><span><span class="cartao__k">ENTRE OS ENCONTROS</span><b>Dúvidas para o Gino Terentim</b><i>Pergunte sobre o método e as atividades; a resposta volta para a sua página e para o seu e-mail</i></span></a></section>')
     open(os.path.join(D, "index.html"), "w", encoding="utf-8").write(pagina("CM4AI · Workbook digital", idx, "index", F))
     m = ('<section class="capa" style="--tom:#E5662C"><p class="capa__k">ENTRE OS ENCONTROS</p><h1>Dúvidas para o <em>Gino Terentim</em></h1>'
