@@ -849,7 +849,7 @@
          "O mapa de pessoas na curva de adoção, insights e opções."
         ]
        ],
-       "exemplo": "<p>“Concordo que a regra de aprovação segura a adoção. Não concordo com a nota de tecnologia: a ferramenta funciona bem no dia a dia. Surpreendeu: a dimensão de pessoas ficou abaixo da de liderança.”</p>",
+       "exemplo": "<p>“Concordo com a nota 2 de liderança: a gerente cobra o uso e aprova pela planilha. Não concordo com a nota 4 de tecnologia: a ferramenta funciona, mas a aprovação exige a planilha. Surpreendeu: processos com nota 3, quando ninguém sabe quem responde por erro do assistente.”</p><p><i>Caso fictício da área de compras.</i></p>",
        "campos": [
         {
          "k": "e2.a6.atencao",
