@@ -314,6 +314,43 @@ input[type=email],input[type=password]{width:100%;font:inherit;font-size:18px;co
 .pd__leitura{font-size:13.5px;font-weight:700;letter-spacing:.02em;color:#8D8377;margin:0 0 10px}
 .pd__leitura--ok{color:#2F6B4F}
 @media (max-width:560px){.abas{flex-wrap:nowrap;gap:0}.aba{flex:0 1 auto;white-space:nowrap;font-size:15px;padding:11px 10px;gap:6px}.aba svg{display:none}}
+/* ---------- Mentor de experimentos: conversa no estilo de aplicativo de mensagens ---------- */
+.mentorx{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:24px;margin-top:28px;align-items:start}
+.zap{display:flex;flex-direction:column;height:min(78vh,760px);min-height:520px;border-radius:22px;overflow:hidden;border:1px solid var(--linha);box-shadow:0 10px 30px rgba(42,33,28,.12);background:#EFE6DA}
+.zap__topo{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--tinta);color:#FBEEE5}
+.zap__av{flex:none;width:44px;height:44px;border-radius:50%;background:var(--lar);display:flex;align-items:center;justify-content:center}
+.zap__topo b{display:block;font-size:16px;line-height:1.2}.zap__topo i{font-style:normal;font-size:12.5px;color:#D9CBBE}
+.zap__fundo{flex:1;overflow-y:auto;padding:18px 14px 10px;display:flex;flex-direction:column;gap:8px;
+  background-color:#EFE6DA;background-image:radial-gradient(rgba(201,162,77,.22) 1.2px,transparent 1.3px),radial-gradient(rgba(176,74,28,.08) 1.2px,transparent 1.3px);background-size:26px 26px,26px 26px;background-position:0 0,13px 13px}
+.zap__msg{max-width:84%;padding:9px 12px 6px;border-radius:14px;font-size:15.5px;line-height:1.5;color:var(--tinta);box-shadow:0 1px 1.5px rgba(42,33,28,.12);position:relative;word-wrap:break-word}
+.zap__msg p{margin:0 0 .45em}.zap__msg p:last-child{margin:0}.zap__msg ul,.zap__msg ol{margin:.2em 0 .45em;padding-left:1.2em}.zap__msg li{margin:.1em 0}
+.zap__msg--mentor{align-self:flex-start;background:#FFFFFF;border-top-left-radius:4px}
+.zap__msg--pessoa{align-self:flex-end;background:#FCDCC8;border-top-right-radius:4px}
+.zap__meta{display:flex;justify-content:flex-end;align-items:center;gap:8px;font-size:11.5px;color:var(--fraco);margin-top:2px}
+.zap__visto{color:#2F6B6F;font-weight:700;letter-spacing:-2px}
+.zap__copiar{font:inherit;font-size:11.5px;font-weight:600;color:var(--lar);background:none;border:0;padding:0;cursor:pointer}
+.zap__aviso{align-self:center;max-width:90%;text-align:center;font-size:13.5px;background:#FFF6E6;color:var(--corpo);border-radius:10px;padding:7px 12px;box-shadow:0 1px 1px rgba(42,33,28,.08)}
+.zap__aviso .btn{display:inline-block;margin-top:8px}
+.zap__digitando{display:flex;gap:5px;padding:12px 14px}
+.zap__digitando span{width:8px;height:8px;border-radius:50%;background:var(--fraco);opacity:.4;animation:zapd 1.2s infinite}
+.zap__digitando span:nth-child(2){animation-delay:.2s}.zap__digitando span:nth-child(3){animation-delay:.4s}
+@keyframes zapd{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:.9;transform:translateY(-3px)}}
+.zap__chips{display:flex;flex-wrap:wrap;gap:8px;padding:8px 12px;background:#E7DCCD}
+.zap__chips button{flex:none;font:inherit;font-size:13.5px;font-weight:600;color:var(--tinta);background:#FFFFFF;border:1px solid var(--linha);border-radius:999px;padding:6px 12px;cursor:pointer}
+.zap__chips button:hover{border-color:var(--lar);color:var(--lar)}.zap__chips button:disabled{opacity:.5;cursor:default}
+.zap__barra{display:flex;align-items:flex-end;gap:10px;padding:10px 12px;background:#E7DCCD}
+.zap__barra textarea{flex:1;resize:none;font:inherit;font-size:15.5px;line-height:1.45;border:0;border-radius:22px;padding:10px 16px;background:#fff;color:var(--tinta);max-height:140px;outline-offset:2px}
+.zap__barra button{flex:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--lar);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.zap__barra button:disabled{opacity:.55;cursor:default}
+.mentorx__lado{display:flex;flex-direction:column;gap:14px}
+.mentorx__card{background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:18px 20px}
+.mentorx__card h3{font-size:18px;margin:0 0 .5em}.mentorx__card p{margin:0;font-size:15px}
+.mentorx__passos{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.mentorx__passos li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.mentorx__passos .disco{flex:none;width:38px;height:38px}
+.mentorx__passos b{display:block;color:var(--tinta)}
+@media (max-width:860px){.mentorx{grid-template-columns:1fr}.zap{height:76vh}.zap__chips{flex-wrap:nowrap;overflow-x:auto}}
+@media (max-width:700px){.topo{position:static}}
 </style></head>
 <body data-pg="e5">
 <header class="topo"><a class="marca" href="index.html"><img src="logo-gt-mark.png" alt=""><span><b>GINO TERENTIM</b><i>RETHINKING LEARNING</i></span></a><nav class="nav"><a href="index.html">Meu mapa</a><a href="e1.html">Encontro 1</a><a href="e2.html">Encontro 2</a><a href="mentoria.html">Mentoria</a></nav><span class="conta" data-conta></span></header>

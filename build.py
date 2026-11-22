@@ -321,4 +321,23 @@ else:
           '<div data-p-lista></div></div></section>')
     open(os.path.join(D, "painel.html"), "w", encoding="utf-8").write(pagina("Painel de dúvidas · CM4AI", pn, "painel", F, PAINEL_JS))
     open(os.path.join(D, "mentoria.html"), "w", encoding="utf-8").write(pagina("CM4AI · Mentoria", m, "mentoria", F))
+    # Mentor de experimentos: conversa com a IA, a partir do que a pessoa registrou no curso.
+    chips = ["Quero formular a minha hipótese", "Me ajude a definir a medida", "Vamos planejar o experimento", "Monte a ficha do meu experimento"]
+    passos_m = [("lightbulb", "#2F6B6F", "O que você já registrou", "O mentor lê o seu workbook e as suas áreas nos quadros do Miro."),
+                ("flask-conical", "#7A4E6D", "A hipótese", "Ação, comportamento esperado e medida, em três partes."),
+                ("gauge", "#2F6B6F", "A medida", "Linha de base, meta, data de revisão e critério com três faixas."),
+                ("calendar-range", "#5E7D52", "O plano", "Preparar, introduzir e revisar, com risco e forma de desfazer.")]
+    mt = ('<section class="capa" style="--tom:#B04A1C"><p class="capa__k">ENTRE OS ENCONTROS · INTELIGÊNCIA ARTIFICIAL</p><h1>Mentor de <em>experimentos</em></h1>'
+          '<p class="capa__l">Uma conversa para pensar o experimento da sua adoção, com perguntas que partem do que você já registrou no curso.</p></section>'
+          '<div class="mentorx"><div class="zap" data-mentor>'
+          f'<header class="zap__topo"><span class="zap__av">{icone("flask-conical", "#FFFFFF", 24)}</span><div><b>Mentor de experimentos</b><i data-mentor-status>on-line · CM4AI</i></div></header>'
+          '<div class="zap__fundo" data-mentor-lista aria-live="polite"></div>'
+          '<div class="zap__chips" data-mentor-chips>' + "".join(f'<button type="button" data-chip="{e(c)}">{e(c)}</button>' for c in chips) + '</div>'
+          f'<form class="zap__barra" data-mentor-form><textarea rows="1" placeholder="Escreva uma mensagem" aria-label="A sua mensagem"></textarea><button type="submit" aria-label="Enviar">{icone("send-horizontal", "#FFFFFF", 22)}</button></form></div>'
+          '<aside class="mentorx__lado"><div class="mentorx__card"><h3>Como o mentor ajuda</h3><ul class="mentorx__passos">'
+          + "".join(f'<li><span class="disco" style="--tom:{t}">{icone(ic, "#FFFFFF", 20)}</span><span><b>{e(ti)}</b>{e(tx)}</span></li>' for ic, t, ti, tx in passos_m) +
+          '</ul></div><div class="mentorx__card"><h3>Reserva</h3><p>As mensagens são processadas pela API da Anthropic e ficam registradas na planilha privada da turma, aberta apenas ao Gino Terentim. Use o papel das pessoas, e não o nome, e mantenha fora da conversa os dados reservados da sua organização.</p></div>'
+          '<div class="mentorx__card"><h3>Dúvidas sobre o método</h3><p>O mentor conversa sobre o seu experimento. Para uma dúvida que precisa da resposta do Gino Terentim, use a <a href="mentoria.html">Mentoria</a>.</p></div></aside></div>')
+    MJS = open(os.path.join(RAIZ, "src", "mentor.js"), encoding="utf-8").read()
+    open(os.path.join(D, "mentor.html"), "w", encoding="utf-8").write(pagina("CM4AI · Mentor de experimentos", mt, "mentor", F, MJS))
     print("site ok")

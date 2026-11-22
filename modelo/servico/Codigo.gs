@@ -13,11 +13,19 @@ var SAL = 'SAL-PROPRIO-DA-TURMA';
 function doGet() { return saida({ok: true, servico: 'cm4ai-workbook'}); }
 
 function doPost(e) {
+  var req0 = {};
+  try { req0 = JSON.parse(e.postData.contents || '{}'); } catch (x) {}
+  // O mentor de experimentos chama a API fora da trava, para não segurar as outras gravações durante a resposta.
+  if (req0.acao === 'mentor') {
+    try { return saida(mentorConversa(req0)); }
+    catch (err) { return saida({ok: false, erro: 'servico', detalhe: String(err).slice(0, 200)}); }
+  }
   var trava = LockService.getScriptLock();
   try {
     trava.waitLock(25000);
-    var req = JSON.parse(e.postData.contents || '{}');
+    var req = req0;
     var ss = SpreadsheetApp.openById(PLANILHA_ID);
+    if (req.acao === 'mentor_contexto') return saida(mentorContexto(ss, req));
     if (req.acao === 'entrar') return saida(entrar(ss, req));
     if (req.acao === 'chave') return saida(enviarChave());
     if (req.acao === 'painel' || req.acao === 'responder') {
@@ -33,6 +41,7 @@ function doPost(e) {
     if (req.acao === 'duvidas') return saida(minhasDuvidas(ss, p));
     if (req.acao === 'pendentes') return saida(pendentes(ss, p));
     if (req.acao === 'lidas') return saida(marcarLidas(ss, p, req));
+    if (req.acao === 'mentor_historico') return saida(mentorHistorico(ss, p));
     return saida({ok: false, erro: 'acao'});
   } catch (err) {
     return saida({ok: false, erro: 'servico', detalhe: String(err).slice(0, 200)});
@@ -304,4 +313,204 @@ function responder(ss, req) {
     enviado = true;
   } catch (x) {}
   return {ok: true, respondida: quando, email: enviado};
+}
+
+
+// ---------- Mentor de experimentos: conversa com a API da Anthropic ----------
+// A chave da API fica na propriedade do script ANTHROPIC_API_KEY. O modelo pode ser trocado na propriedade MENTOR_MODELO.
+var ABA_MCTX = 'Mentor · Quadros', ABA_MCUR = 'Mentor · Curso', ABA_MLOG = 'Mentor · Conversas';
+var CAB_MCTX = ['Chave', 'Número', 'Nome', 'Encontro', 'Área', 'Registros', 'Atualizado em'];
+var CAB_MLOG = ['Data', 'E-mail', 'Nome', 'Quem', 'Mensagem', 'Modelo', 'Tokens de entrada', 'Tokens de saída'];
+var CHAVE_CONTEXTO = '';
+var MENTOR_MODELO_PADRAO = 'claude-sonnet-5-5', MENTOR_LIMITE_DIA = 80, MENTOR_MAX_TOKENS = 1100;
+
+function abaMentor(ss, nome, cab) {
+  var a = ss.getSheetByName(nome);
+  if (!a) {
+    a = ss.insertSheet(nome);
+    a.getRange(1, 1, 1, cab.length).setValues([cab]).setFontWeight('bold').setBackground('#2A211C').setFontColor('#FBEEE5');
+    a.setFrozenRows(1);
+  }
+  return a;
+}
+function chaveNome(s) {
+  return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+function casaNome(a, b) {
+  if (!a || !b) return false;
+  if (a === b) return true;
+  var x = a.split(' '), y = b.split(' ');
+  return x[0] === y[0] && x[x.length - 1] === y[y.length - 1];
+}
+
+// O que a pessoa registrou no workbook, encontro por encontro, com o rótulo de cada campo.
+function mentorWorkbook(ss, p) {
+  var partes = [];
+  Object.keys(ENCONTROS).forEach(function (n) {
+    var a = ss.getSheetByName(ENCONTROS[n]);
+    if (!a) return;
+    var r = linhaDe(a, p.email, 3), c = a.getLastColumn();
+    if (!r || c < 4) return;
+    var rot = a.getRange(1, 1, 1, c).getValues()[0], v = a.getRange(r, 1, 1, c).getValues()[0], l = [];
+    for (var i = 3; i < c; i++) {
+      var t = String(v[i] == null ? '' : v[i]).replace(/^'/, '').trim();
+      if (t) l.push('- ' + String(rot[i] || '').trim() + ': ' + t.slice(0, 1500));
+    }
+    if (l.length) partes.push('Encontro ' + n + ', no workbook:\n' + l.join('\n'));
+  });
+  return partes.join('\n\n');
+}
+
+// O que a pessoa registrou nos quadros do Miro (cópia gravada na aba Mentor · Quadros).
+function mentorQuadros(ss, p) {
+  var a = ss.getSheetByName(ABA_MCTX);
+  if (!a || a.getLastRow() < 2) return '';
+  var k = chaveNome(p.nome);
+  if (!k) return '';
+  var v = a.getRange(2, 1, a.getLastRow() - 1, CAB_MCTX.length).getValues(), por = {}, ordem = [];
+  v.forEach(function (x) {
+    if (!casaNome(String(x[0]), k)) return;
+    var cab = String(x[3]) + ' · ' + String(x[4]);
+    if (!por[cab]) { por[cab] = []; ordem.push(cab); }
+    String(x[5]).split('\n').forEach(function (t) { if (t.trim()) por[cab].push('- ' + t.trim()); });
+  });
+  return ordem.map(function (c) { return c + ', no quadro do Miro:\n' + por[c].join('\n'); }).join('\n\n');
+}
+function mentorCurso(ss) {
+  var a = ss.getSheetByName(ABA_MCUR);
+  if (!a || a.getLastRow() < 1) return '';
+  return a.getRange(1, 1, a.getLastRow(), 1).getValues().map(function (x) { return String(x[0]); }).join('\n');
+}
+
+// Duas partes: a fixa (método e curso), igual para a turma e guardada em cache pela API, e a da pessoa.
+function mentorSistema(p, wb, quadros, curso) {
+  var nome = String(p.nome || '').trim();
+  var fixo = [
+    'Você é o Mentor de Experimentos do curso Change Management for AI (CM4AI), turma on-line de novembro de 2026, conduzida por Gino Terentim (Rethinking Learning).',
+    'Você conversa por mensagens, no estilo de um aplicativo de conversa, com uma pessoa da turma.',
+    '',
+    'PROPÓSITO',
+    'Ajudar a pessoa a pensar e desenhar um experimento pequeno de mudança para a adoção da IA na área dela, a partir do que ela já registrou no curso. O experimento segue o método do curso:',
+    '1. A hipótese em três partes: "Acreditamos que, se [ação, com sujeito e frequência], então [comportamento esperado das pessoas afetadas, uma cena que se consegue ver], e mediremos por [contagem do comportamento]".',
+    '2. A medida: linha de base (quanto marca hoje, ou "?" se for estimativa), meta de comportamento, data de revisão em até quatro semanas, confiança antes (0 a 100%), sinal antecipado e critério de revisão com três faixas, escritas antes dos dados: ampliar, ajustar ou parar.',
+    '3. O plano em uma página: preparar (quem é consultado e quem é avisado), introduzir (o que acontece e quando) e revisar (quando, com quem). Risco, proteção e forma de desfazer.',
+    '4. O portfólio: o experimento em uma frase, início e revisão, e os quatro critérios: pequeno, visível, medido e reversível.',
+    '',
+    'COMO VOCÊ CONVERSA',
+    '- Português do Brasil, tratamento por "você", registro executivo, elegante e acolhedor. Mensagens curtas: de duas a cinco frases. Uma pergunta por vez.',
+    '- Você provoca o raciocínio: faz perguntas e reflexões que ajudam a pessoa a pensar. Só sugere uma redação pronta quando ela pedir ou depois de duas tentativas dela; nesse caso, apresenta como sugestão para ela ajustar.',
+    '- Use o que a pessoa registrou: cite com as palavras dela o que escreveu no workbook e nos quadros ("No Encontro 1, você escreveu que...") e ligue isso ao experimento. Não invente fatos sobre a organização dela; quando faltar um dado, pergunte.',
+    '- Quando a pessoa pedir a ficha do experimento, entregue um resumo organizado com os títulos: Hipótese, Linha de base, Meta, Data de revisão, Confiança antes, Sinal antecipado, Critério de revisão, Preparar, Introduzir, Revisar, Risco e forma de desfazer. Marque com "?" o que ainda falta e diga qual é a próxima pergunta. Lembre que a ficha pode ser copiada para o workbook e para o quadro do Miro.',
+    '- Formatação: texto simples; use **negrito** só para destacar um termo; listas curtas com hífen quando ajudar.',
+    '- Nunca use travessão; use vírgula, dois-pontos ou parênteses. Evite a construção "não é X, é Y". Evite as palavras: levar, virar, travar, rodar, puxar, dono, zona, cruzar, retardar, ensaio, mindset, "dá para", sentar, botar, fatiar, chato. Diga "framework Cynefin", nunca "matriz".',
+    '',
+    'LIMITES',
+    '- Fale apenas dos registros desta pessoa. Os quadros do Miro são da turma inteira: nunca cite o que outro participante escreveu.',
+    '- Peça que a pessoa use papéis ("a gerente da área", "um analista sênior"), e não nomes de colegas ou clientes, e que mantenha fora da conversa dados reservados da organização.',
+    '- Assuntos fora do curso: responda em uma frase e volte ao experimento. Questões jurídicas, trabalhistas ou de saúde: diga que não é a sua função e sugira o especialista.',
+    '- Dúvidas sobre o método que você não souber responder com segurança: sugira a aba Mentoria do workbook, em que o Gino Terentim responde.',
+    '',
+    'O CURSO',
+    curso || '(Sem resumo do curso.)'
+  ].join('\n');
+  var pessoal = [
+    'A PESSOA DESTA CONVERSA: ' + (nome || 'participante da turma') + '.',
+    '',
+    'O QUE ESTA PESSOA REGISTROU NO WORKBOOK',
+    wb || '(Ainda sem registros no workbook.)',
+    '',
+    'O QUE ESTA PESSOA REGISTROU NOS QUADROS DO MIRO',
+    quadros || '(Nenhum registro encontrado nos quadros com o nome desta pessoa.)'
+  ].join('\n');
+  return [{type: 'text', text: fixo, cache_control: {type: 'ephemeral'}}, {type: 'text', text: pessoal}];
+}
+
+function mentorMensagens(req) {
+  var l = (req.mensagens || []).slice(-30).map(function (m) {
+    return {role: m.papel === 'mentor' ? 'assistant' : 'user', content: String(m.texto || '').slice(0, 4000)};
+  }).filter(function (m) { return m.content.trim(); });
+  var out = [];
+  if (l.length && l[0].role !== 'user') out.push({role: 'user', content: '(A pessoa abriu a conversa.)'});
+  l.forEach(function (m) {
+    if (out.length && out[out.length - 1].role === m.role) out[out.length - 1].content += '\n\n' + m.content;
+    else out.push(m);
+  });
+  return out;
+}
+
+function mentorHoje(a, email) {
+  var n = a.getLastRow();
+  if (n < 2) return 0;
+  var hoje = Utilities.formatDate(new Date(), 'America/Sao_Paulo', 'dd/MM/yyyy');
+  var v = a.getRange(Math.max(2, n - 3000), 1, Math.min(n - 1, 3001), 4).getValues();
+  return v.filter(function (x) { return normEmail(x[1]) === email && x[3] === 'Participante' && dataTxt(x[0]).indexOf(hoje) === 0; }).length;
+}
+
+function mentorConversa(req) {
+  var ss = SpreadsheetApp.openById(PLANILHA_ID), trava = LockService.getScriptLock(), p, ctx, log;
+  trava.waitLock(25000);
+  try {
+    p = autenticar(ss, req);
+    if (!p) return {ok: false, erro: 'sessao'};
+    log = abaMentor(ss, ABA_MLOG, CAB_MLOG);
+    if (!FUSO_PLAN) FUSO_PLAN = ss.getSpreadsheetTimeZone();
+    if (mentorHoje(log, p.email) >= MENTOR_LIMITE_DIA) return {ok: false, erro: 'mentor_limite'};
+    ctx = {wb: mentorWorkbook(ss, p), quadros: mentorQuadros(ss, p), curso: mentorCurso(ss)};
+  } finally { trava.releaseLock(); }
+  var pr = PropertiesService.getScriptProperties(), chave = pr.getProperty('ANTHROPIC_API_KEY');
+  if (!chave) return {ok: false, erro: 'mentor_config'};
+  var modelo = pr.getProperty('MENTOR_MODELO') || MENTOR_MODELO_PADRAO;
+  var msgs = mentorMensagens(req), abertura = !msgs.length;
+  if (abertura) msgs = [{role: 'user', content: '(A pessoa acabou de abrir a conversa. Cumprimente pelo primeiro nome, mostre em uma ou duas frases que você conhece o que ela já registrou no curso, e faça a primeira pergunta para começar o experimento. Se não houver registros, pergunte qual é a adoção de IA em que ela trabalha.)'}];
+  var r = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
+    method: 'post', contentType: 'application/json', muteHttpExceptions: true,
+    headers: {'x-api-key': chave, 'anthropic-version': '2023-06-01'},
+    payload: JSON.stringify({model: modelo, max_tokens: MENTOR_MAX_TOKENS, system: mentorSistema(p, ctx.wb, ctx.quadros, ctx.curso), messages: msgs})
+  });
+  var cod = r.getResponseCode(), corpo = {};
+  try { corpo = JSON.parse(r.getContentText()); } catch (x) {}
+  if (cod !== 200) return {ok: false, erro: 'mentor_api', detalhe: (corpo.error && corpo.error.type) || String(cod)};
+  var texto = (corpo.content || []).filter(function (c) { return c.type === 'text'; }).map(function (c) { return c.text; }).join('\n').trim();
+  texto = texto.replace(/\s*—\s*/g, ', ').replace(/\s*–\s*/g, ', ');
+  if (!texto) return {ok: false, erro: 'mentor_api', detalhe: 'vazio'};
+  var uso = corpo.usage || {}, quando = agora();
+  trava.waitLock(25000);
+  try {
+    var ult = abertura ? null : msgs[msgs.length - 1].content;
+    if (ult) log.appendRow([quando, p.email, seguro(p.nome || ''), 'Participante', seguro(ult), modelo, '', '']);
+    log.appendRow([quando, p.email, seguro(p.nome || ''), 'Mentor', seguro(texto), modelo, uso.input_tokens || '', uso.output_tokens || '']);
+  } finally { trava.releaseLock(); }
+  return {ok: true, resposta: texto, hora: quando};
+}
+
+function mentorHistorico(ss, p) {
+  var a = ss.getSheetByName(ABA_MLOG);
+  if (!a || a.getLastRow() < 2) return {ok: true, mensagens: []};
+  if (!FUSO_PLAN) FUSO_PLAN = ss.getSpreadsheetTimeZone();
+  var v = a.getRange(2, 1, a.getLastRow() - 1, 5).getValues();
+  var l = v.filter(function (x) { return normEmail(x[1]) === p.email; }).slice(-60).map(function (x) {
+    return {papel: x[3] === 'Mentor' ? 'mentor' : 'pessoa', texto: String(x[4]).replace(/^'/, ''), hora: dataTxt(x[0])};
+  });
+  return {ok: true, mensagens: l};
+}
+
+// Atualização do contexto: linhas dos quadros do Miro e resumo do curso, enviados com a chave de contexto.
+function mentorContexto(ss, req) {
+  if (!CHAVE_CONTEXTO || String(req.chave_contexto || '') !== CHAVE_CONTEXTO) return {ok: false, erro: 'chave'};
+  var out = {ok: true};
+  if (req.linhas) {
+    var a = abaMentor(ss, ABA_MCTX, CAB_MCTX), quando = agora();
+    if (a.getLastRow() > 1) a.getRange(2, 1, a.getLastRow() - 1, CAB_MCTX.length).clearContent();
+    var l = req.linhas.slice(0, 3000).map(function (x) { return [chaveNome(x.nome), Number(x.numero) || '', seguro(x.nome), seguro(x.encontro), seguro(x.area), seguro(x.registros), quando]; });
+    if (l.length) a.getRange(2, 1, l.length, CAB_MCTX.length).setValues(l);
+    out.linhas = l.length;
+  }
+  if (req.curso) {
+    var c = ss.getSheetByName(ABA_MCUR) || ss.insertSheet(ABA_MCUR);
+    c.clear();
+    var t = String(req.curso).split('\n').map(function (x) { return [seguro(x)]; });
+    c.getRange(1, 1, t.length, 1).setValues(t);
+    out.curso = t.length;
+  }
+  return out;
 }
