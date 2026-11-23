@@ -797,9 +797,9 @@ var mic=form.querySelector("[data-mentor-mic]"),grava=form.querySelector("[data-
     gTempo=grava&&grava.querySelector("[data-grava-tempo]"),gDica=grava&&grava.querySelector("[data-grava-dica]"),
     gCancelar=grava&&grava.querySelector("[data-grava-cancelar]"),gEnviar=grava&&grava.querySelector("[data-grava-enviar]");
 var podeGravar=!!(mic&&navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.MediaRecorder);
-var rec=null,fluxo=null,partes=[],inicio=0,relogio=null,cancelar=false,segurando=false,t0=0,MAXSEG=120;
+var vozAtiva=false,rec=null,fluxo=null,partes=[],inicio=0,relogio=null,cancelar=false,segurando=false,t0=0,MAXSEG=120;
 function mmss(x){x=Math.max(0,Math.round(x));return Math.floor(x/60)+":"+("0"+(x%60)).slice(-2)}
-function alternar(){if(!podeGravar){if(mic)mic.hidden=true;return}var vazio=!campo.value.trim();mic.hidden=!vazio;botao.hidden=vazio}
+function alternar(){if(!podeGravar||!vozAtiva){if(mic)mic.hidden=true;botao.hidden=false;return}var vazio=!campo.value.trim();mic.hidden=!vazio;botao.hidden=vazio}
 function tipoAudio(){var t=["audio/webm;codecs=opus","audio/mp4","audio/webm","audio/ogg;codecs=opus"];
   for(var i=0;i<t.length;i++){try{if(MediaRecorder.isTypeSupported(t[i]))return t[i]}catch(e){}}return ""}
 function travadoUI(trav){gDica.textContent=trav?"Toque em enviar ao terminar":"Solte para enviar";gEnviar.hidden=!trav;mic.hidden=trav}
@@ -867,6 +867,7 @@ if(!s){
 aviso("Carregando a conversa…");
 chamar({acao:"mentor_historico",email:s.email,token:s.token}).then(function(r){
   lista.innerHTML="";
+  if(r&&r.ok&&r.voz){vozAtiva=true;if(mic)alternar()}
   if(r&&r.ok&&r.mensagens&&r.mensagens.length){
     r.mensagens.forEach(function(m){hist.push({papel:m.papel,texto:m.texto});balao(m.papel,m.texto,hhmm(m.hora))});
   }else if(r&&r.erro==="sessao"){aviso(ERRO.sessao);form.hidden=true;chips.hidden=true}
