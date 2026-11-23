@@ -339,6 +339,24 @@ input[type=email],input[type=password]{width:100%;font:inherit;font-size:18px;co
 .zap__barra textarea{flex:1;resize:none;font:inherit;font-size:15.5px;line-height:1.45;border:0;border-radius:22px;padding:10px 16px;background:#fff;color:var(--tinta);max-height:140px;outline-offset:2px}
 .zap__barra button{flex:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--lar);display:flex;align-items:center;justify-content:center;cursor:pointer}
 .zap__barra button:disabled{opacity:.55;cursor:default}
+.zap__barra [hidden]{display:none!important}
+.zap__mic{touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;transition:transform .15s,background .15s}
+.zap__barra--gravando .zap__mic{background:#C8372A;transform:scale(1.14);box-shadow:0 0 0 7px rgba(200,55,42,.18)}
+.zap__grava{flex:1;min-width:0;display:flex;align-items:center;gap:12px;min-height:46px;background:#fff;border-radius:23px;padding:0 4px 0 6px}
+.zap__barra .zap__grava-x{width:38px;height:38px;background:transparent}
+.zap__barra .zap__grava-ok{width:38px;height:38px;margin-left:auto}
+.zap__ponto{flex:none;width:10px;height:10px;border-radius:50%;background:#C8372A;animation:zapp 1s infinite}
+@keyframes zapp{50%{opacity:.2}}
+.zap__grava-t{flex:none;font-weight:700;font-variant-numeric:tabular-nums;color:var(--tinta)}
+.zap__grava-dica{flex:1;min-width:0;font-size:13.5px;color:var(--fraco);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.zap__msg--audio{min-width:min(270px,84%)}
+.zap__audio{display:flex;align-items:center;gap:10px;margin:2px 0 6px}
+.zap__audio-ic{flex:none;width:34px;height:34px;border-radius:50%;background:var(--lar);display:flex;align-items:center;justify-content:center}
+.zap__onda{flex:1;display:flex;align-items:center;gap:2px;height:24px}
+.zap__onda i{flex:1;max-width:4px;height:35%;border-radius:2px;background:#B04A1C;opacity:.5}
+.zap__onda i:nth-child(2n){height:60%}.zap__onda i:nth-child(3n){height:85%}.zap__onda i:nth-child(5n){height:45%}.zap__onda i:nth-child(7n){height:100%}
+.zap__audio-dur{flex:none;font-size:12.5px;color:var(--corpo);font-variant-numeric:tabular-nums}
+.zap__transc{margin:0;padding-top:6px;border-top:1px solid rgba(176,74,28,.2);font-size:14.5px;color:var(--corpo)}
 .mentorx__lado{display:flex;flex-direction:column;gap:14px}
 .mentorx__card{background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:18px 20px}
 .mentorx__card h3{font-size:18px;margin:0 0 .5em}.mentorx__card p{margin:0;font-size:15px}

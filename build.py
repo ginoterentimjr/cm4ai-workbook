@@ -337,10 +337,15 @@ else:
           f'<header class="zap__topo"><span class="zap__av">{icone("flask-conical", "#FFFFFF", 24)}</span><div><b>Mentor de experimentos</b><i data-mentor-status>on-line · CM4AI</i></div></header>'
           '<div class="zap__fundo" data-mentor-lista aria-live="polite"></div>'
           '<div class="zap__chips" data-mentor-chips>' + "".join(f'<button type="button" data-chip="{e(c)}">{e(c)}</button>' for c in chips) + '</div>'
-          f'<form class="zap__barra" data-mentor-form><textarea rows="1" placeholder="Escreva uma mensagem" aria-label="A sua mensagem"></textarea><button type="submit" aria-label="Enviar">{icone("send-horizontal", "#FFFFFF", 22)}</button></form></div>'
+          f'<form class="zap__barra" data-mentor-form><div class="zap__grava" data-mentor-grava hidden><button type="button" class="zap__grava-x" data-grava-cancelar aria-label="Cancelar o áudio">{icone("trash-2", "#6E6259", 22)}</button>'
+          '<span class="zap__ponto" aria-hidden="true"></span><span class="zap__grava-t" data-grava-tempo>0:00</span><span class="zap__grava-dica" data-grava-dica>Solte para enviar</span>'
+          f'<button type="button" class="zap__grava-ok" data-grava-enviar aria-label="Enviar o áudio" hidden>{icone("send-horizontal", "#FFFFFF", 20)}</button></div>'
+          '<textarea rows="1" placeholder="Escreva uma mensagem" aria-label="A sua mensagem"></textarea>'
+          f'<button type="button" class="zap__mic" data-mentor-mic aria-label="Segure para gravar uma mensagem de voz" hidden>{icone("mic", "#FFFFFF", 22)}</button>'
+          f'<button type="submit" aria-label="Enviar">{icone("send-horizontal", "#FFFFFF", 22)}</button></form></div>'
           '<aside class="mentorx__lado"><div class="mentorx__card"><h3>Como o mentor ajuda</h3><ul class="mentorx__passos">'
           + "".join(f'<li><span class="disco" style="--tom:{t}">{icone(ic, "#FFFFFF", 20)}</span><span><b>{e(ti)}</b>{e(tx)}</span></li>' for ic, t, ti, tx in passos_m) +
-          '</ul></div><div class="mentorx__card"><h3>Reserva</h3><p>As mensagens são processadas pela API da Anthropic e ficam registradas na planilha privada da turma, aberta apenas ao Gino Terentim. Use o papel das pessoas, e não o nome, e mantenha fora da conversa os dados reservados da sua organização.</p></div>'
+          '</ul></div><div class="mentorx__card"><h3>Reserva</h3><p>As mensagens são processadas pela API da Anthropic e ficam registradas na planilha privada da turma, aberta apenas ao Gino Terentim. As mensagens de voz são transcritas pela OpenAI: na planilha fica só o texto, e o áudio não é guardado. Use o papel das pessoas, e não o nome, e mantenha fora da conversa os dados reservados da sua organização.</p></div>'
           '<div class="mentorx__card"><h3>Dúvidas sobre o método</h3><p>O mentor conversa sobre o seu experimento. Para uma dúvida que precisa da resposta do Gino Terentim, use a <a href="mentoria.html">Mentoria</a>.</p></div></aside></div>')
     MJS = open(os.path.join(RAIZ, "src", "mentor.js"), encoding="utf-8").read()
     open(os.path.join(D, "mentor.html"), "w", encoding="utf-8").write(pagina("CM4AI · Mentor de experimentos", mt, "mentor", F, MJS))
