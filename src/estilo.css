@@ -70,6 +70,7 @@ main{max-width:1040px;margin:0 auto;padding:0 20px 40px}
 .atividade__cab{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
 .selo{display:inline-block;background:var(--tom);color:#fff;font-weight:700;font-size:13px;letter-spacing:1.5px;padding:6px 12px;border-radius:999px;text-decoration:none}
 .selo--miro{background:#fff;color:var(--tom);border:2px solid var(--tom)}
+.selo--mentor{background:#FBEFE4;color:#B04A1C;border:2px solid #E5662C}
 .atividade h3{margin-top:4px;font-size:24px}
 .passos{padding-left:0;list-style:none;counter-reset:p;margin:14px 0}
 .passos li{counter-increment:p;position:relative;padding:8px 0 8px 48px;border-bottom:1px solid var(--linha)}

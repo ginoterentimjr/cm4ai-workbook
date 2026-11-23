@@ -617,7 +617,7 @@
       {
        "t": "conceito",
        "titulo": "Continuação do Encontro 1: a curva de Satir e o diagnóstico",
-       "html": "<p>O encontro começa pelos Blocos 3 e 4 do Encontro 1, nas Áreas 4 e 5 do quadro do Encontro 1. O registro dessas duas atividades fica na página do Encontro 1 deste workbook. Ao fim da Área 5, o botão <b>Abrir o quadro do Encontro 2</b> leva ao quadro desta noite, que começa na Área 1: a lacuna prioritária.</p>"
+       "html": "<p>O encontro começa pelos Blocos 3 e 4 do Encontro 1, nas Áreas 4 e 5 do quadro do Encontro 1. O registro dessas duas atividades fica na página do Encontro 1 deste workbook. Ao fim da Área 5, o botão <b>Abrir o quadro do Encontro 2</b> abre o quadro desta noite, que começa na Área 1: a lacuna prioritária.</p>"
       }
      ]
     },
@@ -1662,6 +1662,10 @@
          "A sua linha com os três campos da hipótese."
         ],
         [
+         "Dúvida no experimento",
+         "Pergunte ao Mentor de experimentos, pelo botão desta atividade, por escrito ou em voz."
+        ],
+        [
          "Tempo",
          "20 minutos"
         ]
@@ -1698,7 +1702,8 @@
         "<b>Ação com sujeito e frequência.</b> Quem faz, o quê e quantas vezes.",
         "<b>Comportamento das pessoas afetadas.</b> Uma cena que se consegue ver.",
         "<b>Medida que conta.</b> Uma contagem do comportamento, e não uma opinião sobre ele."
-       ]
+       ],
+       "mentor": true
       }
      ]
     },
@@ -1753,6 +1758,10 @@
          "A ficha completa, com as três faixas do critério."
         ],
         [
+         "Dúvida no experimento",
+         "Pergunte ao Mentor de experimentos, pelo botão desta atividade, por escrito ou em voz."
+        ],
+        [
          "Tempo",
          "20 minutos"
         ]
@@ -1801,7 +1810,8 @@
         "<b>Linha de base com origem.</b> O número de hoje diz de onde veio, ou recebe um ponto de interrogação.",
         "<b>Meta de comportamento.</b> Conta o que as pessoas fazem, em até quatro semanas.",
         "<b>Critério com três faixas.</b> Ampliar, ajustar e parar, escritas antes dos dados."
-       ]
+       ],
+       "mentor": true
       }
      ]
     },
@@ -1851,6 +1861,10 @@
          "O plano com as três etapas datadas e o risco registrado."
         ],
         [
+         "Dúvida no experimento",
+         "Pergunte ao Mentor de experimentos, pelo botão desta atividade, por escrito ou em voz."
+        ],
+        [
          "Tempo",
          "20 minutos"
         ]
@@ -1892,7 +1906,8 @@
         "<b>Três etapas com data.</b>",
         "<b>Gente avisada antes.</b> Quem participa foi consultado, e quem é afetado sabe que é um experimento.",
         "<b>Risco com saída.</b> O que pode dar errado, a proteção e a forma de desfazer."
-       ]
+       ],
+       "mentor": true
       }
      ]
     },
@@ -2038,7 +2053,7 @@
        "passos": [
         "<b>Marque a revisão.</b> Coloque a data de revisão na agenda, com as pessoas que participam do experimento.",
         "<b>Mostre o plano a uma pessoa.</b> Se houver oportunidade até amanhã: alguém da etapa de preparar. Pergunte o que ela mudaria.",
-        "<b>Registre no workbook.</b> A hipótese, a medida, o plano e o cartão do portfólio, nesta página."
+        "<b>Registre no workbook.</b> A hipótese, a medida, o plano e o cartão do portfólio, nesta página. Antes, revise cada parte com o Mentor de experimentos, por escrito ou em voz."
        ],
        "meta": [
         [

@@ -129,6 +129,8 @@ def bloco_html(b, enc):
             o += f'<div class="atividade__cab"><span class="selo">ATIVIDADE · {e(it["tempo"])}</span>'
             if it.get("area"):
                 o += f'<a class="selo selo--miro" href="{enc["miro"]}" target="_blank" rel="noopener">Miro · {e(it["area"])}</a>'
+            if it.get("mentor") and not PROF:
+                o += '<a class="selo selo--mentor" href="mentor.html">Mentor de experimentos</a>'
             o += f'</div><h3>{e(it["titulo"])}</h3>'
             if it.get("perg"):
                 o += f'<p class="pergunta pergunta--at">{e(it["perg"])}</p>'
@@ -255,7 +257,7 @@ if PROF:
     for enc in ENCONTROS:
         corpo += encontro_html(enc)
     os.makedirs(os.path.join(RAIZ, "professor"), exist_ok=True)
-    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v14.html"), "w", encoding="utf-8").write(
+    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v15.html"), "w", encoding="utf-8").write(
         pagina("CM4AI · Workbook · Versão do professor", corpo, "prof", fontes(True)))
     print("professor ok")
 else:
