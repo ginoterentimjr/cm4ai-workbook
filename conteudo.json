@@ -2161,7 +2161,7 @@
       {
        "t": "conceito",
        "titulo": "O canvas estratégico, em nove campos",
-       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Faixa</th><th>Campos</th></tr></thead><tbody><tr><td><b>Por que e para onde</b></td><td>A Urgência (Encontro 1) · A Visão (Bloco 1) · O Que Termina (Encontro 1)</td></tr><tr><td><b>O que a turma já construiu</b></td><td>As Pessoas (Encontro 2) · As Forças (Encontro 3) · O Experimento (Encontro 4)</td></tr><tr><td><b>O que sustenta</b></td><td>A Rede (Bloco 2) · O Painel (Bloco 3) · As Margens (Bloco 4)</td></tr></tbody></table></div><p><b>O teste da visão:</b> “O que veríamos as pessoas fazendo, em 90 dias?” Exemplo: em 90 dias, os compradores apresentam a cotação pela comparação do assistente, e a planilha refeita passa a ser exceção.</p>",
+       "html": "<div class=\"tabela-w\"><table class=\"tabela tabela--ler\"><thead><tr><th>Faixa</th><th>Campos</th></tr></thead><tbody><tr><td><b>Por que e para onde</b></td><td>A Urgência (Encontro 1) · A Visão (Bloco 1) · O Que Termina (Encontro 1)</td></tr><tr><td><b>O que a turma já construiu</b></td><td>As Pessoas (Encontro 3) · As Forças (Encontro 3) · O Experimento (Encontro 4)</td></tr><tr><td><b>O que sustenta</b></td><td>A Rede (Bloco 2) · O Painel (Bloco 3) · As Margens (Bloco 4)</td></tr></tbody></table></div><p><b>O teste da visão:</b> “O que veríamos as pessoas fazendo, em 90 dias?” Exemplo: em 90 dias, os compradores apresentam a cotação pela comparação do assistente, e a planilha refeita passa a ser exceção.</p>",
        "fonte": "Instrumento do curso, inspirado no canvas de mudança do Lean Change Management (Little, 2014)."
       },
       {
@@ -2294,7 +2294,7 @@
        "tempo": "20 min",
        "area": "Área 2",
        "passos": [
-        "Abram o mapa de pessoas do Encontro 2 e marquem <b>os adotantes iniciais que a maioria observa</b>. <i>3 min</i>",
+        "Abram o mapa de pessoas do Encontro 3 e marquem <b>os adotantes iniciais que a maioria observa</b>. <i>3 min</i>",
         "Registrem <b>O Patrocinador</b>, <b>Os Campeões</b> e <b>A Maioria Que Cada Um Alcança</b>, por papel, sem nomes. <i>5 min</i>",
         "Completem <b>O Que Cada Campeão Recebe</b>, <b>O Ritual da Rede</b> e <b>O Primeiro Pedido</b>. <i>4 min</i>",
         "Em dupla, um apresenta a rede; o outro pergunta: <b>“Por que a maioria daria ouvidos a esse campeão?”</b> <i>4 min</i>",
@@ -2307,7 +2307,7 @@
         ],
         [
          "Material",
-         "Miro, Área 2, e o mapa de pessoas do Encontro 2."
+         "Miro, Área 2, e o mapa de pessoas do Encontro 3."
         ],
         [
          "Privacidade",
