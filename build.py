@@ -44,6 +44,33 @@ IC_BLOCO = {"Abertura": "door-open", "O paradoxo da IA": "trending-up", "Mudanç
             "Dos registros aos insights": "lightbulb", "O mapa de forças": "scale", "Opções de mudança": "list-checks", "A próxima aposta": "flag",
             "Da aposta à hipótese": "flask-conical", "A medida e o critério de revisão": "gauge", "O plano do experimento": "calendar-range", "O portfólio de experimentos": "layout-grid",
             "O canvas estratégico da mudança": "layout-grid", "A rede de campeões": "network", "O painel de adoção": "gauge", "O roteiro de sustentabilidade": "waves", "Fechamento e certificação": "award"}
+# Materiais de cada encontro: o quadro do Miro e os slides em PDF. O PDF entra só depois do encontro (22h de Brasília).
+SLIDES = {1: ("CM4AI-Online_E1_Slides-da-Turma_v4.pdf", "2026-11-18T22:00:00-03:00"),
+          2: ("CM4AI-Online_E2_Slides-da-Turma_v4.pdf", "2026-11-19T22:00:00-03:00"),
+          3: (None, "2026-11-25T22:00:00-03:00"),
+          4: (None, "2026-11-26T22:00:00-03:00"),
+          5: (None, "2026-11-27T22:00:00-03:00")}
+
+
+def materiais_html(enc):
+    n = enc["n"]
+    arq = SLIDES[n][0]
+    miro = (f'<a class="mat" href="{enc["miro"]}" target="_blank" rel="noopener">'
+            f'<span class="disco" style="--tom:{enc["tom"]}">{icone("layout-grid")}</span>'
+            f'<span><span class="mat__k">QUADRO DO ENCONTRO {n}</span><b>Abrir o quadro do Miro</b><i>Todas as áreas do encontro, com as instruções de cada atividade</i></span></a>')
+    if PROF:
+        return f'<h3>Materiais do encontro</h3><div class="mats">{miro}</div>'
+    if arq:
+        sl = (f'<a class="mat" href="materiais/{arq}" download>'
+              f'<span class="disco" style="--tom:{enc["tom"]}">{icone("presentation")}</span>'
+              f'<span><span class="mat__k">SLIDES DO ENCONTRO {n} · PDF</span><b>Baixar os slides</b><i>O arquivo completo do encontro, para consulta e estudo</i></span></a>')
+    else:
+        sl = (f'<div class="mat mat--espera">'
+              f'<span class="disco" style="--tom:#9A8F86">{icone("presentation")}</span>'
+              f'<span><span class="mat__k">SLIDES DO ENCONTRO {n} · PDF</span><b>Disponíveis ao fim do encontro</b><i>O arquivo entra aqui depois das 22h de {e(enc["data"])}</i></span></div>')
+    return f'<h3>Materiais do encontro</h3><div class="mats">{miro}{sl}</div>'
+
+
 IC_ENC = {1: "compass", 2: "users", 3: "lightbulb", 4: "flask-conical", 5: "flag"}
 FOTO_ENC = {1: "e1.jpg", 2: "e2.jpg", 3: "e3.jpg", 4: "e4.jpg", 5: "e5.jpg"}
 e = html.escape
@@ -220,7 +247,7 @@ def encontro_html(enc):
     fst = f';--foto:url({img_url(foto)})' if foto else ""
     o = f'<section class="capa capa--foto" style="--tom:{enc["tom"]}{fst}"><p class="capa__k">ENCONTRO {enc["n"]} DE 5 · {e(enc["data"].upper())}</p><h1>{enc["titulo"]}</h1>'
     o += f'<p class="capa__l">{e(enc["lede"])}</p></section>'
-    o += '<section class="bloco bloco--abre"><div class="capaz"><b>Ao término deste encontro, os participantes serão capazes de:</b><ol>' + "".join(f"<li>{e(x)}</li>" for x in enc["capaz"]) + "</ol></div>"
+    o += '<section class="bloco bloco--abre">' + materiais_html(enc) + '<div class="capaz"><b>Ao término deste encontro, os participantes serão capazes de:</b><ol>' + "".join(f"<li>{e(x)}</li>" for x in enc["capaz"]) + "</ol></div>"
     o += "<h3>Onde estamos no caminho</h3>" + caminho_html(enc["n"])
     o += '<h3>Neste encontro</h3><ol class="indice">' + "".join(f'<li style="--tom:{b["tom"]}"><a href="#{b["id"]}"><b>{e(b["num"])}</b> {e(b["nome"])}</a><span>{e(b.get("constroi", ""))}</span></li>' for b in enc["blocos"]) + "</ol>"
     if enc["n"] == 4 and not PROF:
@@ -257,7 +284,7 @@ if PROF:
     for enc in ENCONTROS:
         corpo += encontro_html(enc)
     os.makedirs(os.path.join(RAIZ, "professor"), exist_ok=True)
-    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v15.html"), "w", encoding="utf-8").write(
+    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v16.html"), "w", encoding="utf-8").write(
         pagina("CM4AI · Workbook · Versão do professor", corpo, "prof", fontes(True)))
     print("professor ok")
 else:
@@ -269,6 +296,7 @@ else:
     shutil.copy(os.path.join(RAIZ, "src", "logo-gt-mark.png"), D)
     shutil.copytree(os.path.join(RAIZ, "src", "img"), os.path.join(D, "img"))
     open(os.path.join(D, ".nojekyll"), "w").close()
+    shutil.copytree(os.path.join(RAIZ, "src", "materiais"), os.path.join(D, "materiais"))
     F = fontes(False)
     for enc in ENCONTROS:
         open(os.path.join(D, f"e{enc['n']}.html"), "w", encoding="utf-8").write(

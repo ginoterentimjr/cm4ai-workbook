@@ -370,6 +370,16 @@ input[type=email],input[type=password]{width:100%;font:inherit;font-size:18px;co
 .mentorx__passos b{display:block;color:var(--tinta)}
 @media (max-width:860px){.mentorx{grid-template-columns:1fr}.zap{height:76vh}.zap__chips{flex-wrap:nowrap;overflow-x:auto}}
 @media (max-width:700px){.topo{position:static}.capa>*{position:relative;z-index:1}.capa:after{width:150px;height:150px;right:-62px;top:-62px;opacity:.22}}
+/* Materiais do encontro: quadro do Miro e slides em PDF */
+.mats{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:10px 0 18px}
+.mat{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:14px;background:#fff;border:1px solid var(--linha);color:var(--tinta);text-decoration:none;transition:border-color .15s,box-shadow .15s}
+a.mat:hover{border-color:var(--lar);box-shadow:0 6px 18px rgba(42,33,28,.10)}
+.mat>span:last-child{display:flex;flex-direction:column;gap:3px}
+.mat__k{font-size:12px;font-weight:700;letter-spacing:2px;color:#8D8377}
+.mat b{font-size:19px;line-height:1.25}
+.mat i{font-style:normal;font-size:15px;color:#6D625B}
+.mat--espera{background:var(--claro);border-style:dashed}
+.mat--espera b{color:#6D625B}
 </style></head>
 <body data-pg="index">
 <header class="topo"><a class="marca" href="index.html"><img src="logo-gt-mark.png" alt=""><span><b>GINO TERENTIM</b><i>RETHINKING LEARNING</i></span></a><nav class="nav"><a href="index.html">Meu mapa</a><a href="e1.html">Encontro 1</a><a href="e2.html">Encontro 2</a><a href="mentoria.html">Mentoria</a></nav><span class="conta" data-conta></span></header>
