@@ -926,7 +926,7 @@
    "data": "25 de novembro de 2026",
    "miro": "https://miro.com/app/board/uXjVEN1xbkY=/",
    "titulo": "Insights <em>e opções</em>",
-   "lede": "A curva de adoção e o mapa de pessoas, as leituras do relatório transformadas em insights, o mapa de forças, as opções de mudança e, no post-work, a próxima aposta.",
+   "lede": "A curva de adoção e o mapa de pessoas e as leituras do relatório transformadas em insights, com fatos. O mapa de forças e as opções de mudança seguem no Encontro 4, no quadro deste encontro.",
    "capaz": [
     "Mapear as pessoas da adoção na curva de difusão de Rogers e o que acelera ou freia a adoção.",
     "Formular insights a partir das leituras do relatório, separando fato de interpretação.",
@@ -1419,81 +1419,8 @@
      "nome": "Fechamento",
      "tom": "#5E7D52",
      "titulo": "Até o <em>próximo encontro</em>",
-     "constroi": "A próxima aposta, escolhida e registrada no post-work",
+     "constroi": "O insight com fatos",
      "itens": [
-      {
-       "t": "conceito",
-       "titulo": "Post-work: três critérios para a escolha da próxima aposta",
-       "html": "<div class=\"cards3\"><div><b>Valor · de 1 a 5</b><p>Quanto esta opção reduz a força com estrela e aproxima o comportamento desejado.</p></div><div><b>Esforço · de 1 a 5</b><p>Tempo, dinheiro e desgaste para colocar a opção em prática.</p></div><div><b>Alcance · o desempate</b><p>Entre duas opções parecidas, a primeira aposta é a que afeta menos pessoas e pode ser desfeita.</p></div></div><p><b>A matriz:</b> valor alto e esforço baixo, a próxima aposta; valor alto e esforço alto, uma aposta grande, que pede preparação; valor baixo e esforço baixo, um ganho pequeno, para fazer se couber; valor baixo e esforço alto, deixar para depois.</p>",
-       "fonte": "Little, J. Lean Change Management, 2014. No método, as opções têm valor, custo e impacto: no curso, esforço corresponde a custo, e alcance, a impacto."
-      },
-      {
-       "t": "atividade",
-       "id": "e3-a4",
-       "titulo": "Post-work: a próxima aposta da sua adoção",
-       "tempo": "15 min · até 26/11",
-       "area": null,
-       "passos": [
-        "Em <b>O Meu Quadro de Opções</b> (Bloco 04 desta página), dê a cada opção <b>Valor</b> e <b>Esforço</b>, de 1 a 5. Se as opções estiverem só no Miro, copie-as antes. <i>5 min</i>",
-        "Escolha a aposta: <b>maior valor, menor esforço</b>. No empate, a que afeta menos pessoas e pode ser desfeita. <i>2 min</i>",
-        "Responda: <b>“Quem precisa participar do desenho?”</b> As pessoas que vivem a força com estrela. <i>3 min</i>",
-        "Registre abaixo <b>A Próxima Aposta</b>, <b>O Comportamento Que Quero Ver</b>, <b>Quem Participa do Desenho</b> e <b>Por Que Esta</b>. <i>5 min</i>"
-       ],
-       "meta": [
-        [
-         "Com quem",
-         "Individual, depois do encontro."
-        ],
-        [
-         "Material",
-         "O Meu Quadro de Opções, no Bloco 04 desta página."
-        ],
-        [
-         "Entrega",
-         "A sua aposta, nos quatro campos abaixo."
-        ],
-        [
-         "Prazo",
-         "Até quinta-feira, 26/11, às 19h."
-        ],
-        [
-         "Tempo",
-         "Cerca de 15 minutos"
-        ]
-       ],
-       "exemplo": "<p>“A gerente aprova uma cotação por semana na tela do assistente, diante do time. Valor 4, esforço 2: afeta poucas pessoas e pode ser desfeita. A gerente e dois compradores seniores participam do desenho.”</p><p><i>Caso fictício da área de compras.</i></p>",
-       "campos": [
-        {
-         "k": "e3.a4.aposta",
-         "rotulo": "A Próxima Aposta",
-         "linhas": 2,
-         "ph": ""
-        },
-        {
-         "k": "e3.a4.comp",
-         "rotulo": "O Comportamento Que Quero Ver",
-         "linhas": 2,
-         "ph": ""
-        },
-        {
-         "k": "e3.a4.desenho",
-         "rotulo": "Quem Participa do Desenho",
-         "linhas": 2,
-         "ph": ""
-        },
-        {
-         "k": "e3.a4.porque",
-         "rotulo": "Por Que Esta",
-         "linhas": 2,
-         "ph": "Valor, esforço e alcance"
-        }
-       ],
-       "pontos": [
-        "<b>Pequena.</b> Cabe em poucas semanas, com uma equipe, e pode ser desfeita.",
-        "<b>Visível.</b> Diz o comportamento que se passa a ver quando funciona.",
-        "<b>Com gente no desenho.</b> Quem vive a força com estrela ajuda a fechar a aposta."
-       ]
-      },
       {
        "t": "atividade",
        "id": "e3-a5",
@@ -1501,9 +1428,9 @@
        "tempo": "até 26/11",
        "area": null,
        "passos": [
-        "<b>Faça o post-work da aposta.</b> Os quatro passos da atividade acima, em cerca de 15 minutos, até amanhã às 19h.",
-        "<b>Mostre a aposta a uma pessoa.</b> Se houver oportunidade até amanhã: uma das pessoas do desenho. Pergunte o que ela mudaria.",
-        "<b>Confira os registros desta página.</b> O mapa de pessoas, o insight, o mapa de forças e as opções."
+        "<b>Abra a sua linha.</b> Quadro do Miro do Encontro 3, Área 2, com o relatório do diagnóstico 5D ao lado.",
+        "<b>Um fato para cada ponto.</b> Para o ponto com que concorda, o de que discorda e o que o surpreendeu: algo que você viu, ouviu, leu ou mediu. Outra pessoa conseguiria conferir?",
+        "<b>O padrão e o insight.</b> O que se repete entre os três fatos, e o insight em uma frase: “Observamos que…, porque…, e isso gera…”."
        ],
        "meta": [
         [
@@ -1512,15 +1439,15 @@
         ],
         [
          "Tema",
-         "Experimentos de mudança: hipótese, medida, critério de revisão e o portfólio de experimentos."
+         "Do mapa de forças à aposta, e da aposta ao experimento: hipótese, medida e plano."
         ]
        ],
        "campos": [
         {
-         "k": "e3.a5.reacao",
-         "rotulo": "O Que a Pessoa Mudaria na Aposta",
+         "k": "e3.a5.insight",
+         "rotulo": "O Insight Com Fatos",
          "linhas": 3,
-         "ph": ""
+         "ph": "Observamos que…, porque…, e isso gera…"
         }
        ]
       }
@@ -1534,12 +1461,12 @@
    "data": "26 de novembro de 2026",
    "miro": "https://miro.com/app/board/uXjVEN1S8z0=/",
    "titulo": "Experimentos <em>de mudança</em>",
-   "lede": "Da aposta à hipótese, a medida com o critério de revisão, o plano do experimento em uma página e o portfólio de experimentos da turma.",
+   "lede": "Do mapa de forças à aposta, no quadro do Encontro 3; da aposta à hipótese, a medida com o critério de revisão e o plano do experimento em uma página.",
    "capaz": [
+    "Escolher a aposta a partir do mapa de forças e das opções de mudança.",
     "Formular a hipótese do experimento, com ação, comportamento esperado e medida.",
     "Definir a medida de comportamento, com linha de base, meta e critério de revisão.",
-    "Planejar o experimento em uma página: preparar, introduzir e revisar.",
-    "Posicionar o experimento no portfólio da turma, com data de início e de revisão."
+    "Planejar o experimento em uma página: preparar, introduzir e revisar."
    ],
    "blocos": [
     {
@@ -1547,8 +1474,8 @@
      "num": "00",
      "nome": "Abertura",
      "tom": "#4A3F37",
-     "titulo": "A retomada, <em>em grupos</em>",
-     "constroi": "O comportamento esperado em cada aposta",
+     "titulo": "A pergunta <em>da indústria</em>",
+     "constroi": "O ponto de partida do encontro",
      "itens": [
       {
        "t": "conceito",
@@ -1556,46 +1483,10 @@
        "html": "<p>A frase de Richard Feynman (Cornell, 1964) abre o encontro: quem decide se a aposta funciona é o que as pessoas passam a fazer depois dela, e isso só o experimento mostra.</p>"
       },
       {
-       "t": "atividade",
-       "id": "e4-a0",
-       "titulo": "A retomada, em grupos",
-       "tempo": "5 min",
-       "area": null,
-       "passos": [
-        "Em cada grupo, uma pessoa por vez responde, em até <b>um minuto</b>.",
-        "Quem escuta registra <b>o que as pessoas passam a fazer</b>, em cada aposta.",
-        "Ao voltar, uma pessoa do grupo conta a aposta em que isso ficou mais claro."
-       ],
-       "meta": [
-        [
-         "Com quem",
-         "Salas simultâneas. Sem aposta: use a do caso de compras."
-        ],
-        [
-         "Entrega",
-         "A aposta em que o comportamento ficou mais claro."
-        ],
-        [
-         "Tempo",
-         "5 minutos"
-        ]
-       ],
-       "exemplo": "<p>“Na aposta de compras, ficou claro: os seniores apresentam a cotação pelo assistente.”</p><p><i>Caso fictício da área de compras.</i></p>",
-       "campos": [
-        {
-         "k": "e4.a0.resp",
-         "rotulo": "A Minha Resposta",
-         "linhas": 3,
-         "ph": ""
-        },
-        {
-         "k": "e4.a0.comp",
-         "rotulo": "O Que as Pessoas Passam a Fazer",
-         "linhas": 2,
-         "ph": ""
-        }
-       ],
-       "perg": "“Qual é a sua aposta para a adoção da IA na sua área, e o que você espera ver as pessoas fazendo com a IA quando a aposta funcionar?”"
+       "t": "conceito",
+       "titulo": "A indústria e a IA, com dados do IBGE",
+       "html": "<p>Em 2024, <b>41,9%</b> das indústrias com 100 ou mais pessoas ocupadas usavam IA; em 2022, eram 16,9%. Entre as que usam, a IA está na administração (87,9%), na comercialização (75,2%) e no desenvolvimento de produtos (73,1%). Na produção, 52,0%, a única área em queda (56,4% em 2022). As dificuldades mais citadas por quem usa tecnologias digitais avançadas: altos custos (78,6%) e falta de pessoal qualificado (54,2%).</p>",
+       "fonte": "IBGE, PINTEC Semestral 2024, divulgada em 24/09/2025: 10.167 empresas industriais com 100 ou mais pessoas ocupadas."
       },
       {
        "t": "conceito",
@@ -1612,8 +1503,95 @@
      ]
     },
     {
-     "id": "e4-b1",
+     "id": "e4-bf",
      "num": "01",
+     "nome": "Das forças à aposta",
+     "tom": "#B04A1C",
+     "titulo": "Das forças <em>à aposta</em>",
+     "pergunta": "O que hoje impede o comportamento que você quer ver?",
+     "constroi": "O mapa de forças e a sua aposta",
+     "capaz": [
+      "Identificar as forças a favor e as forças contrárias à adoção, com a intensidade de cada uma.",
+      "Selecionar a força contrária mais intensa que está ao alcance da área.",
+      "Escolher a aposta entre as opções, pelo valor e pelo esforço."
+     ],
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "O mapa de forças de Kurt Lewin",
+       "html": "<div class=\"cards3\"><div><b>Forças a Favor</b><p>O que ajuda as pessoas a adotar, o que já funciona e quem ganha com a adoção.</p></div><div><b>Forças Contrárias</b><p>O que impede, o que o jeito atual garante e quem perde. Cada força com intensidade de 1 a 5.</p></div><div><b>A Força Com Estrela</b><p>A contrária mais intensa que a área consegue reduzir com as próprias decisões.</p></div></div><p><b>Por onde começar:</b> reduzir uma força contrária move o equilíbrio com menos tensão do que aumentar as forças a favor. <b>Cinco tipos de opção:</b> começar, parar, mudar, manter e esperar. <b>A aposta:</b> maior valor e menor esforço; no empate, a que afeta menos pessoas e pode ser desfeita.</p>",
+       "fonte": "Lewin, K. Field Theory in Social Science, 1951. Little, J. Lean Change Management, 2014."
+      },
+      {
+       "t": "atividade",
+       "id": "e4-af",
+       "titulo": "Das forças à sua aposta",
+       "tempo": "30 min",
+       "area": "Quadro do Encontro 3, Áreas 3 e 4",
+       "passos": [
+        "Área 3: revisem <b>O Comportamento Desejado</b> (a sugestão é ponto de partida). <i>3 min</i>",
+        "Até três <b>Forças a Favor</b> e três <b>Forças Contrárias</b>, de 1 a 5; ⭐ na contrária mais intensa <b>ao alcance da área</b>. <i>7 min</i>",
+        "Área 4: <b>A Força Com Estrela</b> e pelo menos três opções, de dois tipos. <i>6 min</i>",
+        "Em dupla, cada um apresenta; o outro pergunta: <b>“Que registro sustenta a estrela?”</b> <i>8 min</i>",
+        "<b>Valor</b> e <b>Esforço</b>, de 1 a 5; ⭐ na <b>Aposta</b>: maior valor, menor esforço. <i>4 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual; depois em duplas, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "Quadro do Encontro 3 (link no chat): Áreas 3 e 4, com o seu nome."
+        ],
+        [
+         "Entrega",
+         "O mapa com uma estrela e a aposta marcada."
+        ],
+        [
+         "Tempo",
+         "30 minutos"
+        ]
+       ],
+       "exemplo": "<p>“Aposta ⭐: a gerente aprova uma cotação por semana na tela do assistente.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e4.af.comp",
+         "rotulo": "O Comportamento Desejado",
+         "linhas": 2,
+         "ph": "Com sujeito e verbo"
+        },
+        {
+         "k": "e4.af.estrela",
+         "rotulo": "A Força Com Estrela",
+         "linhas": 2,
+         "ph": "A força contrária mais intensa ao alcance da área, com a intensidade"
+        },
+        {
+         "k": "e4.af.opcoes",
+         "rotulo": "As Opções",
+         "linhas": 3,
+         "ph": "Opção · tipo · valor · esforço"
+        },
+        {
+         "k": "e4.af.aposta",
+         "rotulo": "A Aposta",
+         "linhas": 2,
+         "ph": ""
+        }
+       ],
+       "pontos": [
+        "<b>A estrela ao alcance da área.</b> Se depende de outra instância, a estrela desce para a próxima força.",
+        "<b>Opções com gente.</b> Cada opção diz quem faz o quê.",
+        "<b>Aposta pequena e reversível.</b> Cabe em poucas semanas, com uma equipe, e pode ser desfeita."
+       ],
+       "mentor": true
+      }
+     ]
+    },
+    {
+     "id": "e4-b1",
+     "num": "02",
      "nome": "Da aposta à hipótese",
      "tom": "#7A4E6D",
      "titulo": "Da aposta <em>à hipótese</em>",
@@ -1638,7 +1616,7 @@
        "tempo": "20 min",
        "area": "Área 1",
        "passos": [
-        "Na linha com o seu número, copiem <b>A Aposta</b> do post-work do Encontro 3, registrada no workbook. <i>2 min</i>",
+        "Na linha com o seu número, copiem <b>A Aposta</b> que vocês marcaram na Área 4 do quadro do Encontro 3. <i>2 min</i>",
         "Escrevam a hipótese nos três campos: <b>A Ação</b>, <b>O Comportamento Esperado</b> e <b>A Medida</b>. <i>6 min</i>",
         "Em dupla, um lê a hipótese; o outro pergunta: <b>“O que nós veríamos as pessoas fazendo?”</b> <i>4 min</i>",
         "Invertam os papéis. <i>4 min</i>",
@@ -1651,7 +1629,7 @@
         ],
         [
          "Material",
-         "Miro, Área 1, e a sua aposta, no workbook (post-work do Encontro 3)."
+         "Miro, Área 1, e a aposta do Bloco 1 (quadro do Encontro 3, Área 4)."
         ],
         [
          "Sem aposta",
@@ -1674,10 +1652,10 @@
        "campos": [
         {
          "k": "e4.a1.aposta",
-         "rotulo": "A Aposta (do Encontro 3)",
+         "rotulo": "A Aposta (do Bloco 1)",
          "tipo": "espelho",
-         "de": "e3.a4.aposta",
-         "vazio": "Ainda sem registro no Encontro 3."
+         "de": "e4.af.aposta",
+         "vazio": "Ainda sem registro no Bloco 1."
         },
         {
          "k": "e4.a1.acao",
@@ -1709,7 +1687,7 @@
     },
     {
      "id": "e4-b2",
-     "num": "02",
+     "num": "03",
      "nome": "A medida e o critério de revisão",
      "tom": "#2F6B6F",
      "titulo": "A medida e o <em>critério de revisão</em>",
@@ -1770,7 +1748,7 @@
        "campos": [
         {
          "k": "e4.a2.medida",
-         "rotulo": "A Medida (do Bloco 1)",
+         "rotulo": "A Medida (do Bloco 2)",
          "tipo": "espelho",
          "de": "e4.a1.medida",
          "vazio": "Ainda sem registro no Encontro 4."
@@ -1817,7 +1795,7 @@
     },
     {
      "id": "e4-b3",
-     "num": "03",
+     "num": "04",
      "nome": "O plano do experimento",
      "tom": "#5E7D52",
      "titulo": "O experimento, <em>em uma página</em>",
@@ -1912,131 +1890,6 @@
      ]
     },
     {
-     "id": "e4-b4",
-     "num": "04",
-     "nome": "O portfólio de experimentos",
-     "tom": "#35608F",
-     "titulo": "O portfólio <em>de experimentos</em>",
-     "pergunta": "Onde a área enxerga os experimentos em andamento?",
-     "constroi": "A sua linha conferida e a sua nota no portfólio da turma",
-     "capaz": [
-      "Organizar os experimentos em um quadro visível, por etapa.",
-      "Avaliar um experimento por quatro critérios: pequeno, visível, medido e reversível.",
-      "Posicionar o seu experimento no portfólio da turma."
-     ],
-     "itens": [
-      {
-       "t": "conceito",
-       "titulo": "Um quadro para os experimentos da área",
-       "html": "<div class=\"cards3\"><div><b>Visível para a área</b><p>Quem é afetado consegue ver o que está em teste.</p></div><div><b>Até três em Introduzir</b><p>Um experimento novo começa quando outro chega à revisão.</p></div><div><b>Revisão com data</b><p>Na data, a medida é lida e o cartão muda de coluna.</p></div></div><p>Quatro colunas: <b>A Seguir</b>, <b>Preparar</b>, <b>Introduzir</b> (limite de três) e <b>Revisar</b>.</p>",
-       "fonte": "Little, J. Lean Change Management, 2014. Anderson, D. Kanban, 2010."
-      },
-      {
-       "t": "atividade",
-       "id": "e4-a4",
-       "titulo": "O portfólio de experimentos da turma",
-       "tempo": "20 min",
-       "area": "Área 4",
-       "passos": [
-        "Na linha com o seu número, escrevam <b>O Experimento em Uma Frase</b>, <b>O Início</b> e <b>A Revisão</b>. <i>3 min</i>",
-        "Uma pessoa por vez apresenta o experimento em dois minutos. Os colegas conferem <b>Pequeno</b>, <b>Visível</b>, <b>Medido</b> e <b>Reversível</b> e registram ✔ ou “?”. <i>4 min por pessoa</i>",
-        "Cada pessoa cria uma nota com o experimento e a posiciona no portfólio: <b>Preparar</b>, se começa em até duas semanas; <b>A Seguir</b>, se depende de outra decisão. <i>1 min</i>"
-       ],
-       "meta": [
-        [
-         "Com quem",
-         "Grupos de quatro pessoas, em salas simultâneas."
-        ],
-        [
-         "Papéis",
-         "Anfitrião, guardião do tempo, escriba e porta-voz."
-        ],
-        [
-         "Material",
-         "Miro, Área 4, e os seus registros das Áreas 1 a 3."
-        ],
-        [
-         "Entrega",
-         "A sua linha conferida e a sua nota no portfólio."
-        ],
-        [
-         "Tempo",
-         "20 minutos"
-        ]
-       ],
-       "exemplo": "<p>“Pequeno ✔, visível ✔, medido ✔, reversível ?: falta dizer como se desfaz.”</p><p><i>Caso fictício da área de compras.</i></p>",
-       "campos": [
-        {
-         "k": "e4.a4.frase",
-         "rotulo": "O Experimento em Uma Frase",
-         "linhas": 2,
-         "ph": ""
-        },
-        {
-         "k": "e4.a4.ini",
-         "rotulo": "O Início",
-         "tipo": "texto"
-        },
-        {
-         "k": "e4.a4.rev",
-         "rotulo": "A Revisão",
-         "tipo": "texto"
-        },
-        {
-         "k": "e4.a4.crit",
-         "rotulo": "Os Quatro Critérios, Conferidos pelo Grupo",
-         "tipo": "tabela",
-         "n": 1,
-         "colunas": [
-          {
-           "t": "Pequeno",
-           "opcoes": [
-            "✔",
-            "?"
-           ]
-          },
-          {
-           "t": "Visível",
-           "opcoes": [
-            "✔",
-            "?"
-           ]
-          },
-          {
-           "t": "Medido",
-           "opcoes": [
-            "✔",
-            "?"
-           ]
-          },
-          {
-           "t": "Reversível",
-           "opcoes": [
-            "✔",
-            "?"
-           ]
-          }
-         ]
-        },
-        {
-         "k": "e4.a4.col",
-         "rotulo": "A Coluna no Portfólio",
-         "tipo": "escolha",
-         "opcoes": [
-          "Preparar",
-          "A Seguir"
-         ]
-        }
-       ],
-       "pontos": [
-        "<b>Onde estão os cartões.</b> A maior parte em Preparar; os que dependem de decisão, em A Seguir.",
-        "<b>Os pontos de interrogação.</b> O critério que mais aparece com “?” indica o ajuste antes de começar.",
-        "<b>As datas de revisão.</b> Todas em até quatro semanas, já na agenda de quem participa."
-       ]
-      }
-     ]
-    },
-    {
      "id": "e4-fe",
      "num": "05",
      "nome": "Fechamento",
@@ -2053,7 +1906,7 @@
        "passos": [
         "<b>Marque a revisão.</b> Coloque a data de revisão na agenda, com as pessoas que participam do experimento.",
         "<b>Mostre o plano a uma pessoa.</b> Se houver oportunidade até amanhã: alguém da etapa de preparar. Pergunte o que ela mudaria.",
-        "<b>Registre no workbook.</b> A hipótese, a medida, o plano e o cartão do portfólio, nesta página. Antes, revise cada parte com o Mentor de experimentos, por escrito ou em voz."
+        "<b>Registre no workbook.</b> A aposta, a hipótese, a medida e o plano, nesta página."
        ],
        "meta": [
         [

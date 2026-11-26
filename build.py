@@ -41,7 +41,7 @@ def icone(nome, cor="#FFFFFF", tam=28, sw=1.8):
 
 IC_BLOCO = {"Abertura": "door-open", "O paradoxo da IA": "trending-up", "Mudança e transição": "route", "A curva de Satir": "activity", "A curva de Satir e o ciclo": "activity", "Diagnóstico de prontidão": "stethoscope", "Fechamento": "messages-square",
             "Leitura do diagnóstico em grupo": "search", "O mapa de pessoas": "users", "Práticas de geração de insights": "link-2", "Plano de coleta de insights": "clipboard-list",
-            "Dos registros aos insights": "lightbulb", "O mapa de forças": "scale", "Opções de mudança": "list-checks", "A próxima aposta": "flag",
+            "Dos registros aos insights": "lightbulb", "O mapa de forças": "scale", "Das forças à aposta": "scale", "Opções de mudança": "list-checks", "A próxima aposta": "flag",
             "Da aposta à hipótese": "flask-conical", "A medida e o critério de revisão": "gauge", "O plano do experimento": "calendar-range", "O portfólio de experimentos": "layout-grid",
             "O canvas estratégico da mudança": "layout-grid", "A rede de campeões": "network", "O painel de adoção": "gauge", "O roteiro de sustentabilidade": "waves", "Fechamento e certificação": "award"}
 # Materiais de cada encontro: o quadro do Miro e os slides em PDF. O PDF entra só depois do encontro (22h de Brasília).
@@ -284,7 +284,7 @@ if PROF:
     for enc in ENCONTROS:
         corpo += encontro_html(enc)
     os.makedirs(os.path.join(RAIZ, "professor"), exist_ok=True)
-    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v16.html"), "w", encoding="utf-8").write(
+    open(os.path.join(RAIZ, "professor", "CM4AI-Online_Workbook_Professor_v17.html"), "w", encoding="utf-8").write(
         pagina("CM4AI · Workbook · Versão do professor", corpo, "prof", fontes(True)))
     print("professor ok")
 else:
