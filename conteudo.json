@@ -1956,7 +1956,7 @@
      "num": "00",
      "nome": "Abertura",
      "tom": "#4A3F37",
-     "titulo": "A retomada, <em>em grupos</em>",
+     "titulo": "O portfólio, <em>em grupos</em>",
      "constroi": "Quem sustenta cada experimento",
      "itens": [
       {
@@ -1967,18 +1967,19 @@
       {
        "t": "atividade",
        "id": "e5-a0",
-       "titulo": "A retomada, em grupos",
+       "titulo": "A conversa sobre o portfólio",
        "tempo": "5 min",
        "area": null,
        "passos": [
-        "Em cada grupo, uma pessoa por vez responde, em até <b>um minuto</b>.",
-        "Quem escuta registra <b>quem sustenta</b> cada experimento: liderança, colegas ou ninguém ainda.",
+        "Abram o <b>portfólio da turma</b>, no quadro do Encontro 4.",
+        "Uma pessoa por vez escolhe o experimento de um colega que gostaria de acompanhar e diz <b>por quê</b>, em até <b>um minuto</b>.",
+        "O autor responde: <b>quem precisa sustentá-lo</b> depois que ele começar?",
         "Ao voltar, uma pessoa do grupo conta o experimento com a sustentação mais clara."
        ],
        "meta": [
         [
          "Com quem",
-         "Salas simultâneas. Sem experimento: use o do caso de compras."
+         "Salas simultâneas. Sem cartão no portfólio: escolha o experimento de um colega."
         ],
         [
          "Entrega",
@@ -1989,12 +1990,12 @@
          "5 minutos"
         ]
        ],
-       "exemplo": "<p>“No experimento de compras, quem sustenta é a compradora da cláusula, além da gerente.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "exemplo": "<p>“Escolhi o experimento de compras: quem sustenta é a compradora da cláusula, além da gerente.”</p><p><i>Caso fictício da área de compras.</i></p>",
        "campos": [
         {
          "k": "e5.a0.resp",
-         "rotulo": "A Minha Resposta",
-         "linhas": 3,
+         "rotulo": "O Experimento Que Quero Acompanhar, e Por Quê",
+         "linhas": 2,
          "ph": ""
         },
         {
@@ -2008,7 +2009,7 @@
          ]
         }
        ],
-       "perg": "“Qual é o seu experimento, e quem precisa sustentá-lo depois que ele começar?”"
+       "perg": "“Que experimento de um colega você gostaria de acompanhar, e quem precisa sustentá-lo?”"
       }
      ]
     },
