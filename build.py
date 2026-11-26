@@ -47,7 +47,7 @@ IC_BLOCO = {"Abertura": "door-open", "O paradoxo da IA": "trending-up", "Mudanç
 # Materiais de cada encontro: o quadro do Miro e os slides em PDF. O PDF entra só depois do encontro (22h de Brasília).
 SLIDES = {1: ("CM4AI-Online_E1_Slides-da-Turma_v4.pdf", "2026-11-18T22:00:00-03:00"),
           2: ("CM4AI-Online_E2_Slides-da-Turma_v4.pdf", "2026-11-19T22:00:00-03:00"),
-          3: (None, "2026-11-25T22:00:00-03:00"),
+          3: ("CM4AI-Online_E3_Slides_v12.pdf", "2026-11-25T22:00:00-03:00"),
           4: (None, "2026-11-26T22:00:00-03:00"),
           5: (None, "2026-11-27T22:00:00-03:00")}
 
