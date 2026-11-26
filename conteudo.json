@@ -1526,13 +1526,12 @@
        "t": "atividade",
        "id": "e4-af",
        "titulo": "O mapa de forças e a sua aposta",
-       "tempo": "20 min",
+       "tempo": "17 min",
        "area": "Quadro do Encontro 3, Áreas 3 e 4",
        "passos": [
-        "<b>O mapa de forças</b> (Área 3 do quadro do Encontro 3, 10 min): revisem <b>O Comportamento Desejado</b>. <i>2 min</i>",
+        "<b>O mapa de forças</b> (Área 3 do quadro do Encontro 3, 7 min): revisem <b>O Comportamento Desejado</b>. <i>2 min</i>",
         "Escrevam até três <b>Forças a Favor</b> e até três <b>Forças Contrárias</b>, cada uma com a intensidade de 1 a 5. <i>4 min</i>",
         "Marquem com ⭐ <b>a força mais importante</b>: de preferência, a contrária mais intensa <b>ao alcance da área</b>. <i>1 min</i>",
-        "Em dupla, cada um mostra o mapa; o outro pergunta: <b>“Que registro sustenta essa força?”</b> <i>3 min</i>",
         "<b>A aposta</b> (Área 4, 10 min): escrevam no alto <b>A Força Com Estrela</b> e pelo menos três opções, de dois tipos, para <b>enfraquecê-la</b>, se for contrária, ou <b>fortalecê-la</b>, se for a favor. <i>5 min</i>",
         "Deem a cada opção <b>Valor</b> e <b>Esforço</b>, de 1 a 5, e marquem com ⭐ <b>A Aposta</b>: maior valor, menor esforço. <i>3 min</i>",
         "Uma aposta no chat, em uma frase: quem faz o quê. <i>2 min</i>"
@@ -1540,7 +1539,7 @@
        "meta": [
         [
          "Com quem",
-         "Individual; depois em duplas, em salas simultâneas."
+         "Individual, na sala principal."
         ],
         [
          "Material",
@@ -1552,7 +1551,7 @@
         ],
         [
          "Tempo",
-         "20 minutos"
+         "17 minutos"
         ]
        ],
        "exemplo": "<p>“Aposta ⭐: a gerente aprova uma cotação por semana na tela do assistente.”</p><p><i>Caso fictício da área de compras.</i></p>",
