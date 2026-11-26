@@ -1526,14 +1526,14 @@
        "t": "atividade",
        "id": "e4-af",
        "titulo": "Das forças à sua aposta",
-       "tempo": "30 min",
+       "tempo": "20 min",
        "area": "Quadro do Encontro 3, Áreas 3 e 4",
        "passos": [
-        "Área 3: revisem <b>O Comportamento Desejado</b> (a sugestão é ponto de partida). <i>3 min</i>",
-        "Até três <b>Forças a Favor</b> e três <b>Forças Contrárias</b>, de 1 a 5; ⭐ na contrária mais intensa <b>ao alcance da área</b>. <i>7 min</i>",
-        "Área 4: <b>A Força Com Estrela</b> e pelo menos três opções, de dois tipos. <i>6 min</i>",
-        "Em dupla, cada um apresenta; o outro pergunta: <b>“Que registro sustenta a estrela?”</b> <i>8 min</i>",
-        "<b>Valor</b> e <b>Esforço</b>, de 1 a 5; ⭐ na <b>Aposta</b>: maior valor, menor esforço. <i>4 min</i>"
+        "Área 3: revisem <b>O Comportamento Desejado</b> (a sugestão é ponto de partida). <i>2 min</i>",
+        "Até três <b>Forças a Favor</b> e três <b>Forças Contrárias</b>, de 1 a 5; ⭐ na contrária mais intensa <b>ao alcance da área</b>. <i>5 min</i>",
+        "Área 4: <b>A Força Com Estrela</b> e pelo menos três opções <b>para enfraquecê-la</b>, de dois tipos. <i>4 min</i>",
+        "Em dupla, cada um apresenta; o outro pergunta: <b>“Que registro sustenta a estrela?”</b> <i>6 min</i>",
+        "<b>Valor</b> e <b>Esforço</b>, de 1 a 5; ⭐ na <b>Aposta</b>: maior valor, menor esforço. <i>2 min</i>"
        ],
        "meta": [
         [
@@ -1550,7 +1550,7 @@
         ],
         [
          "Tempo",
-         "30 minutos"
+         "20 minutos"
         ]
        ],
        "exemplo": "<p>“Aposta ⭐: a gerente aprova uma cotação por semana na tela do assistente.”</p><p><i>Caso fictício da área de compras.</i></p>",
@@ -1571,7 +1571,7 @@
          "k": "e4.af.opcoes",
          "rotulo": "As Opções",
          "linhas": 3,
-         "ph": "Opção · tipo · valor · esforço"
+         "ph": "Opção para enfraquecer a força · tipo · valor · esforço"
         },
         {
          "k": "e4.af.aposta",
