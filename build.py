@@ -48,7 +48,7 @@ IC_BLOCO = {"Abertura": "door-open", "O paradoxo da IA": "trending-up", "Mudanç
 SLIDES = {1: ("CM4AI-Online_E1_Slides-da-Turma_v4.pdf", "2026-11-18T22:00:00-03:00"),
           2: ("CM4AI-Online_E2_Slides-da-Turma_v4.pdf", "2026-11-19T22:00:00-03:00"),
           3: ("CM4AI-Online_E3_Slides_v12.pdf", "2026-11-25T22:00:00-03:00"),
-          4: ("CM4AI-Online_E4_Slides_v12.pdf", "2026-11-26T22:00:00-03:00"),
+          4: ("CM4AI-Online_E4_Slides_v13.pdf", "2026-11-26T22:00:00-03:00"),
           5: (None, "2026-11-27T22:00:00-03:00")}
 
 
