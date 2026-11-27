@@ -1963,12 +1963,12 @@
    "data": "27 de novembro de 2026",
    "miro": "https://miro.com/app/board/uXjVEN1S8z0=/",
    "titulo": "Alinhamento <em>e sustentabilidade</em>",
-   "lede": "O experimento completo no quadro do Encontro 4, com o Mentor; o canvas da mudança, em três grupos à sua escolha, no sistema Lean Change Canvas; o Grande, o Próximo e o Agora de cada pessoa, com a apresentação final em trios e a certificação.",
+   "lede": "O experimento completo no quadro do Encontro 4, com o Mentor; o canvas da mudança, em três grupos à sua escolha, no sistema Lean Change Canvas; a rede de campeões de cada pessoa, com o Mentor da rede, a apresentação final em trios e a certificação.",
    "capaz": [
     "Completar o experimento: a hipótese, a medida com o critério de revisão e o plano em três etapas.",
     "Construir em grupo o canvas da mudança, com as perguntas que um plano de adoção precisa responder.",
-    "Relacionar a visão da adoção, o próximo marco e as três ações desta semana, com o papel do seu campeão.",
-    "Apresentar a estratégia a colegas e ajustar as ações com o que ouvir."
+    "Estruturar a rede de campeões da adoção: quem a maioria observa, quem liga grupos e o papel de cada campeão.",
+    "Apresentar a rede a colegas e ajustar os papéis com o que ouvir."
    ],
    "blocos": [
     {
@@ -1987,7 +1987,7 @@
       {
        "t": "conceito",
        "titulo": "Três endereços para hoje",
-       "html": "<div class=\"cards3\"><div><b>Quadro do Encontro 4</b><p>Áreas 1 a 3, o experimento, na linha com o seu número; Área 4, o Grande, o Próximo e o Agora.</p></div><div><b>Mentor de experimentos</b><p>Neste workbook. Ele já conhece o que você registrou no quadro e onde parou.</p></div><div><b>Workbook do curso</b><p>Os registros, os materiais e o botão Perguntar ao Gino Terentim.</p></div></div><p><b>Sistema Lean Change Canvas, no Bloco 2:</b> o link e o código do seu grupo chegam no chat às 20h19. Use o computador: arrastar as cartas exige mouse.</p><p>O Encontro 4 terminou na hipótese. Hoje a turma volta ao mesmo quadro, completa o experimento e segue a partir dele.</p>"
+       "html": "<div class=\"cards3\"><div><b>Quadro do Encontro 4</b><p>Áreas 1 a 3, o experimento, na linha com o seu número. Depois da aula, a Área 5, opcional.</p></div><div><b>Mentor de experimentos</b><p>Neste workbook. Ele já conhece o que você registrou no quadro e onde parou.</p></div><div><b>Workbook do curso</b><p>Os registros, os materiais e o botão Perguntar ao Gino Terentim.</p></div></div><p><b>Sistema Lean Change Canvas, no Bloco 2:</b> o link do seu grupo chega no chat às 20h19. Use o computador: arrastar as cartas exige mouse. <b>Mentor da rede de campeões, no Bloco 3:</b> <a href=\"rede.html\">rede.html</a>, com o mesmo e-mail e código.</p><p>O Encontro 4 terminou na hipótese. Hoje a turma volta ao mesmo quadro, completa o experimento e segue a partir dele.</p>"
       }
      ]
     },
@@ -2178,7 +2178,7 @@
        "tempo": "20 min",
        "area": null,
        "passos": [
-        "Entre na sala do seu grupo e na sessão do sistema, com o <b>código do grupo</b>. <i>2 min</i>",
+        "Entre na sala do seu grupo e abra o <b>link do grupo</b>, no chat. <i>2 min</i>",
         "<b>Nome da Mudança</b>, <b>Template</b> e até <b>nove cartas</b>, azuis e amarelas, a partir dos experimentos do grupo. A pergunta: <b>“O que um plano de adoção de IA não pode deixar de responder?”</b> <i>12 min</i>",
         "Toquem em <b>Dica da IA</b> e troquem uma carta, se fizer sentido. <i>3 min</i>",
         "<b>Exportar</b> e escolher quem mostra o canvas na volta. <i>3 min</i>"
@@ -2190,7 +2190,7 @@
         ],
         [
          "Material",
-         "Sistema Lean Change Canvas, com o código do grupo."
+         "Sistema Lean Change Canvas, pelo link do grupo."
         ],
         [
          "No celular",
@@ -2231,54 +2231,173 @@
     {
      "id": "e5-b3",
      "num": "03",
-     "nome": "Grande, Próximo e Agora",
-     "tom": "#5E7D52",
-     "titulo": "Grande, Próximo <em>e Agora</em>",
-     "pergunta": "O que você faz nesta semana para a visão começar?",
-     "constroi": "O seu canvas Grande, Próximo e Agora, com o seu campeão, na Área 4 do quadro do Encontro 4",
+     "nome": "A rede de campeões",
+     "tom": "#35608F",
+     "titulo": "A rede <em>de campeões</em>",
+     "pergunta": "Quem a sua equipe observa antes de adotar algo novo?",
+     "constroi": "A rede de campeões da sua adoção, com o Mentor da rede",
      "capaz": [
-      "Formular a visão da adoção em uma frase.",
-      "Relacionar o experimento ao próximo marco.",
-      "Definir três ações para esta semana, com responsável e data, e o papel do seu campeão."
+      "Identificar, na rede da adoção, quem a maioria observa e quem liga grupos.",
+      "Escolher de dois a três campeões, cada um com o seu papel até a revisão.",
+      "Apresentar a rede a colegas e ajustá-la com as perguntas deles."
      ],
      "itens": [
       {
        "t": "conceito",
-       "titulo": "Três horizontes num canvas",
-       "html": "<div class=\"cards3\"><div><b>O Grande</b><p>A visão, o propósito e a estratégia, sem desvio relevante.</p></div><div><b>O Próximo</b><p>A coisa mais importante a fazer a seguir, no contexto de um marco de curto prazo: o seu experimento até a revisão.</p></div><div><b>O Agora</b><p>As três coisas mais importantes a fazer esta semana, cada uma com responsável e data.</p></div></div><p><b>Os sinais do marco</b> vêm da Área 2: a meta e o sinal antecipado. <b>O seu campeão</b> é a pessoa da estrela no quadro do Encontro 3, o adotante inicial que a maioria observa: o primeiro nome da rede de campeões, com um papel nesta semana.</p>",
-       "fonte": "Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow); Rogers, E. M. Diffusion of Innovations, 5. ed., 2003."
+       "titulo": "Quem espalha a adoção: líderes de opinião e pontes",
+       "html": "<div class=\"cards3\"><div><b>O líder de opinião</b><p>O mais procurado quando há dúvida; em geral, um adotante inicial que a maioria respeita.</p></div><div><b>A ponte</b><p>Liga grupos que pouco se falam: sem ela, a prática para num só grupo.</p></div><div><b>O quase par de quem resiste</b><p>Parecido com o grupo que mais resiste: a semelhança dá credibilidade.</p></div></div><p>Na análise de redes, o <b>grau</b> mostra quem é mais procurado, e a <b>intermediação</b>, quem liga grupos. O inovador isolado raramente convence a maioria.</p><p><a class=\"btn\" href=\"rede.html\">Abrir o Mentor da rede de campeões</a></p>",
+       "fonte": "Rogers, E. M. Diffusion of Innovations, 5. ed., 2003, cap. 7 a 9; Wasserman, S.; Faust, K. Social Network Analysis, 1994, cap. 5."
       },
       {
        "t": "atividade",
        "id": "e5-a4",
-       "titulo": "O seu Grande, Próximo e Agora",
-       "tempo": "14 min",
-       "area": "Encontro 4, Área 4",
+       "titulo": "A sua rede, com o Mentor",
+       "tempo": "18 min",
+       "area": null,
        "passos": [
-        "Na Área 4 do quadro do Encontro 4, no canvas com o seu nome: <b>O Grande</b>, a visão da adoção, em uma frase. <i>2 min</i>",
-        "<b>O Próximo</b>: o seu experimento até a revisão, como está no portfólio, e os dois <b>sinais</b> do marco. <i>4 min</i>",
-        "<b>O Agora</b>: três ações desta semana, cada uma com responsável e data. Peça ao Mentor <b>“teste o meu Agora”</b>. <i>5 min</i>",
-        "<b>O seu campeão</b>: a pessoa da estrela no quadro do Encontro 3 e o papel dela nesta semana. <i>3 min</i>"
+        "No Mentor da rede, peça <b>“Monte a minha rede”</b> e confira as pessoas do seu mapa do Encontro 3. <i>4 min</i>",
+        "Responda sobre os <b>laços</b>: a quem a equipe recorre quando tem dúvida, quem conversa com quem, quem liga grupos. <i>5 min</i>",
+        "Peça <b>“Quem são os meus campeões?”</b>: escolha de dois a três, cada um com o <b>papel</b> até a revisão. <i>6 min</i>",
+        "Peça <b>“Monte a ficha da minha rede de campeões”</b> e baixe a imagem da rede. <i>3 min</i>"
        ],
        "meta": [
         [
          "Com quem",
-         "Individual, com o Mentor."
+         "Individual, com o Mentor da rede."
         ],
         [
          "Material",
-         "Quadro do Encontro 4, Área 4; o portfólio, abaixo da Área 3."
+         "Workbook: Mentor da rede de campeões."
         ],
         [
          "Entrega",
-         "O seu canvas completo, com três ações e o campeão."
+         "A rede desenhada e de dois a três campeões, cada um com o seu papel."
         ],
         [
          "Tempo",
-         "14 minutos"
+         "18 minutos"
         ]
        ],
-       "exemplo": "<p>“Campeão: a compradora que descobriu a cláusula de reajuste mostra ao time, na segunda, como confere a comparação.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "exemplo": "<p>“Líder de opinião: a compradora da cláusula de reajuste; na semana 1, mostra ao time como confere a comparação.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e5.a4.rede",
+         "rotulo": "As Pessoas e os Laços da Minha Rede",
+         "linhas": 3,
+         "ph": "Quem procura quem quando tem dúvida; quem liga grupos"
+        },
+        {
+         "k": "e5.a4.campeoes",
+         "rotulo": "Os Meus Campeões e o Papel de Cada Um",
+         "linhas": 3,
+         "ph": "Líder de opinião, ponte, quase par de quem resiste: o papel na semana 1 e até a revisão"
+        },
+        {
+         "k": "e5.a4.ficha",
+         "rotulo": "A Ficha da Rede de Campeões",
+         "linhas": 4,
+         "ph": "Cole aqui a ficha que o Mentor da rede montou"
+        }
+       ],
+       "pontos": [
+        "<b>Campeões que a maioria observa.</b> Nem sempre quem tem o cargo.",
+        "<b>Pontes entre grupos.</b> Sem elas, a prática para num só grupo.",
+        "<b>Papéis com data.</b> A semana 1 e as quatro semanas até a revisão."
+       ]
+      },
+      {
+       "t": "atividade",
+       "id": "e5-a5",
+       "titulo": "A apresentação final, em trios",
+       "tempo": "20 min",
+       "area": null,
+       "passos": [
+        "Cada pessoa apresenta a sua <b>rede</b> em <b>quatro minutos</b>: os campeões e o papel de cada um.",
+        "Os colegas perguntam por <b>dois minutos</b>: <b>“O que sustenta isso quando ninguém estiver olhando?”</b>",
+        "Repitam para cada pessoa do trio. <i>18 min</i>",
+        "Ajustem os papéis com o que ouviram. <i>2 min</i>"
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Trios, em salas simultâneas."
+        ],
+        [
+         "Material",
+         "A imagem da rede, na tela de quem apresenta."
+        ],
+        [
+         "Entrega",
+         "Os campeões com papéis ajustados."
+        ],
+        [
+         "Tempo",
+         "20 minutos"
+        ]
+       ],
+       "exemplo": "<p>“O que sustenta é a compradora mostrar a comparação na reunião de segunda, toda semana.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e5.a5.ouvi",
+         "rotulo": "O Que Ouvi na Apresentação Final",
+         "linhas": 3,
+         "ph": "O que sustenta isso quando ninguém estiver olhando?"
+        },
+        {
+         "k": "e5.a5.agora",
+         "rotulo": "Os Papéis Ajustados",
+         "linhas": 3,
+         "ph": ""
+        }
+       ],
+       "pontos": [
+        "<b>A pergunta da sustentação.</b> Cada pessoa ouve o que mantém o novo jeito.",
+        "<b>Os papéis ajustados.</b> Registrados aqui e no Mentor da rede."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e5-sus",
+     "num": "05",
+     "nome": "Depois da aula: sustentabilidade",
+     "tom": "#8D8377",
+     "titulo": "O plano de sustentabilidade, <em>opcional</em>",
+     "constroi": "O seu canvas Grande, Próximo e Agora, na Área 5",
+     "itens": [
+      {
+       "t": "conceito",
+       "titulo": "Grande, Próximo e Agora: em até 15 dias, com devolutiva",
+       "html": "<div class=\"cards3\"><div><b>O Grande</b><p>A visão, o propósito e a estratégia da adoção, sem desvio relevante.</p></div><div><b>O Próximo</b><p>O seu experimento até a revisão, com os dois sinais do marco: a meta e o sinal antecipado.</p></div><div><b>O Agora</b><p>As três coisas mais importantes a fazer nesta semana, cada uma com responsável e data, e o papel do seu campeão.</p></div></div><p>Na <b>Área 5 do quadro do Encontro 4</b>, um canvas por pessoa. Opcional, em até 15 dias depois da aula. Ao terminar, marque o <b>check</b> no seu canvas: o Gino Terentim devolve um comentário a cada pessoa.</p>",
+       "fonte": "Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow)."
+      },
+      {
+       "t": "atividade",
+       "id": "e5-a7",
+       "titulo": "O seu Grande, Próximo e Agora (opcional)",
+       "tempo": "até 15 dias",
+       "area": "Encontro 4, Área 5",
+       "perg": "“O que você faz na segunda-feira para a mudança chegar ao Grande?”",
+       "passos": [
+        "No canvas com o seu nome, na Área 5 do quadro do Encontro 4: <b>O Grande</b>, em uma frase.",
+        "<b>O Próximo</b>: o seu experimento até a revisão e os dois <b>sinais</b> do marco.",
+        "<b>O Agora</b>: três ações desta semana, cada uma com responsável e data, e <b>o seu campeão</b>.",
+        "Ao terminar, marque o <b>check</b> no seu canvas."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individual, com o Mentor de experimentos se quiser."
+        ],
+        [
+         "Entrega",
+         "O canvas completo, com o check."
+        ],
+        [
+         "Devolutiva",
+         "Comentário do Gino Terentim a cada pessoa."
+        ]
+       ],
        "campos": [
         {
          "k": "e5.a4.grande",
@@ -2310,62 +2429,6 @@
          "linhas": 2,
          "ph": ""
         }
-       ],
-       "pontos": [
-        "<b>Grande que se vê.</b> Gente fazendo algo diferente.",
-        "<b>Próximo com data.</b> O experimento até a revisão.",
-        "<b>Agora do tamanho da semana.</b> Três ações, cada uma com responsável e data.",
-        "<b>Campeão com papel.</b> O primeiro nome da rede de campeões, com algo a fazer nesta semana."
-       ]
-      },
-      {
-       "t": "atividade",
-       "id": "e5-a5",
-       "titulo": "A apresentação final, em trios",
-       "tempo": "25 min",
-       "area": "Encontro 4, Área 4",
-       "passos": [
-        "Cada pessoa apresenta o seu canvas em <b>quatro minutos</b>: o Grande, o Próximo, os sinais, o Agora e o campeão.",
-        "Os colegas perguntam por <b>dois minutos</b>: <b>“O que sustenta isso quando ninguém estiver olhando?”</b>",
-        "Repitam para cada pessoa do trio. <i>18 min</i>",
-        "Ajustem o Agora com o que ouviram e registrem no seu canvas. <i>6 min</i>"
-       ],
-       "meta": [
-        [
-         "Com quem",
-         "Trios, em salas simultâneas."
-        ],
-        [
-         "Material",
-         "Quadro do Encontro 4, Área 4: o canvas de quem apresenta."
-        ],
-        [
-         "Entrega",
-         "O Agora ajustado, com três ações desta semana."
-        ],
-        [
-         "Tempo",
-         "25 minutos"
-        ]
-       ],
-       "exemplo": "<p>“O que sustenta é a reunião de aprovação: ela passa a abrir pela tela do assistente.”</p><p><i>Caso fictício da área de compras.</i></p>",
-       "campos": [
-        {
-         "k": "e5.a5.ouvi",
-         "rotulo": "O Que Ouvi na Apresentação Final",
-         "linhas": 3,
-         "ph": "O que sustenta isso quando ninguém estiver olhando?"
-        },
-        {
-         "k": "e5.a5.agora",
-         "rotulo": "O Agora Ajustado",
-         "linhas": 3,
-         "ph": ""
-        }
-       ],
-       "pontos": [
-        "<b>A pergunta da sustentação.</b> Cada pessoa ouve o que mantém o novo jeito.",
-        "<b>O Agora ajustado.</b> As ações registradas no seu canvas da Área 4."
        ]
       }
      ]

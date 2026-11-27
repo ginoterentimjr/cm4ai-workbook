@@ -32,7 +32,7 @@ function posicoes(r){
   var n=r.nos.length,p=[],seed=7;function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647}
   var grupos={},gi=0;r.nos.forEach(function(x){if(!(x.grupo in grupos))grupos[x.grupo]=gi++});
   for(var i=0;i<n;i++){var ang=2*Math.PI*(grupos[r.nos[i].grupo]/Math.max(1,gi))+rnd()*0.8;p.push({x:W/2+Math.cos(ang)*200+rnd()*40,y:H/2+Math.sin(ang)*150+rnd()*40})}
-  var k=Math.sqrt((W-160)*(H-160)/Math.max(1,n))*0.9,t=60;
+  var k=Math.sqrt((W-160)*(H-160)/Math.max(1,n))*1.25,t=60;
   for(var it=0;it<400;it++){
     var d=p.map(function(){return {x:0,y:0}});
     for(i=0;i<n;i++)for(var j=i+1;j<n;j++){var dx=p[i].x-p[j].x,dy=p[i].y-p[j].y,dd=Math.max(1,Math.sqrt(dx*dx+dy*dy)),f=k*k/dd;
@@ -66,7 +66,8 @@ function desenhar(d){
     el("circle",{cx:p[i].x,cy:p[i].y,r:raio,fill:cor,stroke:no.postura==="Resiste"?"#B04A1C":"#FFFFFF","stroke-width":no.postura==="Resiste"?3.5:2},g);
     var tn=el("text",{x:p[i].x,y:p[i].y+5,"text-anchor":"middle","font-size":15,"font-weight":700,fill:"#FFFFFF","font-family":"Poppins, sans-serif"},g);tn.textContent=m.grau[i];
     if(no.campeao){var st=el("text",{x:p[i].x+raio+4,y:p[i].y-raio-2,"font-size":22,"font-family":"sans-serif"},g);st.textContent="★";st.setAttribute("fill","#C9A24D")}
-    quebra(no.rotulo,18).forEach(function(l,k){var t=el("text",{x:p[i].x,y:p[i].y+raio+18+k*16,"text-anchor":"middle","font-size":15,"font-weight":no.id==="voce"?700:500,fill:"#2A211C","font-family":"Poppins, sans-serif",stroke:"#FFFDF9","stroke-width":3,"paint-order":"stroke"},g);t.textContent=l});
+    var off=raio+(no.campeao?10:0)+(pontes.indexOf(i)>=0?(no.campeao?8:6):0)+18;
+    quebra(no.rotulo,18).forEach(function(l,k){var t=el("text",{x:p[i].x,y:p[i].y+off+k*16,"text-anchor":"middle","font-size":15,"font-weight":no.id==="voce"?700:500,fill:"#2A211C","font-family":"Poppins, sans-serif",stroke:"#FFFDF9","stroke-width":3,"paint-order":"stroke"},g);t.textContent=l});
   });
   // Leitura da rede
   var ord=r.nos.map(function(x,i){return i}).filter(function(i){return r.nos[i].id!=="voce"});

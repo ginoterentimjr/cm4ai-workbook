@@ -201,7 +201,7 @@ E4 = dict(n=4, tom="#B5781E", data="26 de novembro de 2026", miro="https://miro.
     ])
 
 # ============================== ENCONTRO 5 ==============================
-A5 = atividades(["e5v8_a.py", "e5v8_b.py"])
+A5 = atividades(["e5v9_a.py", "e5v9_b.py"])
 FRASES = ("<p><b>Frases para o Mentor de experimentos</b> (workbook, Mentor de experimentos):</p><ul>"
           "<li><b>“Continue de onde paramos”</b>: ele diz onde você parou e segue para o próximo campo.</li>"
           "<li><b>“Ainda não tenho aposta”</b>: ele começa pelas opções do Encontro 3.</li>"
@@ -212,18 +212,18 @@ FRASES = ("<p><b>Frases para o Mentor de experimentos</b> (workbook, Mentor de e
           "<p>O Mentor sugere; quem decide e registra no quadro é você.</p>")
 E5 = dict(n=5, tom="#5E7D52", data="27 de novembro de 2026", miro="https://miro.com/app/board/uXjVEN1S8z0=/",
     titulo="Alinhamento <em>e sustentabilidade</em>",
-    lede="O experimento completo no quadro do Encontro 4, com o Mentor; o canvas da mudança, em três grupos à sua escolha, no sistema Lean Change Canvas; o Grande, o Próximo e o Agora de cada pessoa, com a apresentação final em trios e a certificação.",
+    lede="O experimento completo no quadro do Encontro 4, com o Mentor; o canvas da mudança, em três grupos à sua escolha, no sistema Lean Change Canvas; a rede de campeões de cada pessoa, com o Mentor da rede, a apresentação final em trios e a certificação.",
     capaz=["Completar o experimento: a hipótese, a medida com o critério de revisão e o plano em três etapas.", "Construir em grupo o canvas da mudança, com as perguntas que um plano de adoção precisa responder.",
-           "Relacionar a visão da adoção, o próximo marco e as três ações desta semana, com o papel do seu campeão.", "Apresentar a estratégia a colegas e ajustar as ações com o que ouvir."],
+           "Estruturar a rede de campeões da adoção: quem a maioria observa, quem liga grupos e o papel de cada campeão.", "Apresentar a rede a colegas e ajustar os papéis com o que ouvir."],
     blocos=[
         dict(id="e5-ab", num="00", nome="Abertura", tom="#4A3F37", titulo="Onde paramos <em>e o que fazemos hoje</em>", constroi="Os três endereços abertos",
              itens=[dict(t="conceito", titulo="A mudança se sustenta quando passa a ser o jeito como fazemos as coisas aqui.",
                          html="<p>A frase de John Kotter (Harvard Business Review, 1995) abre o último encontro. No chat: algo que hoje é o jeito de trabalhar e que um dia já foi novidade.</p>"),
                     dict(t="conceito", titulo="Três endereços para hoje",
-                         html=cards([("Quadro do Encontro 4", "Áreas 1 a 3, o experimento, na linha com o seu número; Área 4, o Grande, o Próximo e o Agora."),
+                         html=cards([("Quadro do Encontro 4", "Áreas 1 a 3, o experimento, na linha com o seu número. Depois da aula, a Área 5, opcional."),
                                      ("Mentor de experimentos", "Neste workbook. Ele já conhece o que você registrou no quadro e onde parou."),
                                      ("Workbook do curso", "Os registros, os materiais e o botão Perguntar ao Gino Terentim.")])
-                              + "<p><b>Sistema Lean Change Canvas, no Bloco 2:</b> o link e o código do seu grupo chegam no chat às 20h19. Use o computador: arrastar as cartas exige mouse.</p>"
+                              + "<p><b>Sistema Lean Change Canvas, no Bloco 2:</b> o link do seu grupo chega no chat às 20h19. Use o computador: arrastar as cartas exige mouse. <b>Mentor da rede de campeões, no Bloco 3:</b> <a href=\"rede.html\">rede.html</a>, com o mesmo e-mail e código.</p>"
                               + "<p>O Encontro 4 terminou na hipótese. Hoje a turma volta ao mesmo quadro, completa o experimento e segue a partir dele.</p>")]),
         dict(id="e5-b1", num="01", nome="O experimento completo", tom="#35608F", titulo="O experimento <em>completo</em>",
              pergunta="O que falta para o seu experimento começar na segunda-feira?", constroi="A hipótese completa, a ficha da medida e o plano, no quadro do Encontro 4",
@@ -255,20 +255,35 @@ E5 = dict(n=5, tom="#5E7D52", data="27 de novembro de 2026", miro="https://miro.
                          fonte="Lean Change Canvas, sistema de Gino Terentim, com base em Little, J. Lean Change Management, 2014."),
                     ativ("e5-a3", A5[2], None, [F("e5.a3.cartas", "As Cartas do Canvas do Meu Grupo", 4, "Uma carta por linha"), F("e5.a3.pergunta", "A Pergunta Que o Meu Plano Ainda Não Responde", 2)],
                          pontos=["<b>Azuis e amarelas.</b> O canvas equilibra o que descrever e o que enfrentar.", "<b>Até nove cartas.</b> A escolha mostra a prioridade.", "<b>Exportado.</b> Cada grupo exporta o canvas e o mostra em um minuto; cada pessoa sai com o próprio canvas."])]),
-        dict(id="e5-b3", num="03", nome="Grande, Próximo e Agora", tom="#5E7D52", titulo="Grande, Próximo <em>e Agora</em>",
-             pergunta="O que você faz nesta semana para a visão começar?", constroi="O seu canvas Grande, Próximo e Agora, com o seu campeão, na Área 4 do quadro do Encontro 4",
-             capaz=["Formular a visão da adoção em uma frase.", "Relacionar o experimento ao próximo marco.", "Definir três ações para esta semana, com responsável e data, e o papel do seu campeão."],
-             itens=[dict(t="conceito", titulo="Três horizontes num canvas",
-                         html=cards([("O Grande", "A visão, o propósito e a estratégia, sem desvio relevante."), ("O Próximo", "A coisa mais importante a fazer a seguir, no contexto de um marco de curto prazo: o seu experimento até a revisão."),
-                                     ("O Agora", "As três coisas mais importantes a fazer esta semana, cada uma com responsável e data.")])
-                              + "<p><b>Os sinais do marco</b> vêm da Área 2: a meta e o sinal antecipado. <b>O seu campeão</b> é a pessoa da estrela no quadro do Encontro 3, o adotante inicial que a maioria observa: o primeiro nome da rede de campeões, com um papel nesta semana.</p>",
-                         fonte="Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow); Rogers, E. M. Diffusion of Innovations, 5. ed., 2003."),
-                    ativ("e5-a4", A5[3], "Encontro 4, Área 4", [F("e5.a4.grande", "O Grande", 2, "A visão da adoção, em uma frase"), F("e5.a4.proximo", "O Próximo", 2),
-                                                   F("e5.a4.sinal", "Os Sinais do Marco", 2, "Sinal 1, a meta; sinal 2, o sinal antecipado"), F("e5.a4.agora", "O Agora: Três Ações Desta Semana", 3, "Ação, responsável e data"),
-                                                   F("e5.a4.campeao", "O Seu Campeão e o Papel Dele Nesta Semana", 2)],
-                         pontos=["<b>Grande que se vê.</b> Gente fazendo algo diferente.", "<b>Próximo com data.</b> O experimento até a revisão.", "<b>Agora do tamanho da semana.</b> Três ações, cada uma com responsável e data.", "<b>Campeão com papel.</b> O primeiro nome da rede de campeões, com algo a fazer nesta semana."]),
-                    ativ("e5-a5", A5[4], "Encontro 4, Área 4", [F("e5.a5.ouvi", "O Que Ouvi na Apresentação Final", 3, "O que sustenta isso quando ninguém estiver olhando?"), F("e5.a5.agora", "O Agora Ajustado", 3)],
-                         pontos=["<b>A pergunta da sustentação.</b> Cada pessoa ouve o que mantém o novo jeito.", "<b>O Agora ajustado.</b> As ações registradas no seu canvas da Área 4."])]),
+        dict(id="e5-b3", num="03", nome="A rede de campeões", tom="#35608F", titulo="A rede <em>de campeões</em>",
+             pergunta="Quem a sua equipe observa antes de adotar algo novo?", constroi="A rede de campeões da sua adoção, com o Mentor da rede",
+             capaz=["Identificar, na rede da adoção, quem a maioria observa e quem liga grupos.", "Escolher de dois a três campeões, cada um com o seu papel até a revisão.", "Apresentar a rede a colegas e ajustá-la com as perguntas deles."],
+             itens=[dict(t="conceito", titulo="Quem espalha a adoção: líderes de opinião e pontes",
+                         html=cards([("O líder de opinião", "O mais procurado quando há dúvida; em geral, um adotante inicial que a maioria respeita."), ("A ponte", "Liga grupos que pouco se falam: sem ela, a prática para num só grupo."),
+                                     ("O quase par de quem resiste", "Parecido com o grupo que mais resiste: a semelhança dá credibilidade.")])
+                              + "<p>Na análise de redes, o <b>grau</b> mostra quem é mais procurado, e a <b>intermediação</b>, quem liga grupos. O inovador isolado raramente convence a maioria.</p>"
+                              + "<p><a class=\"btn\" href=\"rede.html\">Abrir o Mentor da rede de campeões</a></p>",
+                         fonte="Rogers, E. M. Diffusion of Innovations, 5. ed., 2003, cap. 7 a 9; Wasserman, S.; Faust, K. Social Network Analysis, 1994, cap. 5."),
+                    ativ("e5-a4", A5[3], None, [F("e5.a4.rede", "As Pessoas e os Laços da Minha Rede", 3, "Quem procura quem quando tem dúvida; quem liga grupos"),
+                                                F("e5.a4.campeoes", "Os Meus Campeões e o Papel de Cada Um", 3, "Líder de opinião, ponte, quase par de quem resiste: o papel na semana 1 e até a revisão"),
+                                                F("e5.a4.ficha", "A Ficha da Rede de Campeões", 4, "Cole aqui a ficha que o Mentor da rede montou")],
+                         pontos=["<b>Campeões que a maioria observa.</b> Nem sempre quem tem o cargo.", "<b>Pontes entre grupos.</b> Sem elas, a prática para num só grupo.", "<b>Papéis com data.</b> A semana 1 e as quatro semanas até a revisão."]),
+                    ativ("e5-a5", A5[4], None, [F("e5.a5.ouvi", "O Que Ouvi na Apresentação Final", 3, "O que sustenta isso quando ninguém estiver olhando?"), F("e5.a5.agora", "Os Papéis Ajustados", 3)],
+                         pontos=["<b>A pergunta da sustentação.</b> Cada pessoa ouve o que mantém o novo jeito.", "<b>Os papéis ajustados.</b> Registrados aqui e no Mentor da rede."])]),
+        dict(id="e5-sus", num="05", nome="Depois da aula: sustentabilidade", tom="#8D8377", titulo="O plano de sustentabilidade, <em>opcional</em>", constroi="O seu canvas Grande, Próximo e Agora, na Área 5",
+             itens=[dict(t="conceito", titulo="Grande, Próximo e Agora: em até 15 dias, com devolutiva",
+                         html=cards([("O Grande", "A visão, o propósito e a estratégia da adoção, sem desvio relevante."), ("O Próximo", "O seu experimento até a revisão, com os dois sinais do marco: a meta e o sinal antecipado."),
+                                     ("O Agora", "As três coisas mais importantes a fazer nesta semana, cada uma com responsável e data, e o papel do seu campeão.")])
+                              + "<p>Na <b>Área 5 do quadro do Encontro 4</b>, um canvas por pessoa. Opcional, em até 15 dias depois da aula. Ao terminar, marque o <b>check</b> no seu canvas: o Gino Terentim devolve um comentário a cada pessoa.</p>",
+                         fonte="Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow)."),
+                    dict(t="atividade", id="e5-a7", titulo="O seu Grande, Próximo e Agora (opcional)", tempo="até 15 dias", area="Encontro 4, Área 5",
+                         perg="“O que você faz na segunda-feira para a mudança chegar ao Grande?”",
+                         passos=["No canvas com o seu nome, na Área 5 do quadro do Encontro 4: <b>O Grande</b>, em uma frase.", "<b>O Próximo</b>: o seu experimento até a revisão e os dois <b>sinais</b> do marco.",
+                                 "<b>O Agora</b>: três ações desta semana, cada uma com responsável e data, e <b>o seu campeão</b>.", "Ao terminar, marque o <b>check</b> no seu canvas."],
+                         meta=[("Com quem", "Individual, com o Mentor de experimentos se quiser."), ("Entrega", "O canvas completo, com o check."), ("Devolutiva", "Comentário do Gino Terentim a cada pessoa.")],
+                         campos=[F("e5.a4.grande", "O Grande", 2, "A visão da adoção, em uma frase"), F("e5.a4.proximo", "O Próximo", 2), F("e5.a4.sinal", "Os Sinais do Marco", 2, "Sinal 1, a meta; sinal 2, o sinal antecipado"),
+                                 F("e5.a4.agora", "O Agora: Três Ações Desta Semana", 3, "Ação, responsável e data"), F("e5.a4.campeao", "O Seu Campeão e o Papel Dele Nesta Semana", 2)],
+                         conducao=["Atividade opcional depois da aula: devolutiva do Gino Terentim em até 15 dias, a partir do check no canvas da Área 5; lembrete semanal à turma."])]),
         dict(id="e5-fe", num="04", nome="Fechamento e certificação", tom="#B04A1C", titulo="As margens <em>e a certificação</em>", constroi="A margem que você muda primeiro",
              itens=[dict(t="conceito", titulo="Você não diz à água para onde ir. Você muda as margens.",
                          html="<p>A frase de Dave Snowden, que abriu o curso no Encontro 1, fecha o último encontro. Em cinco encontros, a turma escutou o sistema, escolheu uma aposta, testou e mediu; as margens são a rotina, a regra, o padrão e o reconhecimento que mantêm o novo jeito.</p>"),

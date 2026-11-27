@@ -49,7 +49,7 @@ SLIDES = {1: ("CM4AI-Online_E1_Slides-da-Turma_v4.pdf", "2026-11-18T22:00:00-03:
           2: ("CM4AI-Online_E2_Slides-da-Turma_v4.pdf", "2026-11-19T22:00:00-03:00"),
           3: ("CM4AI-Online_E3_Slides_v12.pdf", "2026-11-25T22:00:00-03:00"),
           4: ("CM4AI-Online_E4_Slides_v15.pdf", "2026-11-26T22:00:00-03:00"),
-          5: ("CM4AI-Online_E5_Slides_v8.pdf", "2026-11-27T22:00:00-03:00")}
+          5: ("CM4AI-Online_E5_Slides_v9.pdf", "2026-11-27T22:00:00-03:00")}
 
 
 def materiais_html(enc):
@@ -254,6 +254,10 @@ def encontro_html(enc):
         o += (f'<a class="cartao cartao--mentor" href="mentor.html" style="--tom:#2F6B6F"><span class="disco" style="--tom:#1F4E51">{icone("flask-conical")}</span>'
               '<span><span class="cartao__k">NESTE ENCONTRO E DEPOIS DELE</span><b>Mentor de experimentos</b>'
               '<i>Converse sobre a sua aposta e desenhe o experimento a partir do que você registrou no workbook e nos quadros do Miro</i></span></a>')
+    if enc["n"] == 5 and not PROF:
+        o += (f'<a class="cartao cartao--mentor" href="rede.html" style="--tom:#35608F"><span class="disco" style="--tom:#1F3B5C">{icone("network")}</span>'
+              '<span><span class="cartao__k">BLOCO 3 E DEPOIS DELE</span><b>Mentor da rede de campeões</b>'
+              '<i>Desenhe a rede de pessoas da sua adoção, veja quem espalha a prática e escolha os seus campeões</i></span></a>')
     if not PROF:
         o += barra()
     o += "</section>"
