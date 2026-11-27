@@ -3,6 +3,7 @@
 // Painel da rede de campeões: desenha a rede enviada pelo Mentor da rede e calcula grau e intermediação (Wasserman e Faust, cap. 5).
 var painel=document.querySelector("[data-rede-painel]");if(!painel)return;
 var svg=painel.querySelector("[data-rede-svg]"),vazio=painel.querySelector("[data-rede-vazio]"),info=painel.querySelector("[data-rede-info]"),baixar=painel.querySelector("[data-rede-baixar]");
+var dica=painel.querySelector("[data-rede-dica]"),cartao=painel.querySelector("[data-rede-pessoa]"),est=null,hist=[],assin="",rodando=null;
 var COR={"Inovadores":"#7A4E6D","Adotantes iniciais":"#35608F","Maioria inicial":"#2F6B6F","Maioria tardia":"#B5781E","Últimos adotantes":"#8D8377","Agente de mudança":"#E5662C"};
 var W=700,H=540,NS="http://www.w3.org/2000/svg";
 function esc(t){return String(t==null?"":t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
@@ -56,11 +57,11 @@ function desenhar(d){
   var m=medidas(r),p=posicoes(r),maxG=Math.max.apply(null,m.grau.concat([1])),maxB=Math.max.apply(null,m.inter.concat([0]));
   vazio.hidden=true;svg.style.display="block";svg.innerHTML="";svg.setAttribute("viewBox","0 0 "+W+" "+H);
   el("rect",{x:0,y:0,width:W,height:H,fill:"#FFFDF9"},svg);
-  var gl=el("g",{},svg),gn=el("g",{},svg);
+  var gl=el("g",{},svg),gn=el("g",{},svg),gs=[],raios=[];
   r.lacos.forEach(function(l){el("line",{x1:p[l[0]].x,y1:p[l[0]].y,x2:p[l[1]].x,y2:p[l[1]].y,stroke:"#CFC4B6","stroke-width":2.2},gl)});
   var pontes=m.inter.map(function(v,i){return [v,i]}).filter(function(x){return x[0]>0&&r.nos[x[1]].id!=="voce"}).sort(function(a,b){return b[0]-a[0]}).slice(0,2).map(function(x){return x[1]});
   r.nos.forEach(function(no,i){
-    var raio=16+16*(m.grau[i]/maxG),g=el("g",{},gn),cor=COR[no.categoria];
+    var raio=16+16*(m.grau[i]/maxG),g=el("g",{"data-no":i,tabindex:0,role:"button","aria-label":no.rotulo+", "+no.categoria+", "+m.grau[i]+" laços"},gn),cor=COR[no.categoria];gs.push(g);raios.push(raio);
     if(no.campeao)el("circle",{cx:p[i].x,cy:p[i].y,r:raio+8,fill:"none",stroke:"#C9A24D","stroke-width":4},g);
     if(pontes.indexOf(i)>=0)el("circle",{cx:p[i].x,cy:p[i].y,r:raio+(no.campeao?14:6),fill:"none",stroke:"#2A211C","stroke-width":1.6,"stroke-dasharray":"4 3"},g);
     el("circle",{cx:p[i].x,cy:p[i].y,r:raio,fill:cor,stroke:no.postura==="Resiste"?"#B04A1C":"#FFFFFF","stroke-width":no.postura==="Resiste"?3.5:2},g);
@@ -79,6 +80,87 @@ function desenhar(d){
     '<p><b>Na periferia</b> (um laço ou nenhum): '+(peri.length?peri.map(function(i){return esc(r.nos[i].rotulo)}).join(", "):"ninguém")+'</p></div>'+
     (camp.length?'<div class="rede__camp"><h4>Os campeões</h4><ul>'+camp.map(function(c){return '<li><b>★ '+esc(c.rotulo)+'</b> · '+esc(c.campeao)+(c.papel?'<br><span>'+esc(c.papel)+'</span>':'')+'</li>'}).join("")+'</ul></div>':'');
   var bp=painel.querySelector("[data-rede-baixar-p]");if(bp)bp.style.display="";
+  var sel=el("g",{},svg);
+  est={r:r,m:m,p:p,gs:gs,raios:raios,sel:sel};
+  var a2=JSON.stringify([r.nos.map(function(x){return x.id+x.categoria+x.postura}),r.lacos]);if(a2!==assin){assin=a2;hist=[]}
+  if(rodando){clearTimeout(rodando);rodando=null}
+  cartao.hidden=true;cartao.innerHTML="";if(dica)dica.hidden=false;
+  gs.forEach(function(g,i){g.addEventListener("click",function(){abrir(i)});g.addEventListener("keydown",function(ev){if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();abrir(i)}})});
+  curva(r);
+}
+// A curva de Rogers da legenda: quantas pessoas da rede estão em cada categoria.
+function curva(r){
+  var c={};r.nos.forEach(function(x){if(x.categoria!=="Agente de mudança")c[x.categoria]=(c[x.categoria]||0)+1});
+  Array.prototype.forEach.call(painel.querySelectorAll("[data-curva-n]"),function(g){var n=c[g.getAttribute("data-curva-n")]||0;g.style.display=n?"":"none";g.querySelector("text").textContent=n});
+  var t=painel.querySelector("[data-curva-txt]");if(t)t.textContent="Os números sobre a curva mostram quantas pessoas da sua rede estão em cada categoria.";
+}
+function iVoce(r){for(var i=0;i<r.nos.length;i++)if(r.nos[i].id==="voce"||r.nos[i].categoria==="Agente de mudança")return i;return -1}
+function marcar(i){
+  var s=est.sel;s.innerHTML="";if(i==null)return;
+  el("circle",{cx:est.p[i].x,cy:est.p[i].y,r:est.raios[i]+22,fill:"none",stroke:"#E5662C","stroke-width":3,"stroke-dasharray":"6 4"},s);
+}
+function opac(f){est.gs.forEach(function(g,i){g.style.opacity=f?f(i):"";g.style.transition="opacity .35s"})}
+// O cartão da pessoa
+function abrir(i){
+  if(!est)return;if(rodando){clearTimeout(rodando);rodando=null}
+  var r=est.r,m=est.m,no=r.nos[i],eu=iVoce(r);opac(null);marcar(i);
+  var meta=[no.categoria];if(no.postura)meta.push(no.postura);meta.push(m.grau[i]+(m.grau[i]===1?" laço":" laços"));
+  if(no.campeao)meta.push("campeão: "+no.campeao);
+  cartao.style.setProperty("--tom",COR[no.categoria]);
+  var h='<h4>'+esc(no.rotulo)+'</h4><p class="rede__meta">'+esc(meta.join(" · "))+'</p>'+(no.papel?'<p class="rede__meta"><b>Papel:</b> '+esc(no.papel)+'</p>':'');
+  if(i===eu)h+='<p class="rede__meta">Você é o agente de mudança. Clique noutra pessoa para testar quem leva a prática mais longe.</p>';
+  h+='<div class="rede__acoes">'+(i===eu?'':'<button type="button" class="prim" data-acao="sim">E se esta pessoa for a campeã?</button><button type="button" data-acao="exp">Proponha um experimento com esta pessoa</button>')+'<button type="button" class="sec" data-acao="fechar">Fechar</button></div><div class="rede__sim" data-sim></div>';
+  cartao.innerHTML=h;cartao.hidden=false;
+  var bs=cartao.querySelector('[data-acao="sim"]'),be=cartao.querySelector('[data-acao="exp"]');
+  if(bs)bs.addEventListener("click",function(){simular(i)});
+  if(be)be.addEventListener("click",function(){pedir("Proponha um experimento pequeno com “"+no.rotulo+"” entre os campeões, no formato do Encontro 4: a hipótese, a medida e o critério de revisão, ligado ao meu experimento.")});
+  cartao.querySelector('[data-acao="fechar"]').addEventListener("click",function(){if(rodando){clearTimeout(rodando);rodando=null}opac(null);marcar(null);cartao.hidden=true});
+  if(hist.length)mostrarHist();
+}
+// Difusão por limiar: cada pessoa adota quando a parcela dos seus contatos que já adotou alcança o limiar da sua categoria
+// (Granovetter, 1978; Valente, 1996, que relaciona os limiares às categorias de Rogers). Modelo simplificado, apenas ilustrativo.
+var LIM={"Inovadores":0,"Adotantes iniciais":0.25,"Maioria inicial":0.4,"Maioria tardia":0.6,"Últimos adotantes":0.8,"Agente de mudança":0};
+function simular(ini){
+  var r=est.r,m=est.m,n=r.nos.length,eu=iVoce(r),ad=new Array(n).fill(0),rod=[],i;
+  ad[ini]=1;
+  for(var k=1;k<=8;k++){
+    var novos=[];
+    for(i=0;i<n;i++){if(ad[i]||i===eu)continue;var viz=m.adj[i].filter(function(j){return j!==eu}),g=viz.length,lim=Math.min(1,(LIM[r.nos[i].categoria]||0.4)+(r.nos[i].postura==="Resiste"?0.1:0));
+      var f=g?viz.filter(function(j){return ad[j]}).length/g:0;if(lim===0||(g&&f>=lim-1e-9))novos.push(i)}
+    if(!novos.length)break;novos.forEach(function(j){ad[j]=k+1});rod.push(novos);
+  }
+  var tot=r.nos.filter(function(x,j){return j!==eu}).length,adot=ad.filter(function(v,j){return v&&j!==eu}).length;
+  var fora=r.nos.map(function(x,j){return j}).filter(function(j){return !ad[j]&&j!==eu});
+  var box=cartao.querySelector("[data-sim]"),nome=r.nos[ini].rotulo;
+  cartao.querySelectorAll(".rede__acoes button").forEach(function(b){b.disabled=true});
+  opac(function(j){return (j===ini||j===eu)?1:0.18});
+  box.innerHTML='<p><b>Rodada 0:</b> '+esc(nome)+' começa a usar e a mostrar como usa.</p>';
+  var k2=0;
+  function passo(){
+    if(k2<rod.length){var l=rod[k2];k2++;opac(function(j){return j===eu||(ad[j]&&ad[j]<=k2+1)?1:0.18});
+      box.insertAdjacentHTML("beforeend",'<p><b>Rodada '+k2+':</b> '+l.map(function(j){return esc(r.nos[j].rotulo)}).join(", ")+'.</p>');rodando=setTimeout(passo,900);return}
+    rodando=null;
+    hist=hist.filter(function(h){return h.nome!==nome});hist.push({nome:nome,n:adot,t:tot,r:rod.length});
+    box.insertAdjacentHTML("beforeend",'<p><b>Partindo de '+esc(nome)+': '+(rod.length?adot+' de '+tot+' pessoas adotam em '+rod.length+(rod.length===1?' rodada':' rodadas'):'a prática não sai desta pessoa')+'.</b>'+
+      (fora.length?' Ficam de fora: '+fora.map(function(j){return esc(r.nos[j].rotulo)}).join(", ")+'.':' Ninguém fica de fora.')+'</p><div data-hist></div>'+
+      '<p class="rede__nota">Modelo simplificado, apenas ilustrativo: cada pessoa adota quando a parcela dos seus contatos que já adotou alcança o limiar da sua categoria (inovadores, por conta própria; adotantes iniciais, 1 em 4; maioria inicial, 2 em 5; maioria tardia, 3 em 5; últimos adotantes, 4 em 5; quem resiste, um pouco mais). Você, agente de mudança, fica fora da conta, para comparar só os campeões. Base: Granovetter (1978) e Valente (1996). A rede real é uma hipótese a conferir nas semanas do experimento.</p>');
+    mostrarHist();
+    cartao.querySelectorAll(".rede__acoes button").forEach(function(b){b.disabled=false});
+    var bs=cartao.querySelector('[data-acao="sim"]');if(bs)bs.textContent="Ver de novo";
+  }
+  rodando=setTimeout(passo,900);
+}
+function mostrarHist(){
+  var d=cartao.querySelector("[data-hist]");if(!d){var bx=cartao.querySelector("[data-sim]");if(!bx)return;d=document.createElement("div");d.setAttribute("data-hist","");bx.appendChild(d)}
+  if(hist.length<1){d.innerHTML="";return}
+  var o=hist.slice().sort(function(a,b){return b.n-a.n||a.r-b.r});
+  d.innerHTML='<p><b>Comparação</b>'+(hist.length<2?' (clique noutra pessoa para comparar)':'')+':</p><ul class="rede__hist">'+o.map(function(h){return '<li>'+esc(h.nome)+': '+(h.r?h.n+' de '+h.t+' em '+h.r+(h.r===1?' rodada':' rodadas'):'não se espalha')+'</li>'}).join("")+'</ul>';
+}
+// Pedido ao Mentor pela conversa ao lado
+function pedir(t){
+  var raiz=document.querySelector('[data-mentor-tipo="rede"]');if(!raiz)return;var f=raiz.querySelector("[data-mentor-form]"),c=f&&f.querySelector("textarea");if(!c)return;
+  c.value=t;c.dispatchEvent(new Event("input"));if(f.requestSubmit)f.requestSubmit();else f.dispatchEvent(new Event("submit",{cancelable:true}));
+  try{raiz.scrollIntoView({behavior:"smooth",block:"start"})}catch(e){}
 }
 window.addEventListener("cm4ai:rede",function(ev){try{desenhar(ev.detail)}catch(e){}});
 baixar.addEventListener("click",function(){

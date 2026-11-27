@@ -225,6 +225,37 @@ def menu_encontros():
           '<span><b>Mentor da rede de campeões</b><i>Encontro 5</i></span></a>')
     return o + '</div></details>'
 
+
+def curva_rogers():
+    """Legenda do painel da rede: a curva de Rogers com a cor de cada categoria na faixa certa e a contagem da rede da pessoa."""
+    import math
+    X0, X1, Z0, Z1, BASE, ALT = 24, 616, -3.0, 3.0, 128, 104
+    def xz(z): return X0 + (z - Z0) / (Z1 - Z0) * (X1 - X0)
+    def yz(z): return BASE - ALT * math.exp(-z * z / 2)
+    faixas = [("Inovadores", "#7A4E6D", -3.0, -2.0, "2,5%"), ("Adotantes iniciais", "#35608F", -2.0, -1.0, "13,5%"),
+              ("Maioria inicial", "#2F6B6F", -1.0, 0.0, "34%"), ("Maioria tardia", "#B5781E", 0.0, 1.0, "34%"),
+              ("Últimos adotantes", "#8D8377", 1.0, 3.0, "16%")]
+    o = ('<div class="rede__curva"><svg viewBox="0 0 640 232" role="img" aria-label="Legenda: curva de adoção de Rogers com as cinco categorias de adotantes">')
+    for nome, cor, a, b, pct in faixas:
+        pts = [(xz(a + (b - a) * k / 40), yz(a + (b - a) * k / 40)) for k in range(41)]
+        d = f"M{xz(a):.1f},{BASE} " + " ".join(f"L{x:.1f},{y:.1f}" for x, y in pts) + f" L{xz(b):.1f},{BASE} Z"
+        o += f'<path d="{d}" fill="{cor}" stroke="#FFFDF9" stroke-width="2"/>'
+        cx = xz((a + b) / 2 if nome != "Últimos adotantes" else 1.6)
+        palavras = nome.split(" ")
+        linhas = [nome] if len(palavras) == 1 else [palavras[0], " ".join(palavras[1:])]
+        lx, anc = (X0 - 4, "start") if nome == "Inovadores" else (cx, "middle")
+        for k, l in enumerate(linhas):
+            o += f'<text x="{lx:.1f}" y="{BASE + 24 + k * 20}" text-anchor="{anc}" font-size="17.5" font-weight="600" fill="{cor}" font-family="Poppins, sans-serif">{e(l)}</text>'
+        o += f'<text x="{(lx + 38) if nome == "Inovadores" else cx:.1f}" y="{BASE + 24 + len(linhas) * 20 + 2}" text-anchor="middle" font-size="15" fill="#8D8377" font-family="Poppins, sans-serif">{pct}</text>'
+        zc = (a + b) / 2 if nome != "Últimos adotantes" else 1.6
+        cy = min(yz(zc) - 18, BASE - 22)
+        o += (f'<g data-curva-n="{e(nome)}" style="display:none"><circle cx="{cx:.1f}" cy="{cy:.1f}" r="15" fill="#FFFFFF" stroke="{cor}" stroke-width="2.5"/>'
+              f'<text x="{cx:.1f}" y="{cy + 5.5:.1f}" text-anchor="middle" font-size="16" font-weight="700" fill="{cor}" font-family="Poppins, sans-serif"></text></g>')
+    o += f'<line x1="{X0}" y1="{BASE}" x2="{X1}" y2="{BASE}" stroke="#CFC4B6" stroke-width="1.5"/></svg>'
+    o += ('<p class="rede__curva-p"><span><i style="background:#E5662C"></i>Você, agente de mudança</span>'
+          '<span data-curva-txt>Os números sobre a curva mostram quantas pessoas da sua rede estão em cada categoria.</span></p></div>')
+    return o
+
 def pagina(titulo, corpo, pg, fontes_css, extra_js=""):
     nav = "" if PROF else ('<nav class="nav"><a href="index.html">Meu mapa</a>' + menu_encontros() +
                            '<a href="mentoria.html">Mentoria</a></nav><span class="conta" data-conta></span>')
@@ -399,11 +430,11 @@ else:
     open(os.path.join(D, "mentor.html"), "w", encoding="utf-8").write(pagina("CM4AI · Mentor de experimentos", mt, "mentor", F, MJS))
     # Mentor da rede de campeões (Encontro 5): a mesma conversa, com o painel que desenha a rede (Rogers; Wasserman e Faust).
     chips_r = ["Monte a minha rede", "Desenhe a minha rede", "Quem são os meus campeões?", "Teste a minha rede", "Monte a ficha da minha rede de campeões"]
-    passos_r = [("users", "#35608F", "As pessoas da adoção", "O mentor parte do seu mapa de pessoas do Encontro 3, com a curva e a estrela."),
+    passos_r = [("users", "#35608F", "As pessoas da adoção", "O mentor parte do seu mapa de pessoas do Encontro 3 e do seu experimento do Encontro 4. Sem o mapa, ele monta a rede com você."),
                 ("network", "#7A4E6D", "Os laços", "Quem procura quem quando tem dúvida, quem conversa com quem e quem liga grupos."),
                 ("award", "#B5781E", "Os campeões", "O líder de opinião, a ponte e o quase par de quem resiste, cada um com o seu papel."),
                 ("calendar-range", "#5E7D52", "As quatro semanas", "O que cada campeão faz até a data de revisão do seu experimento.")]
-    leg = "".join(f'<span><i style="background:{c}"></i>{e(k)}</span>' for k, c in [("Inovadores", "#7A4E6D"), ("Adotantes iniciais", "#35608F"), ("Maioria inicial", "#2F6B6F"), ("Maioria tardia", "#B5781E"), ("Últimos adotantes", "#8D8377"), ("Você", "#E5662C")])
+    leg = curva_rogers()
     rt = ('<section class="capa" style="--tom:#35608F"><p class="capa__k">ENCONTRO 5 · ÁREA 4 · A REDE DE CAMPEÕES</p><h1>Mentor da <em>rede de campeões</em></h1>'
           '<p class="capa__l">Uma conversa para desenhar a rede de pessoas da sua adoção, ler quem espalha a prática e escolher os seus campeões, com base em Rogers e na análise de redes sociais.</p></section>'
           '<div class="mentorx mentorx--rede"><div class="zap" data-mentor data-mentor-tipo="rede" data-mentor-on="on-line · rede de campeões">'
@@ -418,8 +449,10 @@ else:
           f'<button type="submit" aria-label="Enviar">{icone("send-horizontal", "#FFFFFF", 22)}</button></form></div>'
           '<div class="rede" data-rede-painel><h3>A sua rede</h3><p class="rede__sub">O tamanho e o número mostram quantos laços a pessoa tem; o anel dourado marca os campeões; o anel tracejado, as pontes; a borda terra, quem resiste.</p>'
           '<div class="rede__vazio" data-rede-vazio>A rede aparece aqui assim que o mentor tiver as pessoas e os laços. Comece por <b>Monte a minha rede</b>.</div>'
+          '<p class="rede__dica" data-rede-dica hidden>Clique numa pessoa da rede para ver o cartão dela e testar: <b>e se ela for a campeã?</b></p>'
           '<svg data-rede-svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A rede de campeões" style="display:none"></svg>'
-          f'<div class="rede__leg">{leg}</div><div data-rede-info></div>'
+          '<div class="rede__pessoa" data-rede-pessoa hidden></div>'
+          f'{leg}<div data-rede-info></div>'
           '<p class="rede__baixar" data-rede-baixar-p style="display:none"><button type="button" class="btn" data-rede-baixar>Baixar a imagem da rede</button></p></div></div>'
           '<div class="mentorx" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div class="mentorx__card"><h3>Como o mentor ajuda</h3><ul class="mentorx__passos">'
           + "".join(f'<li><span class="disco" style="--tom:{t}">{icone(ic, "#FFFFFF", 20)}</span><span><b>{e(ti)}</b>{e(tx)}</span></li>' for ic, t, ti, tx in passos_r) +
