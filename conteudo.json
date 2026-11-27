@@ -1963,11 +1963,11 @@
    "data": "27 de novembro de 2026",
    "miro": "https://miro.com/app/board/uXjVEN1S8z0=/",
    "titulo": "Alinhamento <em>e sustentabilidade</em>",
-   "lede": "O experimento completo no quadro do Encontro 4, com o Mentor; o canvas da mudança, em duplas, no sistema Lean Change Canvas; o Grande, o Próximo e o Agora de cada pessoa, com a apresentação final em trios e a certificação.",
+   "lede": "O experimento completo no quadro do Encontro 4, com o Mentor; o canvas da mudança, em três grupos à sua escolha, no sistema Lean Change Canvas; o Grande, o Próximo e o Agora de cada pessoa, com a apresentação final em trios e a certificação.",
    "capaz": [
     "Completar o experimento: a hipótese, a medida com o critério de revisão e o plano em três etapas.",
-    "Construir o canvas da mudança, escolhendo as perguntas que o plano precisa responder.",
-    "Relacionar a visão da adoção, o próximo marco e as três ações desta semana.",
+    "Construir em grupo o canvas da mudança, com as perguntas que um plano de adoção precisa responder.",
+    "Relacionar a visão da adoção, o próximo marco e as três ações desta semana, com o papel do seu campeão.",
     "Apresentar a estratégia a colegas e ajustar as ações com o que ouvir."
    ],
    "blocos": [
@@ -1977,7 +1977,7 @@
      "nome": "Abertura",
      "tom": "#4A3F37",
      "titulo": "Onde paramos <em>e o que fazemos hoje</em>",
-     "constroi": "Os quatro endereços abertos",
+     "constroi": "Os três endereços abertos",
      "itens": [
       {
        "t": "conceito",
@@ -1986,8 +1986,8 @@
       },
       {
        "t": "conceito",
-       "titulo": "Quatro endereços para hoje",
-       "html": "<div class=\"cards3\"><div><b>Quadro do Encontro 4</b><p>Áreas 1 a 3, o experimento, na linha com o seu número; Área 4, o Grande, o Próximo e o Agora.</p></div><div><b>Mentor de experimentos</b><p>Neste workbook. Ele já conhece o que você registrou no quadro e onde parou.</p></div><div><b>Sistema Lean Change Canvas</b><p>Link e código no chat da turma. Use o computador: arrastar as cartas exige mouse.</p></div></div><p>O Encontro 4 terminou na hipótese. Hoje a turma volta ao mesmo quadro, completa o experimento e segue a partir dele.</p>"
+       "titulo": "Três endereços para hoje",
+       "html": "<div class=\"cards3\"><div><b>Quadro do Encontro 4</b><p>Áreas 1 a 3, o experimento, na linha com o seu número; Área 4, o Grande, o Próximo e o Agora.</p></div><div><b>Mentor de experimentos</b><p>Neste workbook. Ele já conhece o que você registrou no quadro e onde parou.</p></div><div><b>Workbook do curso</b><p>Os registros, os materiais e o botão Perguntar ao Gino Terentim.</p></div></div><p><b>Sistema Lean Change Canvas, no Bloco 2:</b> o link e o código do seu grupo chegam no chat às 20h19. Use o computador: arrastar as cartas exige mouse.</p><p>O Encontro 4 terminou na hipótese. Hoje a turma volta ao mesmo quadro, completa o experimento e segue a partir dele.</p>"
       }
      ]
     },
@@ -2008,7 +2008,7 @@
       {
        "t": "conceito",
        "titulo": "Como seguir a conversa com o Mentor",
-       "html": "<p><b>Frases para o Mentor de experimentos</b> (workbook, Mentor de experimentos):</p><ul><li><b>“Continue de onde paramos”</b>: ele diz onde você parou e segue para o próximo campo.</li><li><b>“Ainda não tenho aposta”</b>: ele começa pelas opções do Encontro 3.</li><li><b>“teste o meu critério de revisão”</b> e <b>“teste o risco do meu plano”</b>: ele confere e sugere ajustes.</li><li><b>“Monte a ficha do meu experimento”</b>: ele reúne tudo numa ficha, com “?” no que faltar.</li><li><b>“teste o meu Agora”</b>: no Bloco 3, ele confere se cada ação tem quem faz e quando.</li></ul><p>O Mentor sugere; quem decide e registra no quadro é você.</p>"
+       "html": "<p><b>Frases para o Mentor de experimentos</b> (workbook, Mentor de experimentos):</p><ul><li><b>“Continue de onde paramos”</b>: ele diz onde você parou e segue para o próximo campo.</li><li><b>“Ainda não tenho aposta”</b>: ele começa pelas opções do Encontro 3.</li><li><b>“me ajude a montar o Preparar”</b>: no plano, ele monta cada etapa com você.</li><li><b>“teste o meu critério de revisão”</b> e <b>“teste o risco do meu plano”</b>: ele confere e sugere ajustes.</li><li><b>“Monte a ficha do meu experimento”</b>: ele reúne tudo numa ficha, com “?” no que faltar.</li><li><b>“teste o meu Agora”</b>: no Bloco 3, ele confere se cada ação tem responsável e data e se o seu campeão tem um papel nesta semana.</li></ul><p>O Mentor sugere; quem decide e registra no quadro é você.</p>"
       },
       {
        "t": "conceito",
@@ -2099,7 +2099,7 @@
        "tempo": "15 min",
        "area": "Encontro 4, Área 3",
        "passos": [
-        "Na Área 3, linha com o seu número: <b>1 · Preparar</b>, <b>2 · Introduzir</b> e <b>3 · Revisar</b>, com o que acontece, quem faz e a data. A data de revisão vem da Área 2. <i>7 min</i>",
+        "Na Área 3, na sua linha: <b>1 · Preparar</b>, <b>2 · Introduzir</b> e <b>3 · Revisar</b>, com o que acontece, quem faz e a data. O Mentor monta com você: <b>“me ajude a montar o Preparar”</b>. <i>7 min</i>",
         "Registre <b>Quem Participa</b>, <b>O Risco</b>, <b>A Proteção</b> e <b>Como Desfazer</b>. <i>3 min</i>",
         "Peça ao Mentor <b>“teste o risco do meu plano”</b> e ajuste. <i>3 min</i>",
         "Peça <b>“Monte a ficha do meu experimento”</b> e confira se algum campo ficou com “?”. <i>2 min</i>"
@@ -2157,12 +2157,12 @@
      "nome": "O canvas da mudança",
      "tom": "#7A4E6D",
      "titulo": "O canvas <em>da mudança</em>",
-     "pergunta": "Que perguntas o seu plano precisa responder?",
-     "constroi": "Um canvas de até nove cartas por pessoa, exportado",
+     "pergunta": "Que perguntas um plano de adoção de IA não pode deixar de responder?",
+     "constroi": "Um canvas de até nove cartas por grupo, exportado",
      "capaz": [
       "Distinguir campos técnicos e perguntas poderosas.",
       "Escolher as perguntas que o plano da mudança precisa responder.",
-      "Construir o canvas em dupla, no sistema."
+      "Construir o canvas em grupo, no sistema."
      ],
      "itens": [
       {
@@ -2174,31 +2174,31 @@
       {
        "t": "atividade",
        "id": "e5-a3",
-       "titulo": "O canvas da sua mudança",
+       "titulo": "O canvas da mudança, em grupos",
        "tempo": "20 min",
        "area": null,
        "passos": [
-        "Entrem na mesma sessão com <b>Colaborar</b>, com o token no chat da sala. <i>2 min</i>",
-        "Canvas de quem começa: <b>Nome da Mudança</b>, <b>Template</b> e até <b>nove cartas</b>, azuis e amarelas. A pergunta da dupla: <b>“Que pergunta o seu plano ainda não responde?”</b> <i>7 min</i>",
-        "Toquem em <b>Dica da IA</b> e troquem uma carta, se fizer sentido. <i>2 min</i>",
-        "<b>Exportar</b>, <b>Limpar</b> e o canvas da outra pessoa, nos mesmos passos. <i>9 min</i>"
+        "Entre na sala do seu grupo e na sessão do sistema, com o <b>código do grupo</b>. <i>2 min</i>",
+        "<b>Nome da Mudança</b>, <b>Template</b> e até <b>nove cartas</b>, azuis e amarelas, a partir dos experimentos do grupo. A pergunta: <b>“O que um plano de adoção de IA não pode deixar de responder?”</b> <i>12 min</i>",
+        "Toquem em <b>Dica da IA</b> e troquem uma carta, se fizer sentido. <i>3 min</i>",
+        "<b>Exportar</b> e escolher quem mostra o canvas na volta. <i>3 min</i>"
        ],
        "meta": [
         [
          "Com quem",
-         "Em duplas, em salas."
+         "Três grupos, à sua escolha, em salas."
         ],
         [
          "Material",
-         "Sistema Lean Change Canvas."
+         "Sistema Lean Change Canvas, com o código do grupo."
         ],
         [
          "No celular",
-         "Monte com quem está no computador."
+         "Sugira as cartas a quem está no computador."
         ],
         [
          "Entrega",
-         "Um canvas por pessoa, exportado."
+         "Um canvas por grupo, exportado."
         ],
         [
          "Tempo",
@@ -2209,7 +2209,7 @@
        "campos": [
         {
          "k": "e5.a3.cartas",
-         "rotulo": "As Cartas do Meu Canvas",
+         "rotulo": "As Cartas do Canvas do Meu Grupo",
          "linhas": 4,
          "ph": "Uma carta por linha"
         },
@@ -2223,7 +2223,7 @@
        "pontos": [
         "<b>Azuis e amarelas.</b> O canvas equilibra o que descrever e o que enfrentar.",
         "<b>Até nove cartas.</b> A escolha mostra a prioridade.",
-        "<b>Exportado.</b> Cada pessoa sai com o próprio canvas."
+        "<b>Exportado.</b> Cada grupo exporta o canvas e o mostra em um minuto; cada pessoa sai com o próprio canvas."
        ]
       }
      ]
@@ -2235,18 +2235,18 @@
      "tom": "#5E7D52",
      "titulo": "Grande, Próximo <em>e Agora</em>",
      "pergunta": "O que você faz nesta semana para a visão começar?",
-     "constroi": "O Grande, o Próximo e o Agora, na Área 4 do quadro do Encontro 4",
+     "constroi": "O seu canvas Grande, Próximo e Agora, com o seu campeão, na Área 4 do quadro do Encontro 4",
      "capaz": [
       "Formular a visão da adoção em uma frase.",
       "Relacionar o experimento ao próximo marco.",
-      "Definir três ações para esta semana, com quem faz e quando."
+      "Definir três ações para esta semana, com responsável e data, e o papel do seu campeão."
      ],
      "itens": [
       {
        "t": "conceito",
-       "titulo": "Três horizontes em uma linha",
-       "html": "<div class=\"cards3\"><div><b>O Grande</b><p>A visão, o propósito e a estratégia, sem desvio relevante.</p></div><div><b>O Próximo</b><p>A coisa mais importante a fazer a seguir, no contexto de um marco de curto prazo: o seu experimento até a revisão.</p></div><div><b>O Agora</b><p>As três coisas mais importantes a fazer esta semana, cada uma com quem faz e quando.</p></div></div>",
-       "fonte": "Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow)."
+       "titulo": "Três horizontes num canvas",
+       "html": "<div class=\"cards3\"><div><b>O Grande</b><p>A visão, o propósito e a estratégia, sem desvio relevante.</p></div><div><b>O Próximo</b><p>A coisa mais importante a fazer a seguir, no contexto de um marco de curto prazo: o seu experimento até a revisão.</p></div><div><b>O Agora</b><p>As três coisas mais importantes a fazer esta semana, cada uma com responsável e data.</p></div></div><p><b>Os sinais do marco</b> vêm da Área 2: a meta e o sinal antecipado. <b>O seu campeão</b> é a pessoa da estrela no quadro do Encontro 3, o adotante inicial que a maioria observa: o primeiro nome da rede de campeões, com um papel nesta semana.</p>",
+       "fonte": "Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow); Rogers, E. M. Diffusion of Innovations, 5. ed., 2003."
       },
       {
        "t": "atividade",
@@ -2255,10 +2255,10 @@
        "tempo": "14 min",
        "area": "Encontro 4, Área 4",
        "passos": [
-        "Na Área 4 do quadro do Encontro 4, linha com o seu número: <b>O Grande</b>, a visão da adoção, em uma frase. <i>3 min</i>",
-        "<b>O Próximo</b>: o seu experimento até a data de revisão, como está no portfólio. <i>3 min</i>",
-        "<b>O Sinal do Marco</b>: o número que mostra que o marco foi alcançado. <i>2 min</i>",
-        "<b>O Agora</b>: três ações desta semana, cada uma com quem faz e quando. Peça ao Mentor <b>“teste o meu Agora”</b>. <i>6 min</i>"
+        "Na Área 4 do quadro do Encontro 4, no canvas com o seu nome: <b>O Grande</b>, a visão da adoção, em uma frase. <i>2 min</i>",
+        "<b>O Próximo</b>: o seu experimento até a revisão, como está no portfólio, e os dois <b>sinais</b> do marco. <i>4 min</i>",
+        "<b>O Agora</b>: três ações desta semana, cada uma com responsável e data. Peça ao Mentor <b>“teste o meu Agora”</b>. <i>5 min</i>",
+        "<b>O seu campeão</b>: a pessoa da estrela no quadro do Encontro 3 e o papel dela nesta semana. <i>3 min</i>"
        ],
        "meta": [
         [
@@ -2267,18 +2267,18 @@
         ],
         [
          "Material",
-         "Quadro do Encontro 4, Área 4; o portfólio e o plano, no mesmo quadro."
+         "Quadro do Encontro 4, Área 4; o portfólio, abaixo da Área 3."
         ],
         [
          "Entrega",
-         "A sua linha completa, com três ações para esta semana."
+         "O seu canvas completo, com três ações e o campeão."
         ],
         [
          "Tempo",
          "14 minutos"
         ]
        ],
-       "exemplo": "<p>“Ação 1: a gerente escolhe a primeira cotação com dois seniores, até sexta.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "exemplo": "<p>“Campeão: a compradora que descobriu a cláusula de reajuste mostra ao time, na segunda, como confere a comparação.”</p><p><i>Caso fictício da área de compras.</i></p>",
        "campos": [
         {
          "k": "e5.a4.grande",
@@ -2294,21 +2294,28 @@
         },
         {
          "k": "e5.a4.sinal",
-         "rotulo": "O Sinal do Marco",
+         "rotulo": "Os Sinais do Marco",
          "linhas": 2,
-         "ph": ""
+         "ph": "Sinal 1, a meta; sinal 2, o sinal antecipado"
         },
         {
          "k": "e5.a4.agora",
          "rotulo": "O Agora: Três Ações Desta Semana",
          "linhas": 3,
-         "ph": "Ação, quem faz e quando"
+         "ph": "Ação, responsável e data"
+        },
+        {
+         "k": "e5.a4.campeao",
+         "rotulo": "O Seu Campeão e o Papel Dele Nesta Semana",
+         "linhas": 2,
+         "ph": ""
         }
        ],
        "pontos": [
         "<b>Grande que se vê.</b> Gente fazendo algo diferente.",
         "<b>Próximo com data.</b> O experimento até a revisão.",
-        "<b>Agora do tamanho da semana.</b> Três ações, cada uma com quem faz e quando."
+        "<b>Agora do tamanho da semana.</b> Três ações, cada uma com responsável e data.",
+        "<b>Campeão com papel.</b> O primeiro nome da rede de campeões, com algo a fazer nesta semana."
        ]
       },
       {
@@ -2318,10 +2325,10 @@
        "tempo": "25 min",
        "area": "Encontro 4, Área 4",
        "passos": [
-        "Cada pessoa apresenta em <b>quatro minutos</b>: o Grande, o Próximo, o sinal e as três ações do Agora.",
+        "Cada pessoa apresenta o seu canvas em <b>quatro minutos</b>: o Grande, o Próximo, os sinais, o Agora e o campeão.",
         "Os colegas perguntam por <b>dois minutos</b>: <b>“O que sustenta isso quando ninguém estiver olhando?”</b>",
         "Repitam para cada pessoa do trio. <i>18 min</i>",
-        "Ajustem o Agora com o que ouviram e registrem na Área 4. <i>6 min</i>"
+        "Ajustem o Agora com o que ouviram e registrem no seu canvas. <i>6 min</i>"
        ],
        "meta": [
         [
@@ -2330,7 +2337,7 @@
         ],
         [
          "Material",
-         "Quadro do Encontro 4, Área 4, na tela de quem apresenta."
+         "Quadro do Encontro 4, Área 4: o canvas de quem apresenta."
         ],
         [
          "Entrega",
@@ -2358,7 +2365,7 @@
        ],
        "pontos": [
         "<b>A pergunta da sustentação.</b> Cada pessoa ouve o que mantém o novo jeito.",
-        "<b>O Agora ajustado.</b> As ações registradas na Área 4."
+        "<b>O Agora ajustado.</b> As ações registradas no seu canvas da Área 4."
        ]
       }
      ]

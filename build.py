@@ -49,7 +49,7 @@ SLIDES = {1: ("CM4AI-Online_E1_Slides-da-Turma_v4.pdf", "2026-11-18T22:00:00-03:
           2: ("CM4AI-Online_E2_Slides-da-Turma_v4.pdf", "2026-11-19T22:00:00-03:00"),
           3: ("CM4AI-Online_E3_Slides_v12.pdf", "2026-11-25T22:00:00-03:00"),
           4: ("CM4AI-Online_E4_Slides_v15.pdf", "2026-11-26T22:00:00-03:00"),
-          5: ("CM4AI-Online_E5_Slides_v7.pdf", "2026-11-27T22:00:00-03:00")}
+          5: ("CM4AI-Online_E5_Slides_v8.pdf", "2026-11-27T22:00:00-03:00")}
 
 
 def materiais_html(enc):
