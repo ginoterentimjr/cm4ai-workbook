@@ -391,3 +391,20 @@ a.mat:hover{border-color:var(--lar);box-shadow:0 6px 18px rgba(42,33,28,.10)}
 .rede__camp ul{margin:0;padding-left:0;list-style:none}.rede__camp li{margin:.35em 0;font-size:14.5px}.rede__camp span{color:var(--corpo)}
 .rede__baixar{margin-top:10px}
 @media (max-width:900px){.mentorx--rede{grid-template-columns:1fr}}
+.nav{align-items:center}
+.nav-enc{position:relative}
+.nav-enc>summary{list-style:none;cursor:pointer;color:#FBEEE5;font-size:15px;font-weight:500;padding:8px 12px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;user-select:none}
+.nav-enc>summary::-webkit-details-marker{display:none}
+.nav-enc>summary:after{content:"";width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.nav-enc[open]>summary:after{transform:translateY(1px) rotate(-135deg)}
+.nav-enc>summary:hover,.nav-enc>summary.ativo,.nav-enc[open]>summary{background:var(--lar);color:#fff}
+.nav-enc__lista{position:absolute;right:0;top:calc(100% + 8px);width:320px;max-width:calc(100vw - 32px);background:#fff;border-radius:14px;box-shadow:0 14px 36px rgba(27,21,18,.28);padding:8px;z-index:40;display:grid;gap:2px}
+.nav .nav-enc__lista a{display:flex;gap:12px;align-items:center;color:var(--tinta);padding:8px 10px;border-radius:10px;font-size:14px;line-height:1.3}
+.nav .nav-enc__lista a:hover{background:var(--claro);color:var(--tinta)}
+.nav .nav-enc__lista a.ativo{background:#FBEEE5;color:var(--tinta)}
+.nav-enc__n{width:32px;height:32px;flex:none;border-radius:50%;background:var(--tom);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.nav-enc__n svg{display:block}
+.nav-enc__lista b{display:block;font-weight:600;color:var(--tinta)}
+.nav-enc__lista i{display:block;font-style:normal;font-size:12.5px;color:var(--fraco)}
+.nav-enc__sep{font-size:11px;letter-spacing:.14em;font-weight:600;color:var(--fraco);padding:10px 10px 2px;border-top:1px solid var(--linha);margin-top:4px}
+@media (max-width:700px){.nav-enc__lista{position:fixed;left:16px;right:16px;top:auto;width:auto}}

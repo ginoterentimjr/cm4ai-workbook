@@ -70,5 +70,9 @@ $("[data-exportar]").forEach(function(b){b.addEventListener("click",function(){
   a.href=URL.createObjectURL(blob);a.download="cm4ai-"+(document.body.getAttribute("data-pg")||"workbook")+"-respostas.txt";document.body.appendChild(a);a.click();a.remove();
 })});
 $("[data-imprimir]").forEach(function(b){b.addEventListener("click",function(){$("details").forEach(function(d){d.open=true});window.print()})});
-var pg=document.body.getAttribute("data-pg");$(".nav a").forEach(function(a){if(a.getAttribute("href")===pg+".html")a.classList.add("ativo")});
+var pg=document.body.getAttribute("data-pg");$(".nav>a").forEach(function(a){if(a.getAttribute("href")===pg+".html")a.classList.add("ativo")});
 })();
+(function(){var m=document.querySelector("[data-nav-enc]");if(!m)return;var f=(location.pathname.split("/").pop()||"index.html");
+m.querySelectorAll("a").forEach(function(a){if(a.getAttribute("href")===f){a.classList.add("ativo");m.querySelector("summary").classList.add("ativo")}});
+document.addEventListener("click",function(ev){if(m.open&&!m.contains(ev.target))m.open=false});
+document.addEventListener("keydown",function(ev){if(ev.key==="Escape"&&m.open){m.open=false;m.querySelector("summary").focus()}})})();

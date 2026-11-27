@@ -211,9 +211,23 @@ def caminho_html(atual, grande=False):
     return o + "</div>"
 
 
+
+def menu_encontros():
+    """Menu suspenso do topo: os cinco encontros e os dois mentores."""
+    o = '<details class="nav-enc" data-nav-enc><summary>Encontros</summary><div class="nav-enc__lista">'
+    for n, nome, data, tom, prod, grupo in CAMINHO:
+        o += (f'<a href="e{n}.html"><span class="nav-enc__n" style="--tom:{tom}">{n}</span>'
+              f'<span><b>Encontro {n}</b><i>{e(nome)}</i></span></a>')
+    o += '<span class="nav-enc__sep">MENTORES</span>'
+    o += (f'<a href="mentor.html"><span class="nav-enc__n" style="--tom:#B04A1C">{icone("flask-conical", tam=16, sw=2)}</span>'
+          '<span><b>Mentor de experimentos</b><i>Encontros 4 e 5</i></span></a>')
+    o += (f'<a href="rede.html"><span class="nav-enc__n" style="--tom:#1F3B5C">{icone("network", tam=16, sw=2)}</span>'
+          '<span><b>Mentor da rede de campeões</b><i>Encontro 5</i></span></a>')
+    return o + '</div></details>'
+
 def pagina(titulo, corpo, pg, fontes_css, extra_js=""):
-    nav = "" if PROF else ('<nav class="nav"><a href="index.html">Meu mapa</a><a href="e1.html">Encontro 1</a>'
-                           '<a href="e2.html">Encontro 2</a><a href="mentoria.html">Mentoria</a></nav><span class="conta" data-conta></span>')
+    nav = "" if PROF else ('<nav class="nav"><a href="index.html">Meu mapa</a>' + menu_encontros() +
+                           '<a href="mentoria.html">Mentoria</a></nav><span class="conta" data-conta></span>')
     n_enc = int(pg[1:]) if pg.startswith("e") and pg[1:].isdigit() else 0
     cfg = "" if PROF else f'<script>window.CM4AI={{api:{json.dumps(API)},encontro:{n_enc}}};</script>'
     selo = '<span class="selo-prof">VERSÃO DO PROFESSOR</span>' if PROF else ""
