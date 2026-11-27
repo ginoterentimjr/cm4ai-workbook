@@ -364,7 +364,7 @@ else:
     mt = ('<section class="capa" style="--tom:#B04A1C"><p class="capa__k">ENCONTRO 4 · EXPERIMENTOS DE MUDANÇA</p><h1>Mentor de <em>experimentos</em></h1>'
           '<p class="capa__l">Uma conversa para pensar o experimento da sua adoção, com perguntas que partem do que você já registrou no curso.</p></section>'
           '<div class="mentorx"><div class="zap" data-mentor>'
-          f'<header class="zap__topo"><span class="zap__av">{icone("flask-conical", "#FFFFFF", 24)}</span><div><b>Mentor de experimentos</b><i data-mentor-status>on-line · CM4AI</i></div></header>'
+          f'<header class="zap__topo"><span class="zap__av">{icone("flask-conical", "#FFFFFF", 24)}</span><div><b>Mentor de experimentos</b><i data-mentor-status>on-line · CM4AI</i></div><button type="button" class="zap__limpar" data-mentor-limpar>Limpar conversa</button></header>'
           '<div class="zap__fundo" data-mentor-lista aria-live="polite"></div>'
           '<div class="zap__chips" data-mentor-chips>' + "".join(f'<button type="button" data-chip="{e(c)}">{e(c)}</button>' for c in chips) + '</div>'
           f'<form class="zap__barra" data-mentor-form><div class="zap__grava" data-mentor-grava hidden><button type="button" class="zap__grava-x" data-grava-cancelar aria-label="Cancelar o áudio">{icone("trash-2", "#6E6259", 22)}</button>'

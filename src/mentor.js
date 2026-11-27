@@ -24,6 +24,9 @@ function formatar(t){
 var lista=raiz.querySelector("[data-mentor-lista]"),form=raiz.querySelector("[data-mentor-form]"),campo=form.querySelector("textarea"),
     botao=form.querySelector("button[type=submit]"),chips=raiz.querySelector("[data-mentor-chips]"),status=raiz.querySelector("[data-mentor-status]");
 var s=sessao(),hist=[],ocupado=false;
+var CHAVE_LIMPO="cm4ai:mentor_limpo:"+((s&&s.email)||""),limpar=raiz.querySelector("[data-mentor-limpar]");
+var AVISO_LIMPO="A tela foi limpa. O mentor continua lembrando da conversa.";
+function marca(m){return (m.papel||"")+"|"+String(m.texto||"").slice(0,120)}
 var ERRO={mentor_config:"O mentor ainda está sendo configurado. Tente de novo em alguns minutos.",
   mentor_limite:"Você chegou ao limite de mensagens de hoje. A conversa continua amanhã, e as dúvidas sobre o método podem ir para a Mentoria.",
   mentor_api:"O mentor não respondeu agora. Tente de novo em alguns segundos.",sessao:"A sua sessão terminou. Entre de novo no Meu mapa para continuar.",
@@ -146,10 +149,20 @@ chamar({acao:"mentor_historico",email:s.email,token:s.token}).then(function(r){
   lista.innerHTML="";
   if(r&&r.ok&&r.voz){vozAtiva=true;if(mic)alternar()}
   if(r&&r.ok&&r.mensagens&&r.mensagens.length){
-    r.mensagens.forEach(function(m){hist.push({papel:m.papel,texto:m.texto});balao(m.papel,m.texto,hhmm(m.hora))});
+    // Limpar conversa: some só da tela; o mentor continua recebendo o histórico como contexto.
+    var mk=null,desde=-1;try{mk=localStorage.getItem(CHAVE_LIMPO)}catch(e){}
+    if(mk){for(var i=r.mensagens.length-1;i>=0;i--){if(marca(r.mensagens[i])===mk){desde=i;break}}}
+    if(desde>=0)aviso(AVISO_LIMPO);
+    r.mensagens.forEach(function(m,i){hist.push({papel:m.papel,texto:m.texto});if(i>desde)balao(m.papel,m.texto,hhmm(m.hora))});
   }else if(r&&r.erro==="sessao"){aviso(ERRO.sessao);form.hidden=true;chips.hidden=true}
   else falar("",true);
 }).catch(function(){lista.innerHTML="";aviso(ERRO.rede)});
+if(limpar)limpar.addEventListener("click",function(){
+  if(!hist.length||ocupado)return;
+  if(!window.confirm("Limpar a conversa da tela? O mentor continua lembrando do que vocês conversaram."))return;
+  try{localStorage.setItem(CHAVE_LIMPO,marca(hist[hist.length-1]))}catch(e){}
+  lista.innerHTML="";aviso(AVISO_LIMPO);
+});
 form.addEventListener("submit",function(ev){ev.preventDefault();var t=campo.value.trim();if(!t||ocupado)return;campo.value="";ajustar();falar(t)});
 campo.addEventListener("keydown",function(ev){if(ev.key==="Enter"&&!ev.shiftKey){ev.preventDefault();form.requestSubmit?form.requestSubmit():form.dispatchEvent(new Event("submit"))}});
 function ajustar(){campo.style.height="auto";campo.style.height=Math.min(campo.scrollHeight,140)+"px";if(mic)alternar()}
