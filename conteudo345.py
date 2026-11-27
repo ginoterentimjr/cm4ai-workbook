@@ -201,7 +201,7 @@ E4 = dict(n=4, tom="#B5781E", data="26 de novembro de 2026", miro="https://miro.
     ])
 
 # ============================== ENCONTRO 5 ==============================
-A5 = atividades(["e5v9_a.py", "e5v9_b.py"])
+A5 = atividades(["e5v10_a.py", "e5v10_b.py"])
 FRASES = ("<p><b>Frases para o Mentor de experimentos</b> (workbook, Mentor de experimentos):</p><ul>"
           "<li><b>“Continue de onde paramos”</b>: ele diz onde você parou e segue para o próximo campo.</li>"
           "<li><b>“Ainda não tenho aposta”</b>: ele começa pelas opções do Encontro 3.</li>"
@@ -223,7 +223,7 @@ E5 = dict(n=5, tom="#5E7D52", data="27 de novembro de 2026", miro="https://miro.
                          html=cards([("Quadro do Encontro 4", "Áreas 1 a 3, o experimento, na linha com o seu número. Depois da aula, a Área 5, opcional."),
                                      ("Mentor de experimentos", "Neste workbook. Ele já conhece o que você registrou no quadro e onde parou."),
                                      ("Workbook do curso", "Os registros, os materiais e o botão Perguntar ao Gino Terentim.")])
-                              + "<p><b>Sistema Lean Change Canvas, no Bloco 2:</b> o link do seu grupo chega no chat às 20h19. Use o computador: arrastar as cartas exige mouse. <b>Mentor da rede de campeões, no Bloco 3:</b> <a href=\"rede.html\">rede.html</a>, com o mesmo e-mail e código.</p>"
+                              + "<p><b>Sistema Lean Change Canvas, no Bloco 2:</b> o link do seu grupo chega no chat às 20h19: abra-o ainda na sala principal, antes de ir para a sala do grupo. Use o computador: arrastar as cartas exige mouse. <b>Mentor da rede de campeões, no Bloco 3:</b> <a href=\"rede.html\">rede.html</a>, com o mesmo e-mail e código.</p>"
                               + "<p>O Encontro 4 terminou na hipótese. Hoje a turma volta ao mesmo quadro, completa o experimento e segue a partir dele.</p>")]),
         dict(id="e5-b1", num="01", nome="O experimento completo", tom="#35608F", titulo="O experimento <em>completo</em>",
              pergunta="O que falta para o seu experimento começar na segunda-feira?", constroi="A hipótese completa, a ficha da medida e o plano, no quadro do Encontro 4",

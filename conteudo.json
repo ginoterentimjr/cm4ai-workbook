@@ -1987,7 +1987,7 @@
       {
        "t": "conceito",
        "titulo": "Três endereços para hoje",
-       "html": "<div class=\"cards3\"><div><b>Quadro do Encontro 4</b><p>Áreas 1 a 3, o experimento, na linha com o seu número. Depois da aula, a Área 5, opcional.</p></div><div><b>Mentor de experimentos</b><p>Neste workbook. Ele já conhece o que você registrou no quadro e onde parou.</p></div><div><b>Workbook do curso</b><p>Os registros, os materiais e o botão Perguntar ao Gino Terentim.</p></div></div><p><b>Sistema Lean Change Canvas, no Bloco 2:</b> o link do seu grupo chega no chat às 20h19. Use o computador: arrastar as cartas exige mouse. <b>Mentor da rede de campeões, no Bloco 3:</b> <a href=\"rede.html\">rede.html</a>, com o mesmo e-mail e código.</p><p>O Encontro 4 terminou na hipótese. Hoje a turma volta ao mesmo quadro, completa o experimento e segue a partir dele.</p>"
+       "html": "<div class=\"cards3\"><div><b>Quadro do Encontro 4</b><p>Áreas 1 a 3, o experimento, na linha com o seu número. Depois da aula, a Área 5, opcional.</p></div><div><b>Mentor de experimentos</b><p>Neste workbook. Ele já conhece o que você registrou no quadro e onde parou.</p></div><div><b>Workbook do curso</b><p>Os registros, os materiais e o botão Perguntar ao Gino Terentim.</p></div></div><p><b>Sistema Lean Change Canvas, no Bloco 2:</b> o link do seu grupo chega no chat às 20h19: abra-o ainda na sala principal, antes de ir para a sala do grupo. Use o computador: arrastar as cartas exige mouse. <b>Mentor da rede de campeões, no Bloco 3:</b> <a href=\"rede.html\">rede.html</a>, com o mesmo e-mail e código.</p><p>O Encontro 4 terminou na hipótese. Hoje a turma volta ao mesmo quadro, completa o experimento e segue a partir dele.</p>"
       }
      ]
     },
@@ -2039,7 +2039,7 @@
         ],
         [
          "Dado reservado",
-         "Use proporções."
+         "Use proporções. Sem o dado, uma estimativa com “?”."
         ],
         [
          "Entrega",
@@ -2178,8 +2178,8 @@
        "tempo": "20 min",
        "area": null,
        "passos": [
-        "Entre na sala do seu grupo e abra o <b>link do grupo</b>, no chat. <i>2 min</i>",
-        "<b>Nome da Mudança</b>, <b>Template</b> e até <b>nove cartas</b>, azuis e amarelas, a partir dos experimentos do grupo. A pergunta: <b>“O que um plano de adoção de IA não pode deixar de responder?”</b> <i>12 min</i>",
+        "Com o canvas do grupo aberto, entre na sala do Zoom de <b>mesmo número</b>. <i>2 min</i>",
+        "<b>Nome da Mudança</b> (o experimento que mais pessoas do grupo reconhecem), <b>Template</b> e até <b>nove cartas</b>. A pergunta: <b>“O que um plano de adoção de IA não pode deixar de responder?”</b> <i>12 min</i>",
         "Toquem em <b>Dica da IA</b> e troquem uma carta, se fizer sentido. <i>3 min</i>",
         "<b>Exportar</b> e escolher quem mostra o canvas na volta. <i>3 min</i>"
        ],
@@ -2255,7 +2255,7 @@
        "tempo": "18 min",
        "area": null,
        "passos": [
-        "No Mentor da rede, peça <b>“Monte a minha rede”</b> e confira as pessoas do seu mapa do Encontro 3. <i>4 min</i>",
+        "Peça <b>“Monte a minha rede”</b> e confira as pessoas do seu mapa (sem o mapa, ele monta com você). <i>4 min</i>",
         "Responda sobre os <b>laços</b>: a quem a equipe recorre quando tem dúvida, quem conversa com quem, quem liga grupos. <i>5 min</i>",
         "Peça <b>“Quem são os meus campeões?”</b>: escolha de dois a três, cada um com o <b>papel</b> até a revisão. <i>6 min</i>",
         "Peça <b>“Monte a ficha da minha rede de campeões”</b> e baixe a imagem da rede. <i>3 min</i>"
@@ -2320,11 +2320,11 @@
        "meta": [
         [
          "Com quem",
-         "Trios, em salas simultâneas."
+         "Trios (ou um quarteto), em salas simultâneas."
         ],
         [
          "Material",
-         "A imagem da rede, na tela de quem apresenta."
+         "A rede na tela de quem apresenta: a imagem ou a página do Mentor."
         ],
         [
          "Entrega",
