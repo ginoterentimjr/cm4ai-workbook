@@ -54,7 +54,7 @@ var atual=null;
 function desenhar(d){
   var r=limpa(d);if(r.nos.length<2)return;atual=r;
   var m=medidas(r),p=posicoes(r),maxG=Math.max.apply(null,m.grau.concat([1])),maxB=Math.max.apply(null,m.inter.concat([0]));
-  vazio.hidden=true;svg.innerHTML="";svg.setAttribute("viewBox","0 0 "+W+" "+H);
+  vazio.hidden=true;svg.style.display="block";svg.innerHTML="";svg.setAttribute("viewBox","0 0 "+W+" "+H);
   el("rect",{x:0,y:0,width:W,height:H,fill:"#FFFDF9"},svg);
   var gl=el("g",{},svg),gn=el("g",{},svg);
   r.lacos.forEach(function(l){el("line",{x1:p[l[0]].x,y1:p[l[0]].y,x2:p[l[1]].x,y2:p[l[1]].y,stroke:"#CFC4B6","stroke-width":2.2},gl)});
@@ -78,7 +78,7 @@ function desenhar(d){
     '<p><b>Pontes</b> (ligam pessoas que, sem elas, não se alcançam): '+(pontes.length?pontes.map(function(i){return esc(r.nos[i].rotulo)}).join(", "):"nenhuma ainda")+'</p>'+
     '<p><b>Na periferia</b> (um laço ou nenhum): '+(peri.length?peri.map(function(i){return esc(r.nos[i].rotulo)}).join(", "):"ninguém")+'</p></div>'+
     (camp.length?'<div class="rede__camp"><h4>Os campeões</h4><ul>'+camp.map(function(c){return '<li><b>★ '+esc(c.rotulo)+'</b> · '+esc(c.campeao)+(c.papel?'<br><span>'+esc(c.papel)+'</span>':'')+'</li>'}).join("")+'</ul></div>':'');
-  baixar.hidden=false;
+  var bp=painel.querySelector("[data-rede-baixar-p]");if(bp)bp.style.display="";
 }
 window.addEventListener("cm4ai:rede",function(ev){try{desenhar(ev.detail)}catch(e){}});
 baixar.addEventListener("click",function(){

@@ -404,9 +404,9 @@ else:
           f'<button type="submit" aria-label="Enviar">{icone("send-horizontal", "#FFFFFF", 22)}</button></form></div>'
           '<div class="rede" data-rede-painel><h3>A sua rede</h3><p class="rede__sub">O tamanho e o número mostram quantos laços a pessoa tem; o anel dourado marca os campeões; o anel tracejado, as pontes; a borda terra, quem resiste.</p>'
           '<div class="rede__vazio" data-rede-vazio>A rede aparece aqui assim que o mentor tiver as pessoas e os laços. Comece por <b>Monte a minha rede</b>.</div>'
-          '<svg data-rede-svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A rede de campeões"></svg>'
+          '<svg data-rede-svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A rede de campeões" style="display:none"></svg>'
           f'<div class="rede__leg">{leg}</div><div data-rede-info></div>'
-          '<p class="rede__baixar"><button type="button" class="btn" data-rede-baixar hidden>Baixar a imagem da rede</button></p></div></div>'
+          '<p class="rede__baixar" data-rede-baixar-p style="display:none"><button type="button" class="btn" data-rede-baixar>Baixar a imagem da rede</button></p></div></div>'
           '<div class="mentorx" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div class="mentorx__card"><h3>Como o mentor ajuda</h3><ul class="mentorx__passos">'
           + "".join(f'<li><span class="disco" style="--tom:{t}">{icone(ic, "#FFFFFF", 20)}</span><span><b>{e(ti)}</b>{e(tx)}</span></li>' for ic, t, ti, tx in passos_r) +
           '</ul></div><div class="mentorx__card"><h3>Reserva</h3><p>As mensagens são processadas pela API da Anthropic e ficam registradas na planilha privada da turma, aberta apenas ao Gino Terentim. Use o papel das pessoas, e não o nome: a rede mostra papéis e grupos. Mantenha fora da conversa os dados reservados da sua organização.</p></div>'
