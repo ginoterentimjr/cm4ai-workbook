@@ -32,7 +32,7 @@ def atividades(arquivos):
         corpo = ast.parse(open(os.path.join(DECK, f), encoding="utf-8").read()).body
         for i, st in enumerate(corpo):
             v = getattr(st, "value", None)
-            if isinstance(v, ast.Call) and getattr(v.func, "id", "") == "atividade":
+            if isinstance(v, ast.Call) and getattr(v.func, "id", "") in ("atividade", "atividade_m"):
                 a = [_val(x) for x in v.args]
                 notas = {}
                 if i + 1 < len(corpo) and isinstance(corpo[i + 1], ast.Expr):
@@ -201,79 +201,82 @@ E4 = dict(n=4, tom="#B5781E", data="26 de novembro de 2026", miro="https://miro.
     ])
 
 # ============================== ENCONTRO 5 ==============================
-A5 = atividades(["e5_a.py", "e5_b.py"])
-E5 = dict(n=5, tom="#5E7D52", data="27 de novembro de 2026", miro="https://miro.com/app/board/uXjVEMMXhv4=/",
+A5 = atividades(["e5v7_a.py", "e5v7_b.py"])
+FRASES = ("<p><b>Frases para o Mentor de experimentos</b> (workbook, Mentor de experimentos):</p><ul>"
+          "<li><b>“Continue de onde paramos”</b>: ele diz onde você parou e segue para o próximo campo.</li>"
+          "<li><b>“Ainda não tenho aposta”</b>: ele começa pelas opções do Encontro 3.</li>"
+          "<li><b>“teste o meu critério de revisão”</b> e <b>“teste o risco do meu plano”</b>: ele confere e sugere ajustes.</li>"
+          "<li><b>“Monte a ficha do meu experimento”</b>: ele reúne tudo numa ficha, com “?” no que faltar.</li>"
+          "<li><b>“teste o meu Agora”</b>: no Bloco 3, ele confere se cada ação tem quem faz e quando.</li></ul>"
+          "<p>O Mentor sugere; quem decide e registra no quadro é você.</p>")
+E5 = dict(n=5, tom="#5E7D52", data="27 de novembro de 2026", miro="https://miro.com/app/board/uXjVEN1S8z0=/",
     titulo="Alinhamento <em>e sustentabilidade</em>",
-    lede="O canvas estratégico da mudança, a rede de campeões, o painel de adoção e o roteiro de sustentabilidade em 90 dias, com a apresentação final e a certificação.",
-    capaz=["Relacionar os produtos dos quatro encontros no canvas estratégico da mudança.", "Desenhar a rede de campeões da sua adoção, a partir da curva de Rogers.",
-           "Montar o painel de adoção, com medidas por degrau e o sinal de regressão.", "Planejar a sustentabilidade em 90 dias e apresentar a estratégia completa a colegas."],
+    lede="O experimento completo no quadro do Encontro 4, com o Mentor; o canvas da mudança, em duplas, no sistema Lean Change Canvas; o Grande, o Próximo e o Agora de cada pessoa, com a apresentação final em trios e a certificação.",
+    capaz=["Completar o experimento: a hipótese, a medida com o critério de revisão e o plano em três etapas.", "Construir o canvas da mudança, escolhendo as perguntas que o plano precisa responder.",
+           "Relacionar a visão da adoção, o próximo marco e as três ações desta semana.", "Apresentar a estratégia a colegas e ajustar as ações com o que ouvir."],
     blocos=[
-        dict(id="e5-ab", num="00", nome="Abertura", tom="#4A3F37", titulo="A retomada, <em>em grupos</em>", constroi="Quem sustenta cada experimento",
+        dict(id="e5-ab", num="00", nome="Abertura", tom="#4A3F37", titulo="Onde paramos <em>e o que fazemos hoje</em>", constroi="Os quatro endereços abertos",
              itens=[dict(t="conceito", titulo="A mudança se sustenta quando passa a ser o jeito como fazemos as coisas aqui.",
-                         html="<p>A frase de John Kotter (Harvard Business Review, 1995) abre o último encontro. No chat: algo que hoje é o jeito de trabalhar e que já foi novidade.</p>"),
-                    ativ("e5-a0", A5[0], None, [F("e5.a0.resp", "A Minha Resposta"), dict(k="e5.a0.quem", rotulo="Quem Sustenta o Meu Experimento Hoje", tipo="escolha", opcoes=["A liderança", "Colegas da equipe", "Ninguém ainda"])])]),
-        dict(id="e5-b1", num="01", nome="O canvas estratégico da mudança", tom="#35608F", titulo="O canvas estratégico <em>da mudança</em>",
-             pergunta="Como contar a mudança inteira em uma página?", constroi="As duas primeiras faixas do canvas da sua adoção",
-             capaz=["Relacionar os produtos dos quatro encontros num só instrumento.", "Formular a visão da adoção como comportamento, em 90 dias.", "Testar o canvas com a pergunta de quem decide."],
-             itens=[dict(t="conceito", titulo="O canvas estratégico, em nove campos",
-                         html=tb([["<b>Por que e para onde</b>", "A Urgência (Encontro 1) · A Visão (Bloco 1) · O Que Termina (Encontro 1)"], ["<b>O que a turma já construiu</b>", "As Pessoas (Encontro 2) · As Forças (Encontro 3) · O Experimento (Encontro 4)"],
-                                  ["<b>O que sustenta</b>", "A Rede (Bloco 2) · O Painel (Bloco 3) · As Margens (Bloco 4)"]], ["Faixa", "Campos"])
-                              + "<p><b>O teste da visão:</b> “O que veríamos as pessoas fazendo, em 90 dias?” Exemplo: em 90 dias, os compradores apresentam a cotação pela comparação do assistente, e a planilha refeita passa a ser exceção.</p>",
-                         fonte="Instrumento do curso, inspirado no canvas de mudança do Lean Change Management (Little, 2014)."),
-                    ativ("e5-a1", A5[1], "Área 1", [ESP("e5.a1.v1", "O Que Termina, no Encontro 1", "e1.a2.termina", 1), ESP("e5.a1.v3", "A Força Com Estrela, no Encontro 3", "e3.a2.estrela", 3), ESP("e5.a1.v4", "O Experimento, no Encontro 4", "e4.a4.frase", 4),
-                                                   F("e5.a1.urg", "A Urgência", 2, "Um fato da rotina da área"), F("e5.a1.visao", "A Visão", 2, "Em 90 dias, as pessoas…"), F("e5.a1.termina", "O Que Termina", 2),
-                                                   F("e5.a1.pessoas", "As Pessoas", 2), F("e5.a1.forcas", "As Forças", 2), F("e5.a1.exp", "O Experimento", 2)],
-                         pontos=["<b>Urgência que se sente.</b> Um fato da rotina da área, e não uma tendência do mercado.", "<b>Visão que se vê.</b> Gente fazendo algo diferente, em 90 dias, com um número.", "<b>Fios entre os campos.</b> O experimento responde a uma força; a visão descreve o fim do que termina."])]),
-        dict(id="e5-b2", num="02", nome="A rede de campeões", tom="#7A4E6D", titulo="A rede <em>de campeões</em>",
-             pergunta="Quem sustenta a adoção quando a novidade passa?", constroi="O mapa da rede, com o ritual e o primeiro pedido",
-             capaz=["Identificar os campeões entre os adotantes iniciais.", "Distinguir os papéis do patrocinador e dos campeões.", "Desenhar a rede de campeões da sua adoção."],
-             itens=[dict(t="conceito", titulo="O campeão é quem a maioria observa",
-                         html="<p><b>Mito ou fato?</b> “O campeão ideal é a pessoa que mais entende de IA na equipe.” Mito. Os inovadores dominam a ferramenta e costumam ser vistos como diferentes do grupo; a maioria observa os adotantes iniciais: colegas respeitados, parecidos com ela, que adotam com critério.</p>"
-                              + cards([("O Patrocinador", "Tem alçada, dá o exemplo em público e remove obstáculos."), ("Os Campeões", "Adotantes iniciais, um por equipe, com tempo reservado: mostram, escutam e devolvem."), ("A Maioria", "Adota ao ver o colega parecido usar com resultado.")])
-                              + "<p><b>O ritual da rede:</b> quinze minutos por semana, com o patrocinador. O que vimos, o que impediu e o que apresentamos à diretoria.</p>",
-                         fonte="Rogers, E. Diffusion of Innovations, 5ª ed., 2003. Papéis da rede: instrumento do curso."),
-                    ativ("e5-a2", A5[2], "Área 2", [F("e5.a2.patro", "O Patrocinador", 2, "Por papel, sem nome"), F("e5.a2.camp", "Os Campeões", 2), F("e5.a2.maioria", "A Maioria Que Cada Um Alcança", 2),
-                                                   F("e5.a2.recebe", "O Que Cada Campeão Recebe", 2), F("e5.a2.ritual", "O Ritual da Rede", 2), F("e5.a2.pedido", "O Primeiro Pedido", 2, "O que você pede, e até quando"),
-                                                   F("e5.a2.canvas", "A Rede, em Uma Frase, para o Canvas", 2)],
-                         pontos=["<b>Campeões entre os pares.</b> Adotantes iniciais da própria equipe, e não a liderança nem o especialista.", "<b>Patrocinador presente.</b> Aparece em público, com frequência, e remove o obstáculo.", "<b>Ritual e pedido com data.</b> Quinze minutos por semana e um primeiro pedido pequeno, datado."])]),
-        dict(id="e5-b3", num="03", nome="O painel de adoção", tom="#2F6B6F", titulo="O painel <em>de adoção</em>",
-             pergunta="Como a área saberá, em 90 dias, que a adoção se sustenta?", constroi="O painel com quatro degraus e o sinal de regressão",
-             capaz=["Escolher uma medida para cada degrau da adoção.", "Definir o valor de hoje e a meta em 90 dias.", "Identificar o sinal de regressão e quem lê o painel."],
-             itens=[dict(t="conceito", titulo="O painel de adoção, em quatro degraus",
-                         html=tb([["Acesso", "Licenças ativas no time de compras.", "12 de 12", "12 de 12"], ["Uso", "Compradores que abrem o assistente na semana.", "7 de 12", "11 de 12"],
-                                  ["Comportamento", "Cotações da semana sem a planilha refeita.", "2 de 12", "8 de 12"], ["Resultado", "Prazo médio da cotação.", "5 dias", "3 dias"]], ["Degrau", "A medida (exemplo)", "Hoje", "Em 90 dias"])
-                              + "<p><b>O sinal de regressão</b> é o jeito antigo voltando, definido antes: duas reuniões seguidas com mais de metade das cotações na planilha. <b>A leitura:</b> cada número tem quem o lê e uma data. Kotter (1995) aponta a declaração de vitória precoce entre os erros que mais comprometem uma transformação.</p>",
-                         fonte="Escada de medidas do Encontro 4, com base em Hubbard, D., 2007. Kotter, J. HBR, 1995. Caso fictício da área de compras."),
-                    ativ("e5-a3", A5[3], "Área 3", [ESP("e5.a3.v4", "A Medida de Comportamento, no Encontro 4", "e4.a1.medida", 4),
-                                                   dict(k="e5.a3.painel", rotulo="O Meu Painel de Adoção", tipo="tabela", n=4,
-                                                        colunas=[dict(t="Degrau", opcoes=["Acesso", "Uso", "Comportamento", "Resultado"]), dict(t="A Medida"), dict(t="Hoje", ph="Sem o dado: “?”"), dict(t="Em 90 Dias")]),
-                                                   F("e5.a3.regr", "O Sinal de Regressão", 2), F("e5.a3.leitura", "Quem Lê e Quando", 2), F("e5.a3.canvas", "O Painel, em Uma Frase, para o Canvas", 2)],
-                         pontos=["<b>Comportamento no centro.</b> O degrau da adoção é a medida do experimento, com meta em 90 dias.", "<b>Regressão nomeada.</b> O sinal do jeito antigo voltando, escrito antes de aparecer.", "<b>Leitura com data.</b> Quem lê cada número, quando, e o que pode decidir."])]),
-        dict(id="e5-b4", num="04", nome="O roteiro de sustentabilidade", tom="#5E7D52", titulo="O roteiro <em>de sustentabilidade</em>",
-             pergunta="O que mantém o novo jeito quando ninguém estiver olhando?", constroi="O roteiro de 90 dias, a margem a mudar e a apresentação final",
-             capaz=["Planejar a sustentação da adoção em 30, 60 e 90 dias.", "Identificar a margem a mudar: a rotina, a regra, o padrão ou o reconhecimento.", "Apresentar a estratégia da mudança a colegas e incorporar a devolutiva."],
-             itens=[dict(t="conceito", titulo="O roteiro em 30, 60 e 90 dias, até as margens",
-                         html=cards([("30 dias · revisar e decidir", "A revisão do experimento, com o critério escrito antes. A rede se reúne toda semana."), ("60 dias · ampliar com a rede", "O que funcionou chega a outras equipes, pelos campeões, com o painel lido."),
-                                     ("90 dias · mudar as margens", "A rotina, a regra ou o padrão mudam para o novo jeito ser o caminho natural.")])
-                              + "<p><b>As margens que sustentam o novo jeito:</b> a rotina (a reunião abre pela tela), a regra (o que pode ir ao assistente), o padrão (o modelo oficial de cotação) e o reconhecimento (o que a avaliação valoriza).</p>",
-                         fonte="Roteiro de sustentabilidade: instrumento do curso. Kotter, J. HBR, 1995. Snowden, D.; Rancati, A. Cynefin Field Guide, 2021."),
-                    ativ("e5-a4", A5[4], "Área 4", [F("e5.a4.d30", "30 Dias", 2, "O que acontece e quem faz"), F("e5.a4.d60", "60 Dias", 2), F("e5.a4.d90", "90 Dias", 2),
-                                                   F("e5.a4.margem", "A Margem a Mudar", 2, "A rotina, a regra, o padrão ou o reconhecimento"), dict(k="e5.a4.decide", rotulo="Quem Decide", tipo="texto"),
-                                                   F("e5.a4.devol", "O Que Ouvi na Apresentação Final", 3, "A resposta dos colegas: o que sustenta isso quando ninguém estiver olhando?"),
-                                                   F("e5.a4.canvas", "As Margens, em Uma Frase, para o Canvas", 2)],
-                         pontos=["<b>Margem com responsável.</b> A rotina, a regra, o padrão ou o reconhecimento, com quem decide.", "<b>Roteiro que passa pela rede.</b> Os 60 dias ampliam pelos campeões, e não por comunicado.", "<b>Painel na agenda.</b> A leitura de cada número já tem data e pessoa."])]),
-        dict(id="e5-fe", num="05", nome="Fechamento e certificação", tom="#B04A1C", titulo="As margens <em>e a certificação</em>", constroi="A margem que você muda primeiro",
+                         html="<p>A frase de John Kotter (Harvard Business Review, 1995) abre o último encontro. No chat: algo que hoje é o jeito de trabalhar e que um dia já foi novidade.</p>"),
+                    dict(t="conceito", titulo="Quatro endereços para hoje",
+                         html=cards([("Quadro do Encontro 4", "Áreas 1 a 3, o experimento, na linha com o seu número; Área 4, o Grande, o Próximo e o Agora."),
+                                     ("Mentor de experimentos", "Neste workbook. Ele já conhece o que você registrou no quadro e onde parou."),
+                                     ("Sistema Lean Change Canvas", "Link e código no chat da turma. Use o computador: arrastar as cartas exige mouse.")])
+                              + "<p>O Encontro 4 terminou na hipótese. Hoje a turma volta ao mesmo quadro, completa o experimento e segue a partir dele.</p>")]),
+        dict(id="e5-b1", num="01", nome="O experimento completo", tom="#35608F", titulo="O experimento <em>completo</em>",
+             pergunta="O que falta para o seu experimento começar na segunda-feira?", constroi="A hipótese completa, a ficha da medida e o plano, no quadro do Encontro 4",
+             capaz=["Completar a hipótese em três partes.", "Definir a linha de base, a meta, o sinal antecipado e o critério de revisão.", "Planejar o experimento em três etapas datadas, com o risco e a forma de desfazê-lo."],
+             itens=[dict(t="conceito", titulo="Como seguir a conversa com o Mentor", html=FRASES),
+                    dict(t="conceito", titulo="A medida e o critério de revisão",
+                         html=cards([("A Linha de Base", "Quanto a medida marca hoje. Exemplo: 2 de 12 cotações sem a planilha refeita."), ("A Meta e A Data de Revisão", "O valor que confirma a hipótese. Exemplo: 6 de 12, em quatro semanas."),
+                                     ("O Sinal Antecipado", "O que se observa já na primeira semana.")])
+                              + "<p><b>O critério, definido antes dos dados:</b> ampliar se…, ajustar se…, parar se…. E <b>a confiança antes</b>, de 0 a 100%.</p>",
+                         fonte="Instrumento do curso, com base em Hubbard, D. How to Measure Anything, 2007."),
+                    ativ("e5-a1", A5[0], "Encontro 4, Áreas 1 e 2", [ESP("e5.a1.acao", "A Ação (Encontro 4)", "e4.a1.acao", 4), ESP("e5.a1.comp", "O Comportamento Esperado (Encontro 4)", "e4.a1.comp", 4),
+                                                   ESP("e5.a1.medida", "A Medida (Encontro 4)", "e4.a1.medida", 4),
+                                                   F("e5.a1.ficha", "A Ficha da Medida, Como Ficou no Quadro", 4, "Linha de base… Meta e data… Confiança… Sinal antecipado… Ampliar se… Ajustar se… Parar se…")],
+                         pontos=["<b>Hipótese com as três partes.</b> A ação, o comportamento e a medida, na linha de cada pessoa.", "<b>Linha de base com origem.</b> Sem o dado, uma estimativa marcada com “?”.", "<b>Critério escrito antes.</b> As três faixas, com números."]),
+                    dict(t="conceito", titulo="Três etapas: preparar, introduzir e revisar",
+                         html=cards([("1 · Preparar", "Combinar com quem participa, avisar quem é afetado e registrar a linha de base."), ("2 · Introduzir", "Executar a ação, pequena, acompanhar o sinal antecipado e anotar o que surpreende."),
+                                     ("3 · Revisar", "Ler a medida com o time e decidir entre ampliar, ajustar ou parar.")]),
+                         fonte="Little, J. Lean Change Management, 2014."),
+                    ativ("e5-a2", A5[1], "Encontro 4, Área 3", [F("e5.a2.plano", "O Plano: Preparar, Introduzir e Revisar", 3, "O que acontece, quem faz e em que data"),
+                                                   F("e5.a2.risco", "O Risco, a Proteção e Como Desfazer", 2), F("e5.a2.ficha", "A Ficha do Mentor", 4, "Cole aqui a ficha que o Mentor montou")],
+                         pontos=["<b>Três etapas com data.</b> A revisão na data da Área 2.", "<b>Risco com saída.</b> A proteção e a forma de desfazer.", "<b>Nenhum “?” sem resposta prevista.</b> Cada lacuna da ficha tem quem a responda."])]),
+        dict(id="e5-b2", num="02", nome="O canvas da mudança", tom="#7A4E6D", titulo="O canvas <em>da mudança</em>",
+             pergunta="Que perguntas o seu plano precisa responder?", constroi="Um canvas de até nove cartas por pessoa, exportado",
+             capaz=["Distinguir campos técnicos e perguntas poderosas.", "Escolher as perguntas que o plano da mudança precisa responder.", "Construir o canvas em dupla, no sistema."],
+             itens=[dict(t="conceito", titulo="Construir o instrumento, antes de preenchê-lo",
+                         html=cards([("Cartas azuis", "Campos técnicos: o que o plano precisa descrever."), ("Cartas amarelas", "Perguntas poderosas: o que o plano precisa enfrentar."),
+                                     ("Até nove cartas", "A escolha é o exercício: o canvas mostra as perguntas que o seu plano ainda não responde.")])
+                              + "<p>O canvas de hoje é o instrumento que orienta o plano da mudança. Ele não é preenchido em aula.</p>",
+                         fonte="Lean Change Canvas, sistema de Gino Terentim, com base em Little, J. Lean Change Management, 2014."),
+                    ativ("e5-a3", A5[2], None, [F("e5.a3.cartas", "As Cartas do Meu Canvas", 4, "Uma carta por linha"), F("e5.a3.pergunta", "A Pergunta Que o Meu Plano Ainda Não Responde", 2)],
+                         pontos=["<b>Azuis e amarelas.</b> O canvas equilibra o que descrever e o que enfrentar.", "<b>Até nove cartas.</b> A escolha mostra a prioridade.", "<b>Exportado.</b> Cada pessoa sai com o próprio canvas."])]),
+        dict(id="e5-b3", num="03", nome="Grande, Próximo e Agora", tom="#5E7D52", titulo="Grande, Próximo <em>e Agora</em>",
+             pergunta="O que você faz nesta semana para a visão começar?", constroi="O Grande, o Próximo e o Agora, na Área 4 do quadro do Encontro 4",
+             capaz=["Formular a visão da adoção em uma frase.", "Relacionar o experimento ao próximo marco.", "Definir três ações para esta semana, com quem faz e quando."],
+             itens=[dict(t="conceito", titulo="Três horizontes em uma linha",
+                         html=cards([("O Grande", "A visão, o propósito e a estratégia, sem desvio relevante."), ("O Próximo", "A coisa mais importante a fazer a seguir, no contexto de um marco de curto prazo: o seu experimento até a revisão."),
+                                     ("O Agora", "As três coisas mais importantes a fazer esta semana, cada uma com quem faz e quando.")]),
+                         fonte="Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow)."),
+                    ativ("e5-a4", A5[3], "Encontro 4, Área 4", [F("e5.a4.grande", "O Grande", 2, "A visão da adoção, em uma frase"), F("e5.a4.proximo", "O Próximo", 2),
+                                                   F("e5.a4.sinal", "O Sinal do Marco", 2), F("e5.a4.agora", "O Agora: Três Ações Desta Semana", 3, "Ação, quem faz e quando")],
+                         pontos=["<b>Grande que se vê.</b> Gente fazendo algo diferente.", "<b>Próximo com data.</b> O experimento até a revisão.", "<b>Agora do tamanho da semana.</b> Três ações, cada uma com quem faz e quando."]),
+                    ativ("e5-a5", A5[4], "Encontro 4, Área 4", [F("e5.a5.ouvi", "O Que Ouvi na Apresentação Final", 3, "O que sustenta isso quando ninguém estiver olhando?"), F("e5.a5.agora", "O Agora Ajustado", 3)],
+                         pontos=["<b>A pergunta da sustentação.</b> Cada pessoa ouve o que mantém o novo jeito.", "<b>O Agora ajustado.</b> As ações registradas na Área 4."])]),
+        dict(id="e5-fe", num="04", nome="Fechamento e certificação", tom="#B04A1C", titulo="As margens <em>e a certificação</em>", constroi="A margem que você muda primeiro",
              itens=[dict(t="conceito", titulo="Você não diz à água para onde ir. Você muda as margens.",
-                         html="<p>A frase de Dave Snowden, que abriu o curso no Encontro 1, fecha o último encontro. Em cinco encontros, a turma escutou o sistema, escolheu uma aposta, testou, mediu e desenhou as margens.</p>"),
+                         html="<p>A frase de Dave Snowden, que abriu o curso no Encontro 1, fecha o último encontro. Em cinco encontros, a turma escutou o sistema, escolheu uma aposta, testou e mediu; as margens são a rotina, a regra, o padrão e o reconhecimento que mantêm o novo jeito.</p>"),
                     dict(t="conceito", titulo="A certificação: presença e participação",
-                         html=cards([("Presença", "Em pelo menos quatro dos cinco encontros: 80% das 15 horas."), ("Participação", "Os registros das atividades no Miro e neste workbook, com a apresentação final entre pares."),
+                         html=cards([("Presença", "Em pelo menos quatro dos cinco encontros: 80% das 15 horas."), ("Participação", "Os registros das atividades no Miro e neste workbook, com a apresentação final."),
                                      ("Certificado", "Enviado por e-mail ao término da turma, depois da conferência dos dois critérios.")])),
-                    dict(t="atividade", id="e5-a5", titulo="A margem que você muda primeiro", tempo="2 min", area=None,
+                    dict(t="atividade", id="e5-a6", titulo="A margem que você muda primeiro", tempo="2 min", area=None,
                          perg="“Qual é a margem que você vai mudar primeiro?”",
                          passos=["No chat, escreva <b>a margem que você vai mudar primeiro</b>, em até dez palavras.", "Registre aqui a mesma frase, com a data em que pretende mudá-la."],
-                         meta=[("Com quem", "Individual, no chat da turma."), ("Entrega", "A margem e a data."), ("Depois do curso", "Dúvidas pelo botão Perguntar ao Gino Terentim, com a resposta na sua página e no seu e-mail.")],
-                         campos=[F("e5.a5.margem", "A Margem Que Mudo Primeiro, e Quando", 2), F("e5.a5.curso", "O Que Muda no Meu Trabalho Depois Destes Cinco Encontros", 3)],
-                         conducao=["Discussão do encontro e do curso, 20 minutos (21h40 a 22h00): que margem da sua organização mais protege o jeito antigo? Quem seria o primeiro campeão da sua área, e o que essa pessoa precisaria receber? O que você faz na segunda-feira, com a estratégia que construiu?"])]),
+                         meta=[("Com quem", "Individual, no chat da turma."), ("Entrega", "A margem e a data."), ("Depois do curso", "Dúvidas pelo botão Perguntar ao Gino Terentim, com a resposta neste workbook.")],
+                         campos=[F("e5.a6.margem", "A Margem Que Mudo Primeiro, e Quando", 2), F("e5.a6.curso", "O Que Muda no Meu Trabalho Depois Destes Cinco Encontros", 3)],
+                         conducao=["Discussão do encontro e do curso, 20 minutos (21h40 a 22h00)."])]),
     ])
 
 if __name__ == "__main__":

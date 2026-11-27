@@ -356,7 +356,7 @@ else:
     open(os.path.join(D, "painel.html"), "w", encoding="utf-8").write(pagina("Painel de dúvidas · CM4AI", pn, "painel", F, PAINEL_JS))
     open(os.path.join(D, "mentoria.html"), "w", encoding="utf-8").write(pagina("CM4AI · Mentoria", m, "mentoria", F))
     # Mentor de experimentos: conversa com a IA, a partir do que a pessoa registrou no curso.
-    chips = ["Quero formular a minha hipótese", "Me ajude a definir a medida", "Vamos planejar o experimento", "Monte a ficha do meu experimento"]
+    chips = ["Continue de onde paramos", "Quero formular a minha hipótese", "Me ajude a definir a medida", "Vamos planejar o experimento", "Monte a ficha do meu experimento"]
     passos_m = [("lightbulb", "#2F6B6F", "O que você já registrou", "O mentor lê o seu workbook e as suas áreas nos quadros do Miro."),
                 ("flask-conical", "#7A4E6D", "A hipótese", "Ação, comportamento esperado e medida, em três partes."),
                 ("gauge", "#2F6B6F", "A medida", "Linha de base, meta, data de revisão e critério com três faixas."),
