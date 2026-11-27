@@ -379,4 +379,34 @@ else:
           '<div class="mentorx__card"><h3>Dúvidas sobre o método</h3><p>O mentor conversa sobre o seu experimento. Para uma dúvida que precisa da resposta do Gino Terentim, use a <a href="mentoria.html">Mentoria</a>.</p></div></aside></div>')
     MJS = open(os.path.join(RAIZ, "src", "mentor.js"), encoding="utf-8").read()
     open(os.path.join(D, "mentor.html"), "w", encoding="utf-8").write(pagina("CM4AI · Mentor de experimentos", mt, "mentor", F, MJS))
+    # Mentor da rede de campeões (Encontro 5): a mesma conversa, com o painel que desenha a rede (Rogers; Wasserman e Faust).
+    chips_r = ["Monte a minha rede", "Desenhe a minha rede", "Quem são os meus campeões?", "Teste a minha rede", "Monte a ficha da minha rede de campeões"]
+    passos_r = [("users", "#35608F", "As pessoas da adoção", "O mentor parte do seu mapa de pessoas do Encontro 3, com a curva e a estrela."),
+                ("network", "#7A4E6D", "Os laços", "Quem procura quem quando tem dúvida, quem conversa com quem e quem liga grupos."),
+                ("award", "#B5781E", "Os campeões", "O líder de opinião, a ponte e o quase par de quem resiste, cada um com o seu papel."),
+                ("calendar-range", "#5E7D52", "As quatro semanas", "O que cada campeão faz até a data de revisão do seu experimento.")]
+    leg = "".join(f'<span><i style="background:{c}"></i>{e(k)}</span>' for k, c in [("Inovadores", "#7A4E6D"), ("Adotantes iniciais", "#35608F"), ("Maioria inicial", "#2F6B6F"), ("Maioria tardia", "#B5781E"), ("Últimos adotantes", "#8D8377"), ("Você", "#E5662C")])
+    rt = ('<section class="capa" style="--tom:#35608F"><p class="capa__k">ENCONTRO 5 · ÁREA 4 · A REDE DE CAMPEÕES</p><h1>Mentor da <em>rede de campeões</em></h1>'
+          '<p class="capa__l">Uma conversa para desenhar a rede de pessoas da sua adoção, ler quem espalha a prática e escolher os seus campeões, com base em Rogers e na análise de redes sociais.</p></section>'
+          '<div class="mentorx mentorx--rede"><div class="zap" data-mentor data-mentor-tipo="rede" data-mentor-on="on-line · rede de campeões">'
+          f'<header class="zap__topo"><span class="zap__av">{icone("network", "#FFFFFF", 24)}</span><div><b>Mentor da rede de campeões</b><i data-mentor-status>on-line · rede de campeões</i></div><button type="button" class="zap__limpar" data-mentor-limpar>Limpar conversa</button></header>'
+          '<div class="zap__fundo" data-mentor-lista aria-live="polite"></div>'
+          '<div class="zap__chips" data-mentor-chips>' + "".join(f'<button type="button" data-chip="{e(c)}">{e(c)}</button>' for c in chips_r) + '</div>'
+          f'<form class="zap__barra" data-mentor-form><div class="zap__grava" data-mentor-grava hidden><button type="button" class="zap__grava-x" data-grava-cancelar aria-label="Cancelar o áudio">{icone("trash-2", "#6E6259", 22)}</button>'
+          '<span class="zap__ponto" aria-hidden="true"></span><span class="zap__grava-t" data-grava-tempo>0:00</span><span class="zap__grava-dica" data-grava-dica>Solte para enviar</span>'
+          f'<button type="button" class="zap__grava-ok" data-grava-enviar aria-label="Enviar o áudio" hidden>{icone("send-horizontal", "#FFFFFF", 20)}</button></div>'
+          '<textarea rows="1" placeholder="Escreva uma mensagem" aria-label="A sua mensagem"></textarea>'
+          f'<button type="button" class="zap__mic" data-mentor-mic aria-label="Segure para gravar uma mensagem de voz" hidden>{icone("mic", "#FFFFFF", 22)}</button>'
+          f'<button type="submit" aria-label="Enviar">{icone("send-horizontal", "#FFFFFF", 22)}</button></form></div>'
+          '<div class="rede" data-rede-painel><h3>A sua rede</h3><p class="rede__sub">O tamanho e o número mostram quantos laços a pessoa tem; o anel dourado marca os campeões; o anel tracejado, as pontes; a borda terra, quem resiste.</p>'
+          '<div class="rede__vazio" data-rede-vazio>A rede aparece aqui assim que o mentor tiver as pessoas e os laços. Comece por <b>Monte a minha rede</b>.</div>'
+          '<svg data-rede-svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A rede de campeões"></svg>'
+          f'<div class="rede__leg">{leg}</div><div data-rede-info></div>'
+          '<p class="rede__baixar"><button type="button" class="btn" data-rede-baixar hidden>Baixar a imagem da rede</button></p></div></div>'
+          '<div class="mentorx" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div class="mentorx__card"><h3>Como o mentor ajuda</h3><ul class="mentorx__passos">'
+          + "".join(f'<li><span class="disco" style="--tom:{t}">{icone(ic, "#FFFFFF", 20)}</span><span><b>{e(ti)}</b>{e(tx)}</span></li>' for ic, t, ti, tx in passos_r) +
+          '</ul></div><div class="mentorx__card"><h3>Reserva</h3><p>As mensagens são processadas pela API da Anthropic e ficam registradas na planilha privada da turma, aberta apenas ao Gino Terentim. Use o papel das pessoas, e não o nome: a rede mostra papéis e grupos. Mantenha fora da conversa os dados reservados da sua organização.</p></div>'
+          '<div class="mentorx__card"><h3>A base</h3><p>Rogers, E. M. <i>Diffusion of Innovations</i>, 5. ed., 2003 (categorias de adotantes, líderes de opinião, homofilia). Wasserman, S.; Faust, K. <i>Social Network Analysis</i>, 1994 (centralidade de grau e de intermediação). A rede é a rede percebida por você: uma hipótese a conferir nas próximas semanas.</p></div></div>')
+    RJS = open(os.path.join(RAIZ, "src", "rede.js"), encoding="utf-8").read()
+    open(os.path.join(D, "rede.html"), "w", encoding="utf-8").write(pagina("CM4AI · Mentor da rede de campeões", rt, "mentor", F, MJS + "\n" + RJS))
     print("site ok")

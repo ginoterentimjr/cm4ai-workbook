@@ -3,6 +3,11 @@
 var C=window.CM4AI||{},API=C.api;
 function $(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
 var raiz=document.querySelector("[data-mentor]");if(!raiz)return;
+var TIPO=raiz.getAttribute("data-mentor-tipo")||"",STATUS=raiz.getAttribute("data-mentor-on")||"on-line · CM4AI";
+// Mentor da rede: o bloco ```rede {...}``` sai do balão e vai para o painel da rede.
+var BLOCO=/```rede\s*([\s\S]*?)```/;
+function separar(t){var m=BLOCO.exec(t||"");if(!m)return {texto:t,rede:null};var r=null;try{r=JSON.parse(m[1])}catch(e){}return {texto:String(t).replace(BLOCO,"").trim(),rede:r}}
+function avisarRede(r){if(r)try{window.dispatchEvent(new CustomEvent("cm4ai:rede",{detail:r}))}catch(e){}}
 function sessao(){try{return JSON.parse(localStorage.getItem("cm4ai:sessao")||"null")}catch(e){return null}}
 function chamar(d){return fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d),redirect:"follow"}).then(function(r){return r.json()})}
 function esc(t){return String(t==null?"":t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
@@ -24,7 +29,7 @@ function formatar(t){
 var lista=raiz.querySelector("[data-mentor-lista]"),form=raiz.querySelector("[data-mentor-form]"),campo=form.querySelector("textarea"),
     botao=form.querySelector("button[type=submit]"),chips=raiz.querySelector("[data-mentor-chips]"),status=raiz.querySelector("[data-mentor-status]");
 var s=sessao(),hist=[],ocupado=false;
-var CHAVE_LIMPO="cm4ai:mentor_limpo:"+((s&&s.email)||""),limpar=raiz.querySelector("[data-mentor-limpar]");
+var CHAVE_LIMPO="cm4ai:mentor_limpo:"+(TIPO?TIPO+":":"")+((s&&s.email)||""),limpar=raiz.querySelector("[data-mentor-limpar]");
 var AVISO_LIMPO="A tela foi limpa. O mentor continua lembrando da conversa.";
 function marca(m){return (m.papel||"")+"|"+String(m.texto||"").slice(0,120)}
 var ERRO={mentor_config:"O mentor ainda está sendo configurado. Tente de novo em alguns minutos.",
@@ -44,6 +49,7 @@ function corpoAudio(dur,transc){
     '<p class="zap__transc">'+(transc?esc(transc).replace(/\n/g,"<br>"):'<em>Transcrevendo…</em>')+'</p>';
 }
 function balao(papel,texto,hora,extra){
+  if(papel==="mentor"){var sp=separar(texto);if(sp.rede){avisarRede(sp.rede);texto=sp.texto+(sp.texto.indexOf("painel")>=0?"":"\n\n**A rede está desenhada no painel.**")}}
   var d=document.createElement("div"),au=papel!=="mentor"&&AUD.exec(texto||"");d.className="zap__msg zap__msg--"+(papel==="mentor"?"mentor":"pessoa")+(au?" zap__msg--audio":"")+(extra?" "+extra:"");
   d.innerHTML='<div class="zap__txt">'+(papel==="mentor"?formatar(texto):(au?corpoAudio(au[1],au[2]):"<p>"+esc(texto).replace(/\n/g,"<br>")+"</p>"))+'</div>'+
     '<div class="zap__meta">'+(papel==="mentor"?'<button type="button" class="zap__copiar" data-copiar>Copiar</button>':'')+'<span>'+esc(hora||horaAgora())+'</span>'+
@@ -57,14 +63,14 @@ function digitando(on){
   var el=lista.querySelector(".zap__digitando");
   if(on&&!el){el=document.createElement("div");el.className="zap__msg zap__msg--mentor zap__digitando";el.innerHTML='<span></span><span></span><span></span>';lista.appendChild(el);rolar()}
   if(!on&&el)el.remove();
-  status.textContent=on?"digitando…":"on-line · CM4AI";
+  status.textContent=on?"digitando…":STATUS;
 }
 function travar(on){ocupado=on;botao.disabled=on;if(mic)mic.disabled=on;$("button",chips).forEach(function(b){b.disabled=on})}
 function falar(texto,abrindo){
   if(ocupado)return;
   if(!abrindo){hist.push({papel:"pessoa",texto:texto});balao("pessoa",texto)}
   travar(true);digitando(true);
-  chamar({acao:"mentor",email:s.email,token:s.token,mensagens:hist.slice(-30)})
+  chamar({acao:"mentor",tipo:TIPO||undefined,email:s.email,token:s.token,mensagens:hist.slice(-30)})
     .then(function(r){
       digitando(false);travar(false);
       if(!r||!r.ok){aviso(ERRO[(r&&r.erro)||"servico"]||ERRO.servico);if(!abrindo)hist.pop();return}
@@ -111,7 +117,7 @@ function falarAudio(b64,mt,dur){
   if(ocupado)return;
   var rot="🎤 Áudio · "+mmss(dur),bal=balao("pessoa",rot+"\n");
   travar(true);digitando(true);status.textContent="ouvindo o áudio…";
-  chamar({acao:"mentor",email:s.email,token:s.token,mensagens:hist.slice(-30),audio:{b64:b64,mime:mt,dur:Math.round(dur)}})
+  chamar({acao:"mentor",tipo:TIPO||undefined,email:s.email,token:s.token,mensagens:hist.slice(-30),audio:{b64:b64,mime:mt,dur:Math.round(dur)}})
     .then(function(r){
       digitando(false);travar(false);
       if(!r||!r.ok){bal.remove();aviso(ERRO[(r&&r.erro)||"servico"]||ERRO.servico);return}
@@ -145,7 +151,7 @@ if(!s){
 }
 // Histórico: a conversa continua de onde parou, em qualquer dispositivo.
 aviso("Carregando a conversa…");
-chamar({acao:"mentor_historico",email:s.email,token:s.token}).then(function(r){
+chamar({acao:"mentor_historico",tipo:TIPO||undefined,email:s.email,token:s.token}).then(function(r){
   lista.innerHTML="";
   if(r&&r.ok&&r.voz){vozAtiva=true;if(mic)alternar()}
   if(r&&r.ok&&r.mensagens&&r.mensagens.length){
@@ -153,7 +159,7 @@ chamar({acao:"mentor_historico",email:s.email,token:s.token}).then(function(r){
     var mk=null,desde=-1;try{mk=localStorage.getItem(CHAVE_LIMPO)}catch(e){}
     if(mk){for(var i=r.mensagens.length-1;i>=0;i--){if(marca(r.mensagens[i])===mk){desde=i;break}}}
     if(desde>=0)aviso(AVISO_LIMPO);
-    r.mensagens.forEach(function(m,i){hist.push({papel:m.papel,texto:m.texto});if(i>desde)balao(m.papel,m.texto,hhmm(m.hora))});
+    r.mensagens.forEach(function(m,i){hist.push({papel:m.papel,texto:m.texto});if(i>desde)balao(m.papel,m.texto,hhmm(m.hora));else if(m.papel==="mentor")avisarRede(separar(m.texto).rede)});
   }else if(r&&r.erro==="sessao"){aviso(ERRO.sessao);form.hidden=true;chips.hidden=true}
   else falar("",true);
 }).catch(function(){lista.innerHTML="";aviso(ERRO.rede)});

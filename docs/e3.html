@@ -382,6 +382,18 @@ a.mat:hover{border-color:var(--lar);box-shadow:0 6px 18px rgba(42,33,28,.10)}
 .mat--espera b{color:#6D625B}
 
 .zap__limpar{margin-left:auto;flex:none;background:transparent;border:1px solid rgba(251,238,229,.45);color:#FBEEE5;border-radius:999px;padding:6px 12px;font:inherit;font-size:12.5px;line-height:1.2;cursor:pointer}.zap__limpar:hover{background:rgba(251,238,229,.12)}
+/* Mentor da rede de campeões: conversa e painel da rede lado a lado */
+.mentorx--rede{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+.rede{background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:18px 20px}
+.rede h3{font-size:18px;margin:0 0 .3em}.rede__sub{margin:0 0 10px;font-size:14px;color:var(--fraco)}
+.rede svg{width:100%;height:auto;border:1px solid var(--linha);border-radius:12px;background:#FFFDF9;display:block}
+.rede__vazio{border:1.5px dashed var(--linha);border-radius:12px;padding:40px 20px;text-align:center;color:var(--fraco);font-size:15px}
+.rede__leg{display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 0 4px;font-size:13px}
+.rede__leg span{display:inline-flex;align-items:center;gap:6px}.rede__leg i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.rede__ler p{margin:.35em 0;font-size:14.5px}.rede__camp h4{margin:.8em 0 .3em;font-size:15px;color:var(--tinta)}
+.rede__camp ul{margin:0;padding-left:0;list-style:none}.rede__camp li{margin:.35em 0;font-size:14.5px}.rede__camp span{color:var(--corpo)}
+.rede__baixar{margin-top:10px}
+@media (max-width:900px){.mentorx--rede{grid-template-columns:1fr}}
 </style></head>
 <body data-pg="e3">
 <header class="topo"><a class="marca" href="index.html"><img src="logo-gt-mark.png" alt=""><span><b>GINO TERENTIM</b><i>RETHINKING LEARNING</i></span></a><nav class="nav"><a href="index.html">Meu mapa</a><a href="e1.html">Encontro 1</a><a href="e2.html">Encontro 2</a><a href="mentoria.html">Mentoria</a></nav><span class="conta" data-conta></span></header>
