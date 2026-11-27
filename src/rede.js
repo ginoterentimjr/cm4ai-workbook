@@ -108,7 +108,7 @@ function abrir(i){
   if(no.campeao)meta.push("campeão: "+no.campeao);
   cartao.style.setProperty("--tom",COR[no.categoria]);
   var h='<h4>'+esc(no.rotulo)+'</h4><p class="rede__meta">'+esc(meta.join(" · "))+'</p>'+(no.papel?'<p class="rede__meta"><b>Papel:</b> '+esc(no.papel)+'</p>':'');
-  if(i===eu)h+='<p class="rede__meta">Você é o agente de mudança. Clique noutra pessoa para testar quem leva a prática mais longe.</p>';
+  if(i===eu)h+='<p class="rede__meta">Você é o agente de mudança. Clique noutra pessoa para testar quem espalha a prática mais longe.</p>';
   h+='<div class="rede__acoes">'+(i===eu?'':'<button type="button" class="prim" data-acao="sim">E se esta pessoa for a campeã?</button><button type="button" data-acao="exp">Proponha um experimento com esta pessoa</button>')+'<button type="button" class="sec" data-acao="fechar">Fechar</button></div><div class="rede__sim" data-sim></div>';
   cartao.innerHTML=h;cartao.hidden=false;
   var bs=cartao.querySelector('[data-acao="sim"]'),be=cartao.querySelector('[data-acao="exp"]');
