@@ -214,7 +214,7 @@ LINKS = cards([("Quadros do Miro", " · ".join([_a("https://miro.com/app/board/u
                                                               _a(B4 + "?moveToWidget=3458764691736968059", "Área 5")])),
                ("Lean Change Canvas", "O canvas do seu grupo, no computador: " + " · ".join([_a(LCC + "e51781e85c3e", "Grupo 1"), _a(LCC + "c0db4ed9e561", "Grupo 2"), _a(LCC + "582cec32c845", "Grupo 3")])),
                ("Mentores", _a("mentor.html", "Mentor de experimentos", False) + " · " + _a("rede.html", "Mentor da rede de campeões", False) + ". O mesmo e-mail e código do workbook."),
-               ("Slides e gravações", "Na página de cada encontro, em Materiais do encontro: " + " · ".join(_a(f"e{n}.html", f"Encontro {n}", False) for n in range(1, 6)) + "."),
+               ("Slides e gravações", "Na página de cada encontro, em Materiais do encontro: " + " · ".join(_a(f"e{n}.html", f"Encontro {n}", False) for n in range(1, 6)) + ". As cinco gravações também estão na " + _a("https://www.youtube.com/playlist?list=PLcFzRbquLgew", "playlist da turma") + "."),
                ("Dúvidas", _a("mentoria.html", "Dúvidas para o Gino Terentim", False) + ": a resposta volta para a sua página e para o seu e-mail.")])
 
 # ============================== ENCONTRO 5 ==============================

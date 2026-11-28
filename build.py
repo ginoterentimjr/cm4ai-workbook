@@ -52,6 +52,11 @@ SLIDES = {1: ("CM4AI-Online_E1_Slides-da-Turma_v4.pdf", "2026-11-18T22:00:00-03:
           5: ("CM4AI-Online_E5_Slides_v10.pdf", "2026-11-27T22:00:00-03:00")}
 
 
+GRAV = {1: "https://youtu.be/wGTCWntsTew", 2: "https://youtu.be/4ehU8R6jmBg", 3: "https://youtu.be/4aD0eEbpE7s",
+        4: "https://youtu.be/tdh4r_hdfbk", 5: "https://youtu.be/yDBwfa0sI-E"}
+PLAYLIST = "https://www.youtube.com/playlist?list=PLcFzRbquLgew"
+
+
 def materiais_html(enc):
     n = enc["n"]
     arq = SLIDES[n][0]
@@ -68,11 +73,15 @@ def materiais_html(enc):
         sl = (f'<div class="mat mat--espera">'
               f'<span class="disco" style="--tom:#9A8F86">{icone("presentation")}</span>'
               f'<span><span class="mat__k">SLIDES DO ENCONTRO {n} · PDF</span><b>Disponíveis ao fim do encontro</b><i>O arquivo entra aqui depois das 22h de {e(enc["data"])}</i></span></div>')
+    grav = ''
+    if GRAV.get(n):
+        grav = (f'<a class="mat" href="{GRAV[n]}" target="_blank" rel="noopener"><span class="disco" style="--tom:{enc["tom"]}">{icone("circle-play")}</span>'
+                f'<span><span class="mat__k">GRAVAÇÃO DO ENCONTRO {n} · VÍDEO</span><b>Assistir à gravação</b><i>O encontro completo, no YouTube; as cinco gravações também estão na playlist da turma</i></span></a>')
     pos = ''
     if n == 5:
         pos = (f'<a class="mat" href="#e5-sus"><span class="disco" style="--tom:#8D8377">{icone("flag")}</span>'
                f'<span><span class="mat__k">DEPOIS DO CURSO · ATÉ 12 DE DEZEMBRO</span><b>Atividade opcional</b><i>O plano do experimento e o Grande, Próximo e Agora, com a devolutiva do Gino Terentim</i></span></a>')
-    return f'<h3>Materiais do encontro</h3><div class="mats">{miro}{sl}{pos}</div>'
+    return f'<h3>Materiais do encontro</h3><div class="mats">{miro}{sl}{grav}{pos}</div>'
 
 
 IC_ENC = {1: "compass", 2: "users", 3: "lightbulb", 4: "flask-conical", 5: "flag"}
@@ -374,6 +383,7 @@ else:
             '<div class="cards3 cards3--claro"><div><b>Como usar</b><p>Abra o encontro do dia e registre as suas respostas à medida que cada atividade acontece. Sem conexão, o registro fica neste navegador e segue para a sua página na alteração seguinte.</p></div>'
             '<div><b>O fio entre os encontros</b><p>A adoção de IA que você escolhe no Encontro 1 acompanha o curso inteiro. Cada encontro parte do que você registrou no anterior.</p></div>'
             '<div><b>Reserva dos seus dados</b><p>As respostas ficam na planilha privada da turma, aberta apenas ao Gino Terentim, e na sua página, protegida pelo seu código. Use o papel das pessoas, e não o nome.</p></div></div>'
+            f'<a class="cartao cartao--mentor" href="{PLAYLIST}" target="_blank" rel="noopener" style="--tom:#2A211C"><span class="disco" style="--tom:#B04A1C">{icone("circle-play")}</span><span><span class="cartao__k">GRAVAÇÕES · OS CINCO ENCONTROS</span><b>Playlist da turma no YouTube</b><i>Cada encontro também tem a sua gravação na própria página, em Materiais do encontro</i></span></a>'
             f'<a class="cartao cartao--mentor" href="e5.html#e5-sus" style="--tom:#2A211C"><span class="disco" style="--tom:#8D8377">{icone("flag")}</span><span><span class="cartao__k">DEPOIS DO CURSO · ATÉ 12 DE DEZEMBRO</span><b>Atividade opcional, com devolutiva</b><i>O plano do seu experimento e o Grande, Próximo e Agora: o passo a passo está no Encontro 5</i></span></a>'
             f'<a class="cartao cartao--mentor" href="mentoria.html" style="--tom:#2A211C"><span class="disco" style="--tom:#E5662C">{icone("messages-square")}</span><span><span class="cartao__k">ENTRE OS ENCONTROS</span><b>Dúvidas para o Gino Terentim</b><i>Pergunte sobre o método e as atividades; a resposta volta para a sua página e para o seu e-mail</i></span></a></section>')
     open(os.path.join(D, "index.html"), "w", encoding="utf-8").write(pagina("CM4AI · Workbook digital", idx, "index", F))
