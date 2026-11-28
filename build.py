@@ -198,14 +198,28 @@ def bloco_html(b, enc):
 PUBLICADOS = {1, 2}
 ABRE = {3: "25/11", 4: "26/11", 5: "27/11"}
 ABRE_ISO = {3: "2026-11-25", 4: "2026-11-26", 5: "2026-11-27"}   # a parada vira link no dia do encontro (no navegador)
-FASES = (("Escutar o sistema", 2), ("Escolher a próxima aposta", 1), ("Testar, medir e sustentar", 2))
+FASES = (("Escutar o sistema", 2), ("Escolher a próxima aposta", 1), ("Testar, medir e sustentar", 2), ("Depois do curso", 1))
+
+
+def _rota_path(xs, ys):
+    """Curva pontilhada que passa pelo centro de cada parada, alternando a altura."""
+    d = f"M{xs[0]:.0f},{ys[0]}"
+    for i in range(1, len(xs)):
+        dx = xs[i] - xs[i - 1]
+        if i == 1:
+            d += f" C{xs[0] + 0.35 * dx:.0f},{ys[0]} {xs[1] - 0.4 * dx:.0f},{ys[1]} {xs[1]:.0f},{ys[1]}"
+        else:
+            d += f" S{xs[i] - 0.35 * dx:.0f},{ys[i]} {xs[i]:.0f},{ys[i]}"
+    return d
 
 
 def caminho_html(atual, grande=False):
-    """Mapa do caminho: cinco paradas ligadas por uma rota, com foto, ícone e fase."""
-    o = f'<div class="rota{" rota--grande" if grande else ""}">'
+    """Mapa do caminho: cinco paradas ligadas por uma rota, com foto, ícone e fase, e a sexta parada, opcional, depois do curso."""
+    xs = [(i + 0.5) * 1000 / 6 for i in range(6)]
+    ys = [62 if i % 2 == 0 else 138 for i in range(6)]
+    o = f'<div class="rota rota--seis{" rota--grande" if grande else ""}">'
     o += ('<svg class="rota__linha" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true">'
-          '<path d="M100,62 C170,62 220,138 300,138 S430,62 500,62 S630,138 700,138 S830,62 900,62"/></svg>')
+          f'<path d="{_rota_path(xs[:5], ys[:5])}"/><path class="rota__extra" d="{_rota_path(xs[4:], ys[4:])}"/></svg>')
     for n, nome, data, tom, prod, grupo in CAMINHO:
         cls = "feito" if 0 < n < atual else ("aqui" if n == atual else "")
         pub = n in PUBLICADOS or n in ABRE_ISO
@@ -220,6 +234,14 @@ def caminho_html(atual, grande=False):
               f'<span class="parada__foto" style="{foto}"><span class="parada__n">{n}</span><span class="parada__ic">{icone(IC_ENC[n], tam=22)}</span></span>'
               f'<span class="parada__k">ENCONTRO {n} · {e(data.split(" · ")[0])}</span>'
               f'<b>{e(nome)}</b><em>{e(prod)}</em>{rodape}</{tag}>')
+    tag = "span" if PROF else "a"
+    href = "" if PROF else ' href="e5.html#e5-sus"'
+    o += (f'<{tag} class="parada parada--extra" style="--tom:#C9A24D"{href}>'
+          f'<span class="parada__foto"><span class="parada__extra">{icone("calendar-range", "#8A6C2C", 46 if grande else 38, 1.5)}</span>'
+          f'<span class="parada__n">+</span></span>'
+          '<span class="parada__k">ATÉ 12/12</span><b>Depois do curso</b>'
+          '<em>Plano do experimento e Grande, Próximo e Agora, com devolutiva</em><small class="parada__c">Atividade opcional</small>'
+          f'</{tag}>')
     o += '<div class="rota__fases">' + "".join(f'<span style="grid-column:span {c}">{e(f)}</span>' for f, c in FASES) + "</div>"
     return o + "</div>"
 
