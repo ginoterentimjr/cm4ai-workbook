@@ -2096,18 +2096,20 @@
        "t": "atividade",
        "id": "e5-a2",
        "titulo": "O plano do seu experimento",
-       "tempo": "15 min",
+       "tempo": "depois da aula",
        "area": "Encontro 4, Área 3",
        "passos": [
-        "Na Área 3, na sua linha: <b>1 · Preparar</b>, <b>2 · Introduzir</b> e <b>3 · Revisar</b>, com o que acontece, quem faz e a data. O Mentor monta com você: <b>“me ajude a montar o Preparar”</b>. <i>7 min</i>",
-        "Registre <b>Quem Participa</b>, <b>O Risco</b>, <b>A Proteção</b> e <b>Como Desfazer</b>. <i>3 min</i>",
-        "Peça ao Mentor <b>“teste o risco do meu plano”</b> e ajuste. <i>3 min</i>",
-        "Peça <b>“Monte a ficha do meu experimento”</b> e confira se algum campo ficou com “?”. <i>2 min</i>"
+        "<b>Depois da aula, individualmente ou em grupo.</b> Na aula, a turma investigou o plano e o exemplo de compras e trouxe as dúvidas.",
+        "Na Área 3, na sua linha: <b>1 · Preparar</b>, <b>2 · Introduzir</b> e <b>3 · Revisar</b>, com o que acontece, quem faz e a data. O Mentor monta com você: <b>“me ajude a montar o Preparar”</b>.",
+        "Registre <b>Quem Participa</b>, <b>O Risco</b>, <b>A Proteção</b> e <b>Como Desfazer</b>.",
+        "Peça ao Mentor <b>“teste o risco do meu plano”</b> e ajuste.",
+        "Peça <b>“Monte a ficha do meu experimento”</b> e confira se algum campo ficou com “?”.",
+        "Apresente o plano a um colega ou ao grupo, que pergunta: <b>“O que pode dar errado, e como se desfaz?”</b> Ajuste o plano."
        ],
        "meta": [
         [
          "Com quem",
-         "Individual, com o Mentor."
+         "Individualmente ou em grupo, depois da aula; com o Mentor de experimentos, se quiser."
         ],
         [
          "Material",
@@ -2118,8 +2120,8 @@
          "O plano com as três etapas datadas, o risco e a forma de desfazer."
         ],
         [
-         "Tempo",
-         "15 minutos"
+         "Quando",
+         "Depois da aula."
         ]
        ],
        "exemplo": "<p>“Risco: aprovar uma cotação com erro. Proteção: um sênior confere antes. Como desfazer: a cotação seguinte volta à planilha.”</p><p><i>Caso fictício da área de compras.</i></p>",
@@ -2367,31 +2369,31 @@
      "itens": [
       {
        "t": "conceito",
-       "titulo": "Grande, Próximo e Agora: em até 15 dias, com devolutiva",
-       "html": "<div class=\"cards3\"><div><b>O Grande</b><p>A visão, o propósito e a estratégia da adoção, sem desvio relevante.</p></div><div><b>O Próximo</b><p>O seu experimento até a revisão, com os dois sinais do marco: a meta e o sinal antecipado.</p></div><div><b>O Agora</b><p>As três coisas mais importantes a fazer nesta semana, cada uma com responsável e data, e o papel do seu campeão.</p></div></div><p>Na <b>Área 5 do quadro do Encontro 4</b>, um canvas por pessoa. Opcional, em até 15 dias depois da aula. Ao terminar, marque o <b>check</b> no seu canvas: o Gino Terentim devolve um comentário a cada pessoa.</p>",
+       "titulo": "Grande, Próximo e Agora: até 12 de dezembro, com devolutiva",
+       "html": "<div class=\"cards3\"><div><b>O Grande</b><p>A visão, o propósito e a estratégia da adoção, sem desvio relevante.</p></div><div><b>O Próximo</b><p>O seu experimento até a revisão, com os dois sinais do marco: a meta e o sinal antecipado.</p></div><div><b>O Agora</b><p>As três coisas mais importantes a fazer nesta semana, cada uma com responsável e data, e o papel do seu campeão.</p></div></div><p>Na <b>Área 5 do quadro do Encontro 4</b>, um canvas por pessoa. Opcional, até 12 de dezembro, individualmente ou em grupo. Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome: o Gino Terentim devolve um comentário a cada pessoa.</p>",
        "fonte": "Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow)."
       },
       {
        "t": "atividade",
        "id": "e5-a7",
        "titulo": "O seu Grande, Próximo e Agora (opcional)",
-       "tempo": "até 15 dias",
+       "tempo": "até 12 de dezembro",
        "area": "Encontro 4, Área 5",
        "perg": "“O que você faz na segunda-feira para a mudança chegar ao Grande?”",
        "passos": [
         "No canvas com o seu nome, na Área 5 do quadro do Encontro 4: <b>O Grande</b>, em uma frase.",
         "<b>O Próximo</b>: o seu experimento até a revisão e os dois <b>sinais</b> do marco.",
         "<b>O Agora</b>: três ações desta semana, cada uma com responsável e data, e <b>o seu campeão</b>.",
-        "Ao terminar, marque o <b>check</b> no seu canvas."
+        "Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome."
        ],
        "meta": [
         [
          "Com quem",
-         "Individual, com o Mentor de experimentos se quiser."
+         "Individualmente ou em grupo; com o Mentor de experimentos, se quiser."
         ],
         [
          "Entrega",
-         "O canvas completo, com o check."
+         "O canvas completo, com o OK."
         ],
         [
          "Devolutiva",

@@ -298,6 +298,33 @@ E5 = dict(n=5, tom="#5E7D52", data="27 de novembro de 2026", miro="https://miro.
                          conducao=["Discussão do encontro e do curso, 20 minutos (21h40 a 22h00)."])]),
     ])
 
+def ajuste_em_aula_27_11(enc):
+    """Decisão do Gino Terentim na aula de 27/11 (20h53): a Área 3 e a Área 5 ficaram para depois da aula,
+    individualmente ou em grupo; na aula, a turma só investigou os instrumentos e trouxe dúvidas. Mesmo texto dos cartões do quadro (miro4v17)."""
+    import re
+    for b in enc["blocos"]:
+        for it in b["itens"]:
+            if it.get("id") == "e5-a2":
+                it["tempo"] = "depois da aula"
+                it["passos"] = ["<b>Depois da aula, individualmente ou em grupo.</b> Na aula, a turma investigou o plano e o exemplo de compras e trouxe as dúvidas."] + \
+                               [re.sub(r"\s*<i>\d+ min</i>", "", p) for p in it["passos"]] + \
+                               ["Apresente o plano a um colega ou ao grupo, que pergunta: <b>“O que pode dar errado, e como se desfaz?”</b> Ajuste o plano."]
+                it["meta"] = [("Com quem", "Individualmente ou em grupo, depois da aula; com o Mentor de experimentos, se quiser.") if k == "Com quem" else
+                              ("Quando", "Depois da aula.") if k == "Tempo" else (k, v) for k, v in it["meta"]]
+            if it.get("id") == "e5-a7":
+                it["tempo"] = "até 12 de dezembro"
+                it["passos"] = [p.replace("Ao terminar, marque o <b>check</b> no seu canvas.", "Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome.") for p in it["passos"]]
+                it["meta"] = [("Com quem", "Individualmente ou em grupo; com o Mentor de experimentos, se quiser.") if k == "Com quem" else
+                              ("Entrega", "O canvas completo, com o OK.") if k == "Entrega" else (k, v) for k, v in it["meta"]]
+            if it.get("t") == "conceito" and it.get("titulo", "").startswith("Grande, Próximo e Agora"):
+                it["titulo"] = "Grande, Próximo e Agora: até 12 de dezembro, com devolutiva"
+                it["html"] = it["html"].replace("Opcional, em até 15 dias depois da aula. Ao terminar, marque o <b>check</b> no seu canvas:",
+                                                "Opcional, até 12 de dezembro, individualmente ou em grupo. Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome:")
+
+
+ajuste_em_aula_27_11(E5)
+
+
 if __name__ == "__main__":
     import copy
     base = os.path.dirname(os.path.abspath(__file__))
