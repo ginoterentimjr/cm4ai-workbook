@@ -200,6 +200,23 @@ E4 = dict(n=4, tom="#B5781E", data="26 de novembro de 2026", miro="https://miro.
                          conducao=["Discussão do encontro, 20 minutos (21h40 a 22h00): que mudança da sua organização teria sido diferente se começasse como experimento? Que número faria a sua área parar um experimento, e quem decide isso? Quem precisa saber, antes de segunda-feira, que o seu experimento vai começar?"])]),
     ])
 
+B4 = "https://miro.com/app/board/uXjVEN1S8z0=/"
+LCC = "https://leanchange-mwfk2i9q.manus.space/grupo/"
+
+
+def _a(href, txt, ext=True): return f'<a href="{href}"' + (' target="_blank" rel="noopener"' if ext else "") + f">{txt}</a>"
+
+
+LINKS = cards([("Quadros do Miro", " · ".join([_a("https://miro.com/app/board/uXjVENt1lIM=/", "Encontro 1"), _a("https://miro.com/app/board/uXjVENsiEuo=/", "Encontro 2"),
+                                                _a("https://miro.com/app/board/uXjVEN1xbkY=/", "Encontro 3"), _a(B4, "Encontros 4 e 5")])),
+               ("Atalhos do quadro do Encontro 4", " · ".join([_a(B4 + "?moveToWidget=3458764690548250338", "Área 1"), _a(B4 + "?moveToWidget=3458764690548299604", "Área 2"),
+                                                              _a(B4 + "?moveToWidget=3458764690548368631", "Área 3"), _a(B4 + "?moveToWidget=3458764691818150803", "Portfólio"),
+                                                              _a(B4 + "?moveToWidget=3458764691736968059", "Área 5")])),
+               ("Lean Change Canvas", "O canvas do seu grupo, no computador: " + " · ".join([_a(LCC + "e51781e85c3e", "Grupo 1"), _a(LCC + "c0db4ed9e561", "Grupo 2"), _a(LCC + "582cec32c845", "Grupo 3")])),
+               ("Mentores", _a("mentor.html", "Mentor de experimentos", False) + " · " + _a("rede.html", "Mentor da rede de campeões", False) + ". O mesmo e-mail e código do workbook."),
+               ("Slides e gravações", "Na página de cada encontro, em Materiais do encontro: " + " · ".join(_a(f"e{n}.html", f"Encontro {n}", False) for n in range(1, 6)) + "."),
+               ("Dúvidas", _a("mentoria.html", "Dúvidas para o Gino Terentim", False) + ": a resposta volta para a sua página e para o seu e-mail.")])
+
 # ============================== ENCONTRO 5 ==============================
 A5 = atividades(["e5v10_a.py", "e5v10_b.py"])
 FRASES = ("<p><b>Frases para o Mentor de experimentos</b> (workbook, Mentor de experimentos):</p><ul>"
@@ -270,20 +287,51 @@ E5 = dict(n=5, tom="#5E7D52", data="27 de novembro de 2026", miro="https://miro.
                          pontos=["<b>Campeões que a maioria observa.</b> Nem sempre quem tem o cargo.", "<b>Pontes entre grupos.</b> Sem elas, a prática para num só grupo.", "<b>Papéis com data.</b> A semana 1 e as quatro semanas até a revisão."]),
                     ativ("e5-a5", A5[4], None, [F("e5.a5.ouvi", "O Que Ouvi na Apresentação Final", 3, "O que sustenta isso quando ninguém estiver olhando?"), F("e5.a5.agora", "Os Papéis Ajustados", 3)],
                          pontos=["<b>A pergunta da sustentação.</b> Cada pessoa ouve o que mantém o novo jeito.", "<b>Os papéis ajustados.</b> Registrados aqui e no Mentor da rede."])]),
-        dict(id="e5-sus", num="05", nome="Depois da aula: sustentabilidade", tom="#8D8377", titulo="O plano de sustentabilidade, <em>opcional</em>", constroi="O seu canvas Grande, Próximo e Agora, na Área 5",
-             itens=[dict(t="conceito", titulo="Grande, Próximo e Agora: em até 15 dias, com devolutiva",
+        dict(id="e5-sus", num="05", nome="Depois do curso: atividade opcional", tom="#8D8377", titulo="Atividade opcional <em>depois do curso</em>",
+             pergunta="O que o seu experimento precisa para começar na segunda-feira?",
+             constroi="O plano do seu experimento e, se quiser, o Grande, Próximo e Agora, com a devolutiva do Gino Terentim",
+             itens=[dict(t="conceito", titulo="Até 12 de dezembro: o passo a passo",
+                         html="<p>No último encontro, a turma investigou o plano do experimento e o Grande, Próximo e Agora e trouxe as dúvidas. O preenchimento ficou para depois do curso: <b>opcional, individualmente ou em grupo, até 12 de dezembro de 2026</b>. Quem fizer recebe a devolutiva do Gino Terentim, por escrito ou numa conversa.</p>"
+                              "<ol class=\"passos\">"
+                              "<li><b>Confira o seu experimento no portfólio da turma.</b> No quadro do Encontro 4, abaixo da Área 3, o <a href=\"" + B4 + "?moveToWidget=3458764691818150803\" target=\"_blank\" rel=\"noopener\">Portfólio de experimentos da turma</a> reúne o experimento de cada pessoa, montado pela IA a partir do que você registrou. Se algo estiver diferente, anote no seu registro, abaixo.</li>"
+                              "<li><b>Complete a hipótese e a medida, se ainda faltar algum campo.</b> <a href=\"" + B4 + "?moveToWidget=3458764690548250338\" target=\"_blank\" rel=\"noopener\">Área 1</a>: a ação, o comportamento esperado e a medida. <a href=\"" + B4 + "?moveToWidget=3458764690548299604\" target=\"_blank\" rel=\"noopener\">Área 2</a>: a linha de base, a meta e a data de revisão, a confiança, o sinal antecipado e o critério (ampliar se, ajustar se, parar se).</li>"
+                              "<li><b>Monte o plano na <a href=\"" + B4 + "?moveToWidget=3458764690548368631\" target=\"_blank\" rel=\"noopener\">Área 3</a>, na linha com o seu número.</b> O passo a passo está na atividade abaixo.</li>"
+                              "<li><b>Se quiser, faça o Grande, Próximo e Agora na <a href=\"" + B4 + "?moveToWidget=3458764691736968059\" target=\"_blank\" rel=\"noopener\">Área 5</a>.</b> Ao terminar, escreva OK no quadradinho ao lado do seu nome.</li>"
+                              "<li><b>Marque Finalizado no seu registro.</b> Com dúvida, use o botão Perguntar ao Gino Terentim: a resposta volta para este workbook e para o seu e-mail.</li></ol>"
+                              "<p>O Mentor de experimentos e o Mentor da rede continuam disponíveis, com o mesmo e-mail e código.</p>"),
+                    dict(t="atividade", id="e5-pos", titulo="O plano do seu experimento", tempo="até 12 de dezembro", area="Encontro 4, Área 3",
+                         perg="“O que pode dar errado, e como se desfaz?”",
+                         passos=["<b>1 · Preparar, o antes:</b> com quem combinar, quem avisar e a linha de base registrada antes de começar, com quem faz e até quando.",
+                                 "<b>2 · Introduzir, o durante:</b> o que acontece em cada semana, até quatro semanas, e como você acompanha o sinal antecipado.",
+                                 "<b>3 · Revisar, o depois:</b> como a medida é lida (pelo sistema, por uma contagem semanal ou por uma planilha) e quem decide com você entre ampliar, ajustar ou parar, na data da Área 2.",
+                                 "<b>Quem Participa:</b> quem conduz, quem participa, quem ajuda a medir e quem é avisado, sempre pelo papel.",
+                                 "<b>O Risco, A Proteção e Como Desfazer:</b> o que pode dar errado, o que reduz a chance ou o impacto, e o botão de emergência que devolve tudo ao jeito de hoje. Sem forma de desfazer, o experimento está grande demais: reduza o público ou o escopo antes de começar.",
+                                 "No Mentor de experimentos: <b>“me ajude a montar o Preparar”</b>, <b>“teste o risco do meu plano”</b> e, no fim, <b>“Monte a ficha do meu experimento”</b>.",
+                                 "Ao terminar, marque <b>Finalizado</b> no seu registro e escolha como prefere a devolutiva: por escrito ou numa conversa com o Gino Terentim."],
+                         meta=[("Com quem", "Individualmente ou em grupo; com o Mentor de experimentos, se quiser."), ("Material", "Quadro do Encontro 4, Área 3, e a sua ficha da Área 2."),
+                               ("Prazo", "Até 12 de dezembro de 2026."), ("Devolutiva", "Do Gino Terentim, por escrito ou numa conversa.")],
+                         exemplo="<p>“1 · Preparar: a gerente e dois compradores seniores escolhem a primeira cotação e avisam o time na reunião de segunda; a linha de base é conferida: 2 de 12. Risco: aprovar uma cotação com erro do assistente. Proteção: um sênior confere antes da reunião. Como desfazer: a cotação seguinte volta à planilha.”</p><p><i>Caso fictício da área de compras.</i></p>",
+                         campos=[F("e5.pos.portfolio", "O Meu Experimento no Portfólio da Turma", 2, "Está correto? Se algo estiver diferente, escreva o que precisa mudar"),
+                                 F("e5.pos.plano", "O Plano: Preparar, Introduzir e Revisar", 4, "O que acontece, quem faz e em que data"),
+                                 F("e5.pos.risco", "Quem Participa, O Risco, A Proteção e Como Desfazer", 3),
+                                 F("e5.pos.situacao", "Situação da Atividade", tipo="escolha", opcoes=["Em andamento", "Finalizado"]),
+                                 F("e5.pos.devolutiva", "Como Prefiro a Devolutiva", tipo="escolha", opcoes=["Por escrito, neste workbook", "Numa conversa com o Gino Terentim"])],
+                         pontos=["<b>Três etapas com data.</b> A revisão na data da Área 2.", "<b>Risco com saída.</b> A proteção e a forma de desfazer.", "<b>Pequeno e reversível.</b> Sem forma de desfazer, reduza o público ou o escopo."],
+                         conducao=["Pós-curso, até 12/12/2026 (combinado em aula, 27/11: 15 dias). Monitoramento diário: planilha da turma, aba Encontro 5 · 27-11 (e5.pos.situacao e e5.pos.devolutiva), aba Dúvidas e quadro do Encontro 4 (Áreas 3 e 5). Devolutiva do Gino Terentim a quem marcar Finalizado."]),
+                    dict(t="conceito", titulo="Grande, Próximo e Agora: até 12 de dezembro, com devolutiva",
                          html=cards([("O Grande", "A visão, o propósito e a estratégia da adoção, sem desvio relevante."), ("O Próximo", "O seu experimento até a revisão, com os dois sinais do marco: a meta e o sinal antecipado."),
                                      ("O Agora", "As três coisas mais importantes a fazer nesta semana, cada uma com responsável e data, e o papel do seu campeão.")])
-                              + "<p>Na <b>Área 5 do quadro do Encontro 4</b>, um canvas por pessoa. Opcional, em até 15 dias depois da aula. Ao terminar, marque o <b>check</b> no seu canvas: o Gino Terentim devolve um comentário a cada pessoa.</p>",
+                              + "<p>Na <b>Área 5 do quadro do Encontro 4</b>, um canvas por pessoa. Opcional, até 12 de dezembro, individualmente ou em grupo. Funciona como um quadro Kanban: o Grande é a mudança, o Próximo é o experimento, o Agora é a semana. Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome: o Gino Terentim devolve um comentário a cada pessoa.</p>",
                          fonte="Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow)."),
-                    dict(t="atividade", id="e5-a7", titulo="O seu Grande, Próximo e Agora (opcional)", tempo="até 15 dias", area="Encontro 4, Área 5",
+                    dict(t="atividade", id="e5-a7", titulo="O seu Grande, Próximo e Agora (opcional)", tempo="até 12 de dezembro", area="Encontro 4, Área 5",
                          perg="“O que você faz na segunda-feira para a mudança chegar ao Grande?”",
                          passos=["No canvas com o seu nome, na Área 5 do quadro do Encontro 4: <b>O Grande</b>, em uma frase.", "<b>O Próximo</b>: o seu experimento até a revisão e os dois <b>sinais</b> do marco.",
-                                 "<b>O Agora</b>: três ações desta semana, cada uma com responsável e data, e <b>o seu campeão</b>.", "Ao terminar, marque o <b>check</b> no seu canvas."],
-                         meta=[("Com quem", "Individual, com o Mentor de experimentos se quiser."), ("Entrega", "O canvas completo, com o check."), ("Devolutiva", "Comentário do Gino Terentim a cada pessoa.")],
+                                 "<b>O Agora</b>: três ações desta semana, cada uma com responsável e data, e <b>o seu campeão</b>, escolhido com o Mentor da rede.", "Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome."],
+                         meta=[("Com quem", "Individualmente ou em grupo; com o Mentor de experimentos, se quiser."), ("Entrega", "O canvas completo, com o OK."), ("Devolutiva", "Comentário do Gino Terentim a cada pessoa.")],
                          campos=[F("e5.a4.grande", "O Grande", 2, "A visão da adoção, em uma frase"), F("e5.a4.proximo", "O Próximo", 2), F("e5.a4.sinal", "Os Sinais do Marco", 2, "Sinal 1, a meta; sinal 2, o sinal antecipado"),
                                  F("e5.a4.agora", "O Agora: Três Ações Desta Semana", 3, "Ação, responsável e data"), F("e5.a4.campeao", "O Seu Campeão e o Papel Dele Nesta Semana", 2)],
-                         conducao=["Atividade opcional depois da aula: devolutiva do Gino Terentim em até 15 dias, a partir do check no canvas da Área 5; lembrete semanal à turma."])]),
+                         conducao=["Atividade opcional depois do curso: devolutiva do Gino Terentim a partir do OK no canvas da Área 5; prazo 12/12/2026."]),
+                    dict(t="conceito", titulo="Todos os endereços do curso", html=LINKS)]),
         dict(id="e5-fe", num="04", nome="Fechamento e certificação", tom="#B04A1C", titulo="As margens <em>e a certificação</em>", constroi="A margem que você muda primeiro",
              itens=[dict(t="conceito", titulo="Você não diz à água para onde ir. Você muda as margens.",
                          html="<p>A frase de Dave Snowden, que abriu o curso no Encontro 1, fecha o último encontro. Em cinco encontros, a turma escutou o sistema, escolheu uma aposta, testou e mediu; as margens são a rotina, a regra, o padrão e o reconhecimento que mantêm o novo jeito.</p>"),
@@ -299,27 +347,16 @@ E5 = dict(n=5, tom="#5E7D52", data="27 de novembro de 2026", miro="https://miro.
     ])
 
 def ajuste_em_aula_27_11(enc):
-    """Decisão do Gino Terentim na aula de 27/11 (20h53): a Área 3 e a Área 5 ficaram para depois da aula,
-    individualmente ou em grupo; na aula, a turma só investigou os instrumentos e trouxe dúvidas. Mesmo texto dos cartões do quadro (miro4v17)."""
-    import re
+    """Decisão do Gino Terentim na aula de 27/11 (20h53): o plano do experimento (Área 3) e o Grande, Próximo e Agora (Área 5)
+    ficaram para depois do curso, individualmente ou em grupo, até 12/12; na aula, a turma investigou os instrumentos e trouxe dúvidas.
+    O plano em aula vira um aviso que aponta para o bloco 05 (atividade opcional depois do curso)."""
     for b in enc["blocos"]:
-        for it in b["itens"]:
+        for i, it in enumerate(b["itens"]):
             if it.get("id") == "e5-a2":
-                it["tempo"] = "depois da aula"
-                it["passos"] = ["<b>Depois da aula, individualmente ou em grupo.</b> Na aula, a turma investigou o plano e o exemplo de compras e trouxe as dúvidas."] + \
-                               [re.sub(r"\s*<i>\d+ min</i>", "", p) for p in it["passos"]] + \
-                               ["Apresente o plano a um colega ou ao grupo, que pergunta: <b>“O que pode dar errado, e como se desfaz?”</b> Ajuste o plano."]
-                it["meta"] = [("Com quem", "Individualmente ou em grupo, depois da aula; com o Mentor de experimentos, se quiser.") if k == "Com quem" else
-                              ("Quando", "Depois da aula.") if k == "Tempo" else (k, v) for k, v in it["meta"]]
-            if it.get("id") == "e5-a7":
-                it["tempo"] = "até 12 de dezembro"
-                it["passos"] = [p.replace("Ao terminar, marque o <b>check</b> no seu canvas.", "Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome.") for p in it["passos"]]
-                it["meta"] = [("Com quem", "Individualmente ou em grupo; com o Mentor de experimentos, se quiser.") if k == "Com quem" else
-                              ("Entrega", "O canvas completo, com o OK.") if k == "Entrega" else (k, v) for k, v in it["meta"]]
-            if it.get("t") == "conceito" and it.get("titulo", "").startswith("Grande, Próximo e Agora"):
-                it["titulo"] = "Grande, Próximo e Agora: até 12 de dezembro, com devolutiva"
-                it["html"] = it["html"].replace("Opcional, em até 15 dias depois da aula. Ao terminar, marque o <b>check</b> no seu canvas:",
-                                                "Opcional, até 12 de dezembro, individualmente ou em grupo. Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome:")
+                b["itens"][i] = dict(t="conceito", titulo="O plano do seu experimento: na aula, investigação e dúvidas",
+                                     html="<p>Na aula, a turma investigou o plano do experimento e o exemplo de compras e trouxe as dúvidas. "
+                                          "O preenchimento ficou para depois do curso, individualmente ou em grupo, até 12 de dezembro: "
+                                          "o passo a passo está em <a href=\"#e5-sus\">Atividade opcional depois do curso</a>, com a devolutiva do Gino Terentim.</p>")
 
 
 ajuste_em_aula_27_11(E5)

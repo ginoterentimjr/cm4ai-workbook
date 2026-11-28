@@ -2093,63 +2093,9 @@
        "fonte": "Little, J. Lean Change Management, 2014."
       },
       {
-       "t": "atividade",
-       "id": "e5-a2",
-       "titulo": "O plano do seu experimento",
-       "tempo": "depois da aula",
-       "area": "Encontro 4, Área 3",
-       "passos": [
-        "<b>Depois da aula, individualmente ou em grupo.</b> Na aula, a turma investigou o plano e o exemplo de compras e trouxe as dúvidas.",
-        "Na Área 3, na sua linha: <b>1 · Preparar</b>, <b>2 · Introduzir</b> e <b>3 · Revisar</b>, com o que acontece, quem faz e a data. O Mentor monta com você: <b>“me ajude a montar o Preparar”</b>.",
-        "Registre <b>Quem Participa</b>, <b>O Risco</b>, <b>A Proteção</b> e <b>Como Desfazer</b>.",
-        "Peça ao Mentor <b>“teste o risco do meu plano”</b> e ajuste.",
-        "Peça <b>“Monte a ficha do meu experimento”</b> e confira se algum campo ficou com “?”.",
-        "Apresente o plano a um colega ou ao grupo, que pergunta: <b>“O que pode dar errado, e como se desfaz?”</b> Ajuste o plano."
-       ],
-       "meta": [
-        [
-         "Com quem",
-         "Individualmente ou em grupo, depois da aula; com o Mentor de experimentos, se quiser."
-        ],
-        [
-         "Material",
-         "Quadro do Encontro 4, Área 3, e a sua ficha da Área 2."
-        ],
-        [
-         "Entrega",
-         "O plano com as três etapas datadas, o risco e a forma de desfazer."
-        ],
-        [
-         "Quando",
-         "Depois da aula."
-        ]
-       ],
-       "exemplo": "<p>“Risco: aprovar uma cotação com erro. Proteção: um sênior confere antes. Como desfazer: a cotação seguinte volta à planilha.”</p><p><i>Caso fictício da área de compras.</i></p>",
-       "campos": [
-        {
-         "k": "e5.a2.plano",
-         "rotulo": "O Plano: Preparar, Introduzir e Revisar",
-         "linhas": 3,
-         "ph": "O que acontece, quem faz e em que data"
-        },
-        {
-         "k": "e5.a2.risco",
-         "rotulo": "O Risco, a Proteção e Como Desfazer",
-         "linhas": 2,
-         "ph": ""
-        },
-        {
-         "k": "e5.a2.ficha",
-         "rotulo": "A Ficha do Mentor",
-         "linhas": 4,
-         "ph": "Cole aqui a ficha que o Mentor montou"
-        }
-       ],
-       "pontos": [
-        "<b>Três etapas com data.</b> A revisão na data da Área 2.",
-        "<b>Risco com saída.</b> A proteção e a forma de desfazer.",
-        "<b>Nenhum “?” sem resposta prevista.</b> Cada lacuna da ficha tem quem a responda."
-       ]
+       "t": "conceito",
+       "titulo": "O plano do seu experimento: na aula, investigação e dúvidas",
+       "html": "<p>Na aula, a turma investigou o plano do experimento e o exemplo de compras e trouxe as dúvidas. O preenchimento ficou para depois do curso, individualmente ou em grupo, até 12 de dezembro: o passo a passo está em <a href=\"#e5-sus\">Atividade opcional depois do curso</a>, com a devolutiva do Gino Terentim.</p>"
       }
      ]
     },
@@ -2362,15 +2308,104 @@
     {
      "id": "e5-sus",
      "num": "05",
-     "nome": "Depois da aula: sustentabilidade",
+     "nome": "Depois do curso: atividade opcional",
      "tom": "#8D8377",
-     "titulo": "O plano de sustentabilidade, <em>opcional</em>",
-     "constroi": "O seu canvas Grande, Próximo e Agora, na Área 5",
+     "titulo": "Atividade opcional <em>depois do curso</em>",
+     "pergunta": "O que o seu experimento precisa para começar na segunda-feira?",
+     "constroi": "O plano do seu experimento e, se quiser, o Grande, Próximo e Agora, com a devolutiva do Gino Terentim",
      "itens": [
       {
        "t": "conceito",
+       "titulo": "Até 12 de dezembro: o passo a passo",
+       "html": "<p>No último encontro, a turma investigou o plano do experimento e o Grande, Próximo e Agora e trouxe as dúvidas. O preenchimento ficou para depois do curso: <b>opcional, individualmente ou em grupo, até 12 de dezembro de 2026</b>. Quem fizer recebe a devolutiva do Gino Terentim, por escrito ou numa conversa.</p><ol class=\"passos\"><li><b>Confira o seu experimento no portfólio da turma.</b> No quadro do Encontro 4, abaixo da Área 3, o <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764691818150803\" target=\"_blank\" rel=\"noopener\">Portfólio de experimentos da turma</a> reúne o experimento de cada pessoa, montado pela IA a partir do que você registrou. Se algo estiver diferente, anote no seu registro, abaixo.</li><li><b>Complete a hipótese e a medida, se ainda faltar algum campo.</b> <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764690548250338\" target=\"_blank\" rel=\"noopener\">Área 1</a>: a ação, o comportamento esperado e a medida. <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764690548299604\" target=\"_blank\" rel=\"noopener\">Área 2</a>: a linha de base, a meta e a data de revisão, a confiança, o sinal antecipado e o critério (ampliar se, ajustar se, parar se).</li><li><b>Monte o plano na <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764690548368631\" target=\"_blank\" rel=\"noopener\">Área 3</a>, na linha com o seu número.</b> O passo a passo está na atividade abaixo.</li><li><b>Se quiser, faça o Grande, Próximo e Agora na <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764691736968059\" target=\"_blank\" rel=\"noopener\">Área 5</a>.</b> Ao terminar, escreva OK no quadradinho ao lado do seu nome.</li><li><b>Marque Finalizado no seu registro.</b> Com dúvida, use o botão Perguntar ao Gino Terentim: a resposta volta para este workbook e para o seu e-mail.</li></ol><p>O Mentor de experimentos e o Mentor da rede continuam disponíveis, com o mesmo e-mail e código.</p>"
+      },
+      {
+       "t": "atividade",
+       "id": "e5-pos",
+       "titulo": "O plano do seu experimento",
+       "tempo": "até 12 de dezembro",
+       "area": "Encontro 4, Área 3",
+       "perg": "“O que pode dar errado, e como se desfaz?”",
+       "passos": [
+        "<b>1 · Preparar, o antes:</b> com quem combinar, quem avisar e a linha de base registrada antes de começar, com quem faz e até quando.",
+        "<b>2 · Introduzir, o durante:</b> o que acontece em cada semana, até quatro semanas, e como você acompanha o sinal antecipado.",
+        "<b>3 · Revisar, o depois:</b> como a medida é lida (pelo sistema, por uma contagem semanal ou por uma planilha) e quem decide com você entre ampliar, ajustar ou parar, na data da Área 2.",
+        "<b>Quem Participa:</b> quem conduz, quem participa, quem ajuda a medir e quem é avisado, sempre pelo papel.",
+        "<b>O Risco, A Proteção e Como Desfazer:</b> o que pode dar errado, o que reduz a chance ou o impacto, e o botão de emergência que devolve tudo ao jeito de hoje. Sem forma de desfazer, o experimento está grande demais: reduza o público ou o escopo antes de começar.",
+        "No Mentor de experimentos: <b>“me ajude a montar o Preparar”</b>, <b>“teste o risco do meu plano”</b> e, no fim, <b>“Monte a ficha do meu experimento”</b>.",
+        "Ao terminar, marque <b>Finalizado</b> no seu registro e escolha como prefere a devolutiva: por escrito ou numa conversa com o Gino Terentim."
+       ],
+       "meta": [
+        [
+         "Com quem",
+         "Individualmente ou em grupo; com o Mentor de experimentos, se quiser."
+        ],
+        [
+         "Material",
+         "Quadro do Encontro 4, Área 3, e a sua ficha da Área 2."
+        ],
+        [
+         "Prazo",
+         "Até 12 de dezembro de 2026."
+        ],
+        [
+         "Devolutiva",
+         "Do Gino Terentim, por escrito ou numa conversa."
+        ]
+       ],
+       "exemplo": "<p>“1 · Preparar: a gerente e dois compradores seniores escolhem a primeira cotação e avisam o time na reunião de segunda; a linha de base é conferida: 2 de 12. Risco: aprovar uma cotação com erro do assistente. Proteção: um sênior confere antes da reunião. Como desfazer: a cotação seguinte volta à planilha.”</p><p><i>Caso fictício da área de compras.</i></p>",
+       "campos": [
+        {
+         "k": "e5.pos.portfolio",
+         "rotulo": "O Meu Experimento no Portfólio da Turma",
+         "linhas": 2,
+         "ph": "Está correto? Se algo estiver diferente, escreva o que precisa mudar"
+        },
+        {
+         "k": "e5.pos.plano",
+         "rotulo": "O Plano: Preparar, Introduzir e Revisar",
+         "linhas": 4,
+         "ph": "O que acontece, quem faz e em que data"
+        },
+        {
+         "k": "e5.pos.risco",
+         "rotulo": "Quem Participa, O Risco, A Proteção e Como Desfazer",
+         "linhas": 3,
+         "ph": ""
+        },
+        {
+         "k": "e5.pos.situacao",
+         "rotulo": "Situação da Atividade",
+         "linhas": 3,
+         "ph": "",
+         "tipo": "escolha",
+         "opcoes": [
+          "Em andamento",
+          "Finalizado"
+         ]
+        },
+        {
+         "k": "e5.pos.devolutiva",
+         "rotulo": "Como Prefiro a Devolutiva",
+         "linhas": 3,
+         "ph": "",
+         "tipo": "escolha",
+         "opcoes": [
+          "Por escrito, neste workbook",
+          "Numa conversa com o Gino Terentim"
+         ]
+        }
+       ],
+       "pontos": [
+        "<b>Três etapas com data.</b> A revisão na data da Área 2.",
+        "<b>Risco com saída.</b> A proteção e a forma de desfazer.",
+        "<b>Pequeno e reversível.</b> Sem forma de desfazer, reduza o público ou o escopo."
+       ]
+      },
+      {
+       "t": "conceito",
        "titulo": "Grande, Próximo e Agora: até 12 de dezembro, com devolutiva",
-       "html": "<div class=\"cards3\"><div><b>O Grande</b><p>A visão, o propósito e a estratégia da adoção, sem desvio relevante.</p></div><div><b>O Próximo</b><p>O seu experimento até a revisão, com os dois sinais do marco: a meta e o sinal antecipado.</p></div><div><b>O Agora</b><p>As três coisas mais importantes a fazer nesta semana, cada uma com responsável e data, e o papel do seu campeão.</p></div></div><p>Na <b>Área 5 do quadro do Encontro 4</b>, um canvas por pessoa. Opcional, até 12 de dezembro, individualmente ou em grupo. Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome: o Gino Terentim devolve um comentário a cada pessoa.</p>",
+       "html": "<div class=\"cards3\"><div><b>O Grande</b><p>A visão, o propósito e a estratégia da adoção, sem desvio relevante.</p></div><div><b>O Próximo</b><p>O seu experimento até a revisão, com os dois sinais do marco: a meta e o sinal antecipado.</p></div><div><b>O Agora</b><p>As três coisas mais importantes a fazer nesta semana, cada uma com responsável e data, e o papel do seu campeão.</p></div></div><p>Na <b>Área 5 do quadro do Encontro 4</b>, um canvas por pessoa. Opcional, até 12 de dezembro, individualmente ou em grupo. Funciona como um quadro Kanban: o Grande é a mudança, o Próximo é o experimento, o Agora é a semana. Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome: o Gino Terentim devolve um comentário a cada pessoa.</p>",
        "fonte": "Little, J. Lean Change Management: Big, Next, Now (leanchange.org/elements/bignextnow)."
       },
       {
@@ -2383,7 +2418,7 @@
        "passos": [
         "No canvas com o seu nome, na Área 5 do quadro do Encontro 4: <b>O Grande</b>, em uma frase.",
         "<b>O Próximo</b>: o seu experimento até a revisão e os dois <b>sinais</b> do marco.",
-        "<b>O Agora</b>: três ações desta semana, cada uma com responsável e data, e <b>o seu campeão</b>.",
+        "<b>O Agora</b>: três ações desta semana, cada uma com responsável e data, e <b>o seu campeão</b>, escolhido com o Mentor da rede.",
         "Ao terminar, escreva <b>OK</b> no quadradinho ao lado do seu nome."
        ],
        "meta": [
@@ -2432,6 +2467,11 @@
          "ph": ""
         }
        ]
+      },
+      {
+       "t": "conceito",
+       "titulo": "Todos os endereços do curso",
+       "html": "<div class=\"cards3\"><div><b>Quadros do Miro</b><p><a href=\"https://miro.com/app/board/uXjVENt1lIM=/\" target=\"_blank\" rel=\"noopener\">Encontro 1</a> · <a href=\"https://miro.com/app/board/uXjVENsiEuo=/\" target=\"_blank\" rel=\"noopener\">Encontro 2</a> · <a href=\"https://miro.com/app/board/uXjVEN1xbkY=/\" target=\"_blank\" rel=\"noopener\">Encontro 3</a> · <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/\" target=\"_blank\" rel=\"noopener\">Encontros 4 e 5</a></p></div><div><b>Atalhos do quadro do Encontro 4</b><p><a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764690548250338\" target=\"_blank\" rel=\"noopener\">Área 1</a> · <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764690548299604\" target=\"_blank\" rel=\"noopener\">Área 2</a> · <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764690548368631\" target=\"_blank\" rel=\"noopener\">Área 3</a> · <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764691818150803\" target=\"_blank\" rel=\"noopener\">Portfólio</a> · <a href=\"https://miro.com/app/board/uXjVEN1S8z0=/?moveToWidget=3458764691736968059\" target=\"_blank\" rel=\"noopener\">Área 5</a></p></div><div><b>Lean Change Canvas</b><p>O canvas do seu grupo, no computador: <a href=\"https://leanchange-mwfk2i9q.manus.space/grupo/e51781e85c3e\" target=\"_blank\" rel=\"noopener\">Grupo 1</a> · <a href=\"https://leanchange-mwfk2i9q.manus.space/grupo/c0db4ed9e561\" target=\"_blank\" rel=\"noopener\">Grupo 2</a> · <a href=\"https://leanchange-mwfk2i9q.manus.space/grupo/582cec32c845\" target=\"_blank\" rel=\"noopener\">Grupo 3</a></p></div><div><b>Mentores</b><p><a href=\"mentor.html\">Mentor de experimentos</a> · <a href=\"rede.html\">Mentor da rede de campeões</a>. O mesmo e-mail e código do workbook.</p></div><div><b>Slides e gravações</b><p>Na página de cada encontro, em Materiais do encontro: <a href=\"e1.html\">Encontro 1</a> · <a href=\"e2.html\">Encontro 2</a> · <a href=\"e3.html\">Encontro 3</a> · <a href=\"e4.html\">Encontro 4</a> · <a href=\"e5.html\">Encontro 5</a>.</p></div><div><b>Dúvidas</b><p><a href=\"mentoria.html\">Dúvidas para o Gino Terentim</a>: a resposta volta para a sua página e para o seu e-mail.</p></div></div>"
       }
      ]
     },
